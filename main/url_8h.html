@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('url_8h.html',''); initResizable(); });
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">url.h File Reference</div></div>
 </div><!--header-->
@@ -146,6 +147,16 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceupa" id="r_namespaceupa"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceupa.html">upa</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a5806bc3a0d267938f093d8106d84360f" id="r_a5806bc3a0d267938f093d8106d84360f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360f">upa::file_path_format</a> { <a class="el" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa296ccece3e9d4949a538964510e58d21">upa::detect</a>
+, <a class="el" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1">upa::posix</a>
+, <a class="el" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42">upa::windows</a>
+, <a class="el" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">upa::native</a> = posix
+ }</td></tr>
+<tr class="memdesc:a5806bc3a0d267938f093d8106d84360f"><td class="mdescLeft">&#160;</td><td class="mdescRight">File path format.  <a href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360f">More...</a><br /></td></tr>
+<tr class="separator:a5806bc3a0d267938f093d8106d84360f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a704170fa90d71a1899e48494fb85cd70" id="r_a704170fa90d71a1899e48494fb85cd70"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceupa.html#a704170fa90d71a1899e48494fb85cd70">upa::equals</a> (const <a class="el" href="classupa_1_1url.html">url</a> &amp;lhs, const <a class="el" href="classupa_1_1url.html">url</a> &amp;rhs, bool exclude_fragments=false)</td></tr>
@@ -157,10 +168,10 @@ Functions</h2></td></tr>
 <tr class="memitem:aa223cc0cd1376e828988ca9b8698cb85" id="r_aa223cc0cd1376e828988ca9b8698cb85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceupa.html#aa223cc0cd1376e828988ca9b8698cb85">upa::swap</a> (<a class="el" href="classupa_1_1url.html">url</a> &amp;lhs, <a class="el" href="classupa_1_1url.html">url</a> &amp;rhs) UPA_NOEXCEPT_17</td></tr>
 <tr class="memdesc:aa223cc0cd1376e828988ca9b8698cb85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the contents of two URLs.  <br /></td></tr>
 <tr class="separator:aa223cc0cd1376e828988ca9b8698cb85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76e1fbc3aadae956dce6d5e870aef833" id="r_a76e1fbc3aadae956dce6d5e870aef833"><td class="memTemplParams" colspan="2">template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </td></tr>
-<tr class="memitem:a76e1fbc3aadae956dce6d5e870aef833"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classupa_1_1url.html">url</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceupa.html#a76e1fbc3aadae956dce6d5e870aef833">upa::url_from_file_path</a> (StrT &amp;&amp;str)</td></tr>
-<tr class="memdesc:a76e1fbc3aadae956dce6d5e870aef833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make URL from OS file path.  <br /></td></tr>
-<tr class="separator:a76e1fbc3aadae956dce6d5e870aef833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63fd51a8ef1b8bd7b333ebbda4719bdf" id="r_a63fd51a8ef1b8bd7b333ebbda4719bdf"><td class="memTemplParams" colspan="2">template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a63fd51a8ef1b8bd7b333ebbda4719bdf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classupa_1_1url.html">url</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceupa.html#a63fd51a8ef1b8bd7b333ebbda4719bdf">upa::url_from_file_path</a> (StrT &amp;&amp;str, <a class="el" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360f">file_path_format</a> format=<a class="el" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa296ccece3e9d4949a538964510e58d21">file_path_format::detect</a>)</td></tr>
+<tr class="memdesc:a63fd51a8ef1b8bd7b333ebbda4719bdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make URL from OS file path.  <br /></td></tr>
+<tr class="separator:a63fd51a8ef1b8bd7b333ebbda4719bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

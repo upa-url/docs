@@ -5,6 +5,12 @@ var namespaceupa =
     [ "url_error", "classupa_1_1url__error.html", "classupa_1_1url__error" ],
     [ "url_host", "classupa_1_1url__host.html", "classupa_1_1url__host" ],
     [ "url_search_params", "classupa_1_1url__search__params.html", "classupa_1_1url__search__params" ],
+    [ "file_path_format", "namespaceupa.html#a5806bc3a0d267938f093d8106d84360f", [
+      [ "detect", "namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa296ccece3e9d4949a538964510e58d21", null ],
+      [ "posix", "namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1", null ],
+      [ "windows", "namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42", null ],
+      [ "native", "namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796", null ]
+    ] ],
     [ "HostType", "namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecf", [
       [ "Empty", "namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecface2c8aed9c2fa0cfbed56cbda4d8bf07", null ],
       [ "Opaque", "namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecfafaa90538de35640e4b1e31ccf35b6eb5", null ],
@@ -58,7 +64,7 @@ var namespaceupa =
     [ "success", "namespaceupa.html#a05a9cf5ac0b5dafa3ed684f3a17f4710", null ],
     [ "swap", "namespaceupa.html#aa223cc0cd1376e828988ca9b8698cb85", null ],
     [ "swap", "namespaceupa.html#ae007affbf9849ca0957cbe75327ff805", null ],
-    [ "url_from_file_path", "namespaceupa.html#a76e1fbc3aadae956dce6d5e870aef833", null ],
+    [ "url_from_file_path", "namespaceupa.html#a63fd51a8ef1b8bd7b333ebbda4719bdf", null ],
     [ "component_no_encode_set", "namespaceupa.html#a6e5bb00a92770adfff5de74c38a3ed75", null ],
     [ "fragment_no_encode_set", "namespaceupa.html#ae51d15bf921a08293153d02721a40ed1", null ],
     [ "path_no_encode_set", "namespaceupa.html#adcbe17488f9677b76e85c3fb057a54f4", null ],
