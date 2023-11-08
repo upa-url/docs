@@ -126,7 +126,7 @@ Features and standard conformance</h1>
 </ol>
 <p>Upa URL contains features not specified in the standard:</p><ol type="1">
 <li>The <code><a class="el" href="classupa_1_1url.html" title="URL class.">upa::url</a></code> class has <code>path</code> getter (to get <code>pathname</code> concatenated with <code>search</code>)</li>
-<li>File system path converter to file URL: <code>url <a class="el" href="namespaceupa.html#a63fd51a8ef1b8bd7b333ebbda4719bdf" title="Make URL from OS file path.">upa::url_from_file_path</a>(StrT&amp;&amp; str)</code></li>
+<li>Function to convert file system path to file URL: <code><a class="el" href="namespaceupa.html#a63fd51a8ef1b8bd7b333ebbda4719bdf" title="Make URL from OS file path.">upa::url_from_file_path</a></code></li>
 <li>Experimental URLHost class (see proposal: <a href="https://github.com/whatwg/url/pull/288">https://github.com/whatwg/url/pull/288</a>): <code><a class="el" href="classupa_1_1url__host.html">upa::url_host</a></code></li>
 <li>The <code><a class="el" href="classupa_1_1url__search__params.html" title="URLSearchParams class.">upa::url_search_params</a></code> class has a few additional functions: <code>remove</code>, <code>remove_if</code></li>
 </ol>
@@ -234,7 +234,7 @@ Examples</h2>
 <div class="ttc" id="aclassupa_1_1url_html_a9cdc0acfb3ef19c236f39b7e1eb6f2f5"><div class="ttname"><a href="classupa_1_1url.html#a9cdc0acfb3ef19c236f39b7e1eb6f2f5">upa::url::search_params</a></div><div class="ttdeci">url_search_params &amp; search_params()</div><div class="ttdoc">The searchParams getter.</div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l01197">url.h:1197</a></div></div>
 </div><!-- fragment --><p>Convert filesystem path to file URL: </p><div class="fragment"><div class="line"><span class="keywordflow">try</span> {</div>
 <div class="line">    <span class="keyword">auto</span> url = <a class="code hl_function" href="namespaceupa.html#a63fd51a8ef1b8bd7b333ebbda4719bdf">upa::url_from_file_path</a>(<span class="stringliteral">&quot;/home/opa/file.txt&quot;</span>);</div>
-<div class="line">    std::cout &lt;&lt; url.<a class="code hl_function" href="classupa_1_1url.html#a37366859f7402a3773d68861a84ab3ee">href</a>() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line">    std::cout &lt;&lt; url.<a class="code hl_function" href="classupa_1_1url.html#a37366859f7402a3773d68861a84ab3ee">href</a>() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>; <span class="comment">// file:///home/opa/file.txt</span></div>
 <div class="line">}</div>
 <div class="line"><span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; ex) {</div>
 <div class="line">    std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; ex.what() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
