@@ -5,7 +5,7 @@ var searchData=
   ['scheme_5finvalid_5fcode_5fpoint_2',['scheme_invalid_code_point',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a30e81c06630d2584ce85f73fd2f7ec45',1,'upa']]],
   ['scheme_5fsep_3',['SCHEME_SEP',['../classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea261068ab425765b08169df83c7663732',1,'upa::url']]],
   ['search_4',['search',['../classupa_1_1url.html#a2d7a437fd9b379476d0d9397abfa637b',1,'upa::url::search(StrT &amp;&amp;str)'],['../classupa_1_1url.html#a337f5e263ebc4436e1b470fae5be8ed4',1,'upa::url::search() const']]],
-  ['search_5fparams_5',['search_params',['../classupa_1_1url.html#a9cdc0acfb3ef19c236f39b7e1eb6f2f5',1,'upa::url']]],
+  ['search_5fparams_5',['search_params',['../classupa_1_1url.html#a4fb9b3f5a6ff3d88c213326423c17147',1,'upa::url::search_params() &amp;'],['../classupa_1_1url.html#a03ce538b9b279e4ea5801364d28f41a1',1,'upa::url::search_params() &amp;&amp;']]],
   ['serialize_6',['serialize',['../classupa_1_1url.html#a26866381b104a1660712e06fd7089834',1,'upa::url::serialize()'],['../classupa_1_1url__search__params.html#adce84ed2f5c4cb4176e2c7e223936ffc',1,'upa::url_search_params::serialize(std::string &amp;query) const']]],
   ['set_7',['set',['../classupa_1_1url__search__params.html#a1b3e2d47f12a861970d16260a7955e66',1,'upa::url_search_params']]],
   ['set_5fhash_8',['set_hash',['../classupa_1_1url.html#abbf8c386f2003e012c676858ad967fa5',1,'upa::url']]],
