@@ -710,7 +710,7 @@ $(document).ready(function(){initNavTree('url_8h_source.html',''); initResizable
 <div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span><span class="comment">// part start</span></div>
 <div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span><span class="keyword">extern</span> <span class="keyword">const</span> uint8_t kPartStart[<a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4eaacb5f597484032fbcec68a209e604a9c">url::PART_COUNT</a>];</div>
 <div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span> </div>
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span><span class="keyword">inline</span> <span class="keywordtype">int</span> port_from_str(<span class="keyword">const</span> <span class="keywordtype">char</span>* first, <span class="keyword">const</span> <span class="keywordtype">char</span>* last) {</div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span><span class="keyword">inline</span> <span class="keywordtype">int</span> port_from_str(<span class="keyword">const</span> <span class="keywordtype">char</span>* first, <span class="keyword">const</span> <span class="keywordtype">char</span>* last) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>    <span class="keywordtype">int</span> port = 0;</div>
 <div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = first; it != last; ++it) {</div>
 <div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>        port = port * 10 + (*it - <span class="charliteral">&#39;0&#39;</span>);</div>
@@ -722,18 +722,18 @@ $(document).ready(function(){initNavTree('url_8h_source.html',''); initResizable
 <div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span> </div>
 <div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span><span class="comment">// chars to trim (C0 control or space: U+0000 to U+001F or U+0020)</span></div>
 <div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_trim_char(CharT ch) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_trim_char(CharT ch) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>    <span class="keywordflow">return</span> util::to_unsigned(ch) &lt;= <span class="charliteral">&#39; &#39;</span>;</div>
 <div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>}</div>
 <div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span> </div>
 <div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span><span class="comment">// chars what should be removed from the URL (ASCII tab or newline: U+0009, U+000A, U+000D)</span></div>
 <div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_removable_char(CharT ch) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_removable_char(CharT ch) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>    <span class="keywordflow">return</span> ch == <span class="charliteral">&#39;\r&#39;</span> || ch == <span class="charliteral">&#39;\n&#39;</span> || ch == <span class="charliteral">&#39;\t&#39;</span>;</div>
 <div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>}</div>
 <div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span> </div>
 <div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span><span class="keyword">inline</span> <span class="keywordtype">void</span> do_trim(<span class="keyword">const</span> CharT*&amp; first, <span class="keyword">const</span> CharT*&amp; last) {</div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span><span class="keyword">inline</span> <span class="keywordtype">void</span> do_trim(<span class="keyword">const</span> CharT*&amp; first, <span class="keyword">const</span> CharT*&amp; last) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>    <span class="comment">// remove leading C0 controls and space</span></div>
 <div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>    <span class="keywordflow">while</span> (first &lt; last &amp;&amp; is_trim_char(*first))</div>
 <div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>        ++first;</div>
@@ -779,29 +779,29 @@ $(document).ready(function(){initNavTree('url_8h_source.html',''); initResizable
 <div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span><span class="comment">// special chars</span></div>
 <div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span> </div>
 <div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_slash(CharT ch) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_slash(CharT ch) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>    <span class="keywordflow">return</span> ch == <span class="charliteral">&#39;/&#39;</span> || ch == <span class="charliteral">&#39;\\&#39;</span>;</div>
 <div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>}</div>
 <div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span> </div>
 <div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_windows_slash(CharT ch) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_windows_slash(CharT ch) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>    <span class="keywordflow">return</span> ch == <span class="charliteral">&#39;\\&#39;</span> || ch == <span class="charliteral">&#39;/&#39;</span>;</div>
 <div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>}</div>
 <div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span> </div>
 <div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span><span class="comment">// Scheme chars</span></div>
 <div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span> </div>
 <div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_first_scheme_char(CharT ch) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_first_scheme_char(CharT ch) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>    <span class="keywordflow">return</span> is_ascii_alpha(ch);</div>
 <div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>}</div>
 <div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span> </div>
 <div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_authority_end_char(CharT c) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_authority_end_char(CharT c) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>    <span class="keywordflow">return</span> c == <span class="charliteral">&#39;/&#39;</span> || c == <span class="charliteral">&#39;?&#39;</span> || c == <span class="charliteral">&#39;#&#39;</span>;</div>
 <div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>}</div>
 <div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span> </div>
 <div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_special_authority_end_char(CharT c) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_special_authority_end_char(CharT c) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>    <span class="keywordflow">return</span> c == <span class="charliteral">&#39;/&#39;</span> || c == <span class="charliteral">&#39;?&#39;</span> || c == <span class="charliteral">&#39;#&#39;</span> || c == <span class="charliteral">&#39;\\&#39;</span>;</div>
 <div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>}</div>
 <div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span> </div>
@@ -810,12 +810,12 @@ $(document).ready(function(){initNavTree('url_8h_source.html',''); initResizable
 <div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span><span class="comment">// https://url.spec.whatwg.org/#windows-drive-letter</span></div>
 <div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span> </div>
 <div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_windows_drive(CharT c1, CharT c2) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_windows_drive(CharT c1, CharT c2) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>    <span class="keywordflow">return</span> is_ascii_alpha(c1) &amp;&amp; (c2 == <span class="charliteral">&#39;:&#39;</span> || c2 == <span class="charliteral">&#39;|&#39;</span>);</div>
 <div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>}</div>
 <div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span> </div>
 <div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_normalized_windows_drive(CharT c1, CharT c2) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_normalized_windows_drive(CharT c1, CharT c2) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>    <span class="keywordflow">return</span> is_ascii_alpha(c1) &amp;&amp; c2 == <span class="charliteral">&#39;:&#39;</span>;</div>
 <div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>}</div>
 <div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span> </div>
@@ -835,9 +835,9 @@ $(document).ready(function(){initNavTree('url_8h_source.html',''); initResizable
 <div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>}</div>
 <div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span> </div>
-<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span><span class="comment">// check string starts with absolute Windows drive path (for example: &quot;C:\\path&quot; or &quot;C:/path&quot;)</span></div>
+<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span><span class="comment">// Check string is absolute Windows drive path (for example: &quot;C:\\path&quot; or &quot;C:/path&quot;)</span></div>
 <div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> starts_with_windows_drive_absolute_path(<span class="keyword">const</span> CharT* pointer, <span class="keyword">const</span> CharT* last) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_windows_drive_absolute_path(<span class="keyword">const</span> CharT* pointer, <span class="keyword">const</span> CharT* last) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>    <span class="keywordflow">return</span></div>
 <div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>        last - pointer &gt; 2 &amp;&amp;</div>
 <div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>        detail::is_windows_drive(pointer[0], pointer[1]) &amp;&amp;</div>
@@ -2958,7 +2958,7 @@ $(document).ready(function(){initNavTree('url_8h_source.html',''); initResizable
 <div class="line"><a id="l03070" name="l03070"></a><span class="lineno"> 3070</span>        }</div>
 <div class="line"><a id="l03071" name="l03071"></a><span class="lineno"> 3071</span>        <span class="keywordflow">if</span> (is_unc</div>
 <div class="line"><a id="l03072" name="l03072"></a><span class="lineno"> 3072</span>            ? detail::is_unc_path(pointer, last)</div>
-<div class="line"><a id="l03073" name="l03073"></a><span class="lineno"> 3073</span>            : detail::starts_with_windows_drive_absolute_path(pointer, last)) {</div>
+<div class="line"><a id="l03073" name="l03073"></a><span class="lineno"> 3073</span>            : detail::is_windows_drive_absolute_path(pointer, last)) {</div>
 <div class="line"><a id="l03074" name="l03074"></a><span class="lineno"> 3074</span>            no_encode_set = &amp;<a class="code hl_variable" href="namespaceupa.html#ad3b4914de9b2713e81e465043bf1ec3e">raw_path_no_encode_set</a>;</div>
 <div class="line"><a id="l03075" name="l03075"></a><span class="lineno"> 3075</span>            <span class="keywordflow">if</span> (!is_unc) str_url.push_back(<span class="charliteral">&#39;/&#39;</span>); <span class="comment">// start path</span></div>
 <div class="line"><a id="l03076" name="l03076"></a><span class="lineno"> 3076</span>        } <span class="keywordflow">else</span> {</div>

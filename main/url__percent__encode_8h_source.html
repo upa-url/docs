@@ -485,12 +485,12 @@ $(document).ready(function(){initNavTree('url__percent__encode_8h_source.html','
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span><span class="comment">// Char classification</span></div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_ascii_digit(CharT ch) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_ascii_digit(CharT ch) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    <span class="keywordflow">return</span> ch &lt;= <span class="charliteral">&#39;9&#39;</span> &amp;&amp; ch &gt;= <span class="charliteral">&#39;0&#39;</span>;</div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>}</div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_ascii_alpha(CharT ch) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_ascii_alpha(CharT ch) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    <span class="keywordflow">return</span> (ch &gt;= <span class="charliteral">&#39;a&#39;</span> &amp;&amp; ch &lt;= <span class="charliteral">&#39;z&#39;</span>) || (ch &gt;= <span class="charliteral">&#39;A&#39;</span> &amp;&amp; ch &lt;= <span class="charliteral">&#39;Z&#39;</span>);</div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>}</div>
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span> </div>
@@ -575,7 +575,7 @@ $(document).ready(function(){initNavTree('url__percent__encode_8h_source.html','
 <div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span><span class="comment">// sequences in input with Unicode replacement characters (U+FFFD) if present.</span></div>
 <div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span> </div>
 <div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span><span class="keywordtype">void</span> append_utf8_percent_encoded(<span class="keyword">const</span> CharT* first, <span class="keyword">const</span> CharT* last, <span class="keyword">const</span> code_point_set&amp; cpset, std::string&amp; output) {</div>
+<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span><span class="keyword">inline</span> <span class="keywordtype">void</span> append_utf8_percent_encoded(<span class="keyword">const</span> CharT* first, <span class="keyword">const</span> CharT* last, <span class="keyword">const</span> code_point_set&amp; cpset, std::string&amp; output) {</div>
 <div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span>    <span class="keyword">using </span>UCharT = <span class="keyword">typename</span> std::make_unsigned&lt;CharT&gt;::type;</div>
 <div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span> </div>
 <div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = first; it &lt; last; ) {</div>
