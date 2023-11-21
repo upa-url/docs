@@ -54,11 +54,16 @@ var namespaceupa =
       [ "overflow", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a0bd9f6dd716003f3818d15d2e211ee73", null ],
       [ "invalid_base", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a0674127785b0d71200ae2cabd791db90", null ],
       [ "file_empty_path", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7add1b18bee25a37b9de731f67e11402c5", null ],
-      [ "file_unsupported_path", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7abece6466dc75c416e679c74f16bc0f2f", null ]
+      [ "file_unsupported_path", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7abece6466dc75c416e679c74f16bc0f2f", null ],
+      [ "not_file_url", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a6c48249324054e027b248b12b6c3b12e", null ],
+      [ "file_url_host_unsupported", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7ae6810d2d7075ca1780fbd95c70e62287", null ],
+      [ "file_url_invalid_unc", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a9c66d8c63d3ec33c819301db9d488474", null ],
+      [ "file_url_not_windows_path", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a2ca12369d95b6ae5b0f74b951da7eceb", null ]
     ] ],
     [ "encode_url_component", "namespaceupa.html#a38eb088c23f4c98acc10afa8710af657", null ],
     [ "equals", "namespaceupa.html#a704170fa90d71a1899e48494fb85cd70", null ],
     [ "operator==", "namespaceupa.html#ac257334aeb888092d81a7573fa6a3c69", null ],
+    [ "path_from_file_url", "namespaceupa.html#a01668f1801e81e167aa890118e7d456b", null ],
     [ "percent_decode", "namespaceupa.html#a45d0ddd991776b127ca780991a4aeded", null ],
     [ "percent_encode", "namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d", null ],
     [ "success", "namespaceupa.html#a05a9cf5ac0b5dafa3ed684f3a17f4710", null ],

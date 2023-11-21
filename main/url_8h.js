@@ -10,6 +10,7 @@ var url_8h =
     ] ],
     [ "equals", "url_8h.html#a704170fa90d71a1899e48494fb85cd70", null ],
     [ "operator==", "url_8h.html#ac257334aeb888092d81a7573fa6a3c69", null ],
+    [ "path_from_file_url", "url_8h.html#a01668f1801e81e167aa890118e7d456b", null ],
     [ "swap", "url_8h.html#aa223cc0cd1376e828988ca9b8698cb85", null ],
     [ "url_from_file_path", "url_8h.html#a63fd51a8ef1b8bd7b333ebbda4719bdf", null ]
 ];

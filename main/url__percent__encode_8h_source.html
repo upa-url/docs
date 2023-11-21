@@ -597,78 +597,83 @@ $(document).ready(function(){initNavTree('url__percent__encode_8h_source.html','
 <div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>    }</div>
 <div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>}</div>
 <div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span> </div>
-<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span> </div>
-<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>} <span class="comment">// namespace detail</span></div>
-<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span> </div>
-<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span> </div>
-<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StrT, enable_if_str_arg_t&lt;StrT&gt; = 0&gt;</div>
-<div class="foldopen" id="foldopen00508" data-start="{" data-end="}">
-<div class="line"><a id="l00508" name="l00508"></a><span class="lineno"><a class="line" href="namespaceupa.html#a45d0ddd991776b127ca780991a4aeded">  508</a></span><span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceupa.html#a45d0ddd991776b127ca780991a4aeded">percent_decode</a>(StrT&amp;&amp; str) {</div>
-<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>    <span class="keyword">const</span> <span class="keyword">auto</span> inp = make_str_arg(std::forward&lt;StrT&gt;(str));</div>
-<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* first = inp.begin();</div>
-<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* last = inp.end();</div>
-<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span> </div>
-<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>    std::string out;</div>
-<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = first; it != last;) {</div>
-<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>        <span class="keyword">const</span> <span class="keyword">auto</span> uch = util::to_unsigned(*it); ++it;</div>
-<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>        <span class="keywordflow">if</span> (uch &lt; 0x80) {</div>
-<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>            <span class="keywordflow">if</span> (uch != <span class="charliteral">&#39;%&#39;</span>) {</div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>                out.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(uch));</div>
-<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>            }</div>
-<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>            <span class="comment">// uch == &#39;%&#39;</span></div>
-<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> uc8; <span class="comment">// NOLINT(cppcoreguidelines-init-variables)</span></div>
-<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>            <span class="keywordflow">if</span> (detail::decode_hex_to_byte(it, last, uc8)) {</div>
-<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>                <span class="keywordflow">if</span> (uc8 &lt; 0x80) {</div>
-<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>                    out.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(uc8));</div>
-<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>                }</div>
-<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>                <span class="comment">// percent encoded utf-8 sequence</span></div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>                std::string buff_utf8;</div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>                buff_utf8.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(uc8));</div>
-<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>                <span class="keywordflow">while</span> (it != last &amp;&amp; *it == <span class="charliteral">&#39;%&#39;</span>) {</div>
-<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>                    ++it; <span class="comment">// skip &#39;%&#39;</span></div>
-<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>                    <span class="keywordflow">if</span> (!detail::decode_hex_to_byte(it, last, uc8))</div>
-<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>                        uc8 = <span class="charliteral">&#39;%&#39;</span>;</div>
-<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>                    buff_utf8.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(uc8));</div>
-<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>                }</div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>                url_utf::check_fix_utf8(buff_utf8);</div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>                out += buff_utf8;</div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>            }</div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>            <span class="comment">// detected invalid percent encoding</span></div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>            out.push_back(<span class="charliteral">&#39;%&#39;</span>);</div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>        } <span class="keywordflow">else</span> { <span class="comment">// uch &gt;= 0x80</span></div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>            --it;</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>            url_utf::read_char_append_utf8(it, last, out);</div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>        }</div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>    }</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>    <span class="keywordflow">return</span> out;</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>}</div>
+<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StrT, enable_if_str_arg_t&lt;StrT&gt; = 0&gt;</div>
+<div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span><span class="keyword">inline</span> <span class="keywordtype">void</span> append_percent_decoded(StrT&amp;&amp; str, std::string&amp; output) {</div>
+<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>    <span class="keyword">const</span> <span class="keyword">auto</span> inp = make_str_arg(std::forward&lt;StrT&gt;(str));</div>
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* first = inp.begin();</div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* last = inp.end();</div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span> </div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = first; it != last;) {</div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>        <span class="keyword">const</span> <span class="keyword">auto</span> uch = util::to_unsigned(*it); ++it;</div>
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>        <span class="keywordflow">if</span> (uch &lt; 0x80) {</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>            <span class="keywordflow">if</span> (uch != <span class="charliteral">&#39;%&#39;</span>) {</div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>                output.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(uch));</div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>            }</div>
+<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>            <span class="comment">// uch == &#39;%&#39;</span></div>
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> uc8; <span class="comment">// NOLINT(cppcoreguidelines-init-variables)</span></div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>            <span class="keywordflow">if</span> (decode_hex_to_byte(it, last, uc8)) {</div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>                <span class="keywordflow">if</span> (uc8 &lt; 0x80) {</div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>                    output.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(uc8));</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>                }</div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>                <span class="comment">// percent encoded utf-8 sequence</span></div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>                std::string buff_utf8;</div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>                buff_utf8.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(uc8));</div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>                <span class="keywordflow">while</span> (it != last &amp;&amp; *it == <span class="charliteral">&#39;%&#39;</span>) {</div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>                    ++it; <span class="comment">// skip &#39;%&#39;</span></div>
+<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>                    <span class="keywordflow">if</span> (!decode_hex_to_byte(it, last, uc8))</div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>                        uc8 = <span class="charliteral">&#39;%&#39;</span>;</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>                    buff_utf8.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(uc8));</div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>                }</div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>                url_utf::check_fix_utf8(buff_utf8);</div>
+<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>                output += buff_utf8;</div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>            }</div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>            <span class="comment">// detected invalid percent encoding</span></div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>            output.push_back(<span class="charliteral">&#39;%&#39;</span>);</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>        } <span class="keywordflow">else</span> { <span class="comment">// uch &gt;= 0x80</span></div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>            --it;</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>            url_utf::read_char_append_utf8(it, last, output);</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>        }</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>    }</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>}</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span> </div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span> </div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>} <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span> </div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span> </div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StrT, enable_if_str_arg_t&lt;StrT&gt; = 0&gt;</div>
+<div class="foldopen" id="foldopen00559" data-start="{" data-end="}">
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno"><a class="line" href="namespaceupa.html#a45d0ddd991776b127ca780991a4aeded">  559</a></span><span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceupa.html#a45d0ddd991776b127ca780991a4aeded">percent_decode</a>(StrT&amp;&amp; str) {</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>    std::string out;</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    detail::append_percent_decoded(std::forward&lt;StrT&gt;(str), out);</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>    <span class="keywordflow">return</span> out;</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>}</div>
 </div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span> </div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StrT, enable_if_str_arg_t&lt;StrT&gt; = 0&gt;</div>
-<div class="foldopen" id="foldopen00563" data-start="{" data-end="}">
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno"><a class="line" href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d">  563</a></span><span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d">percent_encode</a>(StrT&amp;&amp; str, <span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1code__point__set.html">code_point_set</a>&amp; no_encode_set) {</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>    <span class="keyword">const</span> <span class="keyword">auto</span> inp = make_str_arg(std::forward&lt;StrT&gt;(str));</div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span> </div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>    std::string out;</div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>    detail::append_utf8_percent_encoded(inp.begin(), inp.end(), no_encode_set, out);</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>    <span class="keywordflow">return</span> out;</div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>}</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span> </div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StrT, enable_if_str_arg_t&lt;StrT&gt; = 0&gt;</div>
+<div class="foldopen" id="foldopen00577" data-start="{" data-end="}">
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno"><a class="line" href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d">  577</a></span><span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d">percent_encode</a>(StrT&amp;&amp; str, <span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1code__point__set.html">code_point_set</a>&amp; no_encode_set) {</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>    <span class="keyword">const</span> <span class="keyword">auto</span> inp = make_str_arg(std::forward&lt;StrT&gt;(str));</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span> </div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>    std::string out;</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>    detail::append_utf8_percent_encoded(inp.begin(), inp.end(), no_encode_set, out);</div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>    <span class="keywordflow">return</span> out;</div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>}</div>
 </div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span> </div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StrT, enable_if_str_arg_t&lt;StrT&gt; = 0&gt;</div>
-<div class="foldopen" id="foldopen00582" data-start="{" data-end="}">
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno"><a class="line" href="namespaceupa.html#a38eb088c23f4c98acc10afa8710af657">  582</a></span><span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceupa.html#a38eb088c23f4c98acc10afa8710af657">encode_url_component</a>(StrT&amp;&amp; str) {</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d">percent_encode</a>(std::forward&lt;StrT&gt;(str), <a class="code hl_variable" href="namespaceupa.html#a6e5bb00a92770adfff5de74c38a3ed75">component_no_encode_set</a>);</div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>}</div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span> </div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StrT, enable_if_str_arg_t&lt;StrT&gt; = 0&gt;</div>
+<div class="foldopen" id="foldopen00596" data-start="{" data-end="}">
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno"><a class="line" href="namespaceupa.html#a38eb088c23f4c98acc10afa8710af657">  596</a></span><span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceupa.html#a38eb088c23f4c98acc10afa8710af657">encode_url_component</a>(StrT&amp;&amp; str) {</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d">percent_encode</a>(std::forward&lt;StrT&gt;(str), <a class="code hl_variable" href="namespaceupa.html#a6e5bb00a92770adfff5de74c38a3ed75">component_no_encode_set</a>);</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>}</div>
 </div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span> </div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span> </div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>} <span class="comment">// namespace upa</span></div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span> </div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span><span class="preprocessor">#endif </span><span class="comment">// UPA_URL_PERCENT_ENCODE_H</span></div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span> </div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span> </div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>} <span class="comment">// namespace upa</span></div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span> </div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span><span class="preprocessor">#endif </span><span class="comment">// UPA_URL_PERCENT_ENCODE_H</span></div>
 <div class="ttc" id="aclassupa_1_1code__point__set_html"><div class="ttname"><a href="classupa_1_1code__point__set.html">upa::code_point_set</a></div><div class="ttdoc">Represents code point set.</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00030">url_percent_encode.h:30</a></div></div>
 <div class="ttc" id="aclassupa_1_1code__point__set_html_a18cad4b027451cda764a208e33d2a31a"><div class="ttname"><a href="classupa_1_1code__point__set.html#a18cad4b027451cda764a208e33d2a31a">upa::code_point_set::operator[]</a></div><div class="ttdeci">UPA_CONSTEXPR_17 bool operator[](CharT c) const</div><div class="ttdoc">test code point set contains code point c</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00087">url_percent_encode.h:87</a></div></div>
 <div class="ttc" id="aclassupa_1_1code__point__set_html_a253fd73fe3717f65c463a74d496a54b1"><div class="ttname"><a href="classupa_1_1code__point__set.html#a253fd73fe3717f65c463a74d496a54b1">upa::code_point_set::arr_size</a></div><div class="ttdeci">static constexpr std::size_t arr_size() noexcept</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00094">url_percent_encode.h:94</a></div></div>
@@ -680,11 +685,11 @@ $(document).ready(function(){initNavTree('url__percent__encode_8h_source.html','
 <div class="ttc" id="aclassupa_1_1code__point__set_html_aa43896f30ac32a5a07999ae904ca76da"><div class="ttname"><a href="classupa_1_1code__point__set.html#aa43896f30ac32a5a07999ae904ca76da">upa::code_point_set::include</a></div><div class="ttdeci">constexpr void include(uint8_t from, uint8_t to)</div><div class="ttdoc">include range of code points to set</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00078">url_percent_encode.h:78</a></div></div>
 <div class="ttc" id="aclassupa_1_1code__point__set_html_ab215a3a1946498c60a3285108d7b1b8a"><div class="ttname"><a href="classupa_1_1code__point__set.html#ab215a3a1946498c60a3285108d7b1b8a">upa::code_point_set::arr_val</a></div><div class="ttdeci">constexpr uint8_t arr_val(std::size_t i) const</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00095">url_percent_encode.h:95</a></div></div>
 <div class="ttc" id="aclassupa_1_1code__point__set_html_ad095cacb04385be3e73f5e539e3f5716"><div class="ttname"><a href="classupa_1_1code__point__set.html#ad095cacb04385be3e73f5e539e3f5716">upa::code_point_set::copy</a></div><div class="ttdeci">constexpr void copy(const code_point_set &amp;other)</div><div class="ttdoc">copy code points from other set</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00045">url_percent_encode.h:45</a></div></div>
-<div class="ttc" id="anamespaceupa_html"><div class="ttname"><a href="namespaceupa.html">upa</a></div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l00040">url.h:40</a></div></div>
+<div class="ttc" id="anamespaceupa_html"><div class="ttname"><a href="namespaceupa.html">upa</a></div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l00041">url.h:41</a></div></div>
 <div class="ttc" id="anamespaceupa_html_a239f3e463dcefe348b75bbfb5246dc0d"><div class="ttname"><a href="namespaceupa.html#a239f3e463dcefe348b75bbfb5246dc0d">upa::query_no_encode_set</a></div><div class="ttdeci">constexpr code_point_set query_no_encode_set</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00137">url_percent_encode.h:137</a></div></div>
-<div class="ttc" id="anamespaceupa_html_a38eb088c23f4c98acc10afa8710af657"><div class="ttname"><a href="namespaceupa.html#a38eb088c23f4c98acc10afa8710af657">upa::encode_url_component</a></div><div class="ttdeci">std::string encode_url_component(StrT &amp;&amp;str)</div><div class="ttdoc">UTF-8 percent encode input string using component percent encode set.</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00582">url_percent_encode.h:582</a></div></div>
-<div class="ttc" id="anamespaceupa_html_a45d0ddd991776b127ca780991a4aeded"><div class="ttname"><a href="namespaceupa.html#a45d0ddd991776b127ca780991a4aeded">upa::percent_decode</a></div><div class="ttdeci">std::string percent_decode(StrT &amp;&amp;str)</div><div class="ttdoc">Percent decode input string.</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00508">url_percent_encode.h:508</a></div></div>
-<div class="ttc" id="anamespaceupa_html_a63edd0c260b666d7b332b212c1f5a73d"><div class="ttname"><a href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d">upa::percent_encode</a></div><div class="ttdeci">std::string percent_encode(StrT &amp;&amp;str, const code_point_set &amp;no_encode_set)</div><div class="ttdoc">UTF-8 percent encode input string using specified percent encode set.</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00563">url_percent_encode.h:563</a></div></div>
+<div class="ttc" id="anamespaceupa_html_a38eb088c23f4c98acc10afa8710af657"><div class="ttname"><a href="namespaceupa.html#a38eb088c23f4c98acc10afa8710af657">upa::encode_url_component</a></div><div class="ttdeci">std::string encode_url_component(StrT &amp;&amp;str)</div><div class="ttdoc">UTF-8 percent encode input string using component percent encode set.</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00596">url_percent_encode.h:596</a></div></div>
+<div class="ttc" id="anamespaceupa_html_a45d0ddd991776b127ca780991a4aeded"><div class="ttname"><a href="namespaceupa.html#a45d0ddd991776b127ca780991a4aeded">upa::percent_decode</a></div><div class="ttdeci">std::string percent_decode(StrT &amp;&amp;str)</div><div class="ttdoc">Percent decode input string.</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00559">url_percent_encode.h:559</a></div></div>
+<div class="ttc" id="anamespaceupa_html_a63edd0c260b666d7b332b212c1f5a73d"><div class="ttname"><a href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d">upa::percent_encode</a></div><div class="ttdeci">std::string percent_encode(StrT &amp;&amp;str, const code_point_set &amp;no_encode_set)</div><div class="ttdoc">UTF-8 percent encode input string using specified percent encode set.</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00577">url_percent_encode.h:577</a></div></div>
 <div class="ttc" id="anamespaceupa_html_a6e5bb00a92770adfff5de74c38a3ed75"><div class="ttname"><a href="namespaceupa.html#a6e5bb00a92770adfff5de74c38a3ed75">upa::component_no_encode_set</a></div><div class="ttdeci">constexpr code_point_set component_no_encode_set</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00179">url_percent_encode.h:179</a></div></div>
 <div class="ttc" id="anamespaceupa_html_aa7a053da969c180eb1d23e08317a0cf2"><div class="ttname"><a href="namespaceupa.html#aa7a053da969c180eb1d23e08317a0cf2">upa::special_query_no_encode_set</a></div><div class="ttdeci">constexpr code_point_set special_query_no_encode_set</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00144">url_percent_encode.h:144</a></div></div>
 <div class="ttc" id="anamespaceupa_html_ad3b4914de9b2713e81e465043bf1ec3e"><div class="ttname"><a href="namespaceupa.html#ad3b4914de9b2713e81e465043bf1ec3e">upa::raw_path_no_encode_set</a></div><div class="ttdeci">constexpr code_point_set raw_path_no_encode_set</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00157">url_percent_encode.h:157</a></div></div>
