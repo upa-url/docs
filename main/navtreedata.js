@@ -58,7 +58,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classupa_1_1url__search__params.html#a2a75512e9b629fc75315de06d7500a89",
-"url__search__params_8h_source.html"
+"url__search__params_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -203,8 +203,10 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a6c48249324054e027b248b12b6c3b12e">not_file_url</a>
 , <a class="el" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a638170c41e2e2dc7f761187af119d301">file_url_cannot_have_host</a>
+, <a class="el" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a91095cdc57bcc791b5f5aa636aff5c82">file_url_unsupported_host</a>
 , <a class="el" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a9c66d8c63d3ec33c819301db9d488474">file_url_invalid_unc</a>
-, <a class="el" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a2ca12369d95b6ae5b0f74b951da7eceb">file_url_not_windows_path</a>
+, <br />
+&#160;&#160;<a class="el" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a2ca12369d95b6ae5b0f74b951da7eceb">file_url_not_windows_path</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a80c9675b4477dda8ff779545c1ad75f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">URL validation and other error codes.  <a href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7">More...</a><br /></td></tr>
@@ -444,6 +446,8 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a80c9675b4477dda8ff779545c1ad75f7a6c48249324054e027b248b12b6c3b12e" name="a80c9675b4477dda8ff779545c1ad75f7a6c48249324054e027b248b12b6c3b12e"></a>not_file_url&#160;</td><td class="fielddoc"><p>Not a file URL. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a80c9675b4477dda8ff779545c1ad75f7a638170c41e2e2dc7f761187af119d301" name="a80c9675b4477dda8ff779545c1ad75f7a638170c41e2e2dc7f761187af119d301"></a>file_url_cannot_have_host&#160;</td><td class="fielddoc"><p>POSIX path cannot have host. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a80c9675b4477dda8ff779545c1ad75f7a91095cdc57bcc791b5f5aa636aff5c82" name="a80c9675b4477dda8ff779545c1ad75f7a91095cdc57bcc791b5f5aa636aff5c82"></a>file_url_unsupported_host&#160;</td><td class="fielddoc"><p>UNC path cannot have "." hostname. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a80c9675b4477dda8ff779545c1ad75f7a9c66d8c63d3ec33c819301db9d488474" name="a80c9675b4477dda8ff779545c1ad75f7a9c66d8c63d3ec33c819301db9d488474"></a>file_url_invalid_unc&#160;</td><td class="fielddoc"><p>Invalid UNC path in file URL. </p>
 </td></tr>
@@ -763,7 +767,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </div>
 <p>Check validation error code indicates success. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if validation error code is <a class="el" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a444bcb3a3fcf8389296c49467f27e1d6" title="success">validation_errc::ok</a>, <code>false</code> otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url__result_8h_source.html#l00090">90</a> of file <a class="el" href="url__result_8h_source.html">url_result.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url__result_8h_source.html#l00091">91</a> of file <a class="el" href="url__result_8h_source.html">url_result.h</a>.</p>
 
 </div>
 </div>
