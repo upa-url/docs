@@ -59,7 +59,8 @@ var namespaceupa =
       [ "file_url_cannot_have_host", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a638170c41e2e2dc7f761187af119d301", null ],
       [ "file_url_unsupported_host", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a91095cdc57bcc791b5f5aa636aff5c82", null ],
       [ "file_url_invalid_unc", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a9c66d8c63d3ec33c819301db9d488474", null ],
-      [ "file_url_not_windows_path", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a2ca12369d95b6ae5b0f74b951da7eceb", null ]
+      [ "file_url_not_windows_path", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a2ca12369d95b6ae5b0f74b951da7eceb", null ],
+      [ "null_character", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a787ebdd276396b0923e51eda2e86140c", null ]
     ] ],
     [ "encode_url_component", "namespaceupa.html#a38eb088c23f4c98acc10afa8710af657", null ],
     [ "equals", "namespaceupa.html#a704170fa90d71a1899e48494fb85cd70", null ],

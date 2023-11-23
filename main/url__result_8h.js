@@ -42,7 +42,8 @@ var url__result_8h =
       [ "file_url_cannot_have_host", "url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7a638170c41e2e2dc7f761187af119d301", null ],
       [ "file_url_unsupported_host", "url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7a91095cdc57bcc791b5f5aa636aff5c82", null ],
       [ "file_url_invalid_unc", "url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7a9c66d8c63d3ec33c819301db9d488474", null ],
-      [ "file_url_not_windows_path", "url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7a2ca12369d95b6ae5b0f74b951da7eceb", null ]
+      [ "file_url_not_windows_path", "url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7a2ca12369d95b6ae5b0f74b951da7eceb", null ],
+      [ "null_character", "url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7a787ebdd276396b0923e51eda2e86140c", null ]
     ] ],
     [ "success", "url__result_8h.html#a05a9cf5ac0b5dafa3ed684f3a17f4710", null ]
 ];
