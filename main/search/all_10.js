@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['safe_5fassign_0',['safe_assign',['../classupa_1_1url__search__params.html#a3ecfa68c792af1d3749e2ee87e66ae20',1,'upa::url_search_params::safe_assign()'],['../classupa_1_1url.html#acb85c0973a6dd1e86af1cbf424c0eed4',1,'upa::url::safe_assign(url &amp;&amp;other)']]],
+  ['safe_5fassign_0',['safe_assign',['../classupa_1_1url.html#acb85c0973a6dd1e86af1cbf424c0eed4',1,'upa::url::safe_assign()'],['../classupa_1_1url__search__params.html#a3ecfa68c792af1d3749e2ee87e66ae20',1,'upa::url_search_params::safe_assign()']]],
   ['scheme_1',['SCHEME',['../classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea5bf865dd085ed76bbc49ff208d04262c',1,'upa::url']]],
   ['scheme_5finvalid_5fcode_5fpoint_2',['scheme_invalid_code_point',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a30e81c06630d2584ce85f73fd2f7ec45',1,'upa']]],
   ['scheme_5fsep_3',['SCHEME_SEP',['../classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea261068ab425765b08169df83c7663732',1,'upa::url']]],
