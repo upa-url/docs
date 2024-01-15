@@ -138,8 +138,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a5806bc3a0d267938f093d8106d84360f" id="r_a5806bc3a0d267938f093d8106d84360f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5806bc3a0d267938f093d8106d84360f">file_path_format</a> { <a class="el" href="#a5806bc3a0d267938f093d8106d84360fa296ccece3e9d4949a538964510e58d21">detect</a>
-, <a class="el" href="#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1">posix</a>
+<tr class="memitem:a5806bc3a0d267938f093d8106d84360f" id="r_a5806bc3a0d267938f093d8106d84360f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5806bc3a0d267938f093d8106d84360f">file_path_format</a> { <a class="el" href="#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1">posix</a> = 1
 , <a class="el" href="#a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42">windows</a>
 , <a class="el" href="#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">native</a> = posix
  }</td></tr>
@@ -225,10 +224,10 @@ Functions</h2></td></tr>
 <tr class="memitem:aa223cc0cd1376e828988ca9b8698cb85" id="r_aa223cc0cd1376e828988ca9b8698cb85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa223cc0cd1376e828988ca9b8698cb85">swap</a> (<a class="el" href="classupa_1_1url.html">url</a> &amp;lhs, <a class="el" href="classupa_1_1url.html">url</a> &amp;rhs) UPA_NOEXCEPT_17</td></tr>
 <tr class="memdesc:aa223cc0cd1376e828988ca9b8698cb85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the contents of two URLs.  <br /></td></tr>
 <tr class="separator:aa223cc0cd1376e828988ca9b8698cb85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63fd51a8ef1b8bd7b333ebbda4719bdf" id="r_a63fd51a8ef1b8bd7b333ebbda4719bdf"><td class="memTemplParams" colspan="2">template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </td></tr>
-<tr class="memitem:a63fd51a8ef1b8bd7b333ebbda4719bdf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classupa_1_1url.html">url</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a63fd51a8ef1b8bd7b333ebbda4719bdf">url_from_file_path</a> (StrT &amp;&amp;str, <a class="el" href="#a5806bc3a0d267938f093d8106d84360f">file_path_format</a> format=<a class="el" href="#a5806bc3a0d267938f093d8106d84360fa296ccece3e9d4949a538964510e58d21">file_path_format::detect</a>)</td></tr>
-<tr class="memdesc:a63fd51a8ef1b8bd7b333ebbda4719bdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make URL from OS file path.  <br /></td></tr>
-<tr class="separator:a63fd51a8ef1b8bd7b333ebbda4719bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbb039c01de48ad13cb733c8c32c588f" id="r_adbb039c01de48ad13cb733c8c32c588f"><td class="memTemplParams" colspan="2">template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:adbb039c01de48ad13cb733c8c32c588f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classupa_1_1url.html">url</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adbb039c01de48ad13cb733c8c32c588f">url_from_file_path</a> (StrT &amp;&amp;str, <a class="el" href="#a5806bc3a0d267938f093d8106d84360f">file_path_format</a> format=<a class="el" href="#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">file_path_format::native</a>)</td></tr>
+<tr class="memdesc:adbb039c01de48ad13cb733c8c32c588f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make URL from OS file path.  <br /></td></tr>
+<tr class="separator:adbb039c01de48ad13cb733c8c32c588f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01668f1801e81e167aa890118e7d456b" id="r_a01668f1801e81e167aa890118e7d456b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01668f1801e81e167aa890118e7d456b">path_from_file_url</a> (const <a class="el" href="classupa_1_1url.html">url</a> &amp;file_url, <a class="el" href="#a5806bc3a0d267938f093d8106d84360f">file_path_format</a> format=<a class="el" href="#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">file_path_format::native</a>)</td></tr>
 <tr class="memdesc:a01668f1801e81e167aa890118e7d456b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get OS path from file URL.  <br /></td></tr>
 <tr class="separator:a01668f1801e81e167aa890118e7d456b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -293,9 +292,7 @@ Variables</h2></td></tr>
 
 <p>File path format. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5806bc3a0d267938f093d8106d84360fa296ccece3e9d4949a538964510e58d21" name="a5806bc3a0d267938f093d8106d84360fa296ccece3e9d4949a538964510e58d21"></a>detect&#160;</td><td class="fielddoc"><p>detect file path format from first char: '/' - POSIX, otherwise - Windows (for <a class="el" href="#a63fd51a8ef1b8bd7b333ebbda4719bdf" title="Make URL from OS file path.">upa::url_from_file_path</a>, but for <a class="el" href="#a01668f1801e81e167aa890118e7d456b" title="Get OS path from file URL.">upa::path_from_file_url</a> this is equivalent to <em>native</em>) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1" name="a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1"></a>posix&#160;</td><td class="fielddoc"><p>POSIX file path format. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1" name="a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1"></a>posix&#160;</td><td class="fielddoc"><p>POSIX file path format. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42" name="a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42"></a>windows&#160;</td><td class="fielddoc"><p>Windows file path format. </p>
 </td></tr>
@@ -624,7 +621,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OS path </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03190">3190</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03181">3181</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -826,8 +823,8 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </div>
 
 </div>
 </div>
-<a id="a63fd51a8ef1b8bd7b333ebbda4719bdf" name="a63fd51a8ef1b8bd7b333ebbda4719bdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63fd51a8ef1b8bd7b333ebbda4719bdf">&#9670;&#160;</a></span>url_from_file_path()</h2>
+<a id="adbb039c01de48ad13cb733c8c32c588f" name="adbb039c01de48ad13cb733c8c32c588f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbb039c01de48ad13cb733c8c32c588f">&#9670;&#160;</a></span>url_from_file_path()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -845,7 +842,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a5806bc3a0d267938f093d8106d84360f">file_path_format</a></td>          <td class="paramname"><span class="paramname"><em>format</em><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a5806bc3a0d267938f093d8106d84360fa296ccece3e9d4949a538964510e58d21">file_path_format::detect</a></span></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#a5806bc3a0d267938f093d8106d84360f">file_path_format</a></td>          <td class="paramname"><span class="paramname"><em>format</em><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">file_path_format::native</a></span></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -862,14 +859,14 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>absolute file path string </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>file path format, one of <a class="el" href="#a5806bc3a0d267938f093d8106d84360fa296ccece3e9d4949a538964510e58d21">upa::file_path_format::detect</a>, <a class="el" href="#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1" title="POSIX file path format.">upa::file_path_format::posix</a>, <a class="el" href="#a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42" title="Windows file path format.">upa::file_path_format::windows</a>, <a class="el" href="#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796" title="The file path format corresponds to the OS on which the code was compiled.">upa::file_path_format::native</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>file path format, one of <a class="el" href="#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1" title="POSIX file path format.">upa::file_path_format::posix</a>, <a class="el" href="#a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42" title="Windows file path format.">upa::file_path_format::windows</a>, <a class="el" href="#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796" title="The file path format corresponds to the OS on which the code was compiled.">upa::file_path_format::native</a> </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>file URL </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_271">Pathname (POSIX)</a>, <a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/realpath.html">realpath</a>, <a href="https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfullpathnamew">GetFullPathName</a>, <a href="https://en.cppreference.com/w/cpp/filesystem/canonical">std::filesystem::canonical</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03104">3104</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03100">3100</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
