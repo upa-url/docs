@@ -88,6 +88,9 @@ var classupa_1_1url =
     [ "to_string", "classupa_1_1url.html#a46598a9c2bf6c806f1495d1bd83db205", null ],
     [ "username", "classupa_1_1url.html#a7852b89207d1bdbf112c7f0b1242186a", null ],
     [ "username", "classupa_1_1url.html#aa183eb21c14a7d4f1880b6153aeb11b6", null ],
+    [ "detail::url_parser", "classupa_1_1url.html#a790c1da0eacbbf071c81047892339277", null ],
+    [ "detail::url_serializer", "classupa_1_1url.html#afb318d1c20021658415ecbdc2b4e1d05", null ],
+    [ "detail::url_setter", "classupa_1_1url.html#a8adbe54fc328ed7508effd8191f96535", null ],
     [ "operator==", "classupa_1_1url.html#ad9b933db011038e8fea04a6a6605b5ac", null ],
     [ "std::hash< url >", "classupa_1_1url.html#aa19cbc702c9564624e24f0ec7155e517", null ],
     [ "url_search_params", "classupa_1_1url.html#ad411265e2ae4c9bcdcc9033f0d93d076", null ]
