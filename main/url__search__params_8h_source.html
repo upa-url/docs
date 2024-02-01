@@ -142,7 +142,7 @@ $(document).ready(function(){initNavTree('url__search__params_8h_source.html',''
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">struct </span>is_pair : std::false_type {};</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T1, <span class="keyword">class</span> T2&gt;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">struct </span>is_pair&lt;std::pair&lt;T1, T2&gt;&gt; : std::true_type {};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">struct </span>is_pair&lt;<a class="code hl_namespace" href="namespacestd.html">std</a>::pair&lt;T1, T2&gt;&gt; : std::true_type {};</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// Get iterable&#39;s value type</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// https://stackoverflow.com/a/29634934</span></div>
@@ -206,7 +206,7 @@ $(document).ready(function(){initNavTree('url__search__params_8h_source.html',''
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> StrT, enable_if_str_arg_t&lt;StrT&gt; = 0&gt;</div>
 <div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classupa_1_1url__search__params.html#a49b84f512e1bb2998f5c3a6167fb3c21">  113</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classupa_1_1url__search__params.html#a49b84f512e1bb2998f5c3a6167fb3c21">url_search_params</a>(StrT&amp;&amp; query)</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        : params_(<a class="code hl_function" href="classupa_1_1url__search__params.html#abc379d5fae267444af01a67945986481">do_parse</a>(true, std::forward&lt;StrT&gt;(query)))</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        : params_(<a class="code hl_function" href="classupa_1_1url__search__params.html#abc379d5fae267444af01a67945986481">do_parse</a>(true, <a class="code hl_namespace" href="namespacestd.html">std</a>::forward&lt;StrT&gt;(query)))</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    {}</div>
 </div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
@@ -404,7 +404,7 @@ $(document).ready(function(){initNavTree('url__search__params_8h_source.html',''
 <div class="foldopen" id="foldopen00449" data-start="{" data-end="}">
 <div class="line"><a id="l00449" name="l00449"></a><span class="lineno"><a class="line" href="classupa_1_1url__search__params.html#a111708f4834e92ea8eb97ce42b43381f">  449</a></span><span class="keyword">inline</span> <a class="code hl_function" href="classupa_1_1url__search__params.html#a0e6e9aef7c9e8abff339a082df9b9a13">url_search_params::url_search_params</a>(<a class="code hl_class" href="classupa_1_1url__search__params.html">url_search_params</a>&amp;&amp; other)</div>
 <div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>    <span class="keyword">noexcept</span>(std::is_nothrow_move_constructible&lt;name_value_list&gt;::value)</div>
-<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>    : params_(std::move(other.params_))</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>    : params_(<a class="code hl_namespace" href="namespacestd.html">std</a>::move(other.params_))</div>
 <div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>    , is_sorted_(other.is_sorted_)</div>
 <div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>{}</div>
 </div>
@@ -821,6 +821,7 @@ $(document).ready(function(){initNavTree('url__search__params_8h_source.html',''
 <div class="ttc" id="aclassupa_1_1url__search__params_html_af2d50f9c7e39ee453fd022c11f270861"><div class="ttname"><a href="classupa_1_1url__search__params.html#af2d50f9c7e39ee453fd022c11f270861">upa::url_search_params::reverse_iterator</a></div><div class="ttdeci">const_reverse_iterator reverse_iterator</div><div class="ttdef"><b>Definition</b> <a href="url__search__params_8h_source.html#l00082">url_search_params.h:82</a></div></div>
 <div class="ttc" id="aclassupa_1_1url__search__params_html_af4770df21728d21e6961c9807666eb0b"><div class="ttname"><a href="classupa_1_1url__search__params.html#af4770df21728d21e6961c9807666eb0b">upa::url_search_params::name_value_list</a></div><div class="ttdeci">std::list&lt; name_value_pair &gt; name_value_list</div><div class="ttdef"><b>Definition</b> <a href="url__search__params_8h_source.html#l00078">url_search_params.h:78</a></div></div>
 <div class="ttc" id="aclassupa_1_1url_html"><div class="ttname"><a href="classupa_1_1url.html">upa::url</a></div><div class="ttdoc">URL class.</div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l00060">url.h:60</a></div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l03251">url.h:3251</a></div></div>
 <div class="ttc" id="anamespaceupa_html"><div class="ttname"><a href="namespaceupa.html">upa</a></div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l00041">url.h:41</a></div></div>
 <div class="ttc" id="anamespaceupa_html_aa223cc0cd1376e828988ca9b8698cb85"><div class="ttname"><a href="namespaceupa.html#aa223cc0cd1376e828988ca9b8698cb85">upa::swap</a></div><div class="ttdeci">void swap(url &amp;lhs, url &amp;rhs) UPA_NOEXCEPT_17</div><div class="ttdoc">Swaps the contents of two URLs.</div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l03060">url.h:3060</a></div></div>
 <div class="ttc" id="aurl__percent__encode_8h_html"><div class="ttname"><a href="url__percent__encode_8h.html">url_percent_encode.h</a></div></div>

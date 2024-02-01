@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['safe_5fassign_0',['safe_assign',['../classupa_1_1url__search__params.html#a3ecfa68c792af1d3749e2ee87e66ae20',1,'upa::url_search_params::safe_assign()'],['../classupa_1_1url.html#acb85c0973a6dd1e86af1cbf424c0eed4',1,'upa::url::safe_assign(url &amp;&amp;other)']]],
+  ['safe_5fassign_0',['safe_assign',['../classupa_1_1url.html#acb85c0973a6dd1e86af1cbf424c0eed4',1,'upa::url::safe_assign()'],['../classupa_1_1url__search__params.html#a3ecfa68c792af1d3749e2ee87e66ae20',1,'upa::url_search_params::safe_assign()']]],
   ['scheme_1',['SCHEME',['../classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea5bf865dd085ed76bbc49ff208d04262c',1,'upa::url']]],
   ['scheme_5finvalid_5fcode_5fpoint_2',['scheme_invalid_code_point',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a30e81c06630d2584ce85f73fd2f7ec45',1,'upa']]],
   ['scheme_5fsep_3',['SCHEME_SEP',['../classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea261068ab425765b08169df83c7663732',1,'upa::url']]],
@@ -24,7 +24,8 @@ var searchData=
   ['special_5fquery_5fno_5fencode_5fset_21',['special_query_no_encode_set',['../namespaceupa.html#aa7a053da969c180eb1d23e08317a0cf2',1,'upa']]],
   ['special_5fscheme_5fmissing_5ffollowing_5fsolidus_22',['special_scheme_missing_following_solidus',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a3698c0ddfd063b30ff93d73b23c52b01',1,'upa']]],
   ['standard_20conformance_23',['Features and standard conformance',['../index.html#autotoc_md1',1,'']]],
-  ['std_3a_3ahash_3c_20url_20_3e_24',['hash&lt; url &gt;',['../classupa_1_1url.html#aa19cbc702c9564624e24f0ec7155e517',1,'upa::url']]],
-  ['success_25',['success',['../namespaceupa.html#a05a9cf5ac0b5dafa3ed684f3a17f4710',1,'upa']]],
-  ['swap_26',['swap',['../classupa_1_1url.html#a8505c096851a45c3bd42235bc2120f80',1,'upa::url::swap()'],['../classupa_1_1url__search__params.html#a549af9514ac9730c399349a190ca763c',1,'upa::url_search_params::swap()'],['../namespaceupa.html#aa223cc0cd1376e828988ca9b8698cb85',1,'upa::swap(url &amp;lhs, url &amp;rhs) UPA_NOEXCEPT_17'],['../namespaceupa.html#ae007affbf9849ca0957cbe75327ff805',1,'upa::swap(url_search_params &amp;lhs, url_search_params &amp;rhs) UPA_NOEXCEPT_17']]]
+  ['std_24',['std',['../namespacestd.html',1,'']]],
+  ['std_3a_3ahash_3c_20url_20_3e_25',['hash&lt; url &gt;',['../classupa_1_1url.html#aa19cbc702c9564624e24f0ec7155e517',1,'upa::url']]],
+  ['success_26',['success',['../namespaceupa.html#a05a9cf5ac0b5dafa3ed684f3a17f4710',1,'upa']]],
+  ['swap_27',['swap',['../classupa_1_1url__search__params.html#a549af9514ac9730c399349a190ca763c',1,'upa::url_search_params::swap()'],['../classupa_1_1url.html#a8505c096851a45c3bd42235bc2120f80',1,'upa::url::swap()'],['../namespaceupa.html#aa223cc0cd1376e828988ca9b8698cb85',1,'upa::swap(url &amp;lhs, url &amp;rhs) UPA_NOEXCEPT_17'],['../namespaceupa.html#ae007affbf9849ca0957cbe75327ff805',1,'upa::swap(url_search_params &amp;lhs, url_search_params &amp;rhs) UPA_NOEXCEPT_17']]]
 ];
