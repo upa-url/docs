@@ -1,14 +1,14 @@
 var index =
 [
-    [ "Features and standard conformance", "index.html#autotoc_md1", null ],
-    [ "Installation", "index.html#autotoc_md2", [
-      [ "CMake", "index.html#autotoc_md3", [
-        [ "Embedding", "index.html#autotoc_md4", null ],
-        [ "Embedding with FetchContent", "index.html#autotoc_md5", null ]
+    [ "Features and standard conformance", "index.html#features-and-standard-conformance", null ],
+    [ "Installation", "index.html#installation", [
+      [ "CMake", "index.html#cmake", [
+        [ "Embedding", "index.html#embedding", null ],
+        [ "Embedding with FetchContent", "index.html#embedding-with-fetchcontent", null ]
       ] ]
     ] ],
-    [ "Usage", "index.html#autotoc_md6", [
-      [ "Examples", "index.html#autotoc_md7", null ]
+    [ "Usage", "index.html#usage", [
+      [ "Examples", "index.html#examples", null ]
     ] ],
-    [ "License", "index.html#autotoc_md8", null ]
+    [ "License", "index.html#license", null ]
 ];
