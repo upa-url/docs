@@ -1,8 +1,8 @@
 var searchData=
 [
   ['ignored_0',['ignored',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7af3f98c5d41d7c992a6fb63799f700f2b',1,'upa']]],
-  ['include_1',['include',['../classupa_1_1code__point__set.html#a263d25347473a00997b7e87bcc6cb531',1,'upa::code_point_set::include(std::initializer_list&lt; uint8_t &gt; clist)'],['../classupa_1_1code__point__set.html#aa43896f30ac32a5a07999ae904ca76da',1,'upa::code_point_set::include(uint8_t from, uint8_t to)'],['../classupa_1_1code__point__set.html#a38860dd227565992f7888d0d6a2ef6a2',1,'upa::code_point_set::include(uint8_t c)']]],
-  ['installation_2',['Installation',['../index.html#autotoc_md2',1,'']]],
+  ['include_1',['include',['../classupa_1_1code__point__set.html#a38860dd227565992f7888d0d6a2ef6a2',1,'upa::code_point_set::include(uint8_t c)'],['../classupa_1_1code__point__set.html#a263d25347473a00997b7e87bcc6cb531',1,'upa::code_point_set::include(std::initializer_list&lt; uint8_t &gt; clist)'],['../classupa_1_1code__point__set.html#aa43896f30ac32a5a07999ae904ca76da',1,'upa::code_point_set::include(uint8_t from, uint8_t to)']]],
+  ['installation_2',['Installation',['../index.html#installation',1,'']]],
   ['invalid_5fbase_3',['invalid_base',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a0674127785b0d71200ae2cabd791db90',1,'upa']]],
   ['invalid_5fcredentials_4',['invalid_credentials',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a4e8c418aae8164352aca1aa983a3bee3',1,'upa']]],
   ['invalid_5freverse_5fsolidus_5',['invalid_reverse_solidus',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7ac3ea7eeb178005245d67dcb07a9f923d',1,'upa']]],
