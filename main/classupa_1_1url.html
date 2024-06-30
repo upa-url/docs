@@ -1045,14 +1045,14 @@ template&lt;class T , class TB , enable_if_str_arg_t&lt; T &gt;  = 0, enable_if_
 <p>Gets URL's part (URL record member) as string. </p>
 <p>Function to get ASCII string of any URL's part (URL record member) defined here: <a href="https://url.spec.whatwg.org/#url-representation">https://url.spec.whatwg.org/#url-representation</a></p>
 <ul>
-<li><code>get_part_view(url::SCHEME)</code> - get a URL’s <b>scheme</b> string</li>
-<li><code>get_part_view(url::USERNAME)</code> - get a URL’s <b>username</b> string</li>
-<li><code>get_part_view(url::PASSWORD)</code> - get a URL’s <b>password</b> string</li>
-<li><code>get_part_view(url::HOST)</code> - get a URL’s <b>host</b> serialized to string</li>
-<li><code>get_part_view(url::PORT)</code> - get a URL’s <b>port</b> serialized to string</li>
-<li><code>get_part_view(url::PATH)</code> - get a URL’s <b>path</b> serialized to string</li>
-<li><code>get_part_view(url::QUERY)</code> - get a URL’s <b>query</b> string</li>
-<li><code>get_part_view(url::FRAGMENT)</code> - get a URL’s <b>fragment</b> string</li>
+<li><code>get_part_view(upa::url::SCHEME)</code> - get a URL’s <b>scheme</b> string</li>
+<li><code>get_part_view(upa::url::USERNAME)</code> - get a URL’s <b>username</b> string</li>
+<li><code>get_part_view(upa::url::PASSWORD)</code> - get a URL’s <b>password</b> string</li>
+<li><code>get_part_view(upa::url::HOST)</code> - get a URL’s <b>host</b> serialized to string</li>
+<li><code>get_part_view(upa::url::PORT)</code> - get a URL’s <b>port</b> serialized to string</li>
+<li><code>get_part_view(upa::url::PATH)</code> - get a URL’s <b>path</b> serialized to string</li>
+<li><code>get_part_view(upa::url::QUERY)</code> - get a URL’s <b>query</b> string</li>
+<li><code>get_part_view(upa::url::FRAGMENT)</code> - get a URL’s <b>fragment</b> string</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1752,10 +1752,10 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 
 <p>Checks whether the URL's part (URL record member) is null. </p>
 <p>Only the following <a href="https://url.spec.whatwg.org/#concept-url">URL record members</a> can be null:</p><ul>
-<li><b>host</b> - check with <code>is_null(url::HOST)</code></li>
-<li><b>port</b> - check with <code>is_null(url::PORT)</code></li>
-<li><b>query</b> - check with <code>is_null(url::QUERY)</code></li>
-<li><b>fragment</b> - check with <code>is_null(url::FRAGMENT)</code></li>
+<li><b>host</b> - check with <code>is_null(upa::url::HOST)</code></li>
+<li><b>port</b> - check with <code>is_null(upa::url::PORT)</code></li>
+<li><b>query</b> - check with <code>is_null(upa::url::QUERY)</code></li>
+<li><b>fragment</b> - check with <code>is_null(upa::url::FRAGMENT)</code></li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
