@@ -1813,7 +1813,7 @@ $(function(){initNavTree('url_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l01913" name="l01913"></a><span class="lineno"> 1913</span>                }</div>
 <div class="line"><a id="l01914" name="l01914"></a><span class="lineno"> 1914</span>                <span class="comment">// set port if not default</span></div>
 <div class="line"><a id="l01915" name="l01915"></a><span class="lineno"> 1915</span>                <span class="keywordflow">if</span> (urls.scheme_inf() == <span class="keyword">nullptr</span> || urls.scheme_inf()-&gt;default_port != port) {</div>
-<div class="line"><a id="l01916" name="l01916"></a><span class="lineno"> 1916</span>                    unsigned_to_str(port, urls.start_part(<a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea320e122a4ddb52a22fe01e83dd0db4ba">url::PORT</a>), 10);</div>
+<div class="line"><a id="l01916" name="l01916"></a><span class="lineno"> 1916</span>                    util::unsigned_to_str(port, urls.start_part(<a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea320e122a4ddb52a22fe01e83dd0db4ba">url::PORT</a>), 10);</div>
 <div class="line"><a id="l01917" name="l01917"></a><span class="lineno"> 1917</span>                    urls.save_part();</div>
 <div class="line"><a id="l01918" name="l01918"></a><span class="lineno"> 1918</span>                    urls.set_flag(url::PORT_FLAG);</div>
 <div class="line"><a id="l01919" name="l01919"></a><span class="lineno"> 1919</span>                } <span class="keywordflow">else</span> {</div>
