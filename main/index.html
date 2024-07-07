@@ -142,7 +142,7 @@ Installation</h1>
 <p>The simplest way is to use two amalgamated files: <code><a class="el" href="url_8h.html">url.h</a></code> and <code>url.cpp</code>. You can download them from <a href="https://github.com/rmisev/url_whatwg/releases">releases page</a>, or if you have installed Python, then generate them by running <code>tools/amalgamate.sh</code> script (<code>tools/amalgamate.bat</code> on Windows). The files will be created in the <code>single_include/upa</code> directory.</p>
 <h2><a class="anchor" id="cmake"></a>
 CMake</h2>
-<p>The library can be built and installed using CMake 3.13 or later. To build and install to default directory (usualy <code>/usr/local</code> on Linux) run following commands: </p><div class="fragment"><div class="line">cmake -B build -DURL_BUILD_TESTS=OFF</div>
+<p>The library can be built and installed using CMake 3.13 or later. To build and install to default directory (usualy <code>/usr/local</code> on Linux) run following commands: </p><div class="fragment"><div class="line">cmake -B build -DUPA_BUILD_TESTS=OFF</div>
 <div class="line">cmake --build build</div>
 <div class="line">cmake --install build</div>
 </div><!-- fragment --><p> If ICU is installed in a non-default directory, then specify <code>-DICU_ROOT=&lt;ICU directory&gt;</code> parameter in the first command.</p>
