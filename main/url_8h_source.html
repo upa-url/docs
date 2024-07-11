@@ -593,7 +593,7 @@ $(function(){initNavTree('url_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>        <a class="code hl_enumeration" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4e">url::PartType</a> first_pt, std::size_t len0);</div>
 <div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span> </div>
 <div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>    url&amp; url_;</div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>    url&amp; url_; <span class="comment">// NOLINT(cppcoreguidelines-avoid-const-or-ref-data-members)</span></div>
 <div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>    <span class="comment">// last serialized URL&#39;s part</span></div>
 <div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>    <a class="code hl_enumeration" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4e">url::PartType</a> last_pt_;</div>
 <div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>};</div>
@@ -2340,7 +2340,7 @@ $(function(){initNavTree('url_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l02440" name="l02440"></a><span class="lineno"> 2440</span>}</div>
 <div class="line"><a id="l02441" name="l02441"></a><span class="lineno"> 2441</span> </div>
 <div class="line"><a id="l02442" name="l02442"></a><span class="lineno"> 2442</span><span class="preprocessor">#if 0 </span><span class="comment">// UNUSED</span></div>
-<div class="line"><a id="l02443" name="l02443"></a><span class="lineno"> 2443</span><span class="keyword">static</span> <span class="keyword">inline</span> std::size_t count_leading_path_slashes(<span class="keyword">const</span> <span class="keywordtype">char</span>* first, <span class="keyword">const</span> <span class="keywordtype">char</span>* last) {</div>
+<div class="line"><a id="l02443" name="l02443"></a><span class="lineno"> 2443</span><span class="keyword">inline</span> std::size_t count_leading_path_slashes(<span class="keyword">const</span> <span class="keywordtype">char</span>* first, <span class="keyword">const</span> <span class="keywordtype">char</span>* last) {</div>
 <div class="line"><a id="l02444" name="l02444"></a><span class="lineno"> 2444</span>    <span class="keywordflow">return</span> std::distance(first,</div>
 <div class="line"><a id="l02445" name="l02445"></a><span class="lineno"> 2445</span>        std::find_if_not(first, last, [](<span class="keywordtype">char</span> c){ <span class="keywordflow">return</span> c == <span class="charliteral">&#39;/&#39;</span>; }));</div>
 <div class="line"><a id="l02446" name="l02446"></a><span class="lineno"> 2446</span>}</div>
