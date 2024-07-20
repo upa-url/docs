@@ -96,6 +96,7 @@ var NAVTREEINDEX1 =
 "index.html":[0],
 "index.html#cmake":[0,1,0],
 "index.html#embedding":[0,1,0,0],
+"index.html#embedding-with-cpmcmake-script":[0,1,0,2],
 "index.html#embedding-with-fetchcontent":[0,1,0,1],
 "index.html#examples":[0,2,0],
 "index.html#features-and-standard-conformance":[0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7aa313edb2c0b5b33a76ad39fbecd772ee":[3,0,0,0,3,1,28],
 "url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7aabf0fd2e85a62c8db303178c2b192191":[3,0,0,0,3,1,14],
 "url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7ab577ca969dac9d16ac14048aa15089e9":[3,0,0,0,3,1,23],
-"url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7ab76b800b737d646b3ae8e06071d622c3":[3,0,0,0,3,1,29],
-"url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7abece6466dc75c416e679c74f16bc0f2f":[3,0,0,0,3,1,35]
+"url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7ab76b800b737d646b3ae8e06071d622c3":[3,0,0,0,3,1,29]
 };

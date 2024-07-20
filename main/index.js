@@ -4,7 +4,8 @@ var index =
     [ "Installation", "index.html#installation", [
       [ "CMake", "index.html#cmake", [
         [ "Embedding", "index.html#embedding", null ],
-        [ "Embedding with FetchContent", "index.html#embedding-with-fetchcontent", null ]
+        [ "Embedding with FetchContent", "index.html#embedding-with-fetchcontent", null ],
+        [ "Embedding with CPM.cmake script", "index.html#embedding-with-cpmcmake-script", null ]
       ] ]
     ] ],
     [ "Usage", "index.html#usage", [
