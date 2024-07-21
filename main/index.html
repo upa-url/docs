@@ -145,7 +145,7 @@ CMake</h2>
 <p>The library can be built and installed using CMake 3.13 or later. To build and install to default directory (usualy <code>/usr/local</code> on Linux) run following commands: </p><div class="fragment"><div class="line">cmake -B build -DUPA_BUILD_TESTS=OFF</div>
 <div class="line">cmake --build build</div>
 <div class="line">cmake --install build</div>
-</div><!-- fragment --><p> If ICU is installed in a non-default directory, then specify <code>-DICU_ROOT=&lt;ICU directory&gt;</code> parameter in the first command.</p>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>If ICU is installed in a non-default directory, then specify <code>-DICU_ROOT=&lt;ICU directory&gt;</code> parameter in the first command. If you are building for Windows 10 version 1903 or later, ICU bundled with Windows can be used: specify the <code>-DUPA_USE_WINDOWS_ICU=ON</code> parameter in the first command.</dd></dl>
 <p>To use library add <code>find_package(upa REQUIRED)</code> and link to <code><a class="el" href="classupa_1_1url.html" title="URL class.">upa::url</a></code> target in your CMake project: </p><div class="fragment"><div class="line">find_package(upa REQUIRED)</div>
 <div class="line">...</div>
 <div class="line">target_link_libraries(exe-target PRIVATE upa::url)</div>
@@ -167,7 +167,7 @@ Embedding with FetchContent</h3>
 <div class="line">target_link_libraries(exe-target PRIVATE upa::url)</div>
 </div><!-- fragment --><h3><a class="anchor" id="embedding-with-cpmcmake-script"></a>
 Embedding with CPM.cmake script</h3>
-<p>If you are using the <a href="https://github.com/cpm-cmake/CPM.cmake">CPM.cmake script</a> and have included it in your CMakeCMakeLists.txt, then:</p>
+<p>If you are using the <a href="https://github.com/cpm-cmake/CPM.cmake">CPM.cmake script</a> and have included it in your <code>CMakeLists.txt</code>, then:</p>
 <div class="fragment"><div class="line">CPMAddPackage(&quot;gh:upa-url/upa@0.4.0&quot;)</div>
 <div class="line">...</div>
 <div class="line">target_link_libraries(exe-target PRIVATE upa::url)</div>
