@@ -42,7 +42,7 @@
    <div id="projectbrief">A WHATWG URL Standard implementation</div>
   </td>
   <td id="version-td">
-   <select id="version-select"><option>v0.4.1</option></select>
+   <select id="version-select"><option>v0.4.2</option></select>
   </td>
  </tr>
  </tbody>
@@ -2939,264 +2939,266 @@ $(function(){initNavTree('url_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l03050" name="l03050"></a><span class="lineno"> 3050</span>                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l03051" name="l03051"></a><span class="lineno"> 3051</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l03052" name="l03052"></a><span class="lineno"> 3052</span>            }</div>
-<div class="line"><a id="l03053" name="l03053"></a><span class="lineno"> 3053</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03054" name="l03054"></a><span class="lineno"> 3054</span>        <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a id="l03055" name="l03055"></a><span class="lineno"> 3055</span>            <span class="comment">// Check the second UNC path component (share name).</span></div>
-<div class="line"><a id="l03056" name="l03056"></a><span class="lineno"> 3056</span>            <span class="comment">// Do not allow &quot;.&quot; and &quot;..&quot; as share names, because they have</span></div>
-<div class="line"><a id="l03057" name="l03057"></a><span class="lineno"> 3057</span>            <span class="comment">// a special meaning and are removed by the URL parser.</span></div>
-<div class="line"><a id="l03058" name="l03058"></a><span class="lineno"> 3058</span>            <span class="keywordflow">switch</span> (pcend - start) {</div>
-<div class="line"><a id="l03059" name="l03059"></a><span class="lineno"> 3059</span>            <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a id="l03060" name="l03060"></a><span class="lineno"> 3060</span>                <span class="keywordflow">if</span> (start[0] == <span class="charliteral">&#39;.&#39;</span>)</div>
-<div class="line"><a id="l03061" name="l03061"></a><span class="lineno"> 3061</span>                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l03062" name="l03062"></a><span class="lineno"> 3062</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03063" name="l03063"></a><span class="lineno"> 3063</span>            <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a id="l03064" name="l03064"></a><span class="lineno"> 3064</span>                <span class="keywordflow">if</span> (start[0] == <span class="charliteral">&#39;.&#39;</span> &amp;&amp; start[1] == <span class="charliteral">&#39;.&#39;</span>)</div>
-<div class="line"><a id="l03065" name="l03065"></a><span class="lineno"> 3065</span>                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l03066" name="l03066"></a><span class="lineno"> 3066</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03067" name="l03067"></a><span class="lineno"> 3067</span>            }</div>
-<div class="line"><a id="l03068" name="l03068"></a><span class="lineno"> 3068</span>            <span class="comment">// A valid UNC path MUST contain two or more path components</span></div>
-<div class="line"><a id="l03069" name="l03069"></a><span class="lineno"> 3069</span>            end_of_share_name = pcend;</div>
-<div class="line"><a id="l03070" name="l03070"></a><span class="lineno"> 3070</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03071" name="l03071"></a><span class="lineno"> 3071</span>        <span class="keywordflow">default</span>:;</div>
-<div class="line"><a id="l03072" name="l03072"></a><span class="lineno"> 3072</span>        }</div>
-<div class="line"><a id="l03073" name="l03073"></a><span class="lineno"> 3073</span>        <span class="keywordflow">if</span> (pcend == last) <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03074" name="l03074"></a><span class="lineno"> 3074</span>        start = pcend + 1; <span class="comment">// skip &#39;\&#39;</span></div>
-<div class="line"><a id="l03075" name="l03075"></a><span class="lineno"> 3075</span>    }</div>
-<div class="line"><a id="l03076" name="l03076"></a><span class="lineno"> 3076</span>    <span class="keywordflow">return</span> end_of_share_name;</div>
-<div class="line"><a id="l03077" name="l03077"></a><span class="lineno"> 3077</span>}</div>
-<div class="line"><a id="l03078" name="l03078"></a><span class="lineno"> 3078</span> </div>
-<div class="line"><a id="l03085" name="l03085"></a><span class="lineno"> 3085</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT, <span class="keyword">typename</span> IsSlash&gt;</div>
-<div class="line"><a id="l03086" name="l03086"></a><span class="lineno"> 3086</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> has_dot_dot_segment(<span class="keyword">const</span> CharT* first, <span class="keyword">const</span> CharT* last, IsSlash is_slash) {</div>
-<div class="line"><a id="l03087" name="l03087"></a><span class="lineno"> 3087</span>    <span class="keywordflow">if</span> (last - first &gt;= 2) {</div>
-<div class="line"><a id="l03088" name="l03088"></a><span class="lineno"> 3088</span>        <span class="keyword">const</span> <span class="keyword">auto</span>* ptr = first;</div>
-<div class="line"><a id="l03089" name="l03089"></a><span class="lineno"> 3089</span>        <span class="keyword">const</span> <span class="keyword">auto</span>* end = last - 1;</div>
-<div class="line"><a id="l03090" name="l03090"></a><span class="lineno"> 3090</span>        <span class="keywordflow">while</span> ((ptr = std::char_traits&lt;CharT&gt;::find(ptr, end - ptr, <span class="charliteral">&#39;.&#39;</span>)) != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l03091" name="l03091"></a><span class="lineno"> 3091</span>            <span class="keywordflow">if</span> (ptr[1] == <span class="charliteral">&#39;.&#39;</span> &amp;&amp;</div>
-<div class="line"><a id="l03092" name="l03092"></a><span class="lineno"> 3092</span>                (ptr == first || is_slash(*(ptr - 1))) &amp;&amp;</div>
-<div class="line"><a id="l03093" name="l03093"></a><span class="lineno"> 3093</span>                (last - ptr == 2 || is_slash(ptr[2])))</div>
-<div class="line"><a id="l03094" name="l03094"></a><span class="lineno"> 3094</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l03095" name="l03095"></a><span class="lineno"> 3095</span>            <span class="comment">// skip &#39;.&#39; and following char</span></div>
-<div class="line"><a id="l03096" name="l03096"></a><span class="lineno"> 3096</span>            ptr += 2;</div>
-<div class="line"><a id="l03097" name="l03097"></a><span class="lineno"> 3097</span>            <span class="keywordflow">if</span> (ptr &gt;= end)</div>
-<div class="line"><a id="l03098" name="l03098"></a><span class="lineno"> 3098</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03099" name="l03099"></a><span class="lineno"> 3099</span>        }</div>
-<div class="line"><a id="l03100" name="l03100"></a><span class="lineno"> 3100</span>    }</div>
-<div class="line"><a id="l03101" name="l03101"></a><span class="lineno"> 3101</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l03102" name="l03102"></a><span class="lineno"> 3102</span>}</div>
-<div class="line"><a id="l03103" name="l03103"></a><span class="lineno"> 3103</span> </div>
-<div class="line"><a id="l03104" name="l03104"></a><span class="lineno"> 3104</span>} <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l03053" name="l03053"></a><span class="lineno"> 3053</span>            <span class="comment">// Accept UNC path with hostname, even if it does not contain share-name</span></div>
+<div class="line"><a id="l03054" name="l03054"></a><span class="lineno"> 3054</span>            end_of_share_name = pcend;</div>
+<div class="line"><a id="l03055" name="l03055"></a><span class="lineno"> 3055</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l03056" name="l03056"></a><span class="lineno"> 3056</span>        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a id="l03057" name="l03057"></a><span class="lineno"> 3057</span>            <span class="comment">// Check the second UNC path component (share name).</span></div>
+<div class="line"><a id="l03058" name="l03058"></a><span class="lineno"> 3058</span>            <span class="comment">// Do not allow &quot;.&quot; and &quot;..&quot; as share names, because they have</span></div>
+<div class="line"><a id="l03059" name="l03059"></a><span class="lineno"> 3059</span>            <span class="comment">// a special meaning and are removed by the URL parser.</span></div>
+<div class="line"><a id="l03060" name="l03060"></a><span class="lineno"> 3060</span>            <span class="keywordflow">switch</span> (pcend - start) {</div>
+<div class="line"><a id="l03061" name="l03061"></a><span class="lineno"> 3061</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l03062" name="l03062"></a><span class="lineno"> 3062</span>                <span class="keywordflow">if</span> (start[0] == <span class="charliteral">&#39;.&#39;</span>)</div>
+<div class="line"><a id="l03063" name="l03063"></a><span class="lineno"> 3063</span>                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l03064" name="l03064"></a><span class="lineno"> 3064</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l03065" name="l03065"></a><span class="lineno"> 3065</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a id="l03066" name="l03066"></a><span class="lineno"> 3066</span>                <span class="keywordflow">if</span> (start[0] == <span class="charliteral">&#39;.&#39;</span> &amp;&amp; start[1] == <span class="charliteral">&#39;.&#39;</span>)</div>
+<div class="line"><a id="l03067" name="l03067"></a><span class="lineno"> 3067</span>                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l03068" name="l03068"></a><span class="lineno"> 3068</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l03069" name="l03069"></a><span class="lineno"> 3069</span>            }</div>
+<div class="line"><a id="l03070" name="l03070"></a><span class="lineno"> 3070</span>            <span class="comment">// A valid UNC path MUST contain two or more path components</span></div>
+<div class="line"><a id="l03071" name="l03071"></a><span class="lineno"> 3071</span>            end_of_share_name = pcend;</div>
+<div class="line"><a id="l03072" name="l03072"></a><span class="lineno"> 3072</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l03073" name="l03073"></a><span class="lineno"> 3073</span>        <span class="keywordflow">default</span>:;</div>
+<div class="line"><a id="l03074" name="l03074"></a><span class="lineno"> 3074</span>        }</div>
+<div class="line"><a id="l03075" name="l03075"></a><span class="lineno"> 3075</span>        <span class="keywordflow">if</span> (pcend == last) <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l03076" name="l03076"></a><span class="lineno"> 3076</span>        start = pcend + 1; <span class="comment">// skip &#39;\&#39;</span></div>
+<div class="line"><a id="l03077" name="l03077"></a><span class="lineno"> 3077</span>    }</div>
+<div class="line"><a id="l03078" name="l03078"></a><span class="lineno"> 3078</span>    <span class="keywordflow">return</span> end_of_share_name;</div>
+<div class="line"><a id="l03079" name="l03079"></a><span class="lineno"> 3079</span>}</div>
+<div class="line"><a id="l03080" name="l03080"></a><span class="lineno"> 3080</span> </div>
+<div class="line"><a id="l03087" name="l03087"></a><span class="lineno"> 3087</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT, <span class="keyword">typename</span> IsSlash&gt;</div>
+<div class="line"><a id="l03088" name="l03088"></a><span class="lineno"> 3088</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> has_dot_dot_segment(<span class="keyword">const</span> CharT* first, <span class="keyword">const</span> CharT* last, IsSlash is_slash) {</div>
+<div class="line"><a id="l03089" name="l03089"></a><span class="lineno"> 3089</span>    <span class="keywordflow">if</span> (last - first &gt;= 2) {</div>
+<div class="line"><a id="l03090" name="l03090"></a><span class="lineno"> 3090</span>        <span class="keyword">const</span> <span class="keyword">auto</span>* ptr = first;</div>
+<div class="line"><a id="l03091" name="l03091"></a><span class="lineno"> 3091</span>        <span class="keyword">const</span> <span class="keyword">auto</span>* end = last - 1;</div>
+<div class="line"><a id="l03092" name="l03092"></a><span class="lineno"> 3092</span>        <span class="keywordflow">while</span> ((ptr = std::char_traits&lt;CharT&gt;::find(ptr, end - ptr, <span class="charliteral">&#39;.&#39;</span>)) != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l03093" name="l03093"></a><span class="lineno"> 3093</span>            <span class="keywordflow">if</span> (ptr[1] == <span class="charliteral">&#39;.&#39;</span> &amp;&amp;</div>
+<div class="line"><a id="l03094" name="l03094"></a><span class="lineno"> 3094</span>                (ptr == first || is_slash(*(ptr - 1))) &amp;&amp;</div>
+<div class="line"><a id="l03095" name="l03095"></a><span class="lineno"> 3095</span>                (last - ptr == 2 || is_slash(ptr[2])))</div>
+<div class="line"><a id="l03096" name="l03096"></a><span class="lineno"> 3096</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l03097" name="l03097"></a><span class="lineno"> 3097</span>            <span class="comment">// skip &#39;.&#39; and following char</span></div>
+<div class="line"><a id="l03098" name="l03098"></a><span class="lineno"> 3098</span>            ptr += 2;</div>
+<div class="line"><a id="l03099" name="l03099"></a><span class="lineno"> 3099</span>            <span class="keywordflow">if</span> (ptr &gt;= end)</div>
+<div class="line"><a id="l03100" name="l03100"></a><span class="lineno"> 3100</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l03101" name="l03101"></a><span class="lineno"> 3101</span>        }</div>
+<div class="line"><a id="l03102" name="l03102"></a><span class="lineno"> 3102</span>    }</div>
+<div class="line"><a id="l03103" name="l03103"></a><span class="lineno"> 3103</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l03104" name="l03104"></a><span class="lineno"> 3104</span>}</div>
 <div class="line"><a id="l03105" name="l03105"></a><span class="lineno"> 3105</span> </div>
-<div class="line"><a id="l03106" name="l03106"></a><span class="lineno"> 3106</span> </div>
-<div class="line"><a id="l03107" name="l03107"></a><span class="lineno"> 3107</span><span class="comment">// URL utilities (non-member functions)</span></div>
+<div class="line"><a id="l03106" name="l03106"></a><span class="lineno"> 3106</span>} <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l03107" name="l03107"></a><span class="lineno"> 3107</span> </div>
 <div class="line"><a id="l03108" name="l03108"></a><span class="lineno"> 3108</span> </div>
-<div class="foldopen" id="foldopen03116" data-start="{" data-end="}">
-<div class="line"><a id="l03116" name="l03116"></a><span class="lineno"><a class="line" href="namespaceupa.html#a704170fa90d71a1899e48494fb85cd70"> 3116</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceupa.html#a704170fa90d71a1899e48494fb85cd70">equals</a>(<span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1url.html">url</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1url.html">url</a>&amp; rhs, <span class="keywordtype">bool</span> exclude_fragments = <span class="keyword">false</span>) {</div>
-<div class="line"><a id="l03117" name="l03117"></a><span class="lineno"> 3117</span>    <span class="keywordflow">return</span> lhs.<a class="code hl_function" href="classupa_1_1url.html#a26866381b104a1660712e06fd7089834">serialize</a>(exclude_fragments) == rhs.<a class="code hl_function" href="classupa_1_1url.html#a26866381b104a1660712e06fd7089834">serialize</a>(exclude_fragments);</div>
-<div class="line"><a id="l03118" name="l03118"></a><span class="lineno"> 3118</span>}</div>
+<div class="line"><a id="l03109" name="l03109"></a><span class="lineno"> 3109</span><span class="comment">// URL utilities (non-member functions)</span></div>
+<div class="line"><a id="l03110" name="l03110"></a><span class="lineno"> 3110</span> </div>
+<div class="foldopen" id="foldopen03118" data-start="{" data-end="}">
+<div class="line"><a id="l03118" name="l03118"></a><span class="lineno"><a class="line" href="namespaceupa.html#a704170fa90d71a1899e48494fb85cd70"> 3118</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceupa.html#a704170fa90d71a1899e48494fb85cd70">equals</a>(<span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1url.html">url</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1url.html">url</a>&amp; rhs, <span class="keywordtype">bool</span> exclude_fragments = <span class="keyword">false</span>) {</div>
+<div class="line"><a id="l03119" name="l03119"></a><span class="lineno"> 3119</span>    <span class="keywordflow">return</span> lhs.<a class="code hl_function" href="classupa_1_1url.html#a26866381b104a1660712e06fd7089834">serialize</a>(exclude_fragments) == rhs.<a class="code hl_function" href="classupa_1_1url.html#a26866381b104a1660712e06fd7089834">serialize</a>(exclude_fragments);</div>
+<div class="line"><a id="l03120" name="l03120"></a><span class="lineno"> 3120</span>}</div>
 </div>
-<div class="line"><a id="l03119" name="l03119"></a><span class="lineno"> 3119</span> </div>
-<div class="foldopen" id="foldopen03121" data-start="{" data-end="};">
-<div class="line"><a id="l03121" name="l03121"></a><span class="lineno"><a class="line" href="classupa_1_1url.html#ae8bc3d2dbf1c21771717990227794754"> 3121</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceupa.html#adc0dcd205079a2dac68f58cebf954712">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1url.html">url</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1url.html">url</a>&amp; rhs) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l03122" name="l03122"></a><span class="lineno"> 3122</span>    <span class="keywordflow">return</span> lhs.norm_url_ == rhs.norm_url_;</div>
-<div class="line"><a id="l03123" name="l03123"></a><span class="lineno"> 3123</span>}</div>
+<div class="line"><a id="l03121" name="l03121"></a><span class="lineno"> 3121</span> </div>
+<div class="foldopen" id="foldopen03123" data-start="{" data-end="};">
+<div class="line"><a id="l03123" name="l03123"></a><span class="lineno"><a class="line" href="classupa_1_1url.html#ae8bc3d2dbf1c21771717990227794754"> 3123</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceupa.html#adc0dcd205079a2dac68f58cebf954712">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1url.html">url</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1url.html">url</a>&amp; rhs) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l03124" name="l03124"></a><span class="lineno"> 3124</span>    <span class="keywordflow">return</span> lhs.norm_url_ == rhs.norm_url_;</div>
+<div class="line"><a id="l03125" name="l03125"></a><span class="lineno"> 3125</span>}</div>
 </div>
-<div class="line"><a id="l03124" name="l03124"></a><span class="lineno"> 3124</span> </div>
-<div class="foldopen" id="foldopen03131" data-start="{" data-end="}">
-<div class="line"><a id="l03131" name="l03131"></a><span class="lineno"><a class="line" href="namespaceupa.html#aa223cc0cd1376e828988ca9b8698cb85"> 3131</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceupa.html#aa223cc0cd1376e828988ca9b8698cb85">swap</a>(<a class="code hl_class" href="classupa_1_1url.html">url</a>&amp; lhs, <a class="code hl_class" href="classupa_1_1url.html">url</a>&amp; rhs) UPA_NOEXCEPT_17 {</div>
-<div class="line"><a id="l03132" name="l03132"></a><span class="lineno"> 3132</span>    lhs.<a class="code hl_function" href="classupa_1_1url.html#a8505c096851a45c3bd42235bc2120f80">swap</a>(rhs);</div>
-<div class="line"><a id="l03133" name="l03133"></a><span class="lineno"> 3133</span>}</div>
+<div class="line"><a id="l03126" name="l03126"></a><span class="lineno"> 3126</span> </div>
+<div class="foldopen" id="foldopen03133" data-start="{" data-end="}">
+<div class="line"><a id="l03133" name="l03133"></a><span class="lineno"><a class="line" href="namespaceupa.html#aa223cc0cd1376e828988ca9b8698cb85"> 3133</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceupa.html#aa223cc0cd1376e828988ca9b8698cb85">swap</a>(<a class="code hl_class" href="classupa_1_1url.html">url</a>&amp; lhs, <a class="code hl_class" href="classupa_1_1url.html">url</a>&amp; rhs) UPA_NOEXCEPT_17 {</div>
+<div class="line"><a id="l03134" name="l03134"></a><span class="lineno"> 3134</span>    lhs.<a class="code hl_function" href="classupa_1_1url.html#a8505c096851a45c3bd42235bc2120f80">swap</a>(rhs);</div>
+<div class="line"><a id="l03135" name="l03135"></a><span class="lineno"> 3135</span>}</div>
 </div>
-<div class="line"><a id="l03134" name="l03134"></a><span class="lineno"> 3134</span> </div>
-<div class="foldopen" id="foldopen03136" data-start="{" data-end="};">
-<div class="line"><a id="l03136" name="l03136"></a><span class="lineno"><a class="line" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360f"> 3136</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360f">file_path_format</a> {</div>
-<div class="line"><a id="l03137" name="l03137"></a><span class="lineno"> 3137</span>    <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1">posix</a> = 1,  </div>
-<div class="line"><a id="l03138" name="l03138"></a><span class="lineno"> 3138</span>    <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42">windows</a>,    </div>
-<div class="line"><a id="l03139" name="l03139"></a><span class="lineno"> 3139</span><span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a id="l03140" name="l03140"></a><span class="lineno"> 3140</span>    <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">native</a> = <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42">windows</a> </div>
-<div class="line"><a id="l03141" name="l03141"></a><span class="lineno"> 3141</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l03142" name="l03142"></a><span class="lineno"> 3142</span>    <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">native</a> = <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1">posix</a>   </div>
-<div class="line"><a id="l03143" name="l03143"></a><span class="lineno"> 3143</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l03144" name="l03144"></a><span class="lineno"> 3144</span>};</div>
+<div class="line"><a id="l03136" name="l03136"></a><span class="lineno"> 3136</span> </div>
+<div class="foldopen" id="foldopen03138" data-start="{" data-end="};">
+<div class="line"><a id="l03138" name="l03138"></a><span class="lineno"><a class="line" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360f"> 3138</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360f">file_path_format</a> {</div>
+<div class="line"><a id="l03139" name="l03139"></a><span class="lineno"> 3139</span>    <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1">posix</a> = 1,  </div>
+<div class="line"><a id="l03140" name="l03140"></a><span class="lineno"> 3140</span>    <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42">windows</a>,    </div>
+<div class="line"><a id="l03141" name="l03141"></a><span class="lineno"> 3141</span><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a id="l03142" name="l03142"></a><span class="lineno"> 3142</span>    <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">native</a> = <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42">windows</a> </div>
+<div class="line"><a id="l03143" name="l03143"></a><span class="lineno"> 3143</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l03144" name="l03144"></a><span class="lineno"> 3144</span>    <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">native</a> = <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1">posix</a>   </div>
+<div class="line"><a id="l03145" name="l03145"></a><span class="lineno"> 3145</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l03146" name="l03146"></a><span class="lineno"> 3146</span>};</div>
 </div>
-<div class="line"><a id="l03145" name="l03145"></a><span class="lineno"> 3145</span> </div>
-<div class="line"><a id="l03170" name="l03170"></a><span class="lineno"> 3170</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StrT, enable_if_str_arg_t&lt;StrT&gt; = 0&gt;</div>
-<div class="foldopen" id="foldopen03171" data-start="{" data-end="}">
-<div class="line"><a id="l03171" name="l03171"></a><span class="lineno"><a class="line" href="namespaceupa.html#adbb039c01de48ad13cb733c8c32c588f"> 3171</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classupa_1_1url.html">url</a> <a class="code hl_function" href="namespaceupa.html#adbb039c01de48ad13cb733c8c32c588f">url_from_file_path</a>(StrT&amp;&amp; str, <a class="code hl_enumeration" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360f">file_path_format</a> format = <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">file_path_format::native</a>) {</div>
-<div class="line"><a id="l03172" name="l03172"></a><span class="lineno"> 3172</span>    <span class="keyword">using </span>CharT = str_arg_char_t&lt;StrT&gt;;</div>
-<div class="line"><a id="l03173" name="l03173"></a><span class="lineno"> 3173</span>    <span class="keyword">const</span> <span class="keyword">auto</span> inp = make_str_arg(std::forward&lt;StrT&gt;(str));</div>
-<div class="line"><a id="l03174" name="l03174"></a><span class="lineno"> 3174</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* first = inp.begin();</div>
-<div class="line"><a id="l03175" name="l03175"></a><span class="lineno"> 3175</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* last = inp.end();</div>
-<div class="line"><a id="l03176" name="l03176"></a><span class="lineno"> 3176</span> </div>
-<div class="line"><a id="l03177" name="l03177"></a><span class="lineno"> 3177</span>    <span class="keywordflow">if</span> (first == last) {</div>
-<div class="line"><a id="l03178" name="l03178"></a><span class="lineno"> 3178</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7add1b18bee25a37b9de731f67e11402c5">validation_errc::file_empty_path</a>, <span class="stringliteral">&quot;Empty file path&quot;</span>);</div>
-<div class="line"><a id="l03179" name="l03179"></a><span class="lineno"> 3179</span>    }</div>
-<div class="line"><a id="l03180" name="l03180"></a><span class="lineno"> 3180</span> </div>
-<div class="line"><a id="l03181" name="l03181"></a><span class="lineno"> 3181</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* pointer = first;</div>
-<div class="line"><a id="l03182" name="l03182"></a><span class="lineno"> 3182</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* start_of_check = first;</div>
-<div class="line"><a id="l03183" name="l03183"></a><span class="lineno"> 3183</span>    <span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1code__point__set.html">code_point_set</a>* no_encode_set = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l03184" name="l03184"></a><span class="lineno"> 3184</span> </div>
-<div class="line"><a id="l03185" name="l03185"></a><span class="lineno"> 3185</span>    std::string str_url(<span class="stringliteral">&quot;file://&quot;</span>);</div>
+<div class="line"><a id="l03147" name="l03147"></a><span class="lineno"> 3147</span> </div>
+<div class="line"><a id="l03172" name="l03172"></a><span class="lineno"> 3172</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StrT, enable_if_str_arg_t&lt;StrT&gt; = 0&gt;</div>
+<div class="foldopen" id="foldopen03173" data-start="{" data-end="}">
+<div class="line"><a id="l03173" name="l03173"></a><span class="lineno"><a class="line" href="namespaceupa.html#adbb039c01de48ad13cb733c8c32c588f"> 3173</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classupa_1_1url.html">url</a> <a class="code hl_function" href="namespaceupa.html#adbb039c01de48ad13cb733c8c32c588f">url_from_file_path</a>(StrT&amp;&amp; str, <a class="code hl_enumeration" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360f">file_path_format</a> format = <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">file_path_format::native</a>) {</div>
+<div class="line"><a id="l03174" name="l03174"></a><span class="lineno"> 3174</span>    <span class="keyword">using </span>CharT = str_arg_char_t&lt;StrT&gt;;</div>
+<div class="line"><a id="l03175" name="l03175"></a><span class="lineno"> 3175</span>    <span class="keyword">const</span> <span class="keyword">auto</span> inp = make_str_arg(std::forward&lt;StrT&gt;(str));</div>
+<div class="line"><a id="l03176" name="l03176"></a><span class="lineno"> 3176</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* first = inp.begin();</div>
+<div class="line"><a id="l03177" name="l03177"></a><span class="lineno"> 3177</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* last = inp.end();</div>
+<div class="line"><a id="l03178" name="l03178"></a><span class="lineno"> 3178</span> </div>
+<div class="line"><a id="l03179" name="l03179"></a><span class="lineno"> 3179</span>    <span class="keywordflow">if</span> (first == last) {</div>
+<div class="line"><a id="l03180" name="l03180"></a><span class="lineno"> 3180</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7add1b18bee25a37b9de731f67e11402c5">validation_errc::file_empty_path</a>, <span class="stringliteral">&quot;Empty file path&quot;</span>);</div>
+<div class="line"><a id="l03181" name="l03181"></a><span class="lineno"> 3181</span>    }</div>
+<div class="line"><a id="l03182" name="l03182"></a><span class="lineno"> 3182</span> </div>
+<div class="line"><a id="l03183" name="l03183"></a><span class="lineno"> 3183</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* pointer = first;</div>
+<div class="line"><a id="l03184" name="l03184"></a><span class="lineno"> 3184</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* start_of_check = first;</div>
+<div class="line"><a id="l03185" name="l03185"></a><span class="lineno"> 3185</span>    <span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1code__point__set.html">code_point_set</a>* no_encode_set = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l03186" name="l03186"></a><span class="lineno"> 3186</span> </div>
-<div class="line"><a id="l03187" name="l03187"></a><span class="lineno"> 3187</span>    <span class="keywordflow">if</span> (format == <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1">file_path_format::posix</a>) {</div>
-<div class="line"><a id="l03188" name="l03188"></a><span class="lineno"> 3188</span>        <span class="keywordflow">if</span> (!detail::is_posix_slash(*first))</div>
-<div class="line"><a id="l03189" name="l03189"></a><span class="lineno"> 3189</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7abece6466dc75c416e679c74f16bc0f2f">validation_errc::file_unsupported_path</a>, <span class="stringliteral">&quot;Non-absolute POSIX path&quot;</span>);</div>
-<div class="line"><a id="l03190" name="l03190"></a><span class="lineno"> 3190</span>        <span class="keywordflow">if</span> (detail::has_dot_dot_segment(start_of_check, last, detail::is_posix_slash&lt;CharT&gt;))</div>
-<div class="line"><a id="l03191" name="l03191"></a><span class="lineno"> 3191</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7abece6466dc75c416e679c74f16bc0f2f">validation_errc::file_unsupported_path</a>, <span class="stringliteral">&quot;Unsupported file path&quot;</span>);</div>
-<div class="line"><a id="l03192" name="l03192"></a><span class="lineno"> 3192</span>        <span class="comment">// Absolute POSIX path</span></div>
-<div class="line"><a id="l03193" name="l03193"></a><span class="lineno"> 3193</span>        no_encode_set = &amp;<a class="code hl_variable" href="namespaceupa.html#af283256efea86b31a615b5ab6784bc51">posix_path_no_encode_set</a>;</div>
-<div class="line"><a id="l03194" name="l03194"></a><span class="lineno"> 3194</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03195" name="l03195"></a><span class="lineno"> 3195</span>        <span class="comment">// Windows path?</span></div>
-<div class="line"><a id="l03196" name="l03196"></a><span class="lineno"> 3196</span>        <span class="keywordtype">bool</span> is_unc = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l03197" name="l03197"></a><span class="lineno"> 3197</span> </div>
-<div class="line"><a id="l03198" name="l03198"></a><span class="lineno"> 3198</span>        <span class="comment">// https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file</span></div>
-<div class="line"><a id="l03199" name="l03199"></a><span class="lineno"> 3199</span>        <span class="comment">// https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats</span></div>
-<div class="line"><a id="l03200" name="l03200"></a><span class="lineno"> 3200</span>        <span class="comment">// https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation</span></div>
-<div class="line"><a id="l03201" name="l03201"></a><span class="lineno"> 3201</span>        <span class="keywordflow">if</span> (last - pointer &gt;= 2 &amp;&amp;</div>
-<div class="line"><a id="l03202" name="l03202"></a><span class="lineno"> 3202</span>            detail::is_windows_slash(pointer[0]) &amp;&amp;</div>
-<div class="line"><a id="l03203" name="l03203"></a><span class="lineno"> 3203</span>            detail::is_windows_slash(pointer[1])) {</div>
-<div class="line"><a id="l03204" name="l03204"></a><span class="lineno"> 3204</span>            pointer += 2; <span class="comment">// skip &#39;\\&#39;</span></div>
-<div class="line"><a id="l03205" name="l03205"></a><span class="lineno"> 3205</span> </div>
-<div class="line"><a id="l03206" name="l03206"></a><span class="lineno"> 3206</span>            <span class="comment">// It is Win32 namespace path or UNC path?</span></div>
-<div class="line"><a id="l03207" name="l03207"></a><span class="lineno"> 3207</span>            <span class="keywordflow">if</span> (last - pointer &gt;= 2 &amp;&amp;</div>
-<div class="line"><a id="l03208" name="l03208"></a><span class="lineno"> 3208</span>                (pointer[0] == <span class="charliteral">&#39;?&#39;</span> || pointer[0] == <span class="charliteral">&#39;.&#39;</span>) &amp;&amp;</div>
-<div class="line"><a id="l03209" name="l03209"></a><span class="lineno"> 3209</span>                detail::is_windows_slash(pointer[1])) {</div>
-<div class="line"><a id="l03210" name="l03210"></a><span class="lineno"> 3210</span>                <span class="comment">// Win32 File (&quot;\\?\&quot;) or Device (&quot;\\.\&quot;) namespace path</span></div>
-<div class="line"><a id="l03211" name="l03211"></a><span class="lineno"> 3211</span>                pointer += 2; <span class="comment">// skip &quot;?\&quot; or &quot;.\&quot;</span></div>
-<div class="line"><a id="l03212" name="l03212"></a><span class="lineno"> 3212</span>                <span class="keywordflow">if</span> (last - pointer &gt;= 4 &amp;&amp;</div>
-<div class="line"><a id="l03213" name="l03213"></a><span class="lineno"> 3213</span>                    (pointer[0] | 0x20) == <span class="charliteral">&#39;u&#39;</span> &amp;&amp;</div>
-<div class="line"><a id="l03214" name="l03214"></a><span class="lineno"> 3214</span>                    (pointer[1] | 0x20) == <span class="charliteral">&#39;n&#39;</span> &amp;&amp;</div>
-<div class="line"><a id="l03215" name="l03215"></a><span class="lineno"> 3215</span>                    (pointer[2] | 0x20) == <span class="charliteral">&#39;c&#39;</span> &amp;&amp;</div>
-<div class="line"><a id="l03216" name="l03216"></a><span class="lineno"> 3216</span>                    detail::is_windows_slash(pointer[3])) {</div>
-<div class="line"><a id="l03217" name="l03217"></a><span class="lineno"> 3217</span>                    pointer += 4; <span class="comment">// skip &quot;UNC\&quot;</span></div>
-<div class="line"><a id="l03218" name="l03218"></a><span class="lineno"> 3218</span>                    is_unc = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l03219" name="l03219"></a><span class="lineno"> 3219</span>                }</div>
-<div class="line"><a id="l03220" name="l03220"></a><span class="lineno"> 3220</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03221" name="l03221"></a><span class="lineno"> 3221</span>                <span class="comment">// UNC path</span></div>
-<div class="line"><a id="l03222" name="l03222"></a><span class="lineno"> 3222</span>                is_unc = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l03223" name="l03223"></a><span class="lineno"> 3223</span>            }</div>
-<div class="line"><a id="l03224" name="l03224"></a><span class="lineno"> 3224</span>        }</div>
-<div class="line"><a id="l03225" name="l03225"></a><span class="lineno"> 3225</span>        start_of_check = is_unc</div>
-<div class="line"><a id="l03226" name="l03226"></a><span class="lineno"> 3226</span>            ? detail::is_unc_path(pointer, last)</div>
-<div class="line"><a id="l03227" name="l03227"></a><span class="lineno"> 3227</span>            : detail::is_windows_os_drive_absolute_path(pointer, last);</div>
-<div class="line"><a id="l03228" name="l03228"></a><span class="lineno"> 3228</span>        <span class="keywordflow">if</span> (start_of_check == <span class="keyword">nullptr</span> ||</div>
-<div class="line"><a id="l03229" name="l03229"></a><span class="lineno"> 3229</span>            detail::has_dot_dot_segment(start_of_check, last, detail::is_windows_slash&lt;CharT&gt;))</div>
-<div class="line"><a id="l03230" name="l03230"></a><span class="lineno"> 3230</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7abece6466dc75c416e679c74f16bc0f2f">validation_errc::file_unsupported_path</a>, <span class="stringliteral">&quot;Unsupported file path&quot;</span>);</div>
-<div class="line"><a id="l03231" name="l03231"></a><span class="lineno"> 3231</span>        no_encode_set = &amp;<a class="code hl_variable" href="namespaceupa.html#ad3b4914de9b2713e81e465043bf1ec3e">raw_path_no_encode_set</a>;</div>
-<div class="line"><a id="l03232" name="l03232"></a><span class="lineno"> 3232</span>        <span class="keywordflow">if</span> (!is_unc) str_url.push_back(<span class="charliteral">&#39;/&#39;</span>); <span class="comment">// start path</span></div>
-<div class="line"><a id="l03233" name="l03233"></a><span class="lineno"> 3233</span>    }</div>
-<div class="line"><a id="l03234" name="l03234"></a><span class="lineno"> 3234</span> </div>
-<div class="line"><a id="l03235" name="l03235"></a><span class="lineno"> 3235</span>    <span class="comment">// Check for null characters</span></div>
-<div class="line"><a id="l03236" name="l03236"></a><span class="lineno"> 3236</span>    <span class="keywordflow">if</span> (util::contains_null(start_of_check, last))</div>
-<div class="line"><a id="l03237" name="l03237"></a><span class="lineno"> 3237</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a787ebdd276396b0923e51eda2e86140c">validation_errc::null_character</a>, <span class="stringliteral">&quot;Path contains null character&quot;</span>);</div>
-<div class="line"><a id="l03238" name="l03238"></a><span class="lineno"> 3238</span> </div>
-<div class="line"><a id="l03239" name="l03239"></a><span class="lineno"> 3239</span>    <span class="comment">// make URL</span></div>
-<div class="line"><a id="l03240" name="l03240"></a><span class="lineno"> 3240</span>    detail::append_utf8_percent_encoded(pointer, last, *no_encode_set, str_url);</div>
-<div class="line"><a id="l03241" name="l03241"></a><span class="lineno"> 3241</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classupa_1_1url.html">url</a>(str_url);</div>
-<div class="line"><a id="l03242" name="l03242"></a><span class="lineno"> 3242</span>}</div>
+<div class="line"><a id="l03187" name="l03187"></a><span class="lineno"> 3187</span>    std::string str_url(<span class="stringliteral">&quot;file://&quot;</span>);</div>
+<div class="line"><a id="l03188" name="l03188"></a><span class="lineno"> 3188</span> </div>
+<div class="line"><a id="l03189" name="l03189"></a><span class="lineno"> 3189</span>    <span class="keywordflow">if</span> (format == <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1">file_path_format::posix</a>) {</div>
+<div class="line"><a id="l03190" name="l03190"></a><span class="lineno"> 3190</span>        <span class="keywordflow">if</span> (!detail::is_posix_slash(*first))</div>
+<div class="line"><a id="l03191" name="l03191"></a><span class="lineno"> 3191</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7abece6466dc75c416e679c74f16bc0f2f">validation_errc::file_unsupported_path</a>, <span class="stringliteral">&quot;Non-absolute POSIX path&quot;</span>);</div>
+<div class="line"><a id="l03192" name="l03192"></a><span class="lineno"> 3192</span>        <span class="keywordflow">if</span> (detail::has_dot_dot_segment(start_of_check, last, detail::is_posix_slash&lt;CharT&gt;))</div>
+<div class="line"><a id="l03193" name="l03193"></a><span class="lineno"> 3193</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7abece6466dc75c416e679c74f16bc0f2f">validation_errc::file_unsupported_path</a>, <span class="stringliteral">&quot;Unsupported file path&quot;</span>);</div>
+<div class="line"><a id="l03194" name="l03194"></a><span class="lineno"> 3194</span>        <span class="comment">// Absolute POSIX path</span></div>
+<div class="line"><a id="l03195" name="l03195"></a><span class="lineno"> 3195</span>        no_encode_set = &amp;<a class="code hl_variable" href="namespaceupa.html#af283256efea86b31a615b5ab6784bc51">posix_path_no_encode_set</a>;</div>
+<div class="line"><a id="l03196" name="l03196"></a><span class="lineno"> 3196</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l03197" name="l03197"></a><span class="lineno"> 3197</span>        <span class="comment">// Windows path?</span></div>
+<div class="line"><a id="l03198" name="l03198"></a><span class="lineno"> 3198</span>        <span class="keywordtype">bool</span> is_unc = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l03199" name="l03199"></a><span class="lineno"> 3199</span> </div>
+<div class="line"><a id="l03200" name="l03200"></a><span class="lineno"> 3200</span>        <span class="comment">// https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file</span></div>
+<div class="line"><a id="l03201" name="l03201"></a><span class="lineno"> 3201</span>        <span class="comment">// https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats</span></div>
+<div class="line"><a id="l03202" name="l03202"></a><span class="lineno"> 3202</span>        <span class="comment">// https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation</span></div>
+<div class="line"><a id="l03203" name="l03203"></a><span class="lineno"> 3203</span>        <span class="keywordflow">if</span> (last - pointer &gt;= 2 &amp;&amp;</div>
+<div class="line"><a id="l03204" name="l03204"></a><span class="lineno"> 3204</span>            detail::is_windows_slash(pointer[0]) &amp;&amp;</div>
+<div class="line"><a id="l03205" name="l03205"></a><span class="lineno"> 3205</span>            detail::is_windows_slash(pointer[1])) {</div>
+<div class="line"><a id="l03206" name="l03206"></a><span class="lineno"> 3206</span>            pointer += 2; <span class="comment">// skip &#39;\\&#39;</span></div>
+<div class="line"><a id="l03207" name="l03207"></a><span class="lineno"> 3207</span> </div>
+<div class="line"><a id="l03208" name="l03208"></a><span class="lineno"> 3208</span>            <span class="comment">// It is Win32 namespace path or UNC path?</span></div>
+<div class="line"><a id="l03209" name="l03209"></a><span class="lineno"> 3209</span>            <span class="keywordflow">if</span> (last - pointer &gt;= 2 &amp;&amp;</div>
+<div class="line"><a id="l03210" name="l03210"></a><span class="lineno"> 3210</span>                (pointer[0] == <span class="charliteral">&#39;?&#39;</span> || pointer[0] == <span class="charliteral">&#39;.&#39;</span>) &amp;&amp;</div>
+<div class="line"><a id="l03211" name="l03211"></a><span class="lineno"> 3211</span>                detail::is_windows_slash(pointer[1])) {</div>
+<div class="line"><a id="l03212" name="l03212"></a><span class="lineno"> 3212</span>                <span class="comment">// Win32 File (&quot;\\?\&quot;) or Device (&quot;\\.\&quot;) namespace path</span></div>
+<div class="line"><a id="l03213" name="l03213"></a><span class="lineno"> 3213</span>                pointer += 2; <span class="comment">// skip &quot;?\&quot; or &quot;.\&quot;</span></div>
+<div class="line"><a id="l03214" name="l03214"></a><span class="lineno"> 3214</span>                <span class="keywordflow">if</span> (last - pointer &gt;= 4 &amp;&amp;</div>
+<div class="line"><a id="l03215" name="l03215"></a><span class="lineno"> 3215</span>                    (pointer[0] | 0x20) == <span class="charliteral">&#39;u&#39;</span> &amp;&amp;</div>
+<div class="line"><a id="l03216" name="l03216"></a><span class="lineno"> 3216</span>                    (pointer[1] | 0x20) == <span class="charliteral">&#39;n&#39;</span> &amp;&amp;</div>
+<div class="line"><a id="l03217" name="l03217"></a><span class="lineno"> 3217</span>                    (pointer[2] | 0x20) == <span class="charliteral">&#39;c&#39;</span> &amp;&amp;</div>
+<div class="line"><a id="l03218" name="l03218"></a><span class="lineno"> 3218</span>                    detail::is_windows_slash(pointer[3])) {</div>
+<div class="line"><a id="l03219" name="l03219"></a><span class="lineno"> 3219</span>                    pointer += 4; <span class="comment">// skip &quot;UNC\&quot;</span></div>
+<div class="line"><a id="l03220" name="l03220"></a><span class="lineno"> 3220</span>                    is_unc = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l03221" name="l03221"></a><span class="lineno"> 3221</span>                }</div>
+<div class="line"><a id="l03222" name="l03222"></a><span class="lineno"> 3222</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l03223" name="l03223"></a><span class="lineno"> 3223</span>                <span class="comment">// UNC path</span></div>
+<div class="line"><a id="l03224" name="l03224"></a><span class="lineno"> 3224</span>                is_unc = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l03225" name="l03225"></a><span class="lineno"> 3225</span>            }</div>
+<div class="line"><a id="l03226" name="l03226"></a><span class="lineno"> 3226</span>        }</div>
+<div class="line"><a id="l03227" name="l03227"></a><span class="lineno"> 3227</span>        start_of_check = is_unc</div>
+<div class="line"><a id="l03228" name="l03228"></a><span class="lineno"> 3228</span>            ? detail::is_unc_path(pointer, last)</div>
+<div class="line"><a id="l03229" name="l03229"></a><span class="lineno"> 3229</span>            : detail::is_windows_os_drive_absolute_path(pointer, last);</div>
+<div class="line"><a id="l03230" name="l03230"></a><span class="lineno"> 3230</span>        <span class="keywordflow">if</span> (start_of_check == <span class="keyword">nullptr</span> ||</div>
+<div class="line"><a id="l03231" name="l03231"></a><span class="lineno"> 3231</span>            detail::has_dot_dot_segment(start_of_check, last, detail::is_windows_slash&lt;CharT&gt;))</div>
+<div class="line"><a id="l03232" name="l03232"></a><span class="lineno"> 3232</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7abece6466dc75c416e679c74f16bc0f2f">validation_errc::file_unsupported_path</a>, <span class="stringliteral">&quot;Unsupported file path&quot;</span>);</div>
+<div class="line"><a id="l03233" name="l03233"></a><span class="lineno"> 3233</span>        no_encode_set = &amp;<a class="code hl_variable" href="namespaceupa.html#ad3b4914de9b2713e81e465043bf1ec3e">raw_path_no_encode_set</a>;</div>
+<div class="line"><a id="l03234" name="l03234"></a><span class="lineno"> 3234</span>        <span class="keywordflow">if</span> (!is_unc) str_url.push_back(<span class="charliteral">&#39;/&#39;</span>); <span class="comment">// start path</span></div>
+<div class="line"><a id="l03235" name="l03235"></a><span class="lineno"> 3235</span>    }</div>
+<div class="line"><a id="l03236" name="l03236"></a><span class="lineno"> 3236</span> </div>
+<div class="line"><a id="l03237" name="l03237"></a><span class="lineno"> 3237</span>    <span class="comment">// Check for null characters</span></div>
+<div class="line"><a id="l03238" name="l03238"></a><span class="lineno"> 3238</span>    <span class="keywordflow">if</span> (util::contains_null(start_of_check, last))</div>
+<div class="line"><a id="l03239" name="l03239"></a><span class="lineno"> 3239</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a787ebdd276396b0923e51eda2e86140c">validation_errc::null_character</a>, <span class="stringliteral">&quot;Path contains null character&quot;</span>);</div>
+<div class="line"><a id="l03240" name="l03240"></a><span class="lineno"> 3240</span> </div>
+<div class="line"><a id="l03241" name="l03241"></a><span class="lineno"> 3241</span>    <span class="comment">// make URL</span></div>
+<div class="line"><a id="l03242" name="l03242"></a><span class="lineno"> 3242</span>    detail::append_utf8_percent_encoded(pointer, last, *no_encode_set, str_url);</div>
+<div class="line"><a id="l03243" name="l03243"></a><span class="lineno"> 3243</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classupa_1_1url.html">url</a>(str_url);</div>
+<div class="line"><a id="l03244" name="l03244"></a><span class="lineno"> 3244</span>}</div>
 </div>
-<div class="line"><a id="l03243" name="l03243"></a><span class="lineno"> 3243</span> </div>
-<div class="foldopen" id="foldopen03252" data-start="{" data-end="}">
-<div class="line"><a id="l03252" name="l03252"></a><span class="lineno"><a class="line" href="namespaceupa.html#a01668f1801e81e167aa890118e7d456b"> 3252</a></span><span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceupa.html#a01668f1801e81e167aa890118e7d456b">path_from_file_url</a>(<span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1url.html">url</a>&amp; file_url, <a class="code hl_enumeration" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360f">file_path_format</a> format = <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">file_path_format::native</a>) {</div>
-<div class="line"><a id="l03253" name="l03253"></a><span class="lineno"> 3253</span>    <span class="keywordflow">if</span> (!file_url.<a class="code hl_function" href="classupa_1_1url.html#a9fd5393ae5a83b3cb710fea620579417">is_file_scheme</a>())</div>
-<div class="line"><a id="l03254" name="l03254"></a><span class="lineno"> 3254</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a6c48249324054e027b248b12b6c3b12e">validation_errc::not_file_url</a>, <span class="stringliteral">&quot;Not a file URL&quot;</span>);</div>
-<div class="line"><a id="l03255" name="l03255"></a><span class="lineno"> 3255</span> </div>
-<div class="line"><a id="l03256" name="l03256"></a><span class="lineno"> 3256</span>    <span class="comment">// source</span></div>
-<div class="line"><a id="l03257" name="l03257"></a><span class="lineno"> 3257</span>    <span class="keyword">const</span> <span class="keyword">auto</span> hostname = file_url.<a class="code hl_function" href="classupa_1_1url.html#a00c9e7935052de9bdd5f7dc57922255e">hostname</a>();</div>
-<div class="line"><a id="l03258" name="l03258"></a><span class="lineno"> 3258</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> is_host = !hostname.empty();</div>
-<div class="line"><a id="l03259" name="l03259"></a><span class="lineno"> 3259</span> </div>
-<div class="line"><a id="l03260" name="l03260"></a><span class="lineno"> 3260</span>    <span class="comment">// target</span></div>
-<div class="line"><a id="l03261" name="l03261"></a><span class="lineno"> 3261</span>    std::string path;</div>
-<div class="line"><a id="l03262" name="l03262"></a><span class="lineno"> 3262</span> </div>
-<div class="line"><a id="l03263" name="l03263"></a><span class="lineno"> 3263</span>    <span class="keywordflow">if</span> (format == <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1">file_path_format::posix</a>) {</div>
-<div class="line"><a id="l03264" name="l03264"></a><span class="lineno"> 3264</span>        <span class="keywordflow">if</span> (is_host)</div>
-<div class="line"><a id="l03265" name="l03265"></a><span class="lineno"> 3265</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a638170c41e2e2dc7f761187af119d301">validation_errc::file_url_cannot_have_host</a>, <span class="stringliteral">&quot;POSIX path cannot have host&quot;</span>);</div>
-<div class="line"><a id="l03266" name="l03266"></a><span class="lineno"> 3266</span>        <span class="comment">// percent decode pathname</span></div>
-<div class="line"><a id="l03267" name="l03267"></a><span class="lineno"> 3267</span>        detail::append_percent_decoded(file_url.<a class="code hl_function" href="classupa_1_1url.html#ad82c26035a5289e0f141a156806ad24c">pathname</a>(), path);</div>
-<div class="line"><a id="l03268" name="l03268"></a><span class="lineno"> 3268</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03269" name="l03269"></a><span class="lineno"> 3269</span>        <span class="comment">// format == file_path_format::windows</span></div>
-<div class="line"><a id="l03270" name="l03270"></a><span class="lineno"> 3270</span>        <span class="keywordflow">if</span> (is_host) {</div>
-<div class="line"><a id="l03271" name="l03271"></a><span class="lineno"> 3271</span>            <span class="comment">// UNC path cannot have &quot;.&quot; hostname, because &quot;\\.\&quot; means Win32 device namespace</span></div>
-<div class="line"><a id="l03272" name="l03272"></a><span class="lineno"> 3272</span>            <span class="keywordflow">if</span> (hostname == <span class="stringliteral">&quot;.&quot;</span>)</div>
-<div class="line"><a id="l03273" name="l03273"></a><span class="lineno"> 3273</span>                <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a91095cdc57bcc791b5f5aa636aff5c82">validation_errc::file_url_unsupported_host</a>, <span class="stringliteral">&quot;UNC path cannot have \&quot;.\&quot; hostname&quot;</span>);</div>
-<div class="line"><a id="l03274" name="l03274"></a><span class="lineno"> 3274</span>            <span class="comment">// UNC path</span></div>
-<div class="line"><a id="l03275" name="l03275"></a><span class="lineno"> 3275</span>            path.append(<span class="stringliteral">&quot;\\\\&quot;</span>);</div>
-<div class="line"><a id="l03276" name="l03276"></a><span class="lineno"> 3276</span>            <span class="keywordflow">if</span> (file_url.<a class="code hl_function" href="classupa_1_1url.html#a7b6d0fbe0fc3bd8f7f4dfe712ed5b433">host_type</a>() == <a class="code hl_enumvalue" href="namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecfafdb7cb8f657426e7c409bfd6d1a36ce4">HostType::IPv6</a>) {</div>
-<div class="line"><a id="l03277" name="l03277"></a><span class="lineno"> 3277</span>                <span class="comment">// Form an IPV6 address host-name by substituting hyphens for the colons and appending &quot;.ipv6-literal.net&quot;</span></div>
-<div class="line"><a id="l03278" name="l03278"></a><span class="lineno"> 3278</span>                <span class="comment">// https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dtyp/62e862f4-2a51-452e-8eeb-dc4ff5ee33cc</span></div>
-<div class="line"><a id="l03279" name="l03279"></a><span class="lineno"> 3279</span>                std::replace_copy(std::next(hostname.begin()), std::prev(hostname.end()),</div>
-<div class="line"><a id="l03280" name="l03280"></a><span class="lineno"> 3280</span>                    std::back_inserter(path), <span class="charliteral">&#39;:&#39;</span>, <span class="charliteral">&#39;-&#39;</span>);</div>
-<div class="line"><a id="l03281" name="l03281"></a><span class="lineno"> 3281</span>                path.append(<span class="stringliteral">&quot;.ipv6-literal.net&quot;</span>);</div>
-<div class="line"><a id="l03282" name="l03282"></a><span class="lineno"> 3282</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03283" name="l03283"></a><span class="lineno"> 3283</span>                path.append(hostname);</div>
-<div class="line"><a id="l03284" name="l03284"></a><span class="lineno"> 3284</span>            }</div>
-<div class="line"><a id="l03285" name="l03285"></a><span class="lineno"> 3285</span>        }</div>
-<div class="line"><a id="l03286" name="l03286"></a><span class="lineno"> 3286</span> </div>
-<div class="line"><a id="l03287" name="l03287"></a><span class="lineno"> 3287</span>        <span class="comment">// percent decode pathname and normalize slashes</span></div>
-<div class="line"><a id="l03288" name="l03288"></a><span class="lineno"> 3288</span>        <span class="keyword">const</span> <span class="keyword">auto</span> start = <span class="keyword">static_cast&lt;</span>std::ptrdiff_t<span class="keyword">&gt;</span>(path.length());</div>
-<div class="line"><a id="l03289" name="l03289"></a><span class="lineno"> 3289</span>        detail::append_percent_decoded(file_url.<a class="code hl_function" href="classupa_1_1url.html#ad82c26035a5289e0f141a156806ad24c">pathname</a>(), path);</div>
-<div class="line"><a id="l03290" name="l03290"></a><span class="lineno"> 3290</span>        std::replace(std::next(path.begin(), start), path.end(), <span class="charliteral">&#39;/&#39;</span>, <span class="charliteral">&#39;\\&#39;</span>);</div>
-<div class="line"><a id="l03291" name="l03291"></a><span class="lineno"> 3291</span> </div>
-<div class="line"><a id="l03292" name="l03292"></a><span class="lineno"> 3292</span>        <span class="keywordflow">if</span> (is_host) {</div>
-<div class="line"><a id="l03293" name="l03293"></a><span class="lineno"> 3293</span>            <span class="keywordflow">if</span> (!detail::is_unc_path(path.data() + 2, path.data() + path.length()))</div>
-<div class="line"><a id="l03294" name="l03294"></a><span class="lineno"> 3294</span>                <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a9c66d8c63d3ec33c819301db9d488474">validation_errc::file_url_invalid_unc</a>, <span class="stringliteral">&quot;Invalid UNC path&quot;</span>);</div>
-<div class="line"><a id="l03295" name="l03295"></a><span class="lineno"> 3295</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03296" name="l03296"></a><span class="lineno"> 3296</span>            <span class="keywordflow">if</span> (detail::pathname_has_windows_os_drive(path)) {</div>
-<div class="line"><a id="l03297" name="l03297"></a><span class="lineno"> 3297</span>                path.erase(0, 1); <span class="comment">// remove leading &#39;\\&#39;</span></div>
-<div class="line"><a id="l03298" name="l03298"></a><span class="lineno"> 3298</span>                <span class="keywordflow">if</span> (path.length() == 2)</div>
-<div class="line"><a id="l03299" name="l03299"></a><span class="lineno"> 3299</span>                    path.push_back(<span class="charliteral">&#39;\\&#39;</span>); <span class="comment">// &quot;C:&quot; -&gt; &quot;C:\&quot;</span></div>
-<div class="line"><a id="l03300" name="l03300"></a><span class="lineno"> 3300</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03301" name="l03301"></a><span class="lineno"> 3301</span>                <span class="comment">// https://datatracker.ietf.org/doc/html/rfc8089#appendix-E.3.2</span></div>
-<div class="line"><a id="l03302" name="l03302"></a><span class="lineno"> 3302</span>                <span class="comment">// Maybe a UNC path. Possible variants:</span></div>
-<div class="line"><a id="l03303" name="l03303"></a><span class="lineno"> 3303</span>                <span class="comment">// 1) file://///host/path -&gt; \\\host\path</span></div>
-<div class="line"><a id="l03304" name="l03304"></a><span class="lineno"> 3304</span>                <span class="comment">// 2) file:////host/path -&gt; \\host\path</span></div>
-<div class="line"><a id="l03305" name="l03305"></a><span class="lineno"> 3305</span>                <span class="keyword">const</span> <span class="keyword">auto</span> count_leading_slashes = std::find_if(</div>
-<div class="line"><a id="l03306" name="l03306"></a><span class="lineno"> 3306</span>                    path.data(),</div>
-<div class="line"><a id="l03307" name="l03307"></a><span class="lineno"> 3307</span>                    path.data() + std::min(<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(4), path.length()),</div>
-<div class="line"><a id="l03308" name="l03308"></a><span class="lineno"> 3308</span>                    [](<span class="keywordtype">char</span> c) { return c != <span class="stringliteral">&#39;\\&#39;</span>; }) - path.data();</div>
-<div class="line"><a id="l03309" name="l03309"></a><span class="lineno"> 3309</span>                <span class="keywordflow">if</span> (count_leading_slashes == 3)</div>
-<div class="line"><a id="l03310" name="l03310"></a><span class="lineno"> 3310</span>                    path.erase(0, 1); <span class="comment">// remove leading &#39;\\&#39;</span></div>
-<div class="line"><a id="l03311" name="l03311"></a><span class="lineno"> 3311</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (count_leading_slashes != 2)</div>
-<div class="line"><a id="l03312" name="l03312"></a><span class="lineno"> 3312</span>                    <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a2ca12369d95b6ae5b0f74b951da7eceb">validation_errc::file_url_not_windows_path</a>, <span class="stringliteral">&quot;Not a Windows path&quot;</span>);</div>
-<div class="line"><a id="l03313" name="l03313"></a><span class="lineno"> 3313</span>                <span class="keywordflow">if</span> (!detail::is_unc_path(path.data() + 2, path.data() + path.length()))</div>
-<div class="line"><a id="l03314" name="l03314"></a><span class="lineno"> 3314</span>                    <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a9c66d8c63d3ec33c819301db9d488474">validation_errc::file_url_invalid_unc</a>, <span class="stringliteral">&quot;Invalid UNC path&quot;</span>);</div>
-<div class="line"><a id="l03315" name="l03315"></a><span class="lineno"> 3315</span>            }</div>
-<div class="line"><a id="l03316" name="l03316"></a><span class="lineno"> 3316</span>        }</div>
-<div class="line"><a id="l03317" name="l03317"></a><span class="lineno"> 3317</span>    }</div>
-<div class="line"><a id="l03318" name="l03318"></a><span class="lineno"> 3318</span> </div>
-<div class="line"><a id="l03319" name="l03319"></a><span class="lineno"> 3319</span>    <span class="comment">// Check for null characters</span></div>
-<div class="line"><a id="l03320" name="l03320"></a><span class="lineno"> 3320</span>    <span class="keywordflow">if</span> (util::contains_null(path.begin(), path.end()))</div>
-<div class="line"><a id="l03321" name="l03321"></a><span class="lineno"> 3321</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a787ebdd276396b0923e51eda2e86140c">validation_errc::null_character</a>, <span class="stringliteral">&quot;Path contains null character&quot;</span>);</div>
-<div class="line"><a id="l03322" name="l03322"></a><span class="lineno"> 3322</span> </div>
-<div class="line"><a id="l03323" name="l03323"></a><span class="lineno"> 3323</span>    <span class="keywordflow">return</span> path;</div>
-<div class="line"><a id="l03324" name="l03324"></a><span class="lineno"> 3324</span>}</div>
+<div class="line"><a id="l03245" name="l03245"></a><span class="lineno"> 3245</span> </div>
+<div class="foldopen" id="foldopen03254" data-start="{" data-end="}">
+<div class="line"><a id="l03254" name="l03254"></a><span class="lineno"><a class="line" href="namespaceupa.html#a01668f1801e81e167aa890118e7d456b"> 3254</a></span><span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceupa.html#a01668f1801e81e167aa890118e7d456b">path_from_file_url</a>(<span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1url.html">url</a>&amp; file_url, <a class="code hl_enumeration" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360f">file_path_format</a> format = <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">file_path_format::native</a>) {</div>
+<div class="line"><a id="l03255" name="l03255"></a><span class="lineno"> 3255</span>    <span class="keywordflow">if</span> (!file_url.<a class="code hl_function" href="classupa_1_1url.html#a9fd5393ae5a83b3cb710fea620579417">is_file_scheme</a>())</div>
+<div class="line"><a id="l03256" name="l03256"></a><span class="lineno"> 3256</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a6c48249324054e027b248b12b6c3b12e">validation_errc::not_file_url</a>, <span class="stringliteral">&quot;Not a file URL&quot;</span>);</div>
+<div class="line"><a id="l03257" name="l03257"></a><span class="lineno"> 3257</span> </div>
+<div class="line"><a id="l03258" name="l03258"></a><span class="lineno"> 3258</span>    <span class="comment">// source</span></div>
+<div class="line"><a id="l03259" name="l03259"></a><span class="lineno"> 3259</span>    <span class="keyword">const</span> <span class="keyword">auto</span> hostname = file_url.<a class="code hl_function" href="classupa_1_1url.html#a00c9e7935052de9bdd5f7dc57922255e">hostname</a>();</div>
+<div class="line"><a id="l03260" name="l03260"></a><span class="lineno"> 3260</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> is_host = !hostname.empty();</div>
+<div class="line"><a id="l03261" name="l03261"></a><span class="lineno"> 3261</span> </div>
+<div class="line"><a id="l03262" name="l03262"></a><span class="lineno"> 3262</span>    <span class="comment">// target</span></div>
+<div class="line"><a id="l03263" name="l03263"></a><span class="lineno"> 3263</span>    std::string path;</div>
+<div class="line"><a id="l03264" name="l03264"></a><span class="lineno"> 3264</span> </div>
+<div class="line"><a id="l03265" name="l03265"></a><span class="lineno"> 3265</span>    <span class="keywordflow">if</span> (format == <a class="code hl_enumvalue" href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1">file_path_format::posix</a>) {</div>
+<div class="line"><a id="l03266" name="l03266"></a><span class="lineno"> 3266</span>        <span class="keywordflow">if</span> (is_host)</div>
+<div class="line"><a id="l03267" name="l03267"></a><span class="lineno"> 3267</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a638170c41e2e2dc7f761187af119d301">validation_errc::file_url_cannot_have_host</a>, <span class="stringliteral">&quot;POSIX path cannot have host&quot;</span>);</div>
+<div class="line"><a id="l03268" name="l03268"></a><span class="lineno"> 3268</span>        <span class="comment">// percent decode pathname</span></div>
+<div class="line"><a id="l03269" name="l03269"></a><span class="lineno"> 3269</span>        detail::append_percent_decoded(file_url.<a class="code hl_function" href="classupa_1_1url.html#ad82c26035a5289e0f141a156806ad24c">pathname</a>(), path);</div>
+<div class="line"><a id="l03270" name="l03270"></a><span class="lineno"> 3270</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l03271" name="l03271"></a><span class="lineno"> 3271</span>        <span class="comment">// format == file_path_format::windows</span></div>
+<div class="line"><a id="l03272" name="l03272"></a><span class="lineno"> 3272</span>        <span class="keywordflow">if</span> (is_host) {</div>
+<div class="line"><a id="l03273" name="l03273"></a><span class="lineno"> 3273</span>            <span class="comment">// UNC path cannot have &quot;.&quot; hostname, because &quot;\\.\&quot; means Win32 device namespace</span></div>
+<div class="line"><a id="l03274" name="l03274"></a><span class="lineno"> 3274</span>            <span class="keywordflow">if</span> (hostname == <span class="stringliteral">&quot;.&quot;</span>)</div>
+<div class="line"><a id="l03275" name="l03275"></a><span class="lineno"> 3275</span>                <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a91095cdc57bcc791b5f5aa636aff5c82">validation_errc::file_url_unsupported_host</a>, <span class="stringliteral">&quot;UNC path cannot have \&quot;.\&quot; hostname&quot;</span>);</div>
+<div class="line"><a id="l03276" name="l03276"></a><span class="lineno"> 3276</span>            <span class="comment">// UNC path</span></div>
+<div class="line"><a id="l03277" name="l03277"></a><span class="lineno"> 3277</span>            path.append(<span class="stringliteral">&quot;\\\\&quot;</span>);</div>
+<div class="line"><a id="l03278" name="l03278"></a><span class="lineno"> 3278</span>            <span class="keywordflow">if</span> (file_url.<a class="code hl_function" href="classupa_1_1url.html#a7b6d0fbe0fc3bd8f7f4dfe712ed5b433">host_type</a>() == <a class="code hl_enumvalue" href="namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecfafdb7cb8f657426e7c409bfd6d1a36ce4">HostType::IPv6</a>) {</div>
+<div class="line"><a id="l03279" name="l03279"></a><span class="lineno"> 3279</span>                <span class="comment">// Form an IPV6 address host-name by substituting hyphens for the colons and appending &quot;.ipv6-literal.net&quot;</span></div>
+<div class="line"><a id="l03280" name="l03280"></a><span class="lineno"> 3280</span>                <span class="comment">// https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dtyp/62e862f4-2a51-452e-8eeb-dc4ff5ee33cc</span></div>
+<div class="line"><a id="l03281" name="l03281"></a><span class="lineno"> 3281</span>                std::replace_copy(std::next(hostname.begin()), std::prev(hostname.end()),</div>
+<div class="line"><a id="l03282" name="l03282"></a><span class="lineno"> 3282</span>                    std::back_inserter(path), <span class="charliteral">&#39;:&#39;</span>, <span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><a id="l03283" name="l03283"></a><span class="lineno"> 3283</span>                path.append(<span class="stringliteral">&quot;.ipv6-literal.net&quot;</span>);</div>
+<div class="line"><a id="l03284" name="l03284"></a><span class="lineno"> 3284</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l03285" name="l03285"></a><span class="lineno"> 3285</span>                path.append(hostname);</div>
+<div class="line"><a id="l03286" name="l03286"></a><span class="lineno"> 3286</span>            }</div>
+<div class="line"><a id="l03287" name="l03287"></a><span class="lineno"> 3287</span>        }</div>
+<div class="line"><a id="l03288" name="l03288"></a><span class="lineno"> 3288</span> </div>
+<div class="line"><a id="l03289" name="l03289"></a><span class="lineno"> 3289</span>        <span class="comment">// percent decode pathname and normalize slashes</span></div>
+<div class="line"><a id="l03290" name="l03290"></a><span class="lineno"> 3290</span>        <span class="keyword">const</span> <span class="keyword">auto</span> start = <span class="keyword">static_cast&lt;</span>std::ptrdiff_t<span class="keyword">&gt;</span>(path.length());</div>
+<div class="line"><a id="l03291" name="l03291"></a><span class="lineno"> 3291</span>        detail::append_percent_decoded(file_url.<a class="code hl_function" href="classupa_1_1url.html#ad82c26035a5289e0f141a156806ad24c">pathname</a>(), path);</div>
+<div class="line"><a id="l03292" name="l03292"></a><span class="lineno"> 3292</span>        std::replace(std::next(path.begin(), start), path.end(), <span class="charliteral">&#39;/&#39;</span>, <span class="charliteral">&#39;\\&#39;</span>);</div>
+<div class="line"><a id="l03293" name="l03293"></a><span class="lineno"> 3293</span> </div>
+<div class="line"><a id="l03294" name="l03294"></a><span class="lineno"> 3294</span>        <span class="keywordflow">if</span> (is_host) {</div>
+<div class="line"><a id="l03295" name="l03295"></a><span class="lineno"> 3295</span>            <span class="keywordflow">if</span> (!detail::is_unc_path(path.data() + 2, path.data() + path.length()))</div>
+<div class="line"><a id="l03296" name="l03296"></a><span class="lineno"> 3296</span>                <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a9c66d8c63d3ec33c819301db9d488474">validation_errc::file_url_invalid_unc</a>, <span class="stringliteral">&quot;Invalid UNC path&quot;</span>);</div>
+<div class="line"><a id="l03297" name="l03297"></a><span class="lineno"> 3297</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l03298" name="l03298"></a><span class="lineno"> 3298</span>            <span class="keywordflow">if</span> (detail::pathname_has_windows_os_drive(path)) {</div>
+<div class="line"><a id="l03299" name="l03299"></a><span class="lineno"> 3299</span>                path.erase(0, 1); <span class="comment">// remove leading &#39;\\&#39;</span></div>
+<div class="line"><a id="l03300" name="l03300"></a><span class="lineno"> 3300</span>                <span class="keywordflow">if</span> (path.length() == 2)</div>
+<div class="line"><a id="l03301" name="l03301"></a><span class="lineno"> 3301</span>                    path.push_back(<span class="charliteral">&#39;\\&#39;</span>); <span class="comment">// &quot;C:&quot; -&gt; &quot;C:\&quot;</span></div>
+<div class="line"><a id="l03302" name="l03302"></a><span class="lineno"> 3302</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l03303" name="l03303"></a><span class="lineno"> 3303</span>                <span class="comment">// https://datatracker.ietf.org/doc/html/rfc8089#appendix-E.3.2</span></div>
+<div class="line"><a id="l03304" name="l03304"></a><span class="lineno"> 3304</span>                <span class="comment">// Maybe a UNC path. Possible variants:</span></div>
+<div class="line"><a id="l03305" name="l03305"></a><span class="lineno"> 3305</span>                <span class="comment">// 1) file://///host/path -&gt; \\\host\path</span></div>
+<div class="line"><a id="l03306" name="l03306"></a><span class="lineno"> 3306</span>                <span class="comment">// 2) file:////host/path -&gt; \\host\path</span></div>
+<div class="line"><a id="l03307" name="l03307"></a><span class="lineno"> 3307</span>                <span class="keyword">const</span> <span class="keyword">auto</span> count_leading_slashes = std::find_if(</div>
+<div class="line"><a id="l03308" name="l03308"></a><span class="lineno"> 3308</span>                    path.data(),</div>
+<div class="line"><a id="l03309" name="l03309"></a><span class="lineno"> 3309</span>                    path.data() + std::min(<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(4), path.length()),</div>
+<div class="line"><a id="l03310" name="l03310"></a><span class="lineno"> 3310</span>                    [](<span class="keywordtype">char</span> c) { return c != <span class="stringliteral">&#39;\\&#39;</span>; }) - path.data();</div>
+<div class="line"><a id="l03311" name="l03311"></a><span class="lineno"> 3311</span>                <span class="keywordflow">if</span> (count_leading_slashes == 3)</div>
+<div class="line"><a id="l03312" name="l03312"></a><span class="lineno"> 3312</span>                    path.erase(0, 1); <span class="comment">// remove leading &#39;\\&#39;</span></div>
+<div class="line"><a id="l03313" name="l03313"></a><span class="lineno"> 3313</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (count_leading_slashes != 2)</div>
+<div class="line"><a id="l03314" name="l03314"></a><span class="lineno"> 3314</span>                    <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a2ca12369d95b6ae5b0f74b951da7eceb">validation_errc::file_url_not_windows_path</a>, <span class="stringliteral">&quot;Not a Windows path&quot;</span>);</div>
+<div class="line"><a id="l03315" name="l03315"></a><span class="lineno"> 3315</span>                <span class="keywordflow">if</span> (!detail::is_unc_path(path.data() + 2, path.data() + path.length()))</div>
+<div class="line"><a id="l03316" name="l03316"></a><span class="lineno"> 3316</span>                    <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a9c66d8c63d3ec33c819301db9d488474">validation_errc::file_url_invalid_unc</a>, <span class="stringliteral">&quot;Invalid UNC path&quot;</span>);</div>
+<div class="line"><a id="l03317" name="l03317"></a><span class="lineno"> 3317</span>            }</div>
+<div class="line"><a id="l03318" name="l03318"></a><span class="lineno"> 3318</span>        }</div>
+<div class="line"><a id="l03319" name="l03319"></a><span class="lineno"> 3319</span>    }</div>
+<div class="line"><a id="l03320" name="l03320"></a><span class="lineno"> 3320</span> </div>
+<div class="line"><a id="l03321" name="l03321"></a><span class="lineno"> 3321</span>    <span class="comment">// Check for null characters</span></div>
+<div class="line"><a id="l03322" name="l03322"></a><span class="lineno"> 3322</span>    <span class="keywordflow">if</span> (util::contains_null(path.begin(), path.end()))</div>
+<div class="line"><a id="l03323" name="l03323"></a><span class="lineno"> 3323</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1url__error.html">url_error</a>(<a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a787ebdd276396b0923e51eda2e86140c">validation_errc::null_character</a>, <span class="stringliteral">&quot;Path contains null character&quot;</span>);</div>
+<div class="line"><a id="l03324" name="l03324"></a><span class="lineno"> 3324</span> </div>
+<div class="line"><a id="l03325" name="l03325"></a><span class="lineno"> 3325</span>    <span class="keywordflow">return</span> path;</div>
+<div class="line"><a id="l03326" name="l03326"></a><span class="lineno"> 3326</span>}</div>
 </div>
-<div class="line"><a id="l03325" name="l03325"></a><span class="lineno"> 3325</span> </div>
-<div class="line"><a id="l03326" name="l03326"></a><span class="lineno"> 3326</span> </div>
-<div class="line"><a id="l03327" name="l03327"></a><span class="lineno"> 3327</span>} <span class="comment">// namespace upa</span></div>
-</div>
+<div class="line"><a id="l03327" name="l03327"></a><span class="lineno"> 3327</span> </div>
 <div class="line"><a id="l03328" name="l03328"></a><span class="lineno"> 3328</span> </div>
-<div class="line"><a id="l03329" name="l03329"></a><span class="lineno"> 3329</span> </div>
-<div class="foldopen" id="foldopen03330" data-start="{" data-end="}">
-<div class="line"><a id="l03330" name="l03330"></a><span class="lineno"><a class="line" href="namespacestd.html"> 3330</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacestd.html">std</a> {</div>
+<div class="line"><a id="l03329" name="l03329"></a><span class="lineno"> 3329</span>} <span class="comment">// namespace upa</span></div>
+</div>
+<div class="line"><a id="l03330" name="l03330"></a><span class="lineno"> 3330</span> </div>
 <div class="line"><a id="l03331" name="l03331"></a><span class="lineno"> 3331</span> </div>
-<div class="line"><a id="l03333" name="l03333"></a><span class="lineno"> 3333</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="foldopen" id="foldopen03334" data-start="{" data-end="};">
-<div class="line"><a id="l03334" name="l03334"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01upa_1_1url_01_4.html"> 3334</a></span><span class="keyword">struct </span>hash&lt;<a class="code hl_namespace" href="namespaceupa.html">upa</a>::url&gt; {</div>
-<div class="foldopen" id="foldopen03335" data-start="{" data-end="}">
-<div class="line"><a id="l03335" name="l03335"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01upa_1_1url_01_4.html#a17ef204bd073cdeffc4c2b4d5e91c8cc"> 3335</a></span>    std::size_t <a class="code hl_function" href="structstd_1_1hash_3_01upa_1_1url_01_4.html#a17ef204bd073cdeffc4c2b4d5e91c8cc">operator()</a>(<span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1url.html">upa::url</a>&amp; url) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l03336" name="l03336"></a><span class="lineno"> 3336</span>        <span class="keywordflow">return</span> std::hash&lt;std::string&gt;{}(url.norm_url_);</div>
-<div class="line"><a id="l03337" name="l03337"></a><span class="lineno"> 3337</span>    }</div>
+<div class="foldopen" id="foldopen03332" data-start="{" data-end="}">
+<div class="line"><a id="l03332" name="l03332"></a><span class="lineno"><a class="line" href="namespacestd.html"> 3332</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacestd.html">std</a> {</div>
+<div class="line"><a id="l03333" name="l03333"></a><span class="lineno"> 3333</span> </div>
+<div class="line"><a id="l03335" name="l03335"></a><span class="lineno"> 3335</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="foldopen" id="foldopen03336" data-start="{" data-end="};">
+<div class="line"><a id="l03336" name="l03336"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01upa_1_1url_01_4.html"> 3336</a></span><span class="keyword">struct </span>hash&lt;<a class="code hl_namespace" href="namespaceupa.html">upa</a>::url&gt; {</div>
+<div class="foldopen" id="foldopen03337" data-start="{" data-end="}">
+<div class="line"><a id="l03337" name="l03337"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01upa_1_1url_01_4.html#a17ef204bd073cdeffc4c2b4d5e91c8cc"> 3337</a></span>    std::size_t <a class="code hl_function" href="structstd_1_1hash_3_01upa_1_1url_01_4.html#a17ef204bd073cdeffc4c2b4d5e91c8cc">operator()</a>(<span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1url.html">upa::url</a>&amp; url) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l03338" name="l03338"></a><span class="lineno"> 3338</span>        <span class="keywordflow">return</span> std::hash&lt;std::string&gt;{}(url.norm_url_);</div>
+<div class="line"><a id="l03339" name="l03339"></a><span class="lineno"> 3339</span>    }</div>
 </div>
-<div class="line"><a id="l03338" name="l03338"></a><span class="lineno"> 3338</span>};</div>
-</div>
-<div class="line"><a id="l03339" name="l03339"></a><span class="lineno"> 3339</span> </div>
-<div class="line"><a id="l03340" name="l03340"></a><span class="lineno"> 3340</span>} <span class="comment">// namespace std</span></div>
+<div class="line"><a id="l03340" name="l03340"></a><span class="lineno"> 3340</span>};</div>
 </div>
 <div class="line"><a id="l03341" name="l03341"></a><span class="lineno"> 3341</span> </div>
-<div class="line"><a id="l03342" name="l03342"></a><span class="lineno"> 3342</span><span class="comment">// Includes that require the url class declaration</span></div>
-<div class="line"><a id="l03343" name="l03343"></a><span class="lineno"> 3343</span><span class="preprocessor">#include &quot;url_search_params-inl.h&quot;</span></div>
-<div class="line"><a id="l03344" name="l03344"></a><span class="lineno"> 3344</span> </div>
-<div class="line"><a id="l03345" name="l03345"></a><span class="lineno"> 3345</span><span class="preprocessor">#endif </span><span class="comment">// UPA_URL_H</span></div>
+<div class="line"><a id="l03342" name="l03342"></a><span class="lineno"> 3342</span>} <span class="comment">// namespace std</span></div>
+</div>
+<div class="line"><a id="l03343" name="l03343"></a><span class="lineno"> 3343</span> </div>
+<div class="line"><a id="l03344" name="l03344"></a><span class="lineno"> 3344</span><span class="comment">// Includes that require the url class declaration</span></div>
+<div class="line"><a id="l03345" name="l03345"></a><span class="lineno"> 3345</span><span class="preprocessor">#include &quot;url_search_params-inl.h&quot;</span></div>
+<div class="line"><a id="l03346" name="l03346"></a><span class="lineno"> 3346</span> </div>
+<div class="line"><a id="l03347" name="l03347"></a><span class="lineno"> 3347</span><span class="preprocessor">#endif </span><span class="comment">// UPA_URL_H</span></div>
 <div class="ttc" id="aclassupa_1_1code__point__set_html"><div class="ttname"><a href="classupa_1_1code__point__set.html">upa::code_point_set</a></div><div class="ttdoc">Represents code point set.</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00033">url_percent_encode.h:33</a></div></div>
 <div class="ttc" id="aclassupa_1_1url__error_html"><div class="ttname"><a href="classupa_1_1url__error.html">upa::url_error</a></div><div class="ttdoc">URL exception class.</div><div class="ttdef"><b>Definition</b> <a href="url__result_8h_source.html#l00098">url_result.h:98</a></div></div>
 <div class="ttc" id="aclassupa_1_1url__search__params_html"><div class="ttname"><a href="classupa_1_1url__search__params.html">upa::url_search_params</a></div><div class="ttdoc">URLSearchParams class.</div><div class="ttdef"><b>Definition</b> <a href="url__search__params_8h_source.html#l00073">url_search_params.h:74</a></div></div>
@@ -3275,7 +3277,7 @@ $(function(){initNavTree('url_8h_source.html',''); initResizable(true); });
 <div class="ttc" id="aclassupa_1_1url_html_ad97d3b7fb5781f8e0ad2d9192249dd59"><div class="ttname"><a href="classupa_1_1url.html#ad97d3b7fb5781f8e0ad2d9192249dd59">upa::url::host</a></div><div class="ttdeci">string_view host() const</div><div class="ttdoc">The host getter.</div><div class="ttdef"><b>Definition</b> <a href="#l01168">url.h:1168</a></div></div>
 <div class="ttc" id="aclassupa_1_1url_html_ae29b020a22b37a22279307ab3bf6e2fe"><div class="ttname"><a href="classupa_1_1url.html#ae29b020a22b37a22279307ab3bf6e2fe">upa::url::get_hostname</a></div><div class="ttdeci">string_view get_hostname() const</div><div class="ttdoc">Equivalent to hostname() const .</div><div class="ttdef"><b>Definition</b> <a href="#l00446">url.h:446</a></div></div>
 <div class="ttc" id="aclassupa_1_1url_html_ae702a40b38290d3f7010080c3916fddb"><div class="ttname"><a href="classupa_1_1url.html#ae702a40b38290d3f7010080c3916fddb">upa::url::get_host</a></div><div class="ttdeci">string_view get_host() const</div><div class="ttdoc">Equivalent to host() const .</div><div class="ttdef"><b>Definition</b> <a href="#l00437">url.h:437</a></div></div>
-<div class="ttc" id="aclassupa_1_1url_html_ae8bc3d2dbf1c21771717990227794754"><div class="ttname"><a href="classupa_1_1url.html#ae8bc3d2dbf1c21771717990227794754">upa::url::operator==</a></div><div class="ttdeci">friend bool operator==(const url &amp;lhs, const url &amp;rhs) noexcept</div><div class="ttdoc">Lexicographically compares two URL's.</div><div class="ttdef"><b>Definition</b> <a href="#l03121">url.h:3121</a></div></div>
+<div class="ttc" id="aclassupa_1_1url_html_ae8bc3d2dbf1c21771717990227794754"><div class="ttname"><a href="classupa_1_1url.html#ae8bc3d2dbf1c21771717990227794754">upa::url::operator==</a></div><div class="ttdeci">friend bool operator==(const url &amp;lhs, const url &amp;rhs) noexcept</div><div class="ttdoc">Lexicographically compares two URL's.</div><div class="ttdef"><b>Definition</b> <a href="#l03123">url.h:3123</a></div></div>
 <div class="ttc" id="aclassupa_1_1url_html_aebfa7b2dc26a981cb0124906a4efe7b9"><div class="ttname"><a href="classupa_1_1url.html#aebfa7b2dc26a981cb0124906a4efe7b9">upa::url::url</a></div><div class="ttdeci">url(const url &amp;other)=default</div><div class="ttdoc">Copy constructor.</div></div>
 <div class="ttc" id="aclassupa_1_1url_html_aee719e5e7200bfc662a73f3e3a7eb285"><div class="ttname"><a href="classupa_1_1url.html#aee719e5e7200bfc662a73f3e3a7eb285">upa::url::href</a></div><div class="ttdeci">string_view href() const</div><div class="ttdoc">The href getter.</div><div class="ttdef"><b>Definition</b> <a href="#l01121">url.h:1121</a></div></div>
 <div class="ttc" id="aclassupa_1_1url_html_af194de754979c9075d77af7c99c4d44f"><div class="ttname"><a href="classupa_1_1url.html#af194de754979c9075d77af7c99c4d44f">upa::url::origin</a></div><div class="ttdeci">std::string origin() const</div><div class="ttdoc">The origin getter.</div><div class="ttdef"><b>Definition</b> <a href="#l01134">url.h:1134</a></div></div>
@@ -3283,19 +3285,19 @@ $(function(){initNavTree('url_8h_source.html',''); initResizable(true); });
 <div class="ttc" id="aclassupa_1_1url_html_af58ee895a49b13151c856661bd18fc15"><div class="ttname"><a href="classupa_1_1url.html#af58ee895a49b13151c856661bd18fc15">upa::url::empty</a></div><div class="ttdeci">bool empty() const noexcept</div><div class="ttdoc">Checks whether the URL is empty.</div><div class="ttdef"><b>Definition</b> <a href="#l01263">url.h:1263</a></div></div>
 <div class="ttc" id="aclassupa_1_1url_html_afb318d1c20021658415ecbdc2b4e1d05"><div class="ttname"><a href="classupa_1_1url.html#afb318d1c20021658415ecbdc2b4e1d05">upa::url::url_serializer</a></div><div class="ttdeci">friend class detail::url_serializer</div><div class="ttdef"><b>Definition</b> <a href="#l00690">url.h:690</a></div></div>
 <div class="ttc" id="aclassupa_1_1url_html_aff7f7632093f8a244a295df52c1a7963"><div class="ttname"><a href="classupa_1_1url.html#aff7f7632093f8a244a295df52c1a7963">upa::url::hostname</a></div><div class="ttdeci">string_view hostname() const</div><div class="ttdoc">The hostname getter.</div><div class="ttdef"><b>Definition</b> <a href="#l01177">url.h:1177</a></div></div>
-<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> <a href="#l03330">url.h:3330</a></div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> <a href="#l03332">url.h:3332</a></div></div>
 <div class="ttc" id="anamespaceupa_html"><div class="ttname"><a href="namespaceupa.html">upa</a></div><div class="ttdef"><b>Definition</b> <a href="#l00043">url.h:43</a></div></div>
-<div class="ttc" id="anamespaceupa_html_a01668f1801e81e167aa890118e7d456b"><div class="ttname"><a href="namespaceupa.html#a01668f1801e81e167aa890118e7d456b">upa::path_from_file_url</a></div><div class="ttdeci">std::string path_from_file_url(const url &amp;file_url, file_path_format format=file_path_format::native)</div><div class="ttdoc">Get OS path from file URL.</div><div class="ttdef"><b>Definition</b> <a href="#l03252">url.h:3252</a></div></div>
+<div class="ttc" id="anamespaceupa_html_a01668f1801e81e167aa890118e7d456b"><div class="ttname"><a href="namespaceupa.html#a01668f1801e81e167aa890118e7d456b">upa::path_from_file_url</a></div><div class="ttdeci">std::string path_from_file_url(const url &amp;file_url, file_path_format format=file_path_format::native)</div><div class="ttdoc">Get OS path from file URL.</div><div class="ttdef"><b>Definition</b> <a href="#l03254">url.h:3254</a></div></div>
 <div class="ttc" id="anamespaceupa_html_a05a9cf5ac0b5dafa3ed684f3a17f4710"><div class="ttname"><a href="namespaceupa.html#a05a9cf5ac0b5dafa3ed684f3a17f4710">upa::success</a></div><div class="ttdeci">constexpr bool success(validation_errc res) noexcept</div><div class="ttdoc">Check validation error code indicates success.</div><div class="ttdef"><b>Definition</b> <a href="url__result_8h_source.html#l00092">url_result.h:92</a></div></div>
 <div class="ttc" id="anamespaceupa_html_a239f3e463dcefe348b75bbfb5246dc0d"><div class="ttname"><a href="namespaceupa.html#a239f3e463dcefe348b75bbfb5246dc0d">upa::query_no_encode_set</a></div><div class="ttdeci">constexpr code_point_set query_no_encode_set</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00140">url_percent_encode.h:140</a></div></div>
 <div class="ttc" id="anamespaceupa_html_a318ad29c1af9286c1fd6ecebae372ecf"><div class="ttname"><a href="namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecf">upa::HostType</a></div><div class="ttdeci">HostType</div><div class="ttdoc">Host representation.</div><div class="ttdef"><b>Definition</b> <a href="url__host_8h_source.html#l00029">url_host.h:29</a></div></div>
 <div class="ttc" id="anamespaceupa_html_a318ad29c1af9286c1fd6ecebae372ecface2c8aed9c2fa0cfbed56cbda4d8bf07"><div class="ttname"><a href="namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecface2c8aed9c2fa0cfbed56cbda4d8bf07">upa::HostType::Empty</a></div><div class="ttdeci">@ Empty</div><div class="ttdoc">empty host is the empty string</div></div>
 <div class="ttc" id="anamespaceupa_html_a318ad29c1af9286c1fd6ecebae372ecfafdb7cb8f657426e7c409bfd6d1a36ce4"><div class="ttname"><a href="namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecfafdb7cb8f657426e7c409bfd6d1a36ce4">upa::HostType::IPv6</a></div><div class="ttdeci">@ IPv6</div><div class="ttdoc">host is an IPv6 address</div></div>
-<div class="ttc" id="anamespaceupa_html_a5806bc3a0d267938f093d8106d84360f"><div class="ttname"><a href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360f">upa::file_path_format</a></div><div class="ttdeci">file_path_format</div><div class="ttdoc">File path format.</div><div class="ttdef"><b>Definition</b> <a href="#l03136">url.h:3136</a></div></div>
+<div class="ttc" id="anamespaceupa_html_a5806bc3a0d267938f093d8106d84360f"><div class="ttname"><a href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360f">upa::file_path_format</a></div><div class="ttdeci">file_path_format</div><div class="ttdoc">File path format.</div><div class="ttdef"><b>Definition</b> <a href="#l03138">url.h:3138</a></div></div>
 <div class="ttc" id="anamespaceupa_html_a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42"><div class="ttname"><a href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42">upa::file_path_format::windows</a></div><div class="ttdeci">@ windows</div><div class="ttdoc">Windows file path format.</div></div>
 <div class="ttc" id="anamespaceupa_html_a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796"><div class="ttname"><a href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">upa::file_path_format::native</a></div><div class="ttdeci">@ native</div><div class="ttdoc">The file path format corresponds to the OS on which the code was compiled.</div></div>
 <div class="ttc" id="anamespaceupa_html_a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1"><div class="ttname"><a href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1">upa::file_path_format::posix</a></div><div class="ttdeci">@ posix</div><div class="ttdoc">POSIX file path format.</div></div>
-<div class="ttc" id="anamespaceupa_html_a704170fa90d71a1899e48494fb85cd70"><div class="ttname"><a href="namespaceupa.html#a704170fa90d71a1899e48494fb85cd70">upa::equals</a></div><div class="ttdeci">bool equals(const url &amp;lhs, const url &amp;rhs, bool exclude_fragments=false)</div><div class="ttdoc">URL equivalence.</div><div class="ttdef"><b>Definition</b> <a href="#l03116">url.h:3116</a></div></div>
+<div class="ttc" id="anamespaceupa_html_a704170fa90d71a1899e48494fb85cd70"><div class="ttname"><a href="namespaceupa.html#a704170fa90d71a1899e48494fb85cd70">upa::equals</a></div><div class="ttdeci">bool equals(const url &amp;lhs, const url &amp;rhs, bool exclude_fragments=false)</div><div class="ttdoc">URL equivalence.</div><div class="ttdef"><b>Definition</b> <a href="#l03118">url.h:3118</a></div></div>
 <div class="ttc" id="anamespaceupa_html_a80c9675b4477dda8ff779545c1ad75f7"><div class="ttname"><a href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7">upa::validation_errc</a></div><div class="ttdeci">validation_errc</div><div class="ttdoc">URL validation and other error codes.</div><div class="ttdef"><b>Definition</b> <a href="url__result_8h_source.html#l00016">url_result.h:16</a></div></div>
 <div class="ttc" id="anamespaceupa_html_a80c9675b4477dda8ff779545c1ad75f7a0674127785b0d71200ae2cabd791db90"><div class="ttname"><a href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a0674127785b0d71200ae2cabd791db90">upa::validation_errc::invalid_base</a></div><div class="ttdeci">@ invalid_base</div><div class="ttdoc">Invalid base.</div></div>
 <div class="ttc" id="anamespaceupa_html_a80c9675b4477dda8ff779545c1ad75f7a2ca12369d95b6ae5b0f74b951da7eceb"><div class="ttname"><a href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a2ca12369d95b6ae5b0f74b951da7eceb">upa::validation_errc::file_url_not_windows_path</a></div><div class="ttdeci">@ file_url_not_windows_path</div><div class="ttdoc">Not a Windows path in file URL.</div></div>
@@ -3313,16 +3315,16 @@ $(function(){initNavTree('url_8h_source.html',''); initResizable(true); });
 <div class="ttc" id="anamespaceupa_html_a80c9675b4477dda8ff779545c1ad75f7add1b18bee25a37b9de731f67e11402c5"><div class="ttname"><a href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7add1b18bee25a37b9de731f67e11402c5">upa::validation_errc::file_empty_path</a></div><div class="ttdeci">@ file_empty_path</div><div class="ttdoc">Path cannot be empty.</div></div>
 <div class="ttc" id="anamespaceupa_html_a80c9675b4477dda8ff779545c1ad75f7aeb06dee38357e22dac3cffb0bce2bc61"><div class="ttname"><a href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7aeb06dee38357e22dac3cffb0bce2bc61">upa::validation_errc::port_invalid</a></div><div class="ttdeci">@ port_invalid</div><div class="ttdoc">The input’s port is invalid.</div></div>
 <div class="ttc" id="anamespaceupa_html_a80c9675b4477dda8ff779545c1ad75f7af3f98c5d41d7c992a6fb63799f700f2b"><div class="ttname"><a href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7af3f98c5d41d7c992a6fb63799f700f2b">upa::validation_errc::ignored</a></div><div class="ttdeci">@ ignored</div><div class="ttdoc">Setter ignored the value (internal)</div></div>
-<div class="ttc" id="anamespaceupa_html_aa223cc0cd1376e828988ca9b8698cb85"><div class="ttname"><a href="namespaceupa.html#aa223cc0cd1376e828988ca9b8698cb85">upa::swap</a></div><div class="ttdeci">void swap(url &amp;lhs, url &amp;rhs) UPA_NOEXCEPT_17</div><div class="ttdoc">Swaps the contents of two URLs.</div><div class="ttdef"><b>Definition</b> <a href="#l03131">url.h:3131</a></div></div>
+<div class="ttc" id="anamespaceupa_html_aa223cc0cd1376e828988ca9b8698cb85"><div class="ttname"><a href="namespaceupa.html#aa223cc0cd1376e828988ca9b8698cb85">upa::swap</a></div><div class="ttdeci">void swap(url &amp;lhs, url &amp;rhs) UPA_NOEXCEPT_17</div><div class="ttdoc">Swaps the contents of two URLs.</div><div class="ttdef"><b>Definition</b> <a href="#l03133">url.h:3133</a></div></div>
 <div class="ttc" id="anamespaceupa_html_aa7a053da969c180eb1d23e08317a0cf2"><div class="ttname"><a href="namespaceupa.html#aa7a053da969c180eb1d23e08317a0cf2">upa::special_query_no_encode_set</a></div><div class="ttdeci">constexpr code_point_set special_query_no_encode_set</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00147">url_percent_encode.h:147</a></div></div>
 <div class="ttc" id="anamespaceupa_html_ad3b4914de9b2713e81e465043bf1ec3e"><div class="ttname"><a href="namespaceupa.html#ad3b4914de9b2713e81e465043bf1ec3e">upa::raw_path_no_encode_set</a></div><div class="ttdeci">constexpr code_point_set raw_path_no_encode_set</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00160">url_percent_encode.h:160</a></div></div>
-<div class="ttc" id="anamespaceupa_html_adbb039c01de48ad13cb733c8c32c588f"><div class="ttname"><a href="namespaceupa.html#adbb039c01de48ad13cb733c8c32c588f">upa::url_from_file_path</a></div><div class="ttdeci">url url_from_file_path(StrT &amp;&amp;str, file_path_format format=file_path_format::native)</div><div class="ttdoc">Make URL from OS file path.</div><div class="ttdef"><b>Definition</b> <a href="#l03171">url.h:3171</a></div></div>
-<div class="ttc" id="anamespaceupa_html_adc0dcd205079a2dac68f58cebf954712"><div class="ttname"><a href="namespaceupa.html#adc0dcd205079a2dac68f58cebf954712">upa::operator==</a></div><div class="ttdeci">bool operator==(const url &amp;lhs, const url &amp;rhs) noexcept</div><div class="ttdoc">Lexicographically compares two URL's.</div><div class="ttdef"><b>Definition</b> <a href="#l03121">url.h:3121</a></div></div>
+<div class="ttc" id="anamespaceupa_html_adbb039c01de48ad13cb733c8c32c588f"><div class="ttname"><a href="namespaceupa.html#adbb039c01de48ad13cb733c8c32c588f">upa::url_from_file_path</a></div><div class="ttdeci">url url_from_file_path(StrT &amp;&amp;str, file_path_format format=file_path_format::native)</div><div class="ttdoc">Make URL from OS file path.</div><div class="ttdef"><b>Definition</b> <a href="#l03173">url.h:3173</a></div></div>
+<div class="ttc" id="anamespaceupa_html_adc0dcd205079a2dac68f58cebf954712"><div class="ttname"><a href="namespaceupa.html#adc0dcd205079a2dac68f58cebf954712">upa::operator==</a></div><div class="ttdeci">bool operator==(const url &amp;lhs, const url &amp;rhs) noexcept</div><div class="ttdoc">Lexicographically compares two URL's.</div><div class="ttdef"><b>Definition</b> <a href="#l03123">url.h:3123</a></div></div>
 <div class="ttc" id="anamespaceupa_html_adcbe17488f9677b76e85c3fb057a54f4"><div class="ttname"><a href="namespaceupa.html#adcbe17488f9677b76e85c3fb057a54f4">upa::path_no_encode_set</a></div><div class="ttdeci">constexpr code_point_set path_no_encode_set</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00154">url_percent_encode.h:154</a></div></div>
 <div class="ttc" id="anamespaceupa_html_ae51d15bf921a08293153d02721a40ed1"><div class="ttname"><a href="namespaceupa.html#ae51d15bf921a08293153d02721a40ed1">upa::fragment_no_encode_set</a></div><div class="ttdeci">constexpr code_point_set fragment_no_encode_set</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00133">url_percent_encode.h:133</a></div></div>
 <div class="ttc" id="anamespaceupa_html_aef68d826e39188de36895b53617b2a32"><div class="ttname"><a href="namespaceupa.html#aef68d826e39188de36895b53617b2a32">upa::userinfo_no_encode_set</a></div><div class="ttdeci">constexpr code_point_set userinfo_no_encode_set</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00175">url_percent_encode.h:175</a></div></div>
 <div class="ttc" id="anamespaceupa_html_af283256efea86b31a615b5ab6784bc51"><div class="ttname"><a href="namespaceupa.html#af283256efea86b31a615b5ab6784bc51">upa::posix_path_no_encode_set</a></div><div class="ttdeci">constexpr code_point_set posix_path_no_encode_set</div><div class="ttdef"><b>Definition</b> <a href="url__percent__encode_8h_source.html#l00168">url_percent_encode.h:168</a></div></div>
-<div class="ttc" id="astructstd_1_1hash_3_01upa_1_1url_01_4_html_a17ef204bd073cdeffc4c2b4d5e91c8cc"><div class="ttname"><a href="structstd_1_1hash_3_01upa_1_1url_01_4.html#a17ef204bd073cdeffc4c2b4d5e91c8cc">std::hash&lt; upa::url &gt;::operator()</a></div><div class="ttdeci">std::size_t operator()(const upa::url &amp;url) const noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l03335">url.h:3335</a></div></div>
+<div class="ttc" id="astructstd_1_1hash_3_01upa_1_1url_01_4_html_a17ef204bd073cdeffc4c2b4d5e91c8cc"><div class="ttname"><a href="structstd_1_1hash_3_01upa_1_1url_01_4.html#a17ef204bd073cdeffc4c2b4d5e91c8cc">std::hash&lt; upa::url &gt;::operator()</a></div><div class="ttdeci">std::size_t operator()(const upa::url &amp;url) const noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l03337">url.h:3337</a></div></div>
 <div class="ttc" id="aurl__host_8h_html"><div class="ttname"><a href="url__host_8h.html">url_host.h</a></div></div>
 <div class="ttc" id="aurl__percent__encode_8h_html"><div class="ttname"><a href="url__percent__encode_8h.html">url_percent_encode.h</a></div></div>
 <div class="ttc" id="aurl__result_8h_html"><div class="ttname"><a href="url__result_8h.html">url_result.h</a></div></div>
