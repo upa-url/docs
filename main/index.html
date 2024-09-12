@@ -114,10 +114,10 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a> Upa URL is <a href="https://url.spec.whatwg.org/">WHATWG URL Standard</a> compliant <b>U</b>RL <b>pa</b>rser library written in C++.</p>
-<p>The library depends on the <a href="https://icu.unicode.org/">ICU library</a> for IDNA processing and requires a compiler that supports C++11 or later. It is known to compile with Clang 4, GCC 4.9, Microsoft Visual Studio 2015 or later. It is recommended to use ICU 68 or later; to pass URL IDNA tests (IdnaTestV2.json) of <a href="https://github.com/web-platform-tests/wpt/tree/master/url">web-platform-tests</a> use ICU 66 or later.</p>
+<p>The library is self-contained with no dependencies and requires a compiler that supports C++11 or later. It is known to compile with Clang 4, GCC 4.9, Microsoft Visual Studio 2015 or later. Can also be compiled to WebAssembly, see demo: <a href="https://upa-url.github.io/demo/">https://upa-url.github.io/demo/</a></p>
 <h1><a class="anchor" id="features-and-standard-conformance"></a>
 Features and standard conformance</h1>
-<p>This library is up to date with the URL Standard published on <a href="https://url.spec.whatwg.org/commit-snapshots/aa64bb27d427cef0d87f134980ac762cced1f5bb/">27 September 2023 (commit aa64bb2)</a>.</p>
+<p>This library is up to date with the URL Standard published on <a href="https://url.spec.whatwg.org/commit-snapshots/5861e023bbd695c92190aa6bb7cb3c6717dab33b/">19 August 2024 (commit 5861e02)</a> and supports internationalized domain names as specified in the <a href="https://www.unicode.org/reports/tr46/tr46-31.html">UTS46 Unicode IDNA Compatibility Processing version 15.1.0</a>.</p>
 <p>It implements:</p><ol type="1">
 <li><a href="https://url.spec.whatwg.org/#url-class">URL class</a>: <code><a class="el" href="classupa_1_1url.html" title="URL class.">upa::url</a></code></li>
 <li><a href="https://url.spec.whatwg.org/#interface-urlsearchparams">URLSearchParams class</a>: <code><a class="el" href="classupa_1_1url__search__params.html" title="URLSearchParams class.">upa::url_search_params</a></code></li>
@@ -145,8 +145,7 @@ CMake</h2>
 <p>The library can be built and installed using CMake 3.13 or later. To build and install to default directory (usually <code>/usr/local</code> on Linux) run following commands: </p><div class="fragment"><div class="line">cmake -B build -DUPA_BUILD_TESTS=OFF</div>
 <div class="line">cmake --build build</div>
 <div class="line">cmake --install build</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>If ICU is installed in a non-default directory, then specify <code>-DICU_ROOT=&lt;ICU directory&gt;</code> parameter in the first command. If you are building for Windows 10 version 1903 or later, ICU bundled with Windows can be used: specify the <code>-DUPA_USE_WINDOWS_ICU=ON</code> parameter in the first command.</dd></dl>
-<p>To use library add <code>find_package(upa REQUIRED)</code> and link to <code><a class="el" href="classupa_1_1url.html" title="URL class.">upa::url</a></code> target in your CMake project: </p><div class="fragment"><div class="line">find_package(upa REQUIRED)</div>
+</div><!-- fragment --><p>To use library add <code>find_package(upa REQUIRED)</code> and link to <code><a class="el" href="classupa_1_1url.html" title="URL class.">upa::url</a></code> target in your CMake project: </p><div class="fragment"><div class="line">find_package(upa REQUIRED)</div>
 <div class="line">...</div>
 <div class="line">target_link_libraries(exe-target PRIVATE upa::url)</div>
 </div><!-- fragment --><h3><a class="anchor" id="embedding"></a>
@@ -175,7 +174,7 @@ Embedding with CPM.cmake script</h3>
 Usage</h1>
 <p>In source files, that use this library, the <code><a class="el" href="url_8h.html">upa/url.h</a></code> must be included: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="url_8h.html">upa/url.h</a>&quot;</span></div>
 <div class="ttc" id="aurl_8h_html"><div class="ttname"><a href="url_8h.html">url.h</a></div></div>
-</div><!-- fragment --><p>If you are using CMake, see the <a class="el" href="#cmake">CMake section</a> for how to link to the library. Alternatively, if you are using amalgamated files, then add the amalgamated <code>url.cpp</code> file to your project, otherwise add all the files from the <code>src/</code> directory to your project; and link to the ICU <code>i18n</code> and <code>uc</code> libraries.</p>
+</div><!-- fragment --><p>If you are using CMake, see the <a class="el" href="#cmake">CMake section</a> for how to link to the library. Alternatively, if you are using amalgamated files, then add the amalgamated <code>url.cpp</code> file to your project, otherwise add all the files from the <code>src/</code> directory to your project.</p>
 <h2><a class="anchor" id="examples"></a>
 Examples</h2>
 <p>Parse input string using <code>url::parse</code> function and output URL components: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="url_8h.html">upa/url.h</a>&quot;</span></div>
