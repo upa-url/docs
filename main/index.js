@@ -6,7 +6,8 @@ var index =
         [ "Embedding", "index.html#embedding", null ],
         [ "Embedding with FetchContent", "index.html#embedding-with-fetchcontent", null ],
         [ "Embedding with CPM.cmake script", "index.html#embedding-with-cpmcmake-script", null ]
-      ] ]
+      ] ],
+      [ "vcpkg", "index.html#vcpkg", null ]
     ] ],
     [ "Usage", "index.html#usage", [
       [ "Examples", "index.html#examples", null ]

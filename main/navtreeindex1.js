@@ -103,6 +103,7 @@ var NAVTREEINDEX1 =
 "index.html#installation":[0,1],
 "index.html#license":[0,3],
 "index.html#usage":[0,2],
+"index.html#vcpkg":[0,1,1],
 "namespacemembers.html":[1,1,0],
 "namespacemembers_enum.html":[1,1,3],
 "namespacemembers_func.html":[1,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7a9c66d8c63d3ec33c819301db9d488474":[3,0,0,0,3,1,39],
 "url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7aa313edb2c0b5b33a76ad39fbecd772ee":[3,0,0,0,3,1,28],
 "url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7aabf0fd2e85a62c8db303178c2b192191":[3,0,0,0,3,1,14],
-"url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7ab577ca969dac9d16ac14048aa15089e9":[3,0,0,0,3,1,23],
-"url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7ab76b800b737d646b3ae8e06071d622c3":[3,0,0,0,3,1,29]
+"url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7ab577ca969dac9d16ac14048aa15089e9":[3,0,0,0,3,1,23]
 };
