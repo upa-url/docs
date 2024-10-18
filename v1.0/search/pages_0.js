@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['upa_20url_0',['Upa URL',['../index.html',1,'']]],
-  ['url_1',['Upa URL',['../index.html',1,'']]]
+  ['input_0',['String input',['../md_doc_2string__input.html',1,'']]]
 ];

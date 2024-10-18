@@ -26,6 +26,7 @@ var NAVTREE =
 [
   [ "Upa URL C++ library", "index.html", [
     [ "Upa URL", "index.html", "index" ],
+    [ "String input", "md_doc_2string__input.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -58,7 +59,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classupa_1_1url__search__params.html#a1b07f2e19dd022f02b8b9e3849f4df12",
-"url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7abece6466dc75c416e679c74f16bc0f2f"
+"url__result_8h.html#a80c9675b4477dda8ff779545c1ad75f7aabf0fd2e85a62c8db303178c2b192191"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
