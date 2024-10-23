@@ -112,7 +112,6 @@ $(function(){initNavTree('classupa_1_1code__point__set.html',''); initResizable(
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classupa_1_1code__point__set-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">upa::code_point_set Class Reference</div></div>
 </div><!--header-->
@@ -146,23 +145,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa43896f30ac32a5a07999ae904ca76da" id="r_aa43896f30ac32a5a07999ae904ca76da"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa43896f30ac32a5a07999ae904ca76da">include</a> (uint8_t from, uint8_t to)</td></tr>
 <tr class="memdesc:aa43896f30ac32a5a07999ae904ca76da"><td class="mdescLeft">&#160;</td><td class="mdescRight">include range of code points to set  <br /></td></tr>
 <tr class="separator:aa43896f30ac32a5a07999ae904ca76da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18cad4b027451cda764a208e33d2a31a" id="r_a18cad4b027451cda764a208e33d2a31a"><td class="memTemplParams" colspan="2">template&lt;typename CharT &gt; </td></tr>
-<tr class="memitem:a18cad4b027451cda764a208e33d2a31a"><td class="memTemplItemLeft" align="right" valign="top">UPA_CONSTEXPR_17 bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a18cad4b027451cda764a208e33d2a31a">operator[]</a> (CharT c) const</td></tr>
-<tr class="memdesc:a18cad4b027451cda764a208e33d2a31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">test code point set contains code point <em>c</em>  <br /></td></tr>
-<tr class="separator:a18cad4b027451cda764a208e33d2a31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab215a3a1946498c60a3285108d7b1b8a" id="r_ab215a3a1946498c60a3285108d7b1b8a"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab215a3a1946498c60a3285108d7b1b8a">arr_val</a> (std::size_t i) const</td></tr>
-<tr class="separator:ab215a3a1946498c60a3285108d7b1b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a253fd73fe3717f65c463a74d496a54b1" id="r_a253fd73fe3717f65c463a74d496a54b1"><td class="memItemLeft" align="right" valign="top">static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a253fd73fe3717f65c463a74d496a54b1">arr_size</a> () noexcept</td></tr>
-<tr class="separator:a253fd73fe3717f65c463a74d496a54b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1f429d88c920e24231252a937df4b99" id="r_ac1f429d88c920e24231252a937df4b99"><td class="memTemplParams" colspan="2">template&lt;typename CharT &gt; </td></tr>
+<tr class="memitem:ac1f429d88c920e24231252a937df4b99"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac1f429d88c920e24231252a937df4b99">operator[]</a> (CharT c) const</td></tr>
+<tr class="memdesc:ac1f429d88c920e24231252a937df4b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">test code point set contains code point <em>c</em>  <br /></td></tr>
+<tr class="separator:ac1f429d88c920e24231252a937df4b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents code point set. </p>
 <p>Is used to define percent encode sets, forbidden host code points, and other code point sets. </p>
 
-<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00033">33</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00032">32</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8146cb9f4ac5a766c96aead80ebd40e2" name="a8146cb9f4ac5a766c96aead80ebd40e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8146cb9f4ac5a766c96aead80ebd40e2">&#9670;&#160;</a></span>code_point_set()</h2>
@@ -196,65 +188,11 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00042">42</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00040">40</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a253fd73fe3717f65c463a74d496a54b1" name="a253fd73fe3717f65c463a74d496a54b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a253fd73fe3717f65c463a74d496a54b1">&#9670;&#160;</a></span>arr_size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static constexpr std::size_t upa::code_point_set::arr_size </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00097">97</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
-
-</div>
-</div>
-<a id="ab215a3a1946498c60a3285108d7b1b8a" name="ab215a3a1946498c60a3285108d7b1b8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab215a3a1946498c60a3285108d7b1b8a">&#9670;&#160;</a></span>arr_val()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t upa::code_point_set::arr_val </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00098">98</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
-
-</div>
-</div>
 <a id="ad095cacb04385be3e73f5e539e3f5716" name="ad095cacb04385be3e73f5e539e3f5716"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad095cacb04385be3e73f5e539e3f5716">&#9670;&#160;</a></span>copy()</h2>
 
@@ -286,7 +224,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00048">48</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00046">46</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
 
 </div>
 </div>
@@ -321,7 +259,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00067">67</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00065">65</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
 
 </div>
 </div>
@@ -356,7 +294,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00055">55</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00053">53</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
 
 </div>
 </div>
@@ -391,7 +329,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00074">74</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00072">72</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
 
 </div>
 </div>
@@ -426,7 +364,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00061">61</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00059">59</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
 
 </div>
 </div>
@@ -465,12 +403,12 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00081">81</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00079">79</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
 
 </div>
 </div>
-<a id="a18cad4b027451cda764a208e33d2a31a" name="a18cad4b027451cda764a208e33d2a31a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18cad4b027451cda764a208e33d2a31a">&#9670;&#160;</a></span>operator[]()</h2>
+<a id="ac1f429d88c920e24231252a937df4b99" name="ac1f429d88c920e24231252a937df4b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1f429d88c920e24231252a937df4b99">&#9670;&#160;</a></span>operator[]()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -481,7 +419,7 @@ template&lt;typename CharT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">UPA_CONSTEXPR_17 bool upa::code_point_set::operator[] </td>
+          <td class="memname">bool upa::code_point_set::operator[] </td>
           <td>(</td>
           <td class="paramtype">CharT</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td> const</td>
@@ -489,7 +427,7 @@ template&lt;typename CharT &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -502,7 +440,7 @@ template&lt;typename CharT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00090">90</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url__percent__encode_8h_source.html#l00087">87</a> of file <a class="el" href="url__percent__encode_8h_source.html">url_percent_encode.h</a>.</p>
 
 </div>
 </div>

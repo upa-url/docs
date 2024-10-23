@@ -152,14 +152,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab751db40b49a26bf3a6e5b0a6a7be268" id="r_ab751db40b49a26bf3a6e5b0a6a7be268"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab751db40b49a26bf3a6e5b0a6a7be268">url_search_params</a> (const <a class="el" href="classupa_1_1url__search__params.html">url_search_params</a> &amp;other)</td></tr>
 <tr class="memdesc:ab751db40b49a26bf3a6e5b0a6a7be268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
 <tr class="separator:ab751db40b49a26bf3a6e5b0a6a7be268"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a111708f4834e92ea8eb97ce42b43381f" id="r_a111708f4834e92ea8eb97ce42b43381f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a111708f4834e92ea8eb97ce42b43381f">url_search_params</a> (<a class="el" href="classupa_1_1url__search__params.html">url_search_params</a> &amp;&amp;other) noexcept(std::is_nothrow_move_constructible&lt; <a class="el" href="#af4770df21728d21e6961c9807666eb0b">name_value_list</a> &gt;::value)</td></tr>
-<tr class="memdesc:a111708f4834e92ea8eb97ce42b43381f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor.  <br /></td></tr>
-<tr class="separator:a111708f4834e92ea8eb97ce42b43381f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade595988a4c17f650ec728a15a5b502d" id="r_ade595988a4c17f650ec728a15a5b502d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade595988a4c17f650ec728a15a5b502d">url_search_params</a> (<a class="el" href="classupa_1_1url__search__params.html">url_search_params</a> &amp;&amp;other) noexcept(std::is_nothrow_move_constructible_v&lt; <a class="el" href="#af4770df21728d21e6961c9807666eb0b">name_value_list</a> &gt;)</td></tr>
+<tr class="memdesc:ade595988a4c17f650ec728a15a5b502d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor.  <br /></td></tr>
+<tr class="separator:ade595988a4c17f650ec728a15a5b502d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49b84f512e1bb2998f5c3a6167fb3c21" id="r_a49b84f512e1bb2998f5c3a6167fb3c21"><td class="memTemplParams" colspan="2">template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </td></tr>
 <tr class="memitem:a49b84f512e1bb2998f5c3a6167fb3c21"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a49b84f512e1bb2998f5c3a6167fb3c21">url_search_params</a> (StrT &amp;&amp;query)</td></tr>
 <tr class="memdesc:a49b84f512e1bb2998f5c3a6167fb3c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parsing constructor.  <br /></td></tr>
 <tr class="separator:a49b84f512e1bb2998f5c3a6167fb3c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8db0602bddfeab71d429422025a25d80" id="r_a8db0602bddfeab71d429422025a25d80"><td class="memTemplParams" colspan="2">template&lt;class ConT , detail::enable_if_not_base_of_t&lt; <a class="el" href="classupa_1_1url__search__params.html">url_search_params</a>, ConT &gt;  = 0, typename std::enable_if&lt; detail::is_iterable_pairs&lt; ConT &gt;::value, int &gt;::type  = 0&gt; </td></tr>
+<tr class="memitem:a8db0602bddfeab71d429422025a25d80" id="r_a8db0602bddfeab71d429422025a25d80"><td class="memTemplParams" colspan="2">template&lt;class ConT , detail::enable_if_not_base_of_t&lt; <a class="el" href="classupa_1_1url__search__params.html">url_search_params</a>, ConT &gt;  = 0, std::enable_if_t&lt; detail::is_iterable_pairs_v&lt; ConT &gt;, int &gt;  = 0&gt; </td></tr>
 <tr class="memitem:a8db0602bddfeab71d429422025a25d80"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8db0602bddfeab71d429422025a25d80">url_search_params</a> (ConT &amp;&amp;cont)</td></tr>
 <tr class="separator:a8db0602bddfeab71d429422025a25d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e33faf1c75393c14b534d8a7b58db0b" id="r_a6e33faf1c75393c14b534d8a7b58db0b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e33faf1c75393c14b534d8a7b58db0b">~url_search_params</a> ()=default</td></tr>
@@ -168,18 +168,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a16858f8b1df0c75d7ac41df264aa8cf2" id="r_a16858f8b1df0c75d7ac41df264aa8cf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classupa_1_1url__search__params.html">url_search_params</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16858f8b1df0c75d7ac41df264aa8cf2">operator=</a> (const <a class="el" href="classupa_1_1url__search__params.html">url_search_params</a> &amp;other)</td></tr>
 <tr class="memdesc:a16858f8b1df0c75d7ac41df264aa8cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment.  <br /></td></tr>
 <tr class="separator:a16858f8b1df0c75d7ac41df264aa8cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9332604766fbe29ff99821c61aaf989e" id="r_a9332604766fbe29ff99821c61aaf989e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classupa_1_1url__search__params.html">url_search_params</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9332604766fbe29ff99821c61aaf989e">operator=</a> (<a class="el" href="classupa_1_1url__search__params.html">url_search_params</a> &amp;&amp;other) UPA_NOEXCEPT_17</td></tr>
-<tr class="memdesc:a9332604766fbe29ff99821c61aaf989e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment.  <br /></td></tr>
-<tr class="separator:a9332604766fbe29ff99821c61aaf989e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ddd856fab305a122771300eb94eea77" id="r_a8ddd856fab305a122771300eb94eea77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classupa_1_1url__search__params.html">url_search_params</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ddd856fab305a122771300eb94eea77">operator=</a> (<a class="el" href="classupa_1_1url__search__params.html">url_search_params</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a8ddd856fab305a122771300eb94eea77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment.  <br /></td></tr>
+<tr class="separator:a8ddd856fab305a122771300eb94eea77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ecfa68c792af1d3749e2ee87e66ae20" id="r_a3ecfa68c792af1d3749e2ee87e66ae20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classupa_1_1url__search__params.html">url_search_params</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ecfa68c792af1d3749e2ee87e66ae20">safe_assign</a> (<a class="el" href="classupa_1_1url__search__params.html">url_search_params</a> &amp;&amp;other)</td></tr>
 <tr class="memdesc:a3ecfa68c792af1d3749e2ee87e66ae20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe move assignment.  <br /></td></tr>
 <tr class="separator:a3ecfa68c792af1d3749e2ee87e66ae20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81360c880d10de70c20426e60909fe35" id="r_a81360c880d10de70c20426e60909fe35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81360c880d10de70c20426e60909fe35">clear</a> ()</td></tr>
 <tr class="memdesc:a81360c880d10de70c20426e60909fe35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears parameters.  <br /></td></tr>
 <tr class="separator:a81360c880d10de70c20426e60909fe35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a549af9514ac9730c399349a190ca763c" id="r_a549af9514ac9730c399349a190ca763c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a549af9514ac9730c399349a190ca763c">swap</a> (<a class="el" href="classupa_1_1url__search__params.html">url_search_params</a> &amp;other) UPA_NOEXCEPT_17</td></tr>
-<tr class="memdesc:a549af9514ac9730c399349a190ca763c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the contents of two <a class="el" href="classupa_1_1url__search__params.html" title="URLSearchParams class.">url_search_params</a>.  <br /></td></tr>
-<tr class="separator:a549af9514ac9730c399349a190ca763c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab36961592c3f5c32672d614b47a47d2e" id="r_ab36961592c3f5c32672d614b47a47d2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab36961592c3f5c32672d614b47a47d2e">swap</a> (<a class="el" href="classupa_1_1url__search__params.html">url_search_params</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:ab36961592c3f5c32672d614b47a47d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the contents of two <a class="el" href="classupa_1_1url__search__params.html" title="URLSearchParams class.">url_search_params</a>.  <br /></td></tr>
+<tr class="separator:ab36961592c3f5c32672d614b47a47d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa59ef3cdc192c675e037308e0d258fda" id="r_aa59ef3cdc192c675e037308e0d258fda"><td class="memTemplParams" colspan="2">template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </td></tr>
 <tr class="memitem:aa59ef3cdc192c675e037308e0d258fda"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa59ef3cdc192c675e037308e0d258fda">parse</a> (StrT &amp;&amp;query)</td></tr>
 <tr class="separator:aa59ef3cdc192c675e037308e0d258fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -457,8 +457,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a111708f4834e92ea8eb97ce42b43381f" name="a111708f4834e92ea8eb97ce42b43381f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a111708f4834e92ea8eb97ce42b43381f">&#9670;&#160;</a></span>url_search_params() <span class="overload">[3/5]</span></h2>
+<a id="ade595988a4c17f650ec728a15a5b502d" name="ade595988a4c17f650ec728a15a5b502d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade595988a4c17f650ec728a15a5b502d">&#9670;&#160;</a></span>url_search_params() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -537,7 +537,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ConT , detail::enable_if_not_base_of_t&lt; <a class="el" href="classupa_1_1url__search__params.html">url_search_params</a>, ConT &gt;  = 0, typename std::enable_if&lt; detail::is_iterable_pairs&lt; ConT &gt;::value, int &gt;::type  = 0&gt; </div>
+template&lt;class ConT , detail::enable_if_not_base_of_t&lt; <a class="el" href="classupa_1_1url__search__params.html">url_search_params</a>, ConT &gt;  = 0, std::enable_if_t&lt; detail::is_iterable_pairs_v&lt; ConT &gt;, int &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1178,8 +1178,8 @@ template&lt;class TN , class TV &gt; </div>
 
 </div>
 </div>
-<a id="a9332604766fbe29ff99821c61aaf989e" name="a9332604766fbe29ff99821c61aaf989e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9332604766fbe29ff99821c61aaf989e">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a8ddd856fab305a122771300eb94eea77" name="a8ddd856fab305a122771300eb94eea77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ddd856fab305a122771300eb94eea77">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1196,7 +1196,7 @@ template&lt;class TN , class TV &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1599,8 +1599,8 @@ template&lt;class TN , class TV &gt; </div>
 
 </div>
 </div>
-<a id="a549af9514ac9730c399349a190ca763c" name="a549af9514ac9730c399349a190ca763c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a549af9514ac9730c399349a190ca763c">&#9670;&#160;</a></span>swap()</h2>
+<a id="ab36961592c3f5c32672d614b47a47d2e" name="ab36961592c3f5c32672d614b47a47d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab36961592c3f5c32672d614b47a47d2e">&#9670;&#160;</a></span>swap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1617,7 +1617,7 @@ template&lt;class TN , class TV &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
