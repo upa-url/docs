@@ -403,37 +403,37 @@ $(function(){initNavTree('url__percent__encode_8h_source.html',''); initResizabl
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="comment">// Check char is in predefined set</span></div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_char_in_set(CharT c, <span class="keyword">const</span> code_point_set&amp; cpset) {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_char_in_set(CharT c, <span class="keyword">const</span> code_point_set&amp; cpset) {</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="keywordflow">return</span> cpset[c];</div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>}</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_ipv4_char(CharT c) {</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_ipv4_char(CharT c) {</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="keywordflow">return</span> code_points.char_in_set(c, IPV4_CHAR_SET);</div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>}</div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_hex_char(CharT c) {</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_hex_char(CharT c) {</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="keywordflow">return</span> code_points.char_in_set(c, HEX_DIGIT_SET);</div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>}</div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_scheme_char(CharT c) {</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_scheme_char(CharT c) {</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <span class="keywordflow">return</span> code_points.char_in_set(c, SCHEME_SET);</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>}</div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_forbidden_domain_char(CharT c) {</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_forbidden_domain_char(CharT c) {</div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keywordflow">return</span> code_points.char_in_set(c, DOMAIN_FORBIDDEN_SET);</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>}</div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_forbidden_host_char(CharT c) {</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_forbidden_host_char(CharT c) {</div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="keywordflow">return</span> code_points.char_in_set(c, HOST_FORBIDDEN_SET);</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>}</div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> is_ascii_domain_char(CharT c) {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_ascii_domain_char(CharT c) {</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    <span class="keywordflow">return</span> code_points.char_in_set(c, ASCII_DOMAIN_SET);</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>}</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>

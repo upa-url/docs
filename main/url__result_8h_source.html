@@ -228,11 +228,11 @@ $(function(){initNavTree('url__result_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    T value{};</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    R result{};</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    result_value(R res) noexcept</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">constexpr</span> result_value(R res) noexcept</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        : result(res) {}</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    result_value(R res, T val) noexcept</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">constexpr</span> result_value(R res, T val) noexcept</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        : value(val), result(res) {}</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    [[nodiscard]] <span class="keyword">operator</span> R() const noexcept {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">operator</span> R() const noexcept {</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">return</span> result;</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>};</div>
