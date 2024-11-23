@@ -42,7 +42,7 @@
    <div id="projectbrief">A WHATWG URL Standard implementation</div>
   </td>
   <td id="version-td">
-   <select id="version-select"><option>v1.0.1</option></select>
+   <select id="version-select"><option>v1.0.2</option></select>
   </td>
  </tr>
  </tbody>
@@ -115,7 +115,8 @@ $(function(){initNavTree('md_doc_2string__input.html',''); initResizable(true); 
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="string-input"></a></p>
 <p>For string input, the library supports UTF-8, UTF-16, UTF-32 encodings and several string types, including <code>std::basic_string</code>, <code>std::basic_string_view</code>, null-terminated strings of any char type: <code>char</code>, <code>char8_t</code>, <code>char16_t</code>, <code>char32_t</code>, or <code>wchar_t</code>.</p>
-<p>The ATL/MFC and Qt library string types are also supported. To use them you need to include the header files listed in the table below instead of <code><a class="el" href="url_8h.html">url.h</a></code>:</p>
+<p>Other classes that have a <code>data()</code> function that returns a pointer to one of the char types listed above and a <code>size()</code> function that has an integer return type are also supported (e.g. <code>std::vector&lt;char&gt;</code>).</p>
+<p>The ATL/MFC and Qt library string types are supported. To use them you need to include the header files listed in the table below instead of <code><a class="el" href="url_8h.html">url.h</a></code>:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Library   </th><th class="markdownTableHeadNone">Supported string types   </th><th class="markdownTableHeadNone">Include instead of <code><a class="el" href="url_8h.html">url.h</a></code>    </th></tr>
@@ -134,8 +135,8 @@ $(function(){initNavTree('md_doc_2string__input.html',''); initResizable(true); 
 <div class="line">    std::cout &lt;&lt; url.<a class="code hl_function" href="classupa_1_1url.html#a37366859f7402a3773d68861a84ab3ee">href</a>() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassupa_1_1url_html"><div class="ttname"><a href="classupa_1_1url.html">upa::url</a></div><div class="ttdoc">URL class.</div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l00062">url.h:62</a></div></div>
-<div class="ttc" id="aclassupa_1_1url_html_a37366859f7402a3773d68861a84ab3ee"><div class="ttname"><a href="classupa_1_1url.html#a37366859f7402a3773d68861a84ab3ee">upa::url::href</a></div><div class="ttdeci">bool href(StrT &amp;&amp;str)</div><div class="ttdoc">The href setter.</div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l01438">url.h:1438</a></div></div>
+<div class="ttc" id="aclassupa_1_1url_html"><div class="ttname"><a href="classupa_1_1url.html">upa::url</a></div><div class="ttdoc">URL class.</div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l00063">url.h:63</a></div></div>
+<div class="ttc" id="aclassupa_1_1url_html_a37366859f7402a3773d68861a84ab3ee"><div class="ttname"><a href="classupa_1_1url.html#a37366859f7402a3773d68861a84ab3ee">upa::url::href</a></div><div class="ttdeci">bool href(StrT &amp;&amp;str)</div><div class="ttdoc">The href setter.</div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l01439">url.h:1439</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
