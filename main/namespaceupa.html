@@ -235,6 +235,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a01668f1801e81e167aa890118e7d456b" id="r_a01668f1801e81e167aa890118e7d456b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01668f1801e81e167aa890118e7d456b">path_from_file_url</a> (const <a class="el" href="classupa_1_1url.html">url</a> &amp;file_url, <a class="el" href="#a5806bc3a0d267938f093d8106d84360f">file_path_format</a> format=<a class="el" href="#a5806bc3a0d267938f093d8106d84360fa8e5f3adee38c8fccc13c1f3be0143796">file_path_format::native</a>)</td></tr>
 <tr class="memdesc:a01668f1801e81e167aa890118e7d456b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get OS path from file URL.  <br /></td></tr>
 <tr class="separator:a01668f1801e81e167aa890118e7d456b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a760250b346f7e7ddfc58813b45993ed3" id="r_a760250b346f7e7ddfc58813b45993ed3"><td class="memTemplParams" colspan="2">template&lt;class CharT , class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a760250b346f7e7ddfc58813b45993ed3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a760250b346f7e7ddfc58813b45993ed3">domain_to_unicode</a> (std::basic_string&lt; CharT &gt; &amp;output, StrT &amp;&amp;input, bool be_strict=false, bool is_input_ascii=false)</td></tr>
+<tr class="memdesc:a760250b346f7e7ddfc58813b45993ed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the domain to Unicode algorithm.  <br /></td></tr>
+<tr class="separator:a760250b346f7e7ddfc58813b45993ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05a9cf5ac0b5dafa3ed684f3a17f4710" id="r_a05a9cf5ac0b5dafa3ed684f3a17f4710"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05a9cf5ac0b5dafa3ed684f3a17f4710">success</a> (<a class="el" href="#a80c9675b4477dda8ff779545c1ad75f7">validation_errc</a> res) noexcept</td></tr>
 <tr class="memdesc:a05a9cf5ac0b5dafa3ed684f3a17f4710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check validation error code indicates success.  <br /></td></tr>
 <tr class="separator:a05a9cf5ac0b5dafa3ed684f3a17f4710"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -465,6 +469,62 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a760250b346f7e7ddfc58813b45993ed3" name="a760250b346f7e7ddfc58813b45993ed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a760250b346f7e7ddfc58813b45993ed3">&#9670;&#160;</a></span>domain_to_unicode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CharT , class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool upa::domain_to_unicode </td>
+          <td>(</td>
+          <td class="paramtype">std::basic_string&lt; CharT &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>output</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StrT &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>be_strict</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>is_input_ascii</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements the domain to Unicode algorithm. </p>
+<p>See: <a href="https://url.spec.whatwg.org/#concept-domain-to-unicode">https://url.spec.whatwg.org/#concept-domain-to-unicode</a> The domain to Unicode result is appended to the <em>output</em>, even if the function returns <code>false</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>string to store result </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>source domain string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">be_strict</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_input_ascii</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success, or <code>false</code> on errors </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="url__host_8h_source.html#l00170">170</a> of file <a class="el" href="url__host_8h_source.html">url_host.h</a>.</p>
+
+</div>
+</div>
 <a id="a38eb088c23f4c98acc10afa8710af657" name="a38eb088c23f4c98acc10afa8710af657"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38eb088c23f4c98acc10afa8710af657">&#9670;&#160;</a></span>encode_url_component()</h2>
 

@@ -7,5 +7,6 @@ var url__host_8h =
       [ "Domain", "url__host_8h.html#a318ad29c1af9286c1fd6ecebae372ecfaeae639a70006feff484a39363c977e24", null ],
       [ "IPv4", "url__host_8h.html#a318ad29c1af9286c1fd6ecebae372ecfa42a9137a05a60eb752dcdf982e717626", null ],
       [ "IPv6", "url__host_8h.html#a318ad29c1af9286c1fd6ecebae372ecfafdb7cb8f657426e7c409bfd6d1a36ce4", null ]
-    ] ]
+    ] ],
+    [ "domain_to_unicode", "url__host_8h.html#a760250b346f7e7ddfc58813b45993ed3", null ]
 ];
