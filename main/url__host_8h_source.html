@@ -113,7 +113,7 @@ $(function(){initNavTree('url__host_8h_source.html',''); initResizable(true); })
   <div class="headertitle"><div class="title">url_host.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="url__host_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright 2016-2024 Rimas Misevičius</span></div>
+<a href="url__host_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright 2016-2025 Rimas Misevičius</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Distributed under the BSD-style license that can be</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// found in the LICENSE file.</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//</span></div>
@@ -396,7 +396,7 @@ $(function(){initNavTree('url__host_8h_source.html',''); initResizable(true); })
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keywordflow">if</span> (dest.need_save()) {</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        <span class="comment">// Return asciiDomain</span></div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        std::string&amp; str_host = dest.hostStart();</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        util::append(str_host, buff_ascii);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        str_host.append(buff_ascii);</div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        dest.hostDone(<a class="code hl_enumvalue" href="namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecfaeae639a70006feff484a39363c977e24">HostType::Domain</a>);</div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    }</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a444bcb3a3fcf8389296c49467f27e1d6">validation_errc::ok</a>;</div>
