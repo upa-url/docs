@@ -370,6 +370,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a407d06d913a2f309709d9e99550adc6c" id="r_a407d06d913a2f309709d9e99550adc6c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a407d06d913a2f309709d9e99550adc6c">is_valid</a> () const noexcept</td></tr>
 <tr class="memdesc:a407d06d913a2f309709d9e99550adc6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the URL is valid.  <br /></td></tr>
 <tr class="separator:a407d06d913a2f309709d9e99550adc6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab01c066e264bdc669543d57390a234b9" id="r_ab01c066e264bdc669543d57390a234b9"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::size_t, std::size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab01c066e264bdc669543d57390a234b9">get_part_pos</a> (<a class="el" href="#a84cba39d7a98ecc004de3f1585902b4e">PartType</a> t, bool with_sep=false) const</td></tr>
+<tr class="memdesc:ab01c066e264bdc669543d57390a234b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the start and end position of the specified URL part.  <br /></td></tr>
+<tr class="separator:ab01c066e264bdc669543d57390a234b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d4800c6cc6bb6980148f6d2042290ed" id="r_a3d4800c6cc6bb6980148f6d2042290ed"><td class="memItemLeft" align="right" valign="top">string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d4800c6cc6bb6980148f6d2042290ed">get_part_view</a> (<a class="el" href="#a84cba39d7a98ecc004de3f1585902b4e">PartType</a> t) const</td></tr>
 <tr class="memdesc:a3d4800c6cc6bb6980148f6d2042290ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets URL's part (URL record member) as string.  <br /></td></tr>
 <tr class="separator:a3d4800c6cc6bb6980148f6d2042290ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -554,7 +557,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01068">1068</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01100">1100</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -873,7 +876,7 @@ template&lt;class T , class TB , enable_if_str_arg_t&lt; T &gt;  = 0, enable_if_
 <p>Clears URL. </p>
 <p>Makes URL empty. </p>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01366">1366</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01398">1398</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -903,7 +906,7 @@ template&lt;class T , class TB , enable_if_str_arg_t&lt; T &gt;  = 0, enable_if_
 <p>Checks whether the URL is empty. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if URL is empty, <code>false</code> otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01261">1261</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01293">1293</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1023,6 +1026,63 @@ template&lt;class T , class TB , enable_if_str_arg_t&lt; T &gt;  = 0, enable_if_
 
 </div>
 </div>
+<a id="ab01c066e264bdc669543d57390a234b9" name="ab01c066e264bdc669543d57390a234b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab01c066e264bdc669543d57390a234b9">&#9670;&#160;</a></span>get_part_pos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; std::size_t, std::size_t &gt; upa::url::get_part_pos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a84cba39d7a98ecc004de3f1585902b4e">PartType</a></td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>with_sep</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the start and end position of the specified URL part. </p>
+<p>Returns the start and end position of the part (as defined in <a href="https://url.spec.whatwg.org/#url-representation">https://url.spec.whatwg.org/#url-representation</a>) in the string returned by the <code><a class="el" href="#a3e0c5e451b825513bb2de744af70a388" title="Equivalent to href() const .">get_href()</a></code>, <code><a class="el" href="#aee719e5e7200bfc662a73f3e3a7eb285" title="The href getter.">href()</a></code> or <code><a class="el" href="#a46598a9c2bf6c806f1495d1bd83db205">to_string()</a></code> functions.</p>
+<ul>
+<li><code>get_part_pos(upa::url::SCHEME)</code> - get a URL's <b>scheme</b> position</li>
+<li><code>get_part_pos(upa::url::USERNAME)</code> - get a URL's <b>username</b> position</li>
+<li><code>get_part_pos(upa::url::PASSWORD)</code> - get a URL's <b>password</b> position</li>
+<li><code>get_part_pos(upa::url::HOST)</code> - get a URL's <b>host</b> position</li>
+<li><code>get_part_pos(upa::url::PORT)</code> - get a URL's <b>port</b> position</li>
+<li><code>get_part_pos(upa::url::PATH)</code> - get a URL's <b>path</b> position</li>
+<li><code>get_part_pos(upa::url::QUERY)</code> - get a URL's <b>query</b> position</li>
+<li><code>get_part_pos(upa::url::FRAGMENT)</code> - get a URL's <b>fragment</b> position</li>
+</ul>
+<p>If <em>with_sep</em> is <code>true</code>, then:</p>
+<ul>
+<li><code>get_part_pos(upa::url::SCHEME, true)</code> - gets position of URL's <b>scheme</b> along with <code>:</code> (corresponds to the return value of <code><a class="el" href="#a87c8849066bae6f8b8d380ff2de91703" title="The protocol getter.">protocol()</a></code>)</li>
+<li><code>get_part_pos(upa::url::QUERY, true)</code> - gets position of URL's <b>query</b> along with <code>?</code> (corresponds to the return value of <code><a class="el" href="#a337f5e263ebc4436e1b470fae5be8ed4" title="The search getter.">search()</a></code>)</li>
+<li><code>get_part_pos(upa::url::FRAGMENT, true)</code> - gets position of URL's <b>fragment</b> along with <code>#</code> (corresponds to the return value of <code><a class="el" href="#af4f294eee008689de0f56d8d6906cd84" title="The hash getter.">hash()</a></code>)</li>
+</ul>
+<p>For other <em>t</em> values, the <em>with_sep</em> has no effect.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">t</td><td>URL's part </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">with_sep</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the start and end position of the specified URL part </dd></dl>
+
+</div>
+</div>
 <a id="a3d4800c6cc6bb6980148f6d2042290ed" name="a3d4800c6cc6bb6980148f6d2042290ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d4800c6cc6bb6980148f6d2042290ed">&#9670;&#160;</a></span>get_part_view()</h2>
 
@@ -1049,14 +1109,14 @@ template&lt;class T , class TB , enable_if_str_arg_t&lt; T &gt;  = 0, enable_if_
 <p>Gets URL's part (URL record member) as string. </p>
 <p>Function to get ASCII string of any URL's part (URL record member) defined here: <a href="https://url.spec.whatwg.org/#url-representation">https://url.spec.whatwg.org/#url-representation</a></p>
 <ul>
-<li><code>get_part_view(upa::url::SCHEME)</code> - get a URL’s <b>scheme</b> string</li>
-<li><code>get_part_view(upa::url::USERNAME)</code> - get a URL’s <b>username</b> string</li>
-<li><code>get_part_view(upa::url::PASSWORD)</code> - get a URL’s <b>password</b> string</li>
-<li><code>get_part_view(upa::url::HOST)</code> - get a URL’s <b>host</b> serialized to string</li>
-<li><code>get_part_view(upa::url::PORT)</code> - get a URL’s <b>port</b> serialized to string</li>
-<li><code>get_part_view(upa::url::PATH)</code> - get a URL’s <b>path</b> serialized to string</li>
-<li><code>get_part_view(upa::url::QUERY)</code> - get a URL’s <b>query</b> string</li>
-<li><code>get_part_view(upa::url::FRAGMENT)</code> - get a URL’s <b>fragment</b> string</li>
+<li><code>get_part_view(upa::url::SCHEME)</code> - get a URL's <b>scheme</b> string</li>
+<li><code>get_part_view(upa::url::USERNAME)</code> - get a URL's <b>username</b> string</li>
+<li><code>get_part_view(upa::url::PASSWORD)</code> - get a URL's <b>password</b> string</li>
+<li><code>get_part_view(upa::url::HOST)</code> - get a URL's <b>host</b> serialized to string</li>
+<li><code>get_part_view(upa::url::PORT)</code> - get a URL's <b>port</b> serialized to string</li>
+<li><code>get_part_view(upa::url::PATH)</code> - get a URL's <b>path</b> serialized to string</li>
+<li><code>get_part_view(upa::url::QUERY)</code> - get a URL's <b>query</b> string</li>
+<li><code>get_part_view(upa::url::FRAGMENT)</code> - get a URL's <b>fragment</b> string</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1066,7 +1126,7 @@ template&lt;class T , class TB , enable_if_str_arg_t&lt; T &gt;  = 0, enable_if_
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>URL's part string; it is empty if part is empty or null </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01269">1269</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01301">1301</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1297,7 +1357,7 @@ template&lt;class T , class TB , enable_if_str_arg_t&lt; T &gt;  = 0, enable_if_
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if URL includes credentials (username, password), <code>false</code> otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01303">1303</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01335">1335</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1325,7 +1385,7 @@ template&lt;class T , class TB , enable_if_str_arg_t&lt; T &gt;  = 0, enable_if_
 </div><div class="memdoc">
 <p>see: <a href="https://url.spec.whatwg.org/#url-opaque-path">https://url.spec.whatwg.org/#url-opaque-path</a> </p><dl class="section return"><dt>Returns</dt><dd><code>true</code> if URL's path is a URL path segment, <code>false</code> otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01338">1338</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01370">1370</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1356,7 +1416,7 @@ template&lt;class T , class TB , enable_if_str_arg_t&lt; T &gt;  = 0, enable_if_
 <p>More info: <a href="https://url.spec.whatwg.org/#dom-url-hash">https://url.spec.whatwg.org/#dom-url-hash</a></p>
 <dl class="section return"><dt>Returns</dt><dd>empty string or U+0023 (#), followed by URL’s fragment </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01221">1221</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01253">1253</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1395,7 +1455,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> - on success; <code>false</code> - on failure (URL's fragment unchanged) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01574">1574</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01606">1606</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1426,7 +1486,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 <p>More info: <a href="https://url.spec.whatwg.org/#dom-url-host">https://url.spec.whatwg.org/#dom-url-host</a></p>
 <dl class="section return"><dt>Returns</dt><dd>URL’s host, serialized, followed by U+003A (:) and URL’s port, serialized </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01164">1164</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01196">1196</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1465,7 +1525,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> - on success; <code>false</code> - on failure (URL's host and port unchanged) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01496">1496</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01528">1528</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1495,7 +1555,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 <p>The host_type getter. </p>
 <dl class="section return"><dt>Returns</dt><dd>URL’s host type as HostType enumeration value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01177">1177</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01209">1209</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1526,7 +1586,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 <p>More info: <a href="https://url.spec.whatwg.org/#dom-url-hostname">https://url.spec.whatwg.org/#dom-url-hostname</a></p>
 <dl class="section return"><dt>Returns</dt><dd>URL’s host, serialized </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01173">1173</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01205">1205</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1565,7 +1625,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> - on success; <code>false</code> - on failure (URL's host unchanged) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01507">1507</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01539">1539</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1596,7 +1656,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 <p>More info: <a href="https://url.spec.whatwg.org/#dom-url-href">https://url.spec.whatwg.org/#dom-url-href</a></p>
 <dl class="section return"><dt>Returns</dt><dd>serialized URL </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01117">1117</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01149">1149</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1635,7 +1695,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> - on success; <code>false</code> - on failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01441">1441</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01473">1473</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1671,7 +1731,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if URL's part <em>t</em> is empty or null, <code>false</code> otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01278">1278</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01310">1310</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1699,7 +1759,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if URL's scheme is "file", <code>false</code> otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01295">1295</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01327">1327</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1727,7 +1787,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if URL's scheme is "http" or "https", <code>false</code> otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01299">1299</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01331">1331</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1769,7 +1829,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if URL's part <em>t</em> is null, <code>false</code> otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01287">1287</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01319">1319</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1797,7 +1857,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if URL's scheme is special ("ftp", "file", "http", "https", "ws", or "wss"), <code>false</code> otherwise; see: <a href="https://url.spec.whatwg.org/#special-scheme">https://url.spec.whatwg.org/#special-scheme</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01291">1291</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01323">1323</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1828,7 +1888,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 <p>URL is valid if it is not empty, and contains a successfully parsed URL.</p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if URL is valid, <code>false</code> otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01265">1265</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01297">1297</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1899,7 +1959,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>*this </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01079">1079</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01111">1111</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1931,7 +1991,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 <p>Note: For file URLs, this implementation returns a serialized opaque origin (null).</p>
 <dl class="section return"><dt>Returns</dt><dd>ASCII serialized URL's origin </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01130">1130</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01162">1162</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2091,7 +2151,7 @@ template&lt;class T , class TB , enable_if_str_arg_t&lt; T &gt;  = 0, enable_if_
 <p>More info: <a href="https://url.spec.whatwg.org/#dom-url-password">https://url.spec.whatwg.org/#dom-url-password</a></p>
 <dl class="section return"><dt>Returns</dt><dd>URL’s password </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01160">1160</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01192">1192</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2130,7 +2190,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> - on success; <code>false</code> - if password can not be set </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01480">1480</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01512">1512</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2160,7 +2220,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 <p>The path getter. </p>
 <dl class="section return"><dt>Returns</dt><dd>URL's path, serialized, followed by U+003F (?) and URL’s query </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01198">1198</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01230">1230</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2191,7 +2251,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 <p>More info: <a href="https://url.spec.whatwg.org/#dom-url-pathname">https://url.spec.whatwg.org/#dom-url-pathname</a></p>
 <dl class="section return"><dt>Returns</dt><dd>URL’s path, serialized </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01205">1205</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01237">1237</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2230,7 +2290,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> - on success; <code>false</code> - on failure (URL's path unchanged) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01536">1536</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01568">1568</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2261,7 +2321,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 <p>More info: <a href="https://url.spec.whatwg.org/#dom-url-port">https://url.spec.whatwg.org/#dom-url-port</a></p>
 <dl class="section return"><dt>Returns</dt><dd>URL’s port, serialized, if URL’s port is not null, otherwise empty string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01181">1181</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01213">1213</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2300,7 +2360,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> - on success; <code>false</code> - on failure (URL's port unchanged) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01518">1518</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01550">1550</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2328,7 +2388,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>URL’s port, converted to <code>int</code> value, if URL’s port is not null, otherwise <code>-1</code> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01185">1185</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01217">1217</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2359,7 +2419,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 <p>More info: <a href="https://url.spec.whatwg.org/#dom-url-protocol">https://url.spec.whatwg.org/#dom-url-protocol</a></p>
 <dl class="section return"><dt>Returns</dt><dd>URL's scheme, followed by U+003A (:) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01151">1151</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01183">1183</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2398,7 +2458,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> - on success; <code>false</code> - on failure (URL protocol unchanged) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01453">1453</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01485">1485</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2426,7 +2486,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>URL’s port, converted to <code>int</code> value, if URL’s port is not null, otherwise default port, if URL's scheme has default port, otherwise <code>-1</code> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01190">1190</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01222">1222</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2463,7 +2523,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>*this </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01090">1090</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01122">1122</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2494,7 +2554,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 <p>More info: <a href="https://url.spec.whatwg.org/#dom-url-search">https://url.spec.whatwg.org/#dom-url-search</a></p>
 <dl class="section return"><dt>Returns</dt><dd>empty string or U+003F (?), followed by URL’s query </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01211">1211</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01243">1243</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2533,7 +2593,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> - on success; <code>false</code> - on failure (URL's query unchanged) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01547">1547</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01579">1579</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2565,7 +2625,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 <p>Returned reference is valid thru lifetime of url, or until url's move assignment operation (except <code>safe_assign</code>, which preserves reference validity).</p>
 <dl class="section return"><dt>Returns</dt><dd>reference to this’s query object (<a class="el" href="classupa_1_1url__search__params.html" title="URLSearchParams class.">url_search_params</a> class) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01231">1231</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01263">1263</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2596,7 +2656,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>the move constructed copy of this’s query object (<a class="el" href="classupa_1_1url__search__params.html" title="URLSearchParams class.">url_search_params</a> class) </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a4fb9b3f5a6ff3d88c213326423c17147" title="The searchParams getter.">search_params()</a>&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01237">1237</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01269">1269</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2633,7 +2693,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>serialized URL as string_view </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01253">1253</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01285">1285</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -2978,7 +3038,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01375">1375</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01407">1407</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -3006,7 +3066,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>serialized URL as <code>std::string</code> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01121">1121</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01153">1153</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -3037,7 +3097,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt;  = 0&gt; </div>
 <p>More info: <a href="https://url.spec.whatwg.org/#dom-url-username">https://url.spec.whatwg.org/#dom-url-username</a></p>
 <dl class="section return"><dt>Returns</dt><dd>URL’s username </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01156">1156</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01188">1188</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -3076,7 +3136,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> - on success; <code>false</code> - if username can not be set </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01464">1464</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l01496">1496</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -3101,7 +3161,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l00693">693</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l00725">725</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -3125,7 +3185,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l00691">691</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l00723">723</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -3149,7 +3209,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l00692">692</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l00724">724</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -3182,7 +3242,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 
 <p>Lexicographically compares two URL's. </p>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03072">3072</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03104">3104</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -3206,7 +3266,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l00689">689</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l00721">721</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -3230,7 +3290,7 @@ template&lt;class StrT , enable_if_str_arg_t&lt; StrT &gt; &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l00694">694</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l00726">726</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>

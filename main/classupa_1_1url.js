@@ -27,6 +27,7 @@ var classupa_1_1url =
     [ "get_host", "classupa_1_1url.html#ae702a40b38290d3f7010080c3916fddb", null ],
     [ "get_hostname", "classupa_1_1url.html#ae29b020a22b37a22279307ab3bf6e2fe", null ],
     [ "get_href", "classupa_1_1url.html#a3e0c5e451b825513bb2de744af70a388", null ],
+    [ "get_part_pos", "classupa_1_1url.html#ab01c066e264bdc669543d57390a234b9", null ],
     [ "get_part_view", "classupa_1_1url.html#a3d4800c6cc6bb6980148f6d2042290ed", null ],
     [ "get_password", "classupa_1_1url.html#a416907def23eed2b1caf69de1251e591", null ],
     [ "get_path", "classupa_1_1url.html#a98726d6ee33a80a42179faa6648b0d58", null ],
