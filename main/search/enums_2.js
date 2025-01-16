@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parttype_0',['PartType',['../classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4e',1,'upa::url']]]
+  ['option_0',['option',['../classupa_1_1public__suffix__list.html#aacf1f5100fba8fcec1fc1bd9eb36687a',1,'upa::public_suffix_list']]]
 ];

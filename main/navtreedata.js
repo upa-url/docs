@@ -43,6 +43,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Enumerator", "functions_eval.html", null ],
@@ -58,7 +59,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classupa_1_1url__search__params.html#a1b3e2d47f12a861970d16260a7955e66"
+"classupa_1_1url__error.html#a6ebbcc2b0e107084b6a7b4635ee38d4b",
+"structupa_1_1public__suffix__list_1_1result.html#aaade28fe3bbf8de51d69553649e7629d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

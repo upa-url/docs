@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['username_0',['USERNAME',['../classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea09ba9cd6eecd391a8d60e1224f1186e5',1,'upa::url']]]
+  ['registrable_5fdomain_0',['REGISTRABLE_DOMAIN',['../classupa_1_1public__suffix__list.html#aacf1f5100fba8fcec1fc1bd9eb36687aac52671c357178b6ba9bf8fe9c05025d4',1,'upa::public_suffix_list']]]
 ];

@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['include_0',['include',['../classupa_1_1code__point__set.html#a38860dd227565992f7888d0d6a2ef6a2',1,'upa::code_point_set::include(uint8_t c)'],['../classupa_1_1code__point__set.html#a263d25347473a00997b7e87bcc6cb531',1,'upa::code_point_set::include(std::initializer_list&lt; uint8_t &gt; clist)'],['../classupa_1_1code__point__set.html#aa43896f30ac32a5a07999ae904ca76da',1,'upa::code_point_set::include(uint8_t from, uint8_t to)']]],
-  ['is_5fempty_1',['is_empty',['../classupa_1_1url.html#a11d9787e1aaf5cc34fec78e51a6b9195',1,'upa::url']]],
-  ['is_5ffile_5fscheme_2',['is_file_scheme',['../classupa_1_1url.html#a9fd5393ae5a83b3cb710fea620579417',1,'upa::url']]],
-  ['is_5fhttp_5fscheme_3',['is_http_scheme',['../classupa_1_1url.html#abcb44181627e38d53d3a05a29d8f233f',1,'upa::url']]],
-  ['is_5fnull_4',['is_null',['../classupa_1_1url.html#a5745d98e87d6aa2885877300bcc3e590',1,'upa::url']]],
-  ['is_5fspecial_5fscheme_5',['is_special_scheme',['../classupa_1_1url.html#accd15c481134fbde27af1c860960009f',1,'upa::url']]],
-  ['is_5fvalid_6',['is_valid',['../classupa_1_1url.html#a407d06d913a2f309709d9e99550adc6c',1,'upa::url']]]
+  ['has_0',['has',['../classupa_1_1url__search__params.html#a398973afb1fe21645fe3e32705b8fd3d',1,'upa::url_search_params::has(const TN &amp;name) const'],['../classupa_1_1url__search__params.html#ace4525195a029f296635ee210e819d9d',1,'upa::url_search_params::has(const TN &amp;name, const TV &amp;value) const']]],
+  ['has_5fcredentials_1',['has_credentials',['../classupa_1_1url.html#a847e66a7bbfadccb9a1a01b427b9e479',1,'upa::url']]],
+  ['has_5fopaque_5fpath_2',['has_opaque_path',['../classupa_1_1url.html#a857dd6d78f6d38eccb1f8f4860a9abae',1,'upa::url']]],
+  ['hash_3',['hash',['../classupa_1_1url.html#a39ea63cc60276d528b5469a16a308942',1,'upa::url::hash(StrT &amp;&amp;str)'],['../classupa_1_1url.html#af4f294eee008689de0f56d8d6906cd84',1,'upa::url::hash() const']]],
+  ['host_4',['host',['../classupa_1_1url.html#a9596575079d483f7fd33527f61cc2a6b',1,'upa::url::host(StrT &amp;&amp;str)'],['../classupa_1_1url.html#ad97d3b7fb5781f8e0ad2d9192249dd59',1,'upa::url::host() const']]],
+  ['host_5ftype_5',['host_type',['../classupa_1_1url.html#a7b6d0fbe0fc3bd8f7f4dfe712ed5b433',1,'upa::url']]],
+  ['hostname_6',['hostname',['../classupa_1_1url.html#a00c9e7935052de9bdd5f7dc57922255e',1,'upa::url::hostname(StrT &amp;&amp;str)'],['../classupa_1_1url.html#aff7f7632093f8a244a295df52c1a7963',1,'upa::url::hostname() const']]],
+  ['href_7',['href',['../classupa_1_1url.html#a37366859f7402a3773d68861a84ab3ee',1,'upa::url::href(StrT &amp;&amp;str)'],['../classupa_1_1url.html#aee719e5e7200bfc662a73f3e3a7eb285',1,'upa::url::href() const']]]
 ];

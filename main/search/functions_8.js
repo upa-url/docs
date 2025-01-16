@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['operator_28_29_0',['operator()',['../structstd_1_1hash_3_01upa_1_1url_01_4.html#a17ef204bd073cdeffc4c2b4d5e91c8cc',1,'std::hash&lt; upa::url &gt;']]],
-  ['operator_3d_1',['operator=',['../classupa_1_1url.html#abc7b998fcb7ddd6f84e007870c87321f',1,'upa::url::operator=(const url &amp;other)=default'],['../classupa_1_1url.html#a06fdf11912a091efcd250b35bbb8195a',1,'upa::url::operator=(url &amp;&amp;other) noexcept'],['../classupa_1_1url__host.html#a608f0ebc61adf0ee14581e0ce9d01fe3',1,'upa::url_host::operator=(const url_host &amp;)=default'],['../classupa_1_1url__host.html#ad5fd2318162602a5a8ea8923e34a8e17',1,'upa::url_host::operator=(url_host &amp;&amp;) noexcept=default'],['../classupa_1_1url__search__params.html#a16858f8b1df0c75d7ac41df264aa8cf2',1,'upa::url_search_params::operator=(const url_search_params &amp;other)'],['../classupa_1_1url__search__params.html#a8ddd856fab305a122771300eb94eea77',1,'upa::url_search_params::operator=(url_search_params &amp;&amp;other) noexcept']]],
-  ['operator_3d_3d_2',['operator==',['../namespaceupa.html#adc0dcd205079a2dac68f58cebf954712',1,'upa']]],
-  ['operator_5b_5d_3',['operator[]',['../classupa_1_1code__point__set.html#ac1f429d88c920e24231252a937df4b99',1,'upa::code_point_set']]],
-  ['origin_4',['origin',['../classupa_1_1url.html#af194de754979c9075d77af7c99c4d44f',1,'upa::url']]]
+  ['include_0',['include',['../classupa_1_1code__point__set.html#a38860dd227565992f7888d0d6a2ef6a2',1,'upa::code_point_set::include(uint8_t c)'],['../classupa_1_1code__point__set.html#a263d25347473a00997b7e87bcc6cb531',1,'upa::code_point_set::include(std::initializer_list&lt; uint8_t &gt; clist)'],['../classupa_1_1code__point__set.html#aa43896f30ac32a5a07999ae904ca76da',1,'upa::code_point_set::include(uint8_t from, uint8_t to)']]],
+  ['is_5fempty_1',['is_empty',['../classupa_1_1url.html#a11d9787e1aaf5cc34fec78e51a6b9195',1,'upa::url']]],
+  ['is_5ffile_5fscheme_2',['is_file_scheme',['../classupa_1_1url.html#a9fd5393ae5a83b3cb710fea620579417',1,'upa::url']]],
+  ['is_5fhttp_5fscheme_3',['is_http_scheme',['../classupa_1_1url.html#abcb44181627e38d53d3a05a29d8f233f',1,'upa::url']]],
+  ['is_5ficann_4',['is_icann',['../structupa_1_1public__suffix__list_1_1result.html#a4d0b59e8dd4bd8dd44332cca9f49822d',1,'upa::public_suffix_list::result']]],
+  ['is_5fnull_5',['is_null',['../classupa_1_1url.html#a5745d98e87d6aa2885877300bcc3e590',1,'upa::url']]],
+  ['is_5fprivate_6',['is_private',['../structupa_1_1public__suffix__list_1_1result.html#aaade28fe3bbf8de51d69553649e7629d',1,'upa::public_suffix_list::result']]],
+  ['is_5fspecial_5fscheme_7',['is_special_scheme',['../classupa_1_1url.html#accd15c481134fbde27af1c860960009f',1,'upa::url']]],
+  ['is_5fvalid_8',['is_valid',['../classupa_1_1url.html#a407d06d913a2f309709d9e99550adc6c',1,'upa::url']]]
 ];

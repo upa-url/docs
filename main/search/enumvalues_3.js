@@ -1,7 +1,12 @@
 var searchData=
 [
-  ['host_0',['HOST',['../classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea47e7325100dc88bd29b643b27564b73c',1,'upa::url']]],
-  ['host_5finvalid_5fcode_5fpoint_1',['host_invalid_code_point',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a16944afffa595ce9e8ae290e2d020f52',1,'upa']]],
-  ['host_5fmissing_2',['host_missing',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7ab76b800b737d646b3ae8e06071d622c3',1,'upa']]],
-  ['host_5fstart_3',['HOST_START',['../classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4eaef1b79755ba59f0c64fc3c59d0e70db7',1,'upa::url']]]
+  ['file_5fempty_5fpath_0',['file_empty_path',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7add1b18bee25a37b9de731f67e11402c5',1,'upa']]],
+  ['file_5finvalid_5fwindows_5fdrive_5fletter_1',['file_invalid_windows_drive_letter',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7aeac93c6906b2444bc610597207877278',1,'upa']]],
+  ['file_5finvalid_5fwindows_5fdrive_5fletter_5fhost_2',['file_invalid_windows_drive_letter_host',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a7f111d32d5a0abd56f534f1201b9e7db',1,'upa']]],
+  ['file_5funsupported_5fpath_3',['file_unsupported_path',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7abece6466dc75c416e679c74f16bc0f2f',1,'upa']]],
+  ['file_5furl_5fcannot_5fhave_5fhost_4',['file_url_cannot_have_host',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a638170c41e2e2dc7f761187af119d301',1,'upa']]],
+  ['file_5furl_5finvalid_5func_5',['file_url_invalid_unc',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a9c66d8c63d3ec33c819301db9d488474',1,'upa']]],
+  ['file_5furl_5fnot_5fwindows_5fpath_6',['file_url_not_windows_path',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a2ca12369d95b6ae5b0f74b951da7eceb',1,'upa']]],
+  ['file_5furl_5funsupported_5fhost_7',['file_url_unsupported_host',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a91095cdc57bcc791b5f5aa636aff5c82',1,'upa']]],
+  ['fragment_8',['FRAGMENT',['../classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4eaa92a84530b89237947e05ae3816853c7',1,'upa::url']]]
 ];

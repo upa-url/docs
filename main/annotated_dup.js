@@ -5,9 +5,11 @@ var annotated_dup =
     ] ],
     [ "upa", "namespaceupa.html", [
       [ "code_point_set", "classupa_1_1code__point__set.html", "classupa_1_1code__point__set" ],
+      [ "public_suffix_list", "classupa_1_1public__suffix__list.html", "classupa_1_1public__suffix__list" ],
       [ "url", "classupa_1_1url.html", "classupa_1_1url" ],
       [ "url_error", "classupa_1_1url__error.html", "classupa_1_1url__error" ],
       [ "url_host", "classupa_1_1url__host.html", "classupa_1_1url__host" ],
       [ "url_search_params", "classupa_1_1url__search__params.html", "classupa_1_1url__search__params" ]
-    ] ]
+    ] ],
+    [ "enable_bitmask_operators< upa::public_suffix_list::option >", "structenable__bitmask__operators_3_01upa_1_1public__suffix__list_1_1option_01_4.html", null ]
 ];

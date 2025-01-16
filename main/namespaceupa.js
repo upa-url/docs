@@ -1,6 +1,7 @@
 var namespaceupa =
 [
     [ "code_point_set", "classupa_1_1code__point__set.html", "classupa_1_1code__point__set" ],
+    [ "public_suffix_list", "classupa_1_1public__suffix__list.html", "classupa_1_1public__suffix__list" ],
     [ "url", "classupa_1_1url.html", "classupa_1_1url" ],
     [ "url_error", "classupa_1_1url__error.html", "classupa_1_1url__error" ],
     [ "url_host", "classupa_1_1url__host.html", "classupa_1_1url__host" ],
@@ -64,6 +65,7 @@ var namespaceupa =
     [ "domain_to_unicode", "namespaceupa.html#a760250b346f7e7ddfc58813b45993ed3", null ],
     [ "encode_url_component", "namespaceupa.html#a38eb088c23f4c98acc10afa8710af657", null ],
     [ "equals", "namespaceupa.html#a704170fa90d71a1899e48494fb85cd70", null ],
+    [ "get_label_pos_by_index", "namespaceupa.html#af3b2e08956601bd33986ebf777752c77", null ],
     [ "operator==", "namespaceupa.html#adc0dcd205079a2dac68f58cebf954712", null ],
     [ "path_from_file_url", "namespaceupa.html#a01668f1801e81e167aa890118e7d456b", null ],
     [ "percent_decode", "namespaceupa.html#a45d0ddd991776b127ca780991a4aeded", null ],

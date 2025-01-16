@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['url_0',['url',['../classupa_1_1url.html',1,'upa']]],
-  ['url_5ferror_1',['url_error',['../classupa_1_1url__error.html',1,'upa']]],
-  ['url_5fhost_2',['url_host',['../classupa_1_1url__host.html',1,'upa']]],
-  ['url_5fsearch_5fparams_3',['url_search_params',['../classupa_1_1url__search__params.html',1,'upa']]]
+  ['hash_3c_20upa_3a_3aurl_20_3e_0',['hash&lt; upa::url &gt;',['../structstd_1_1hash_3_01upa_1_1url_01_4.html',1,'std']]]
 ];
