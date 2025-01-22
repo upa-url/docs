@@ -45,5 +45,6 @@ var classupa_1_1url__search__params =
     [ "swap", "classupa_1_1url__search__params.html#ab36961592c3f5c32672d614b47a47d2e", null ],
     [ "to_string", "classupa_1_1url__search__params.html#ad89134b75918f7c94ac0873b66d94156", null ],
     [ "detail::url_search_params_ptr", "classupa_1_1url__search__params.html#ab1b0c55b5ec62eacec6b0c4870e18ba8", null ],
+    [ "operator<<", "classupa_1_1url__search__params.html#a65db457da78ccbd8d5ce936d9ede7eb9", null ],
     [ "url", "classupa_1_1url__search__params.html#ac8e4546acf12c4e621b1d729e223cf7d", null ]
 ];
