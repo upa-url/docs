@@ -1,5 +1,6 @@
 var namespaceupa =
 [
+    [ "idna", "namespaceupa_1_1idna.html", "namespaceupa_1_1idna" ],
     [ "code_point_set", "classupa_1_1code__point__set.html", "classupa_1_1code__point__set" ],
     [ "public_suffix_list", "classupa_1_1public__suffix__list.html", "classupa_1_1public__suffix__list" ],
     [ "url", "classupa_1_1url.html", "classupa_1_1url" ],
