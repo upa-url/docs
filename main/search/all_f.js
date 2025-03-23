@@ -4,7 +4,7 @@ var searchData=
   ['rbegin_1',['rbegin',['../classupa_1_1url__search__params.html#ad8b9b33d3f6994d17a46dfb268100802',1,'upa::url_search_params']]],
   ['readme_2emd_2',['README.md',['../README_8md.html',1,'']]],
   ['real_5fport_5fint_3',['real_port_int',['../classupa_1_1url.html#a1506d5ac515b7cffc3a50f59bf2a4e6e',1,'upa::url']]],
-  ['registrable_5fdomain_4',['REGISTRABLE_DOMAIN',['../classupa_1_1public__suffix__list.html#a76c2c977ab0560f357e330c9e75f119c',1,'upa::public_suffix_list::REGISTRABLE_DOMAIN'],['../classupa_1_1public__suffix__list.html#aacf1f5100fba8fcec1fc1bd9eb36687aac52671c357178b6ba9bf8fe9c05025d4',1,'upa::public_suffix_list::REGISTRABLE_DOMAIN']]],
+  ['registrable_5fdomain_4',['registrable_domain',['../classupa_1_1public__suffix__list.html#aacf1f5100fba8fcec1fc1bd9eb36687aaff9398a8d00b70a5d503cd393986a509',1,'upa::public_suffix_list']]],
   ['remaining_5',['remaining',['../structupa_1_1public__suffix__list_1_1push__context.html#abb621cb7de29b8d871f81c08ffd9de72',1,'upa::public_suffix_list::push_context']]],
   ['remove_6',['remove',['../classupa_1_1url__search__params.html#ac1d41abf2e881f8a0ef146f331406180',1,'upa::url_search_params::remove(const TN &amp;name)'],['../classupa_1_1url__search__params.html#a4ce300eba7e90cada6790835a2c4f89a',1,'upa::url_search_params::remove(const TN &amp;name, const TV &amp;value)']]],
   ['remove_5fif_7',['remove_if',['../classupa_1_1url__search__params.html#ac68e1da1c80834f3d30eb2e8e892f7e8',1,'upa::url_search_params']]],

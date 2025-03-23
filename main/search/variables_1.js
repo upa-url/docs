@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['code_5f_0',['code_',['../structupa_1_1public__suffix__list_1_1result.html#a072cf532f4fa6d9a5b9c8a1c8a57781a',1,'upa::public_suffix_list::result']]],
-  ['code_5fflags_1',['code_flags',['../structupa_1_1public__suffix__list_1_1push__context.html#ac853975522308b4b9129f69b1c16b593',1,'upa::public_suffix_list::push_context']]],
-  ['component_5fno_5fencode_5fset_2',['component_no_encode_set',['../namespaceupa.html#a6e5bb00a92770adfff5de74c38a3ed75',1,'upa']]]
+  ['first_5flabel_5find_0',['first_label_ind',['../structupa_1_1public__suffix__list_1_1result.html#ae47e059a6216b75c1a1b624ec7948cbc',1,'upa::public_suffix_list::result']]],
+  ['first_5flabel_5fpos_1',['first_label_pos',['../structupa_1_1public__suffix__list_1_1result.html#a9f9672d4e127a56b37716637bfe007db',1,'upa::public_suffix_list::result']]],
+  ['fragment_5fno_5fencode_5fset_2',['fragment_no_encode_set',['../namespaceupa.html#ae51d15bf921a08293153d02721a40ed1',1,'upa']]]
 ];

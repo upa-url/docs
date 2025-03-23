@@ -8,5 +8,5 @@ var searchData=
   ['port_5finvalid_5',['port_invalid',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7aeb06dee38357e22dac3cffb0bce2bc61',1,'upa']]],
   ['port_5fout_5fof_5frange_6',['port_out_of_range',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a426e71cf6c60c728c51d63edb2643692',1,'upa']]],
   ['posix_7',['posix',['../namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1',1,'upa']]],
-  ['public_5fsuffix_8',['PUBLIC_SUFFIX',['../classupa_1_1public__suffix__list.html#aacf1f5100fba8fcec1fc1bd9eb36687aad031b88f7cb56d297b1c29b94b68ba83',1,'upa::public_suffix_list']]]
+  ['public_5fsuffix_8',['public_suffix',['../classupa_1_1public__suffix__list.html#aacf1f5100fba8fcec1fc1bd9eb36687aacfd410278d0ad7b0186ac22ae3892881',1,'upa::public_suffix_list']]]
 ];
