@@ -114,7 +114,7 @@ $(function(){initNavTree('md_doc_2string__input.html',''); initResizable(true); 
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="string-input"></a></p>
-<p>For string input, the library supports UTF-8, UTF-16, UTF-32 encodings and several string types, including <code>std::basic_string</code>, <code>std::basic_string_view</code>, null-terminated strings of any char type: <code>char</code>, <code>char8_t</code>, <code>char16_t</code>, <code>char32_t</code>, or <code>wchar_t</code>.</p>
+<p>For string input, the library supports UTF-8, UTF-16, UTF-32 encodings and several string types, including <code>std::basic_string</code>, <code>std::basic_string_view</code>, null-terminated strings of any char type: <code>char</code>, <code>char8_t</code>, <code>char16_t</code>, <code>char32_t</code>, or <code>wchar_t</code>. Also classes convertible to <code>std::basic_string_view</code> are supported (for example string classes of Qt 6.7 or latter).</p>
 <p>Other classes that have a <code>data()</code> function that returns a pointer to one of the char types listed above and a <code>size()</code> function that has an integer return type are also supported (e.g. <code>std::vector&lt;char&gt;</code>).</p>
 <p>The ATL/MFC and Qt library string types are supported. To use them you need to include the header files listed in the table below instead of <code><a class="el" href="url_8h.html">url.h</a></code>:</p>
 <table class="markdownTable">
@@ -125,6 +125,7 @@ $(function(){initNavTree('md_doc_2string__input.html',''); initResizable(true); 
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Qt   </td><td class="markdownTableBodyNone"><code>QString</code>, <code>QStringView</code>, <code>QUtf8StringView</code>   </td><td class="markdownTableBodyNone"><code>url_for_qt.h</code>   </td></tr>
 </table>
+<dl class="section note"><dt>Note</dt><dd>As of version 6.7, Qt string classes are convertible to <code>std::basic_string_view</code>, so they are supported directly in <code><a class="el" href="url_8h.html">url.h</a></code>, and there is no need to include <code>url_for_qt.h</code>.</dd></dl>
 <p>Qt example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;upa/url_for_qt.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;QString&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>

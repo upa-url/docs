@@ -115,7 +115,7 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a></p>
 <p>Upa URL is <a href="https://url.spec.whatwg.org/">WHATWG URL Standard</a> compliant <b>U</b>RL <b>pa</b>rser library written in C++.</p>
-<p>The library is self-contained with no dependencies and requires a compiler that supports C++11 or later. It is known to compile with Clang 4, GCC 4.9, Microsoft Visual Studio 2015 or later. Can also be compiled to WebAssembly, see demo: <a href="https://upa-url.github.io/demo/">https://upa-url.github.io/demo/</a></p>
+<p>The library is self-contained with no dependencies and requires a compiler that supports C++17 or later (for previous major version that requires C++11 or later, see <a href="https://github.com/upa-url/upa/tree/v1.x">the v1.x branch</a>). It is known to compile with Clang 7, GCC 8, Microsoft Visual Studio 2017 or later. Can also be compiled to WebAssembly, see demo: <a href="https://upa-url.github.io/demo/">https://upa-url.github.io/demo/</a></p>
 <h1><a class="anchor" id="features-and-standard-conformance"></a>
 Features and standard conformance</h1>
 <p>This library is up to date with the URL Standard published on <a href="https://url.spec.whatwg.org/commit-snapshots/6c782003a2d53b1feecd072d1006eb8f1d65fb2d/">14 March 2025 (commit 6c78200)</a> and supports internationalized domain names as specified in the <a href="https://www.unicode.org/reports/tr46/tr46-33.html">UTS46 Unicode IDNA Compatibility Processing version 16.0.0</a>.</p>
@@ -125,6 +125,7 @@ Features and standard conformance</h1>
 <li><a href="https://url.spec.whatwg.org/#concept-url">URL record</a>: <code><a class="el" href="classupa_1_1url.html" title="URL class.">upa::url</a></code> has functions to examine URL record members: <code>get_part_view(PartType t)</code>, <code>is_empty(PartType t)</code> and <code>is_null(PartType t)</code></li>
 <li><a href="https://url.spec.whatwg.org/#url-equivalence">URL equivalence</a>: <code><a class="el" href="namespaceupa.html#a704170fa90d71a1899e48494fb85cd70" title="URL equivalence.">upa::equals</a></code> function</li>
 <li><a href="https://url.spec.whatwg.org/#percent-encoded-bytes">Percent decoding and encoding</a> functions: <code><a class="el" href="namespaceupa.html#a45d0ddd991776b127ca780991a4aeded" title="Percent decode input string.">upa::percent_decode</a></code>, <code><a class="el" href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d" title="UTF-8 percent encode input string using specified percent encode set.">upa::percent_encode</a></code> and <code><a class="el" href="namespaceupa.html#a38eb088c23f4c98acc10afa8710af657" title="UTF-8 percent encode input string using component percent encode set.">upa::encode_url_component</a></code></li>
+<li><a href="https://publicsuffix.org/">Public Suffix List</a> class <code><a class="el" href="classupa_1_1public__suffix__list.html" title="The Public Suffix List class.">upa::public_suffix_list</a></code> to get <a href="https://url.spec.whatwg.org/#host-public-suffix">public suffix</a> and <a href="https://url.spec.whatwg.org/#host-registrable-domain">registrable domain</a> of a host.</li>
 </ol>
 <p>It has some differences from the standard:</p><ol type="1">
 <li>Setters of the <code><a class="el" href="classupa_1_1url.html" title="URL class.">upa::url</a></code> class are implemented as functions, which return <code>true</code> if value is accepted.</li>
@@ -174,8 +175,7 @@ Embedding with CPM.cmake script</h3>
 <div class="line">target_link_libraries(exe-target PRIVATE upa::url)</div>
 </div><!-- fragment --><h2><a class="anchor" id="vcpkg"></a>
 vcpkg</h2>
-<p>For use in C++17 or later projects, install Upa URL with <code>vcpkg install upa-url</code>.</p>
-<p>For use in C++11 and C++14 projects: <code>vcpkg install upa-url[cxx11]</code>.</p>
+<p>Install Upa URL with <code>vcpkg install upa-url</code>.</p>
 <h1><a class="anchor" id="usage"></a>
 Usage</h1>
 <p>In source files, that use this library, the <code><a class="el" href="url_8h.html">upa/url.h</a></code> must be included: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="url_8h.html">upa/url.h</a>&quot;</span></div>
@@ -259,6 +259,20 @@ Examples</h2>
 <div class="line">}</div>
 <div class="ttc" id="anamespaceupa_html_a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1"><div class="ttname"><a href="namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1">upa::file_path_format::posix</a></div><div class="ttdeci">@ posix</div><div class="ttdoc">POSIX file path format.</div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l03128">url.h:3128</a></div></div>
 <div class="ttc" id="anamespaceupa_html_adbb039c01de48ad13cb733c8c32c588f"><div class="ttname"><a href="namespaceupa.html#adbb039c01de48ad13cb733c8c32c588f">upa::url_from_file_path</a></div><div class="ttdeci">url url_from_file_path(StrT &amp;&amp;str, file_path_format format=file_path_format::native)</div><div class="ttdoc">Make URL from OS file path.</div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l03162">url.h:3162</a></div></div>
+</div><!-- fragment --><p>Load the <a href="https://publicsuffix.org/">Public Suffix List</a> and get <a href="https://url.spec.whatwg.org/#host-public-suffix">public suffix</a> of a hostname: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="public__suffix__list_8h.html">upa/public_suffix_list.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <a class="code hl_class" href="classupa_1_1public__suffix__list.html">upa::public_suffix_list</a> psl;</div>
+<div class="line">    <span class="keywordflow">if</span> (psl.<a class="code hl_function" href="classupa_1_1public__suffix__list.html#ab305f760f8313f2d7a22e6c6d2a0555c">load</a>(<span class="stringliteral">&quot;public_suffix_list.dat&quot;</span>))</div>
+<div class="line">        std::cout &lt;&lt; psl.<a class="code hl_function" href="classupa_1_1public__suffix__list.html#ad6aa94f54653eac8683654740fb25d16">get_suffix</a>(<span class="stringliteral">&quot;upa-url.github.io.&quot;</span>,</div>
+<div class="line">            <a class="code hl_enumvalue" href="classupa_1_1public__suffix__list.html#aacf1f5100fba8fcec1fc1bd9eb36687aa23e541bd68e37b85efa8b14e1b3ba1c5">upa::public_suffix_list::option::allow_trailing_dot</a>) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>; <span class="comment">// github.io.</span></div>
+<div class="line">}</div>
+<div class="ttc" id="aclassupa_1_1public__suffix__list_html"><div class="ttname"><a href="classupa_1_1public__suffix__list.html">upa::public_suffix_list</a></div><div class="ttdoc">The Public Suffix List class.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00086">public_suffix_list.h:86</a></div></div>
+<div class="ttc" id="aclassupa_1_1public__suffix__list_html_aacf1f5100fba8fcec1fc1bd9eb36687aa23e541bd68e37b85efa8b14e1b3ba1c5"><div class="ttname"><a href="classupa_1_1public__suffix__list.html#aacf1f5100fba8fcec1fc1bd9eb36687aa23e541bd68e37b85efa8b14e1b3ba1c5">upa::public_suffix_list::option::allow_trailing_dot</a></div><div class="ttdeci">@ allow_trailing_dot</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00097">public_suffix_list.h:97</a></div></div>
+<div class="ttc" id="aclassupa_1_1public__suffix__list_html_ab305f760f8313f2d7a22e6c6d2a0555c"><div class="ttname"><a href="classupa_1_1public__suffix__list.html#ab305f760f8313f2d7a22e6c6d2a0555c">upa::public_suffix_list::load</a></div><div class="ttdeci">bool load(const std::filesystem::path &amp;filename)</div><div class="ttdoc">Load Public Suffix List from file.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00134">public_suffix_list.h:134</a></div></div>
+<div class="ttc" id="aclassupa_1_1public__suffix__list_html_ad6aa94f54653eac8683654740fb25d16"><div class="ttname"><a href="classupa_1_1public__suffix__list.html#ad6aa94f54653eac8683654740fb25d16">upa::public_suffix_list::get_suffix</a></div><div class="ttdeci">std::string get_suffix(StrT &amp;&amp;str_host, option opt=option::public_suffix) const</div><div class="ttdoc">Get public suffix or registrable domain.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00187">public_suffix_list.h:187</a></div></div>
+<div class="ttc" id="apublic__suffix__list_8h_html"><div class="ttname"><a href="public__suffix__list_8h.html">public_suffix_list.h</a></div></div>
 </div><!-- fragment --><h1><a class="anchor" id="license"></a>
 License</h1>
 <p>This library is licensed under the <a href="https://opensource.org/license/bsd-2-clause/">BSD 2-Clause License</a>. It contains portions of modified source code from the Chromium project, licensed under the <a href="https://opensource.org/license/bsd-3-clause/">BSD 3-Clause License</a>, and the ICU project, licensed under the <a href="https://www.unicode.org/license.txt">UNICODE LICENSE V3</a>.</p>
