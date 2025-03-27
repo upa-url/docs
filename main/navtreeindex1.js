@@ -1,5 +1,17 @@
 var NAVTREEINDEX1 =
 {
+"classupa_1_1url.html#aefff2a396c60bb736c6af7c94e67e834":[2,0,1,3,55],
+"classupa_1_1url.html#aefff2a396c60bb736c6af7c94e67e834":[3,0,1,3,55],
+"classupa_1_1url.html#af194de754979c9075d77af7c99c4d44f":[2,0,1,3,42],
+"classupa_1_1url.html#af194de754979c9075d77af7c99c4d44f":[3,0,1,3,42],
+"classupa_1_1url.html#af4f294eee008689de0f56d8d6906cd84":[2,0,1,3,25],
+"classupa_1_1url.html#af4f294eee008689de0f56d8d6906cd84":[3,0,1,3,25],
+"classupa_1_1url.html#af58ee895a49b13151c856661bd18fc15":[2,0,1,3,9],
+"classupa_1_1url.html#af58ee895a49b13151c856661bd18fc15":[3,0,1,3,9],
+"classupa_1_1url.html#afb318d1c20021658415ecbdc2b4e1d05":[2,0,1,3,78],
+"classupa_1_1url.html#afb318d1c20021658415ecbdc2b4e1d05":[3,0,1,3,78],
+"classupa_1_1url.html#aff7f7632093f8a244a295df52c1a7963":[2,0,1,3,30],
+"classupa_1_1url.html#aff7f7632093f8a244a295df52c1a7963":[3,0,1,3,30],
 "classupa_1_1url__error.html":[2,0,1,4],
 "classupa_1_1url__error.html":[3,0,1,4],
 "classupa_1_1url__error.html#a6ebbcc2b0e107084b6a7b4635ee38d4b":[2,0,1,4,1],
@@ -237,17 +249,5 @@ var NAVTREEINDEX1 =
 "public__suffix__list_8h_source.html":[4,0,1,0,0],
 "structstd_1_1hash_3_01upa_1_1url_01_4.html":[2,0,0,0],
 "structstd_1_1hash_3_01upa_1_1url_01_4.html":[3,0,0,0],
-"structstd_1_1hash_3_01upa_1_1url_01_4.html#a17ef204bd073cdeffc4c2b4d5e91c8cc":[2,0,0,0,0],
-"structstd_1_1hash_3_01upa_1_1url_01_4.html#a17ef204bd073cdeffc4c2b4d5e91c8cc":[3,0,0,0,0],
-"structupa_1_1idna_1_1enable__bitmask__operators_3_01upa_1_1public__suffix__list_1_1option_01_4.html":[2,0,1,0,0],
-"structupa_1_1idna_1_1enable__bitmask__operators_3_01upa_1_1public__suffix__list_1_1option_01_4.html":[3,0,1,0,0],
-"structupa_1_1public__suffix__list_1_1push__context.html":[2,0,1,2,0],
-"structupa_1_1public__suffix__list_1_1push__context.html":[3,0,1,2,0],
-"structupa_1_1public__suffix__list_1_1push__context.html#abb621cb7de29b8d871f81c08ffd9de72":[2,0,1,2,0,1],
-"structupa_1_1public__suffix__list_1_1push__context.html#abb621cb7de29b8d871f81c08ffd9de72":[3,0,1,2,0,1],
-"structupa_1_1public__suffix__list_1_1push__context.html#ac853975522308b4b9129f69b1c16b593":[2,0,1,2,0,0],
-"structupa_1_1public__suffix__list_1_1push__context.html#ac853975522308b4b9129f69b1c16b593":[3,0,1,2,0,0],
-"structupa_1_1public__suffix__list_1_1result.html":[2,0,1,2,1],
-"structupa_1_1public__suffix__list_1_1result.html":[3,0,1,2,1],
-"structupa_1_1public__suffix__list_1_1result.html#a072cf532f4fa6d9a5b9c8a1c8a57781a":[2,0,1,2,1,4]
+"structstd_1_1hash_3_01upa_1_1url_01_4.html#a17ef204bd073cdeffc4c2b4d5e91c8cc":[2,0,0,0,0]
 };

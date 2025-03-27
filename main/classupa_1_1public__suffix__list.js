@@ -7,6 +7,10 @@ var classupa_1_1public__suffix__list =
       [ "registrable_domain", "classupa_1_1public__suffix__list.html#aacf1f5100fba8fcec1fc1bd9eb36687aaff9398a8d00b70a5d503cd393986a509", null ],
       [ "allow_trailing_dot", "classupa_1_1public__suffix__list.html#aacf1f5100fba8fcec1fc1bd9eb36687aa23e541bd68e37b85efa8b14e1b3ba1c5", null ]
     ] ],
+    [ "public_suffix_list", "classupa_1_1public__suffix__list.html#a87447d670a6b6521ddf2d56297dc155b", null ],
+    [ "~public_suffix_list", "classupa_1_1public__suffix__list.html#a284e63b2e387beeafd759398b2b9ed04", null ],
+    [ "public_suffix_list", "classupa_1_1public__suffix__list.html#a142d09c18eac061ad81ff7bcfd55c7fa", null ],
+    [ "public_suffix_list", "classupa_1_1public__suffix__list.html#a7ab2b241ddb03ca11116731d8fff2085", null ],
     [ "finalize", "classupa_1_1public__suffix__list.html#a5445b4ec94082318318ea2a50305bfb0", null ],
     [ "get_suffix", "classupa_1_1public__suffix__list.html#ad6aa94f54653eac8683654740fb25d16", null ],
     [ "get_suffix_info", "classupa_1_1public__suffix__list.html#a5654e9ca39f44de1a731adcdaff274ce", null ],
@@ -17,6 +21,8 @@ var classupa_1_1public__suffix__list =
     [ "get_suffix_view", "classupa_1_1public__suffix__list.html#a9d43d7c6d4f0fce20ac43655b7932482", null ],
     [ "load", "classupa_1_1public__suffix__list.html#ab305f760f8313f2d7a22e6c6d2a0555c", null ],
     [ "load", "classupa_1_1public__suffix__list.html#ad39f7b544eb12db5d69dbcbcc5de110e", null ],
+    [ "operator=", "classupa_1_1public__suffix__list.html#aadaf0991ab27aa628e7dae84a20c806b", null ],
+    [ "operator=", "classupa_1_1public__suffix__list.html#ad5d0b4b3e8b46faaf08aa873f1848f03", null ],
     [ "operator==", "classupa_1_1public__suffix__list.html#a8895603a0d90cd64d3679cc93609f7d5", null ],
     [ "push", "classupa_1_1public__suffix__list.html#ab14d9881b2319afe35741a3ce21e05c1", null ],
     [ "push_line", "classupa_1_1public__suffix__list.html#ad75e0d07a4c4bf07c37fd2afcf523402", null ]

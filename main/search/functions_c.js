@@ -10,6 +10,7 @@ var searchData=
   ['port_7',['port',['../classupa_1_1url.html#ad17810412671e9775490e95df79be11a',1,'upa::url::port(StrT &amp;&amp;str)'],['../classupa_1_1url.html#a382c92705f9c6a48264de5551e5bffe5',1,'upa::url::port() const']]],
   ['port_5fint_8',['port_int',['../classupa_1_1url.html#a89ded003a49b1858aafbc9528bab89cb',1,'upa::url']]],
   ['protocol_9',['protocol',['../classupa_1_1url.html#aefff2a396c60bb736c6af7c94e67e834',1,'upa::url::protocol(StrT &amp;&amp;str)'],['../classupa_1_1url.html#a87c8849066bae6f8b8d380ff2de91703',1,'upa::url::protocol() const']]],
-  ['push_10',['push',['../classupa_1_1public__suffix__list.html#ab14d9881b2319afe35741a3ce21e05c1',1,'upa::public_suffix_list']]],
-  ['push_5fline_11',['push_line',['../classupa_1_1public__suffix__list.html#ad75e0d07a4c4bf07c37fd2afcf523402',1,'upa::public_suffix_list']]]
+  ['public_5fsuffix_5flist_10',['public_suffix_list',['../classupa_1_1public__suffix__list.html#a87447d670a6b6521ddf2d56297dc155b',1,'upa::public_suffix_list::public_suffix_list()'],['../classupa_1_1public__suffix__list.html#a142d09c18eac061ad81ff7bcfd55c7fa',1,'upa::public_suffix_list::public_suffix_list(public_suffix_list &amp;&amp;) noexcept'],['../classupa_1_1public__suffix__list.html#a7ab2b241ddb03ca11116731d8fff2085',1,'upa::public_suffix_list::public_suffix_list(const public_suffix_list &amp;)=delete']]],
+  ['push_11',['push',['../classupa_1_1public__suffix__list.html#ab14d9881b2319afe35741a3ce21e05c1',1,'upa::public_suffix_list']]],
+  ['push_5fline_12',['push_line',['../classupa_1_1public__suffix__list.html#ad75e0d07a4c4bf07c37fd2afcf523402',1,'upa::public_suffix_list']]]
 ];
