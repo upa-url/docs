@@ -11,7 +11,7 @@ var searchData=
   ['file_5furl_5finvalid_5func_8',['file_url_invalid_unc',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a9c66d8c63d3ec33c819301db9d488474',1,'upa']]],
   ['file_5furl_5fnot_5fwindows_5fpath_9',['file_url_not_windows_path',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a2ca12369d95b6ae5b0f74b951da7eceb',1,'upa']]],
   ['file_5furl_5funsupported_5fhost_10',['file_url_unsupported_host',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a91095cdc57bcc791b5f5aa636aff5c82',1,'upa']]],
-  ['finalize_11',['finalize',['../classupa_1_1public__suffix__list.html#a5445b4ec94082318318ea2a50305bfb0',1,'upa::public_suffix_list']]],
+  ['finalize_11',['finalize',['../classupa_1_1public__suffix__list.html#aac3578c7783f0ba763a359a8e9772af1',1,'upa::public_suffix_list']]],
   ['first_5flabel_5find_12',['first_label_ind',['../structupa_1_1public__suffix__list_1_1result.html#ae47e059a6216b75c1a1b624ec7948cbc',1,'upa::public_suffix_list::result']]],
   ['first_5flabel_5fpos_13',['first_label_pos',['../structupa_1_1public__suffix__list_1_1result.html#a9f9672d4e127a56b37716637bfe007db',1,'upa::public_suffix_list::result']]],
   ['fragment_14',['FRAGMENT',['../classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4eaa92a84530b89237947e05ae3816853c7',1,'upa::url']]],

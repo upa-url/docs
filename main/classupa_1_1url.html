@@ -370,9 +370,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a407d06d913a2f309709d9e99550adc6c" id="r_a407d06d913a2f309709d9e99550adc6c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a407d06d913a2f309709d9e99550adc6c">is_valid</a> () const noexcept</td></tr>
 <tr class="memdesc:a407d06d913a2f309709d9e99550adc6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the URL is valid.  <br /></td></tr>
 <tr class="separator:a407d06d913a2f309709d9e99550adc6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab01c066e264bdc669543d57390a234b9" id="r_ab01c066e264bdc669543d57390a234b9"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::size_t, std::size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab01c066e264bdc669543d57390a234b9">get_part_pos</a> (<a class="el" href="#a84cba39d7a98ecc004de3f1585902b4e">PartType</a> t, bool with_sep=false) const</td></tr>
-<tr class="memdesc:ab01c066e264bdc669543d57390a234b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the start and end position of the specified URL part.  <br /></td></tr>
-<tr class="separator:ab01c066e264bdc669543d57390a234b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ee667ba68220871988c6b798542f633" id="r_a1ee667ba68220871988c6b798542f633"><td class="memItemLeft" align="right" valign="top">UPA_API std::pair&lt; std::size_t, std::size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ee667ba68220871988c6b798542f633">get_part_pos</a> (<a class="el" href="#a84cba39d7a98ecc004de3f1585902b4e">PartType</a> t, bool with_sep=false) const</td></tr>
+<tr class="memdesc:a1ee667ba68220871988c6b798542f633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the start and end position of the specified URL part.  <br /></td></tr>
+<tr class="separator:a1ee667ba68220871988c6b798542f633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d4800c6cc6bb6980148f6d2042290ed" id="r_a3d4800c6cc6bb6980148f6d2042290ed"><td class="memItemLeft" align="right" valign="top">string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d4800c6cc6bb6980148f6d2042290ed">get_part_view</a> (<a class="el" href="#a84cba39d7a98ecc004de3f1585902b4e">PartType</a> t) const</td></tr>
 <tr class="memdesc:a3d4800c6cc6bb6980148f6d2042290ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets URL's part (URL record member) as string.  <br /></td></tr>
 <tr class="separator:a3d4800c6cc6bb6980148f6d2042290ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1029,8 +1029,8 @@ template&lt;class T, class TB, enable_if_str_arg_t&lt; T &gt; = 0, enable_if_str
 
 </div>
 </div>
-<a id="ab01c066e264bdc669543d57390a234b9" name="ab01c066e264bdc669543d57390a234b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab01c066e264bdc669543d57390a234b9">&#9670;&#160;</a></span>get_part_pos()</h2>
+<a id="a1ee667ba68220871988c6b798542f633" name="a1ee667ba68220871988c6b798542f633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ee667ba68220871988c6b798542f633">&#9670;&#160;</a></span>get_part_pos()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1039,7 +1039,7 @@ template&lt;class T, class TB, enable_if_str_arg_t&lt; T &gt; = 0, enable_if_str
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; std::size_t, std::size_t &gt; upa::url::get_part_pos </td>
+          <td class="memname">UPA_API std::pair&lt; std::size_t, std::size_t &gt; upa::url::get_part_pos </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a84cba39d7a98ecc004de3f1585902b4e">PartType</a></td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
         </tr>

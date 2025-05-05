@@ -121,7 +121,7 @@ $(function(){initNavTree('url__search__params_8h_source.html',''); initResizable
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef UPA_URL_SEARCH_PARAMS_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define UPA_URL_SEARCH_PARAMS_H</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;config.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;config.h&quot;</span> <span class="comment">// IWYU pragma: export</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;str_arg.h&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="url__percent__encode_8h.html">url_percent_encode.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;url_utf.h&quot;</span></div>
@@ -333,7 +333,7 @@ $(function(){initNavTree('url__search__params_8h_source.html',''); initResizable
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    <span class="keywordtype">bool</span> is_sorted_ = false;</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    <a class="code hl_friend" href="classupa_1_1url__search__params.html#ac8e4546acf12c4e621b1d729e223cf7d">url</a>* url_ptr_ = <span class="keywordtype">nullptr</span>;</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span> </div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    static const <span class="keywordtype">char</span> kEncByte[0x100];</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    static UPA_API const <span class="keywordtype">char</span> kEncByte[0x100];</div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>};</div>
 </div>
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span> </div>
