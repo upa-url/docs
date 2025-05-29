@@ -12,5 +12,6 @@ var index =
     [ "Usage", "index.html#usage", [
       [ "Examples", "index.html#examples", null ]
     ] ],
+    [ "Building and running tests", "index.html#building-and-running-tests", null ],
     [ "License", "index.html#license", null ]
 ];
