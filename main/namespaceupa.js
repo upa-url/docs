@@ -77,6 +77,7 @@ var namespaceupa =
     [ "success", "namespaceupa.html#a05a9cf5ac0b5dafa3ed684f3a17f4710", null ],
     [ "swap", "namespaceupa.html#aae10d60b96ead54ec26a68c6a972cc3b", null ],
     [ "swap", "namespaceupa.html#ae3ab1af7fc61714a4e90eb5d7ca1370d", null ],
+    [ "url_from_file_path", "namespaceupa.html#a176dc24e3ddfd58f6b8bb026802bbd9e", null ],
     [ "url_from_file_path", "namespaceupa.html#adbb039c01de48ad13cb733c8c32c588f", null ],
     [ "version_num", "namespaceupa.html#a630576fbe181c46493712235942e88a6", null ],
     [ "component_no_encode_set", "namespaceupa.html#a6e5bb00a92770adfff5de74c38a3ed75", null ],
