@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"namespaceupa_1_1idna.html":[2,0,1,0],
 "pages.html":[],
 "public__suffix__list_8h.html":[4,0,1,0,0],
 "public__suffix__list_8h_source.html":[4,0,1,0,0],

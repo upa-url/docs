@@ -9,6 +9,7 @@ var url_8h =
     ] ],
     [ "upa::check_version", "namespaceupa.html#a80452c6a19ca20320e345f0508f07493", null ],
     [ "upa::equals", "namespaceupa.html#a704170fa90d71a1899e48494fb85cd70", null ],
+    [ "upa::fs_path_from_file_url", "namespaceupa.html#a19f003618c092280d9a4c28b51971c4f", null ],
     [ "upa::operator<<", "namespaceupa.html#a5546157988279185b6eaa4d582b813b8", null ],
     [ "upa::operator==", "namespaceupa.html#adc0dcd205079a2dac68f58cebf954712", null ],
     [ "upa::path_from_file_url", "namespaceupa.html#a01668f1801e81e167aa890118e7d456b", null ],

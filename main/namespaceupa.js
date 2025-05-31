@@ -67,6 +67,7 @@ var namespaceupa =
     [ "domain_to_unicode", "namespaceupa.html#a760250b346f7e7ddfc58813b45993ed3", null ],
     [ "encode_url_component", "namespaceupa.html#a38eb088c23f4c98acc10afa8710af657", null ],
     [ "equals", "namespaceupa.html#a704170fa90d71a1899e48494fb85cd70", null ],
+    [ "fs_path_from_file_url", "namespaceupa.html#a19f003618c092280d9a4c28b51971c4f", null ],
     [ "get_label_pos_by_index", "namespaceupa.html#af3b2e08956601bd33986ebf777752c77", null ],
     [ "operator<<", "namespaceupa.html#a5546157988279185b6eaa4d582b813b8", null ],
     [ "operator<<", "namespaceupa.html#ac5258e7785b98c4945dc1064c329a9a9", null ],
