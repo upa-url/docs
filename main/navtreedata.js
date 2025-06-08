@@ -64,7 +64,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classupa_1_1url.html#aefff2a396c60bb736c6af7c94e67e834",
-"namespaceupa_1_1idna.html"
+"namespaceupa.html#af3b2e08956601bd33986ebf777752c77"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

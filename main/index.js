@@ -12,6 +12,7 @@ var index =
     [ "Usage", "index.html#usage", [
       [ "Examples", "index.html#examples", null ]
     ] ],
+    [ "Using as a shared library", "index.html#using-as-a-shared-library", null ],
     [ "Building and running tests", "index.html#building-and-running-tests", null ],
     [ "License", "index.html#license", null ]
 ];

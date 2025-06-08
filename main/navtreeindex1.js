@@ -152,7 +152,7 @@ var NAVTREEINDEX1 =
 "hierarchy.html":[3,2],
 "index.html":[],
 "index.html":[0],
-"index.html#building-and-running-tests":[0,3],
+"index.html#building-and-running-tests":[0,4],
 "index.html#cmake":[0,1,0],
 "index.html#embedding":[0,1,0,0],
 "index.html#embedding-with-cpmcmake-script":[0,1,0,2],
@@ -160,8 +160,9 @@ var NAVTREEINDEX1 =
 "index.html#examples":[0,2,0],
 "index.html#features-and-standard-conformance":[0,0],
 "index.html#installation":[0,1],
-"index.html#license":[0,4],
+"index.html#license":[0,5],
 "index.html#usage":[0,2],
+"index.html#using-as-a-shared-library":[0,3],
 "index.html#vcpkg":[0,1,1],
 "md_doc_2string__input.html":[1],
 "namespacemembers.html":[2,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "namespaceupa.html#ae3ab1af7fc61714a4e90eb5d7ca1370d":[2,0,1,24],
 "namespaceupa.html#ae51d15bf921a08293153d02721a40ed1":[2,0,1,29],
 "namespaceupa.html#aef68d826e39188de36895b53617b2a32":[2,0,1,35],
-"namespaceupa.html#af283256efea86b31a615b5ab6784bc51":[2,0,1,31],
-"namespaceupa.html#af3b2e08956601bd33986ebf777752c77":[2,0,1,15]
+"namespaceupa.html#af283256efea86b31a615b5ab6784bc51":[2,0,1,31]
 };
