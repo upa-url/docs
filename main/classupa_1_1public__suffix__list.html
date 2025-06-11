@@ -179,10 +179,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4224f8316a2c5d474a11d44d87c53ac9" id="r_a4224f8316a2c5d474a11d44d87c53ac9"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4224f8316a2c5d474a11d44d87c53ac9">get_suffix_view</a> (const <a class="el" href="classupa_1_1url__host.html">url_host</a> &amp;host, <a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687a">option</a> opt=<a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687aacfd410278d0ad7b0186ac22ae3892881">option::public_suffix</a>) const</td></tr>
 <tr class="memdesc:a4224f8316a2c5d474a11d44d87c53ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get public suffix or registrable domain as string view.  <br /></td></tr>
 <tr class="separator:a4224f8316a2c5d474a11d44d87c53ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d43d7c6d4f0fce20ac43655b7932482" id="r_a9d43d7c6d4f0fce20ac43655b7932482"><td class="memTemplParams" colspan="2">template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </td></tr>
-<tr class="memitem:a9d43d7c6d4f0fce20ac43655b7932482"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9d43d7c6d4f0fce20ac43655b7932482">get_suffix_view</a> (StrT &amp;&amp;str_host, <a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687a">option</a> opt=<a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687aacfd410278d0ad7b0186ac22ae3892881">option::public_suffix</a>) const -&gt; std::basic_string_view&lt; typename str_arg&lt; str_arg_char_t&lt; StrT &gt; &gt;::value_type &gt;</td></tr>
-<tr class="memdesc:a9d43d7c6d4f0fce20ac43655b7932482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get public suffix or registrable domain as string view.  <br /></td></tr>
-<tr class="separator:a9d43d7c6d4f0fce20ac43655b7932482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac0c0143e602871587748ede625ab84" id="r_abac0c0143e602871587748ede625ab84"><td class="memTemplParams" colspan="2">template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </td></tr>
+<tr class="memitem:abac0c0143e602871587748ede625ab84"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abac0c0143e602871587748ede625ab84">get_suffix_view</a> (const StrT &amp;str_host, <a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687a">option</a> opt=<a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687aacfd410278d0ad7b0186ac22ae3892881">option::public_suffix</a>) const -&gt; std::basic_string_view&lt; typename str_arg&lt; str_arg_char_t&lt; StrT &gt; &gt;::value_type &gt;</td></tr>
+<tr class="memdesc:abac0c0143e602871587748ede625ab84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get public suffix or registrable domain as string view.  <br /></td></tr>
+<tr class="separator:abac0c0143e602871587748ede625ab84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7df3d7de79b8d0c27699091a90fb55a9" id="r_a7df3d7de79b8d0c27699091a90fb55a9"><td class="memItemLeft" align="right" valign="top">UPA_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7df3d7de79b8d0c27699091a90fb55a9">operator==</a> (const <a class="el" href="classupa_1_1public__suffix__list.html">public_suffix_list</a> &amp;other) const</td></tr>
 <tr class="memdesc:a7df3d7de79b8d0c27699091a90fb55a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares <code>*this</code> with <code class="param">other</code>.  <br /></td></tr>
 <tr class="separator:a7df3d7de79b8d0c27699091a90fb55a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -541,8 +541,52 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 
 </div>
 </div>
+<a id="abac0c0143e602871587748ede625ab84" name="abac0c0143e602871587748ede625ab84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abac0c0143e602871587748ede625ab84">&#9670;&#160;</a></span>get_suffix_view() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto upa::public_suffix_list::get_suffix_view </td>
+          <td>(</td>
+          <td class="paramtype">const StrT &amp;</td>          <td class="paramname"><span class="paramname"><em>str_host</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687a">option</a></td>          <td class="paramname"><span class="paramname"><em>opt</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687aacfd410278d0ad7b0186ac22ae3892881">option::public_suffix</a></span>&#160;) const -&gt; std::basic_string_view&lt;typename str_arg&lt;str_arg_char_t&lt;StrT&gt;&gt;::value_type&gt; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get public suffix or registrable domain as string view. </p>
+<p>Returns the public suffix or registrable domain of the <code class="param">str_host</code> string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str_host</td><td>hostname string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">opt</td><td>options </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>public suffix or registrable domain (depends on <code class="param">opt</code> value) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00287">287</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+
+</div>
+</div>
 <a id="aefa28a783180fa862511ec1643fe53ba" name="aefa28a783180fa862511ec1643fe53ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefa28a783180fa862511ec1643fe53ba">&#9670;&#160;</a></span>get_suffix_view() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa28a783180fa862511ec1643fe53ba">&#9670;&#160;</a></span>get_suffix_view() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -584,7 +628,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </div>
 </div>
 <a id="a4224f8316a2c5d474a11d44d87c53ac9" name="a4224f8316a2c5d474a11d44d87c53ac9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4224f8316a2c5d474a11d44d87c53ac9">&#9670;&#160;</a></span>get_suffix_view() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4224f8316a2c5d474a11d44d87c53ac9">&#9670;&#160;</a></span>get_suffix_view() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -622,50 +666,6 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>public suffix or registrable domain (depends on <code class="param">opt</code> value) </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00272">272</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
-
-</div>
-</div>
-<a id="a9d43d7c6d4f0fce20ac43655b7932482" name="a9d43d7c6d4f0fce20ac43655b7932482"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d43d7c6d4f0fce20ac43655b7932482">&#9670;&#160;</a></span>get_suffix_view() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto upa::public_suffix_list::get_suffix_view </td>
-          <td>(</td>
-          <td class="paramtype">StrT &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>str_host</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687a">option</a></td>          <td class="paramname"><span class="paramname"><em>opt</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687aacfd410278d0ad7b0186ac22ae3892881">option::public_suffix</a></span>&#160;) const -&gt; std::basic_string_view&lt;typename str_arg&lt;str_arg_char_t&lt;StrT&gt;&gt;::value_type&gt; </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get public suffix or registrable domain as string view. </p>
-<p>Returns the public suffix or registrable domain of the <code class="param">str_host</code> string.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str_host</td><td>hostname string </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">opt</td><td>options </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>public suffix or registrable domain (depends on <code class="param">opt</code> value) </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00287">287</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
