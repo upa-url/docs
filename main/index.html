@@ -174,10 +174,16 @@ Embedding with CPM.cmake script</h3>
 <div class="fragment"><div class="line">CPMAddPackage(&quot;gh:upa-url/upa@2.2.0&quot;)</div>
 <div class="line">...</div>
 <div class="line">target_link_libraries(exe-target PRIVATE upa::url)</div>
+</div><!-- fragment --><h2><a class="anchor" id="conan"></a>
+Conan</h2>
+<p>Install the latest version of Upa URL: </p><div class="fragment"><div class="line">conan install --requires=upa-url/[*]</div>
+</div><!-- fragment --><h2><a class="anchor" id="homebrew"></a>
+Homebrew</h2>
+<div class="fragment"><div class="line">brew install upa-url/tap/upa-url</div>
 </div><!-- fragment --><h2><a class="anchor" id="vcpkg"></a>
 vcpkg</h2>
-<p>Install Upa URL with <code>vcpkg install upa-url</code>.</p>
-<h1><a class="anchor" id="usage"></a>
+<div class="fragment"><div class="line">vcpkg install upa-url</div>
+</div><!-- fragment --><h1><a class="anchor" id="usage"></a>
 Usage</h1>
 <p>Source files using this library must include <code><a class="el" href="url_8h.html">upa/url.h</a></code>: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="url_8h.html">upa/url.h</a>&quot;</span></div>
 <div class="ttc" id="aurl_8h_html"><div class="ttname"><a href="url_8h.html">url.h</a></div></div>

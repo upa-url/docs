@@ -7,6 +7,8 @@ var index =
         [ "Embedding with FetchContent", "index.html#embedding-with-fetchcontent", null ],
         [ "Embedding with CPM.cmake script", "index.html#embedding-with-cpmcmake-script", null ]
       ] ],
+      [ "Conan", "index.html#conan", null ],
+      [ "Homebrew", "index.html#homebrew", null ],
       [ "vcpkg", "index.html#vcpkg", null ]
     ] ],
     [ "Usage", "index.html#usage", [
