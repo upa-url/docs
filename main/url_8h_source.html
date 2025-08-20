@@ -1044,14 +1044,14 @@ $(function(){initNavTree('url_8h_source.html',''); initResizable(true); });
 <div class="foldopen" id="foldopen01238" data-start="{" data-end="}">
 <div class="line"><a id="l01238" name="l01238"></a><span class="lineno"><a class="line" href="classupa_1_1url.html#a89ded003a49b1858aafbc9528bab89cb"> 1238</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classupa_1_1url.html#a89ded003a49b1858aafbc9528bab89cb">url::port_int</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span>    <span class="keyword">const</span> <span class="keyword">auto</span> vport = <a class="code hl_function" href="classupa_1_1url.html#a3d4800c6cc6bb6980148f6d2042290ed">get_part_view</a>(<a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea320e122a4ddb52a22fe01e83dd0db4ba">PORT</a>);</div>
-<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>    <span class="keywordflow">return</span> vport.length() ? detail::port_from_str(vport.data(), vport.data() + vport.length()) : -1;</div>
+<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>    <span class="keywordflow">return</span> !vport.empty() ? detail::port_from_str(vport.data(), vport.data() + vport.length()) : -1;</div>
 <div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>}</div>
 </div>
 <div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span> </div>
 <div class="foldopen" id="foldopen01243" data-start="{" data-end="}">
 <div class="line"><a id="l01243" name="l01243"></a><span class="lineno"><a class="line" href="classupa_1_1url.html#a1506d5ac515b7cffc3a50f59bf2a4e6e"> 1243</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classupa_1_1url.html#a1506d5ac515b7cffc3a50f59bf2a4e6e">url::real_port_int</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>    <span class="keyword">const</span> <span class="keyword">auto</span> vport = <a class="code hl_function" href="classupa_1_1url.html#a3d4800c6cc6bb6980148f6d2042290ed">get_part_view</a>(<a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea320e122a4ddb52a22fe01e83dd0db4ba">PORT</a>);</div>
-<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>    <span class="keywordflow">if</span> (vport.length())</div>
+<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>    <span class="keywordflow">if</span> (!vport.empty())</div>
 <div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span>        <span class="keywordflow">return</span> detail::port_from_str(vport.data(), vport.data() + vport.length());</div>
 <div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span>    <span class="keywordflow">return</span> scheme_inf_ ? scheme_inf_-&gt;default_port : -1;</div>
 <div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>}</div>
@@ -2383,7 +2383,7 @@ $(function(){initNavTree('url_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l02515" name="l02515"></a><span class="lineno"> 2515</span> </div>
 <div class="line"><a id="l02516" name="l02516"></a><span class="lineno"> 2516</span><span class="keyword">inline</span> string_view url::get_path_first_string(std::size_t len)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l02517" name="l02517"></a><span class="lineno"> 2517</span>    string_view pathv = <a class="code hl_function" href="classupa_1_1url.html#a3d4800c6cc6bb6980148f6d2042290ed">get_part_view</a>(<a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea54c17ff433530e73130086aec85297fd">PATH</a>);</div>
-<div class="line"><a id="l02518" name="l02518"></a><span class="lineno"> 2518</span>    <span class="keywordflow">if</span> (pathv.length() == 0 || <a class="code hl_function" href="classupa_1_1url.html#a857dd6d78f6d38eccb1f8f4860a9abae">has_opaque_path</a>())</div>
+<div class="line"><a id="l02518" name="l02518"></a><span class="lineno"> 2518</span>    <span class="keywordflow">if</span> (pathv.empty() || <a class="code hl_function" href="classupa_1_1url.html#a857dd6d78f6d38eccb1f8f4860a9abae">has_opaque_path</a>())</div>
 <div class="line"><a id="l02519" name="l02519"></a><span class="lineno"> 2519</span>        <span class="keywordflow">return</span> pathv;</div>
 <div class="line"><a id="l02520" name="l02520"></a><span class="lineno"> 2520</span>    <span class="comment">// skip &#39;/&#39;</span></div>
 <div class="line"><a id="l02521" name="l02521"></a><span class="lineno"> 2521</span>    pathv.remove_prefix(1);</div>
