@@ -25,6 +25,6 @@ var searchData=
   ['usage_22',['Usage',['../index.html#usage',1,'']]],
   ['userinfo_5fno_5fencode_5fset_23',['userinfo_no_encode_set',['../namespaceupa.html#aef68d826e39188de36895b53617b2a32',1,'upa']]],
   ['username_24',['USERNAME',['../classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea09ba9cd6eecd391a8d60e1224f1186e5',1,'upa::url']]],
-  ['username_25',['username',['../classupa_1_1url.html#aa183eb21c14a7d4f1880b6153aeb11b6',1,'upa::url::username(StrT &amp;&amp;str)'],['../classupa_1_1url.html#a7852b89207d1bdbf112c7f0b1242186a',1,'upa::url::username() const']]],
+  ['username_25',['username',['../classupa_1_1url.html#aa183eb21c14a7d4f1880b6153aeb11b6',1,'upa::url::username(StrT &amp;&amp;str)'],['../classupa_1_1url.html#a2f940b7ac106473be3f2c8cff8b3c11a',1,'upa::url::username() const UPA_LIFETIMEBOUND']]],
   ['using_20as_20a_20shared_20library_26',['Using as a shared library',['../index.html#using-as-a-shared-library',1,'']]]
 ];

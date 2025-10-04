@@ -1,9 +1,9 @@
 var searchData=
 [
   ['safe_5fassign_0',['safe_assign',['../classupa_1_1url.html#acb85c0973a6dd1e86af1cbf424c0eed4',1,'upa::url::safe_assign()'],['../classupa_1_1url__search__params.html#a3ecfa68c792af1d3749e2ee87e66ae20',1,'upa::url_search_params::safe_assign()']]],
-  ['search_1',['search',['../classupa_1_1url.html#a2d7a437fd9b379476d0d9397abfa637b',1,'upa::url::search(StrT &amp;&amp;str)'],['../classupa_1_1url.html#a337f5e263ebc4436e1b470fae5be8ed4',1,'upa::url::search() const']]],
-  ['search_5fparams_2',['search_params',['../classupa_1_1url.html#a4fb9b3f5a6ff3d88c213326423c17147',1,'upa::url::search_params() &amp;'],['../classupa_1_1url.html#a03ce538b9b279e4ea5801364d28f41a1',1,'upa::url::search_params() &amp;&amp;']]],
-  ['serialize_3',['serialize',['../classupa_1_1url.html#a26866381b104a1660712e06fd7089834',1,'upa::url::serialize()'],['../classupa_1_1url__search__params.html#adce84ed2f5c4cb4176e2c7e223936ffc',1,'upa::url_search_params::serialize(std::string &amp;query) const']]],
+  ['search_1',['search',['../classupa_1_1url.html#a2d7a437fd9b379476d0d9397abfa637b',1,'upa::url::search(StrT &amp;&amp;str)'],['../classupa_1_1url.html#a9f3dab1ce6adce07c08ba11fc5d6f1fc',1,'upa::url::search() const UPA_LIFETIMEBOUND']]],
+  ['search_5fparams_2',['search_params',['../classupa_1_1url.html#a584a3af184a50a23538d9fc4f0c98a00',1,'upa::url::search_params() &amp;UPA_LIFETIMEBOUND'],['../classupa_1_1url.html#a03ce538b9b279e4ea5801364d28f41a1',1,'upa::url::search_params() &amp;&amp;']]],
+  ['serialize_3',['serialize',['../classupa_1_1url.html#a60f99a614fc89a709dd1cdaa61f51a38',1,'upa::url::serialize()'],['../classupa_1_1url__search__params.html#adce84ed2f5c4cb4176e2c7e223936ffc',1,'upa::url_search_params::serialize(std::string &amp;query) const']]],
   ['set_4',['set',['../classupa_1_1url__search__params.html#a1b3e2d47f12a861970d16260a7955e66',1,'upa::url_search_params']]],
   ['set_5fhash_5',['set_hash',['../classupa_1_1url.html#abbf8c386f2003e012c676858ad967fa5',1,'upa::url']]],
   ['set_5fhost_6',['set_host',['../classupa_1_1url.html#a5d5c7ba89a639286a1986ea36d6d5be2',1,'upa::url']]],
