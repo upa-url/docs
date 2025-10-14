@@ -181,8 +181,8 @@ Public Member Functions</h2></td></tr>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassupa_1_1public__suffix__list_html"><div class="ttname"><a href="classupa_1_1public__suffix__list.html">upa::public_suffix_list</a></div><div class="ttdoc">The Public Suffix List class.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00086">public_suffix_list.h:86</a></div></div>
-<div class="ttc" id="aclassupa_1_1public__suffix__list_html_a4771eeda99372c460d137913433ed19b"><div class="ttname"><a href="#a4771eeda99372c460d137913433ed19b">upa::public_suffix_list::get_suffix_view</a></div><div class="ttdeci">std::string_view get_suffix_view(const url &amp;url UPA_LIFETIMEBOUND, option opt=option::public_suffix) const</div><div class="ttdoc">Get public suffix or registrable domain as string view.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00258">public_suffix_list.h:258</a></div></div>
-<div class="ttc" id="aclassupa_1_1public__suffix__list_html_ab305f760f8313f2d7a22e6c6d2a0555c"><div class="ttname"><a href="#ab305f760f8313f2d7a22e6c6d2a0555c">upa::public_suffix_list::load</a></div><div class="ttdeci">bool load(const std::filesystem::path &amp;filename)</div><div class="ttdoc">Load Public Suffix List from file.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00134">public_suffix_list.h:134</a></div></div>
+<div class="ttc" id="aclassupa_1_1public__suffix__list_html_a4771eeda99372c460d137913433ed19b"><div class="ttname"><a href="#a4771eeda99372c460d137913433ed19b">upa::public_suffix_list::get_suffix_view</a></div><div class="ttdeci">std::string_view get_suffix_view(const url &amp;url UPA_LIFETIMEBOUND, option opt=option::public_suffix) const</div><div class="ttdoc">Get public suffix or registrable domain as string view.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00257">public_suffix_list.h:257</a></div></div>
+<div class="ttc" id="aclassupa_1_1public__suffix__list_html_ab305f760f8313f2d7a22e6c6d2a0555c"><div class="ttname"><a href="#ab305f760f8313f2d7a22e6c6d2a0555c">upa::public_suffix_list::load</a></div><div class="ttdeci">bool load(const std::filesystem::path &amp;filename)</div><div class="ttdoc">Load Public Suffix List from file.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00133">public_suffix_list.h:133</a></div></div>
 <div class="ttc" id="apublic__suffix__list_8h_html"><div class="ttname"><a href="public__suffix__list_8h.html">public_suffix_list.h</a></div></div>
 </div><!-- fragment --> </dd></dl>
 
@@ -214,7 +214,7 @@ Public Member Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="aacf1f5100fba8fcec1fc1bd9eb36687aaff9398a8d00b70a5d503cd393986a509" name="aacf1f5100fba8fcec1fc1bd9eb36687aaff9398a8d00b70a5d503cd393986a509"></a>registrable_domain&#160;</td><td class="fielddoc"><p>to get registrable domain </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aacf1f5100fba8fcec1fc1bd9eb36687aa23e541bd68e37b85efa8b14e1b3ba1c5" name="aacf1f5100fba8fcec1fc1bd9eb36687aa23e541bd68e37b85efa8b14e1b3ba1c5"></a>allow_trailing_dot&#160;</td><td class="fielddoc"><p>allow trailing dot in hostname input to get result as defined in the URL standard; see: <a href="https://url.spec.whatwg.org/#host-public-suffix">https://url.spec.whatwg.org/#host-public-suffix</a> </p>
+<tr><td class="fieldname"><a id="aacf1f5100fba8fcec1fc1bd9eb36687aa23e541bd68e37b85efa8b14e1b3ba1c5" name="aacf1f5100fba8fcec1fc1bd9eb36687aa23e541bd68e37b85efa8b14e1b3ba1c5"></a>allow_trailing_dot&#160;</td><td class="fielddoc"><p>this option has no effect because trailing dot in hostname is always allowed </p>
 </td></tr>
 </table>
 
@@ -374,7 +374,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>public suffix or registrable domain (depends on <code class="param">opt</code> value) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00187">187</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00186">186</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -416,7 +416,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>information in the <a class="el" href="structupa_1_1public__suffix__list_1_1result.html" title="Return value type of the public_suffix_list::get_suffix_info function.">public_suffix_list::result</a> type struct </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00207">207</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00206">206</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -458,7 +458,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>information in the <a class="el" href="structupa_1_1public__suffix__list_1_1result.html" title="Return value type of the public_suffix_list::get_suffix_info function.">public_suffix_list::result</a> type struct </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00222">222</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00221">221</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -502,7 +502,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>information in the <a class="el" href="structupa_1_1public__suffix__list_1_1result.html" title="Return value type of the public_suffix_list::get_suffix_info function.">public_suffix_list::result</a> type struct </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00238">238</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00237">237</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -546,7 +546,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>public suffix or registrable domain (depends on <code class="param">opt</code> value) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00287">287</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00286">286</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -588,7 +588,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>public suffix or registrable domain (depends on <code class="param">opt</code> value) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00258">258</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00257">257</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -630,7 +630,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>public suffix or registrable domain (depends on <code class="param">opt</code> value) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00272">272</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00271">271</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -667,7 +667,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the Public Suffix List was loaded successfully </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00134">134</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00133">133</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
