@@ -117,6 +117,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4d0b59e8dd4bd8dd44332cca9f49822d" id="r_a4d0b59e8dd4bd8dd44332cca9f49822d"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d0b59e8dd4bd8dd44332cca9f49822d">is_icann</a> () const noexcept</td></tr>
 <tr class="memitem:aaade28fe3bbf8de51d69553649e7629d" id="r_aaade28fe3bbf8de51d69553649e7629d"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaade28fe3bbf8de51d69553649e7629d">is_private</a> () const noexcept</td></tr>
 <tr class="memitem:aa195a5c8dcd7f5f7d1cd013212936cca" id="r_aa195a5c8dcd7f5f7d1cd013212936cca"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa195a5c8dcd7f5f7d1cd013212936cca">wildcard_rule</a> () const noexcept</td></tr>
+<tr class="memitem:ab10c66dfe8dc58d5d24628d36bc0658f" id="r_ab10c66dfe8dc58d5d24628d36bc0658f"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab10c66dfe8dc58d5d24628d36bc0658f">is_rules_match</a> () const noexcept</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -129,7 +130,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Return value type of the <a class="el" href="classupa_1_1public__suffix__list.html#a5654e9ca39f44de1a731adcdaff274ce" title="Get public suffix or registrable domain information.">public_suffix_list::get_suffix_info</a> function. </p>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00102">102</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00103">103</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a4d0b59e8dd4bd8dd44332cca9f49822d" name="a4d0b59e8dd4bd8dd44332cca9f49822d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4d0b59e8dd4bd8dd44332cca9f49822d">&#9670;&#160;</a></span>is_icann()</h2>
@@ -155,7 +156,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if public suffix is in ICANN section </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00108">108</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00109">109</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -183,7 +184,35 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if public suffix is in PRIVATE section </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00112">112</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00113">113</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+
+</div>
+</div>
+<a id="ab10c66dfe8dc58d5d24628d36bc0658f" name="ab10c66dfe8dc58d5d24628d36bc0658f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab10c66dfe8dc58d5d24628d36bc0658f">&#9670;&#160;</a></span>is_rules_match()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool upa::public_suffix_list::result::is_rules_match </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true if there is a rule match (listed TLD) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00121">121</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -211,7 +240,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if public suffix or registrable domain is not null </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00104">104</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00105">105</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -239,7 +268,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if hostname matches wildcard rule </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00116">116</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00117">117</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -256,7 +285,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00123">123</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00128">128</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -274,7 +303,7 @@ Public Attributes</h2></td></tr>
 
 <p>First label index of public suffix or registrable domain in hostname. </p>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00120">120</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00125">125</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -292,7 +321,7 @@ Public Attributes</h2></td></tr>
 
 <p>First label position of public suffix or registrable domain in hostname. </p>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00122">122</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00127">127</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
