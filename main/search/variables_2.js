@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['path_5fno_5fencode_5fset_0',['path_no_encode_set',['../namespaceupa.html#adcbe17488f9677b76e85c3fb057a54f4',1,'upa']]],
-  ['posix_5fpath_5fno_5fencode_5fset_1',['posix_path_no_encode_set',['../namespaceupa.html#af283256efea86b31a615b5ab6784bc51',1,'upa']]]
+  ['first_5flabel_5find_0',['first_label_ind',['../structupa_1_1public__suffix__list_1_1result.html#ae47e059a6216b75c1a1b624ec7948cbc',1,'upa::public_suffix_list::result']]],
+  ['first_5flabel_5fpos_1',['first_label_pos',['../structupa_1_1public__suffix__list_1_1result.html#a9f9672d4e127a56b37716637bfe007db',1,'upa::public_suffix_list::result']]],
+  ['fragment_5fno_5fencode_5fset_2',['fragment_no_encode_set',['../namespaceupa.html#ae51d15bf921a08293153d02721a40ed1',1,'upa']]]
 ];

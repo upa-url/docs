@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['userinfo_5fno_5fencode_5fset_0',['userinfo_no_encode_set',['../namespaceupa.html#aef68d826e39188de36895b53617b2a32',1,'upa']]]
+  ['special_5fquery_5fno_5fencode_5fset_0',['special_query_no_encode_set',['../namespaceupa.html#aa7a053da969c180eb1d23e08317a0cf2',1,'upa']]]
 ];
