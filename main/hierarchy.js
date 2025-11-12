@@ -1,7 +1,7 @@
 var hierarchy =
 [
     [ "upa::code_point_set", "classupa_1_1code__point__set.html", null ],
-    [ "std::hash< upa::url >", "structstd_1_1hash_3_01upa_1_1url_01_4.html", null ],
+    [ "std::hash&lt; upa::url &gt;", "structstd_1_1hash_3_01upa_1_1url_01_4.html", null ],
     [ "upa::public_suffix_list", "classupa_1_1public__suffix__list.html", null ],
     [ "upa::public_suffix_list::push_context", "structupa_1_1public__suffix__list_1_1push__context.html", null ],
     [ "upa::public_suffix_list::result", "structupa_1_1public__suffix__list_1_1result.html", null ],

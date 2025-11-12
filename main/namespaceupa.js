@@ -1,12 +1,12 @@
 var namespaceupa =
 [
     [ "idna", "namespaceupa_1_1idna.html", "namespaceupa_1_1idna" ],
+    [ "url", "classupa_1_1url.html", "classupa_1_1url" ],
+    [ "url_host", "classupa_1_1url__host.html", "classupa_1_1url__host" ],
+    [ "url_error", "classupa_1_1url__error.html", "classupa_1_1url__error" ],
+    [ "url_search_params", "classupa_1_1url__search__params.html", "classupa_1_1url__search__params" ],
     [ "code_point_set", "classupa_1_1code__point__set.html", "classupa_1_1code__point__set" ],
     [ "public_suffix_list", "classupa_1_1public__suffix__list.html", "classupa_1_1public__suffix__list" ],
-    [ "url", "classupa_1_1url.html", "classupa_1_1url" ],
-    [ "url_error", "classupa_1_1url__error.html", "classupa_1_1url__error" ],
-    [ "url_host", "classupa_1_1url__host.html", "classupa_1_1url__host" ],
-    [ "url_search_params", "classupa_1_1url__search__params.html", "classupa_1_1url__search__params" ],
     [ "file_path_format", "namespaceupa.html#a5806bc3a0d267938f093d8106d84360f", [
       [ "posix", "namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1", null ],
       [ "windows", "namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42", null ],

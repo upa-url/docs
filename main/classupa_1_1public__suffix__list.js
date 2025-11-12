@@ -1,7 +1,7 @@
 var classupa_1_1public__suffix__list =
 [
-    [ "push_context", "structupa_1_1public__suffix__list_1_1push__context.html", "structupa_1_1public__suffix__list_1_1push__context" ],
     [ "result", "structupa_1_1public__suffix__list_1_1result.html", "structupa_1_1public__suffix__list_1_1result" ],
+    [ "push_context", "structupa_1_1public__suffix__list_1_1push__context.html", "structupa_1_1public__suffix__list_1_1push__context" ],
     [ "option", "classupa_1_1public__suffix__list.html#aacf1f5100fba8fcec1fc1bd9eb36687a", [
       [ "public_suffix", "classupa_1_1public__suffix__list.html#aacf1f5100fba8fcec1fc1bd9eb36687aacfd410278d0ad7b0186ac22ae3892881", null ],
       [ "registrable_domain", "classupa_1_1public__suffix__list.html#aacf1f5100fba8fcec1fc1bd9eb36687aaff9398a8d00b70a5d503cd393986a509", null ],
