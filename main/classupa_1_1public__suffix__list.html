@@ -183,7 +183,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="ttc" id="aclassupa_1_1public__suffix__list_html"><div class="ttname"><a href="classupa_1_1public__suffix__list.html">upa::public_suffix_list</a></div><div class="ttdoc">The Public Suffix List class.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00086">public_suffix_list.h:86</a></div></div>
 <div class="ttc" id="aclassupa_1_1public__suffix__list_html_ab305f760f8313f2d7a22e6c6d2a0555c"><div class="ttname"><a href="#ab305f760f8313f2d7a22e6c6d2a0555c">upa::public_suffix_list::load</a></div><div class="ttdeci">bool load(const std::filesystem::path &amp;filename)</div><div class="ttdoc">Load Public Suffix List from file.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00138">public_suffix_list.h:138</a></div></div>
-<div class="ttc" id="aclassupa_1_1public__suffix__list_html_aefa28a783180fa862511ec1643fe53ba"><div class="ttname"><a href="#aefa28a783180fa862511ec1643fe53ba">upa::public_suffix_list::get_suffix_view</a></div><div class="ttdeci">std::string_view get_suffix_view(const url &amp;url, option opt=option::public_suffix) const</div><div class="ttdoc">Get public suffix or registrable domain as string view.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00263">public_suffix_list.h:263</a></div></div>
+<div class="ttc" id="aclassupa_1_1public__suffix__list_html_aefa28a783180fa862511ec1643fe53ba"><div class="ttname"><a href="#aefa28a783180fa862511ec1643fe53ba">upa::public_suffix_list::get_suffix_view</a></div><div class="ttdeci">std::string_view get_suffix_view(const url &amp;url, option opt=option::public_suffix) const</div><div class="ttdoc">Get public suffix or registrable domain as string view.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00276">public_suffix_list.h:276</a></div></div>
 <div class="ttc" id="apublic__suffix__list_8h_html"><div class="ttname"><a href="public__suffix__list_8h.html">public_suffix_list.h</a></div></div>
 </div><!-- fragment --> </dd></dl>
 
@@ -366,6 +366,8 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </div><div class="memdoc">
 
 <p>Get public suffix or registrable domain. </p>
+<p>Returns public suffix if <code class="param">opt</code> has default or <a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687aacfd410278d0ad7b0186ac22ae3892881" title="to get public suffix">option::public_suffix</a> value; and returns registrable domain if <code class="param">opt</code> is <a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687aaff9398a8d00b70a5d503cd393986a509" title="to get registrable domain">option::registrable_domain</a>.</p>
+<p>In case of error or if there is no public suffix or registrable domain, it returns an empty string.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">str_host</td><td>hostname string </td></tr>
@@ -375,7 +377,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>public suffix or registrable domain (depends on <code class="param">opt</code> value) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00192">192</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00198">198</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -417,7 +419,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>information in the <a class="el" href="structupa_1_1public__suffix__list_1_1result.html" title="Return value type of the public_suffix_list::get_suffix_info function.">public_suffix_list::result</a> type struct </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00212">212</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00218">218</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -459,7 +461,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>information in the <a class="el" href="structupa_1_1public__suffix__list_1_1result.html" title="Return value type of the public_suffix_list::get_suffix_info function.">public_suffix_list::result</a> type struct </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00227">227</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00233">233</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -503,7 +505,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>information in the <a class="el" href="structupa_1_1public__suffix__list_1_1result.html" title="Return value type of the public_suffix_list::get_suffix_info function.">public_suffix_list::result</a> type struct </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00243">243</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00249">249</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -537,7 +539,9 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </div><div class="memdoc">
 
 <p>Get public suffix or registrable domain as string view. </p>
-<p>Returns the public suffix or registrable domain of the <code class="param">str_host</code> string.</p>
+<p>Returns the public suffix or registrable domain of the <code class="param">str_host</code> string. To get the public suffix, use the default <code class="param">opt</code> value; to get the registrable domain, set <code class="param">opt</code> to <a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687aaff9398a8d00b70a5d503cd393986a509" title="to get registrable domain">option::registrable_domain</a>.</p>
+<p>The returned view is only valid as long as the <code class="param">str_host</code> exists and has not been modified.</p>
+<p>In case of error or if there is no public suffix or registrable domain, it returns an empty string view.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">str_host</td><td>hostname string </td></tr>
@@ -547,7 +551,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>public suffix or registrable domain (depends on <code class="param">opt</code> value) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00292">292</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00321">321</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -579,7 +583,9 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </div><div class="memdoc">
 
 <p>Get public suffix or registrable domain as string view. </p>
-<p>Returns the public suffix or registrable domain of a hostname returned by <a class="el" href="classupa_1_1url.html#aff7f7632093f8a244a295df52c1a7963" title="The hostname getter.">url::hostname() const</a>.</p>
+<p>Returns the public suffix or registrable domain of a hostname returned by <a class="el" href="classupa_1_1url.html#aff7f7632093f8a244a295df52c1a7963" title="The hostname getter.">url::hostname() const</a>. To get the public suffix, use the default <code class="param">opt</code> value; to get the registrable domain, set <code class="param">opt</code> to <a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687aaff9398a8d00b70a5d503cd393986a509" title="to get registrable domain">option::registrable_domain</a>.</p>
+<p>The returned view is only valid as long as the <code class="param">url</code> exists and has not been modified.</p>
+<p>In case of error or if there is no public suffix or registrable domain, it returns an empty string view.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>the <a class="el" href="classupa_1_1url.html">url</a> object </td></tr>
@@ -589,7 +595,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>public suffix or registrable domain (depends on <code class="param">opt</code> value) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00263">263</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00276">276</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
@@ -621,7 +627,9 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </div><div class="memdoc">
 
 <p>Get public suffix or registrable domain as string view. </p>
-<p>Returns the public suffix or registrable domain of the <code class="param">host</code>.</p>
+<p>Returns the public suffix or registrable domain of the <code class="param">host</code>. To get the public suffix, use the default <code class="param">opt</code> value; to get the registrable domain, set <code class="param">opt</code> to <a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687aaff9398a8d00b70a5d503cd393986a509" title="to get registrable domain">option::registrable_domain</a>.</p>
+<p>The returned view is only valid as long as the <code class="param">host</code> exists and has not been modified.</p>
+<p>In case of error or if there is no public suffix or registrable domain, it returns an empty string view.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">host</td><td>the <a class="el" href="classupa_1_1url__host.html">url_host</a> object </td></tr>
@@ -631,7 +639,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>public suffix or registrable domain (depends on <code class="param">opt</code> value) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00277">277</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="public__suffix__list_8h_source.html#l00298">298</a> of file <a class="el" href="public__suffix__list_8h_source.html">public_suffix_list.h</a>.</p>
 
 </div>
 </div>
