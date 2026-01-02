@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['can_5fparse_0',['can_parse',['../classupa_1_1url.html#aa9b1fe4ca2df8e08d7dfe6f1e2553695',1,'upa::url::can_parse(T &amp;&amp;str_url, const url *pbase=nullptr)'],['../classupa_1_1url.html#a6c1c372748eceef30d81e2ba8363ad8c',1,'upa::url::can_parse(T &amp;&amp;str_url, const url &amp;base)'],['../classupa_1_1url.html#a6d1a207a0e6280dcefc319d1484a5036',1,'upa::url::can_parse(T &amp;&amp;str_url, TB &amp;&amp;str_base)']]],
+  ['can_5fparse_0',['can_parse',['../classupa_1_1url.html#a4efe5fe876d822fc7b7c538247f9337b',1,'upa::url::can_parse(const T &amp;str_url, const url *pbase=nullptr)'],['../classupa_1_1url.html#a895376f58a33371d2d7315cd31330829',1,'upa::url::can_parse(const T &amp;str_url, const url &amp;base)'],['../classupa_1_1url.html#ad494c5663752bcee4f0f7fc2d7bd00fb',1,'upa::url::can_parse(const T &amp;str_url, const TB &amp;str_base)']]],
   ['cbegin_1',['cbegin',['../classupa_1_1url__search__params.html#a2a75512e9b629fc75315de06d7500a89',1,'upa::url_search_params']]],
   ['cend_2',['cend',['../classupa_1_1url__search__params.html#a2c7d6959e4cd875d2c7198808497551c',1,'upa::url_search_params']]],
   ['check_5fversion_3',['check_version',['../namespaceupa.html#a80452c6a19ca20320e345f0508f07493',1,'upa']]],
