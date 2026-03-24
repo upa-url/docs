@@ -107,11 +107,11 @@ $(function(){initNavTree('index.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a></p>
-<p>Upa URL is <a href="https://url.spec.whatwg.org/">WHATWG URL Standard</a> compliant <b>U</b>RL <b>pa</b>rser library written in C++.</p>
+<p>Upa URL is <a href="https://url.spec.whatwg.org/">WHATWG URL Standard</a> and <a href="https://urlpattern.spec.whatwg.org/">URL Pattern Standard</a> compliant <b>U</b>RL <b>pa</b>rser library written in C++.</p>
 <p>The library is self-contained with no dependencies and requires a compiler that supports C++17 or later (for previous major version that requires C++11 or later, see <a href="https://github.com/upa-url/upa/tree/v1.x">the v1.x branch</a>). It is known to compile with Clang 7, GCC 8, Microsoft Visual Studio 2017 or later. Can also be compiled to WebAssembly, see demo: <a href="https://upa-url.github.io/demo/">https://upa-url.github.io/demo/</a></p>
 <h1 class="doxsection"><a class="anchor" id="features-and-standard-conformance"></a>
 Features and standard conformance</h1>
-<p>This library is up to date with the URL Standard published on <a href="https://url.spec.whatwg.org/commit-snapshots/52526653e848c5a56598c84aa4bc8ac9025fb66b/">30 October 2025 (commit 5252665)</a> and supports internationalized domain names as specified in the <a href="https://www.unicode.org/reports/tr46/tr46-35.html">UTS46 Unicode IDNA Compatibility Processing version 17.0.0</a>.</p>
+<p>This library is up to date with the URL Standard published on <a href="https://url.spec.whatwg.org/commit-snapshots/52526653e848c5a56598c84aa4bc8ac9025fb66b/">30 October 2025</a>, the URL Pattern Standard published on <a href="https://urlpattern.spec.whatwg.org/commit-snapshots/203d435c32272a10bdccc2c6dfa8a51ee5c6b92c/">20 March 2026</a> and supports internationalized domain names as specified in the <a href="https://www.unicode.org/reports/tr46/tr46-35.html">UTS46 Unicode IDNA Compatibility Processing version 17.0.0</a>.</p>
 <p>It implements:</p><ol type="1">
 <li><a href="https://url.spec.whatwg.org/#url-class">URL class</a>: <span class="tt"><a class="el" href="classupa_1_1url.html" title="URL class.">upa::url</a></span></li>
 <li><a href="https://url.spec.whatwg.org/#interface-urlsearchparams">URLSearchParams class</a>: <span class="tt"><a class="el" href="classupa_1_1url__search__params.html" title="URLSearchParams class.">upa::url_search_params</a></span></li>
@@ -119,6 +119,7 @@ Features and standard conformance</h1>
 <li><a href="https://url.spec.whatwg.org/#url-equivalence">URL equivalence</a>: <span class="tt"><a class="el" href="namespaceupa.html#a704170fa90d71a1899e48494fb85cd70" title="URL equivalence.">upa::equals</a></span> function</li>
 <li><a href="https://url.spec.whatwg.org/#percent-encoded-bytes">Percent decoding and encoding</a> functions: <span class="tt"><a class="el" href="namespaceupa.html#a45d0ddd991776b127ca780991a4aeded" title="Percent decode input string.">upa::percent_decode</a></span>, <span class="tt"><a class="el" href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d" title="UTF-8 percent encode input string using specified percent encode set.">upa::percent_encode</a></span> and <span class="tt"><a class="el" href="namespaceupa.html#a38eb088c23f4c98acc10afa8710af657" title="UTF-8 percent encode input string using component percent encode set.">upa::encode_url_component</a></span></li>
 <li><a href="https://publicsuffix.org/">Public Suffix List</a> class <span class="tt"><a class="el" href="classupa_1_1public__suffix__list.html" title="The Public Suffix List class.">upa::public_suffix_list</a></span> to get <a href="https://url.spec.whatwg.org/#host-public-suffix">public suffix</a> and <a href="https://url.spec.whatwg.org/#host-registrable-domain">registrable domain</a> of a host.</li>
+<li><a href="https://urlpattern.spec.whatwg.org/#urlpattern-class">URL Pattern class</a> as <span class="tt"><a class="el" href="classupa_1_1urlpattern.html" title="URL pattern class template.">upa::urlpattern</a></span> class template.</li>
 </ol>
 <p>It has some differences from the standard:</p><ol type="1">
 <li>Setters of the <span class="tt"><a class="el" href="classupa_1_1url.html" title="URL class.">upa::url</a></span> class are implemented as functions, which return <span class="tt">true</span> if value is accepted.</li>
@@ -180,9 +181,16 @@ vcpkg</h2>
 Usage</h1>
 <p>Source files using this library must include <span class="tt"><a class="el" href="url_8h.html">upa/url.h</a></span>: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="url_8h.html">upa/url.h</a>&quot;</span></div>
 <div class="ttc" id="aurl_8h_html"><div class="ttname"><a href="url_8h.html">url.h</a></div></div>
+</div><!-- fragment --><p>In order to use the URL Pattern implementation, you must include <span class="tt"><a class="el" href="urlpattern_8h.html">upa/urlpattern.h</a></span> and either <span class="tt"><a class="el" href="regex__engine__std_8h.html">upa/regex_engine_std.h</a></span> or <span class="tt"><a class="el" href="regex__engine__srell_8h.html">upa/regex_engine_srell.h</a></span> (the latter depends on <a href="https://www.akenotsuki.com/misc/srell/en/">SRELL library</a>). For example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="regex__engine__srell_8h.html">upa/regex_engine_srell.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="urlpattern_8h.html">upa/urlpattern.h</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using </span>urlpattern = <a class="code hl_class" href="classupa_1_1urlpattern.html">upa::urlpattern&lt;upa::regex_engine_srell&gt;</a>;</div>
+<div class="ttc" id="aclassupa_1_1urlpattern_html"><div class="ttname"><a href="classupa_1_1urlpattern.html">upa::urlpattern</a></div><div class="ttdoc">URL pattern class template.</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00615">urlpattern.h:615</a></div></div>
+<div class="ttc" id="aregex__engine__srell_8h_html"><div class="ttname"><a href="regex__engine__srell_8h.html">regex_engine_srell.h</a></div></div>
+<div class="ttc" id="aurlpattern_8h_html"><div class="ttname"><a href="urlpattern_8h.html">urlpattern.h</a></div></div>
 </div><!-- fragment --><p>To use the Public Suffix List, you must also include <span class="tt"><a class="el" href="public__suffix__list_8h.html">upa/public_suffix_list.h</a></span>: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="public__suffix__list_8h.html">upa/public_suffix_list.h</a>&quot;</span></div>
 <div class="ttc" id="apublic__suffix__list_8h_html"><div class="ttname"><a href="public__suffix__list_8h.html">public_suffix_list.h</a></div></div>
-</div><!-- fragment --><p>If you are using CMake, see the <a class="el" href="#cmake">CMake section</a> for how to link to the library. Alternatively, if you are using amalgamated files, then add the amalgamated <span class="tt">url.cpp</span> file (and optionaly amalgamated <span class="tt">public_suffix_list.cpp</span>) to your project, otherwise add all the files from the <span class="tt">src/</span> directory to your project.</p>
+</div><!-- fragment --><p>If you are using CMake, see the <a class="el" href="#cmake">CMake section</a> for how to link to the library. Alternatively, if you are using amalgamated files, then add the amalgamated <span class="tt">url.cpp</span> file (and optionaly amalgamated <span class="tt">urlpattern.cpp</span>, <span class="tt">public_suffix_list.cpp</span>) to your project, otherwise add all the files from the <span class="tt">src/</span> directory to your project.</p>
 <h2 class="doxsection"><a class="anchor" id="examples"></a>
 Examples</h2>
 <p>Parse input string using <span class="tt">url::parse</span> function and output URL components: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="url_8h.html">upa/url.h</a>&quot;</span></div>
@@ -274,6 +282,29 @@ Examples</h2>
 <div class="ttc" id="aclassupa_1_1public__suffix__list_html"><div class="ttname"><a href="classupa_1_1public__suffix__list.html">upa::public_suffix_list</a></div><div class="ttdoc">The Public Suffix List class.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00086">public_suffix_list.h:86</a></div></div>
 <div class="ttc" id="aclassupa_1_1public__suffix__list_html_aa6f6e82e212e40201acc68d53ae20071"><div class="ttname"><a href="classupa_1_1public__suffix__list.html#aa6f6e82e212e40201acc68d53ae20071">upa::public_suffix_list::get_suffix</a></div><div class="ttdeci">std::string get_suffix(const StrT &amp;str_host, option opt=option::public_suffix) const</div><div class="ttdoc">Get public suffix or registrable domain.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00198">public_suffix_list.h:198</a></div></div>
 <div class="ttc" id="aclassupa_1_1public__suffix__list_html_ab305f760f8313f2d7a22e6c6d2a0555c"><div class="ttname"><a href="classupa_1_1public__suffix__list.html#ab305f760f8313f2d7a22e6c6d2a0555c">upa::public_suffix_list::load</a></div><div class="ttdeci">bool load(const std::filesystem::path &amp;filename)</div><div class="ttdoc">Load Public Suffix List from file.</div><div class="ttdef"><b>Definition</b> <a href="public__suffix__list_8h_source.html#l00138">public_suffix_list.h:138</a></div></div>
+</div><!-- fragment --><p>Parse the URL pattern string input, execute it against the provided URL, and output the result.</p>
+<p>The <span class="tt"><a class="el" href="classupa_1_1urlpattern.html" title="URL pattern class template.">upa::urlpattern</a></span> class template requires a regular expression engine to be specified as a template argument. For simple cases, the <span class="tt"><a class="el" href="classupa_1_1regex__engine__std.html" title="Regex engine class based on std::regex.">upa::regex_engine_std</a></span> (implemented using the <span class="tt">std::regex</span>) can be used, as shown in the example below. However, for production use, we recommend using the <span class="tt"><a class="el" href="classupa_1_1regex__engine__srell.html" title="Regex engine class based on SRELL library.">upa::regex_engine_srell</a></span>, which depends on the <a href="https://www.akenotsuki.com/misc/srell/en/">SRELL library</a>. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="regex__engine__std_8h.html">upa/regex_engine_std.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="urlpattern_8h.html">upa/urlpattern.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using </span>urlpattern = <a class="code hl_class" href="classupa_1_1urlpattern.html">upa::urlpattern&lt;upa::regex_engine_std&gt;</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="keywordflow">try</span> {</div>
+<div class="line">        urlpattern urlp{ <span class="stringliteral">&quot;http{s}?://*/*/:id([0-9]+)&quot;</span> };</div>
+<div class="line">        <span class="keyword">auto</span> res = urlp.exec(<span class="stringliteral">&quot;http://example.com/key/123#descr&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">if</span> (res) {</div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;protocol: &quot;</span> &lt;&lt; res-&gt;protocol.input &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>; <span class="comment">// http</span></div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;hostname: &quot;</span> &lt;&lt; res-&gt;hostname.input &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>; <span class="comment">// example.com</span></div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;id: &quot;</span> &lt;&lt; res-&gt;pathname.groups[<span class="stringliteral">&quot;id&quot;</span>].value() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>; <span class="comment">// 123</span></div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; ex) {</div>
+<div class="line">        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; ex.what() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aregex__engine__std_8h_html"><div class="ttname"><a href="regex__engine__std_8h.html">regex_engine_std.h</a></div></div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="using-as-a-shared-library"></a>
 Using as a shared library</h1>
 <p>For information on building as a shared library, see the <a class="el" href="#cmake">CMake section</a>.</p>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['raw_5fpath_5fno_5fencode_5fset_0',['raw_path_no_encode_set',['../namespaceupa.html#ad3b4914de9b2713e81e465043bf1ec3e',1,'upa']]],
-  ['remaining_1',['remaining',['../structupa_1_1public__suffix__list_1_1push__context.html#abb621cb7de29b8d871f81c08ffd9de72',1,'upa::public_suffix_list::push_context']]]
+  ['hash_0',['hash',['../structupa_1_1urlpattern__init.html#a1c6f4cb27b5cc235cfce93cf91e83b6a',1,'upa::urlpattern_init::hash'],['../structupa_1_1urlpattern__result.html#ad65548c46428ca5e27d5ce5d5e40eb5d',1,'upa::urlpattern_result::hash']]],
+  ['hostname_1',['hostname',['../structupa_1_1urlpattern__init.html#a93a891b0dfaef10daf5ee00cdf984202',1,'upa::urlpattern_init::hostname'],['../structupa_1_1urlpattern__result.html#a724186fc9e937b5d31504fdb70eaef93',1,'upa::urlpattern_result::hostname']]]
 ];

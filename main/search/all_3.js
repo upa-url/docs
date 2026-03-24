@@ -5,9 +5,10 @@ var searchData=
   ['detail_3a_3aurl_5fsearch_5fparams_5fptr_2',['url_search_params_ptr',['../classupa_1_1url__search__params.html#ab1b0c55b5ec62eacec6b0c4870e18ba8',1,'upa::url_search_params']]],
   ['detail_3a_3aurl_5fserializer_3',['url_serializer',['../classupa_1_1url.html#afb318d1c20021658415ecbdc2b4e1d05',1,'upa::url']]],
   ['detail_3a_3aurl_5fsetter_4',['url_setter',['../classupa_1_1url.html#a8adbe54fc328ed7508effd8191f96535',1,'upa::url']]],
-  ['do_5fparse_5',['do_parse',['../classupa_1_1url__search__params.html#abc379d5fae267444af01a67945986481',1,'upa::url_search_params']]],
-  ['domain_6',['Domain',['../namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecfaeae639a70006feff484a39363c977e24',1,'upa']]],
-  ['domain_5finvalid_5fcode_5fpoint_7',['domain_invalid_code_point',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7aabf0fd2e85a62c8db303178c2b192191',1,'upa']]],
-  ['domain_5fto_5fascii_8',['domain_to_ascii',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7ad08953fe67c4855155597c0531593851',1,'upa']]],
-  ['domain_5fto_5funicode_9',['domain_to_unicode',['../namespaceupa.html#ac9c08b0d549f6c60d2593f64e567b9d6',1,'upa::domain_to_unicode(std::basic_string&lt; CharT &gt; &amp;output, const StrT &amp;input, bool be_strict=false, bool is_input_ascii=false)'],['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a79cf64639dd9cb4f87e26daf2858717f',1,'upa::domain_to_unicode']]]
+  ['difference_5ftype_5',['difference_type',['../classupa_1_1urlpattern__inputs.html#ab1ada260ff67773768da6b45969a5825',1,'upa::urlpattern_inputs']]],
+  ['do_5fparse_6',['do_parse',['../classupa_1_1url__search__params.html#abc379d5fae267444af01a67945986481',1,'upa::url_search_params']]],
+  ['domain_7',['Domain',['../namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecfaeae639a70006feff484a39363c977e24',1,'upa']]],
+  ['domain_5finvalid_5fcode_5fpoint_8',['domain_invalid_code_point',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7aabf0fd2e85a62c8db303178c2b192191',1,'upa']]],
+  ['domain_5fto_5fascii_9',['domain_to_ascii',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7ad08953fe67c4855155597c0531593851',1,'upa']]],
+  ['domain_5fto_5funicode_10',['domain_to_unicode',['../namespaceupa.html#ac9c08b0d549f6c60d2593f64e567b9d6',1,'upa::domain_to_unicode(std::basic_string&lt; CharT &gt; &amp;output, const StrT &amp;input, bool be_strict=false, bool is_input_ascii=false)'],['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a79cf64639dd9cb4f87e26daf2858717f',1,'upa::domain_to_unicode']]]
 ];

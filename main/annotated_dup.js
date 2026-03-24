@@ -12,6 +12,16 @@ var annotated_dup =
       [ "url_error", "classupa_1_1url__error.html", "classupa_1_1url__error" ],
       [ "url_search_params", "classupa_1_1url__search__params.html", "classupa_1_1url__search__params" ],
       [ "code_point_set", "classupa_1_1code__point__set.html", "classupa_1_1code__point__set" ],
-      [ "public_suffix_list", "classupa_1_1public__suffix__list.html", "classupa_1_1public__suffix__list" ]
+      [ "urlpattern_init", "structupa_1_1urlpattern__init.html", "structupa_1_1urlpattern__init" ],
+      [ "urlpattern_options", "structupa_1_1urlpattern__options.html", "structupa_1_1urlpattern__options" ],
+      [ "urlpattern_inputs", "classupa_1_1urlpattern__inputs.html", "classupa_1_1urlpattern__inputs" ],
+      [ "urlpattern_component_result", "structupa_1_1urlpattern__component__result.html", "structupa_1_1urlpattern__component__result" ],
+      [ "urlpattern_result", "structupa_1_1urlpattern__result.html", "structupa_1_1urlpattern__result" ],
+      [ "urlpattern_result_and_inputs", "structupa_1_1urlpattern__result__and__inputs.html", "structupa_1_1urlpattern__result__and__inputs" ],
+      [ "urlpattern", "classupa_1_1urlpattern.html", "classupa_1_1urlpattern" ],
+      [ "urlpattern_error", "classupa_1_1urlpattern__error.html", "classupa_1_1urlpattern__error" ],
+      [ "public_suffix_list", "classupa_1_1public__suffix__list.html", "classupa_1_1public__suffix__list" ],
+      [ "regex_engine_srell", "classupa_1_1regex__engine__srell.html", "classupa_1_1regex__engine__srell" ],
+      [ "regex_engine_std", "classupa_1_1regex__engine__std.html", "classupa_1_1regex__engine__std" ]
     ] ]
 ];

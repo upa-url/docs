@@ -5,5 +5,6 @@ var searchData=
   ['url_5fpercent_5fencode_2eh_2',['url_percent_encode.h',['../url__percent__encode_8h.html',1,'']]],
   ['url_5fresult_2eh_3',['url_result.h',['../url__result_8h.html',1,'']]],
   ['url_5fsearch_5fparams_2eh_4',['url_search_params.h',['../url__search__params_8h.html',1,'']]],
-  ['url_5fversion_2eh_5',['url_version.h',['../url__version_8h.html',1,'']]]
+  ['url_5fversion_2eh_5',['url_version.h',['../url__version_8h.html',1,'']]],
+  ['urlpattern_2eh_6',['urlpattern.h',['../urlpattern_8h.html',1,'']]]
 ];

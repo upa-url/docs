@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['const_5fiterator_0',['const_iterator',['../classupa_1_1url__search__params.html#ac481bf6f6f782ad2c034620e79bcd471',1,'upa::url_search_params']]],
-  ['const_5freverse_5fiterator_1',['const_reverse_iterator',['../classupa_1_1url__search__params.html#ad7d3c7871b82f1d44c16dd401eac314e',1,'upa::url_search_params']]]
+  ['array_5ftype_0',['array_type',['../classupa_1_1urlpattern__inputs.html#a83ae376866ab73065548a10668d0e20f',1,'upa::urlpattern_inputs']]]
 ];

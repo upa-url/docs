@@ -5,5 +5,6 @@ var searchData=
   ['and_20running_20tests_2',['Building and running tests',['../index.html#building-and-running-tests',1,'']]],
   ['and_20standard_20conformance_3',['Features and standard conformance',['../index.html#features-and-standard-conformance',1,'']]],
   ['append_4',['append',['../classupa_1_1url__search__params.html#a284287d17dbb70b4b14b19ddf9b40383',1,'upa::url_search_params']]],
-  ['as_20a_20shared_20library_5',['Using as a shared library',['../index.html#using-as-a-shared-library',1,'']]]
+  ['array_5ftype_5',['array_type',['../classupa_1_1urlpattern__inputs.html#a83ae376866ab73065548a10668d0e20f',1,'upa::urlpattern_inputs']]],
+  ['as_20a_20shared_20library_6',['Using as a shared library',['../index.html#using-as-a-shared-library',1,'']]]
 ];
