@@ -17,7 +17,7 @@ var namespaceupa =
     [ "public_suffix_list", "classupa_1_1public__suffix__list.html", "classupa_1_1public__suffix__list" ],
     [ "regex_engine_srell", "classupa_1_1regex__engine__srell.html", "classupa_1_1regex__engine__srell" ],
     [ "regex_engine_std", "classupa_1_1regex__engine__std.html", "classupa_1_1regex__engine__std" ],
-    [ "urlpattern_input", "namespaceupa.html#aff10b1d976d971cd8479a20ddabfb256", null ],
+    [ "urlpattern_input", "namespaceupa.html#aff091cb315e190326521e7d4b01c74f5", null ],
     [ "file_path_format", "namespaceupa.html#a5806bc3a0d267938f093d8106d84360f", [
       [ "posix", "namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa950616e5405e4ef51a87d384180e7aa1", null ],
       [ "windows", "namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42", null ],

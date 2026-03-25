@@ -27,7 +27,7 @@ var searchData=
   ['urlpattern_5fcomponent_5fresult_24',['urlpattern_component_result',['../structupa_1_1urlpattern__component__result.html',1,'upa']]],
   ['urlpattern_5ferror_25',['urlpattern_error',['../classupa_1_1urlpattern__error.html',1,'upa::urlpattern_error'],['../classupa_1_1urlpattern__error.html#a61cbffc945469bf258c4c4916f8d6aa9',1,'upa::urlpattern_error::urlpattern_error()']]],
   ['urlpattern_5finit_26',['urlpattern_init',['../structupa_1_1urlpattern__init.html',1,'upa']]],
-  ['urlpattern_5finput_27',['urlpattern_input',['../namespaceupa.html#aff10b1d976d971cd8479a20ddabfb256',1,'upa']]],
+  ['urlpattern_5finput_27',['urlpattern_input',['../namespaceupa.html#aff091cb315e190326521e7d4b01c74f5',1,'upa']]],
   ['urlpattern_5finputs_28',['urlpattern_inputs',['../classupa_1_1urlpattern__inputs.html',1,'upa::urlpattern_inputs'],['../classupa_1_1urlpattern__inputs.html#ac8a4f1d1a71028e9f21481053777b671',1,'upa::urlpattern_inputs::urlpattern_inputs() noexcept=default'],['../classupa_1_1urlpattern__inputs.html#a21fec9443bab87cea410d2d265068bdd',1,'upa::urlpattern_inputs::urlpattern_inputs(const T &amp;str0, const TB &amp;str1=std::nullopt) noexcept'],['../classupa_1_1urlpattern__inputs.html#a2bdcf57426ea12512aaf0602015877db',1,'upa::urlpattern_inputs::urlpattern_inputs(const urlpattern_init &amp;init) noexcept']]],
   ['urlpattern_5foptions_29',['urlpattern_options',['../structupa_1_1urlpattern__options.html',1,'upa']]],
   ['urlpattern_5fresult_30',['urlpattern_result',['../structupa_1_1urlpattern__result.html',1,'upa']]],
