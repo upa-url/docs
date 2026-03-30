@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['include_0',['include',['../classupa_1_1code__point__set.html#a38860dd227565992f7888d0d6a2ef6a2',1,'upa::code_point_set::include(uint8_t c)'],['../classupa_1_1code__point__set.html#a263d25347473a00997b7e87bcc6cb531',1,'upa::code_point_set::include(std::initializer_list&lt; uint8_t &gt; clist)'],['../classupa_1_1code__point__set.html#aa43896f30ac32a5a07999ae904ca76da',1,'upa::code_point_set::include(uint8_t from, uint8_t to)']]],
+  ['include_0',['include',['../classupa_1_1code__point__set.html#a6449c9fd47fcafe2e03af90ee3941f41',1,'upa::code_point_set::include(std::uint8_t c)'],['../classupa_1_1code__point__set.html#a8db90c2af4c9c2adc14c9f2610b39a88',1,'upa::code_point_set::include(std::initializer_list&lt; std::uint8_t &gt; clist)'],['../classupa_1_1code__point__set.html#a93dac6e986587655affc5cd315484697',1,'upa::code_point_set::include(std::uint8_t from, std::uint8_t to)']]],
   ['init_1',['init',['../classupa_1_1regex__engine__srell.html#ab55ba1ea6e2d0888cc54d64153484380',1,'upa::regex_engine_srell::init()'],['../classupa_1_1regex__engine__std.html#a03e4b812a72fabfc70a597c1c8c204ea',1,'upa::regex_engine_std::init()']]],
   ['is_5fempty_2',['is_empty',['../classupa_1_1url.html#a11d9787e1aaf5cc34fec78e51a6b9195',1,'upa::url']]],
   ['is_5ffile_5fscheme_3',['is_file_scheme',['../classupa_1_1url.html#a9fd5393ae5a83b3cb710fea620579417',1,'upa::url']]],

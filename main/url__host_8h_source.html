@@ -105,7 +105,7 @@ $(function(){initNavTree('url__host_8h_source.html','',''); });
   <div class="headertitle"><div class="title">url_host.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="url__host_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright 2016-2025 Rimas Misevičius</span></div>
+<a href="url__host_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright 2016-2026 Rimas Misevičius</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Distributed under the BSD-style license that can be</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// found in the LICENSE file.</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//</span></div>
@@ -481,7 +481,7 @@ $(function(){initNavTree('url__host_8h_source.html','',''); });
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span> </div>
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span><span class="keyword">inline</span> <a class="code hl_enumeration" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7">validation_errc</a> host_parser::parse_ipv4(<span class="keyword">const</span> CharT* first, <span class="keyword">const</span> CharT* last, host_output&amp; dest) {</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    uint32_t ipv4;  <span class="comment">// NOLINT(cppcoreguidelines-init-variables)</span></div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    std::uint32_t ipv4;  <span class="comment">// NOLINT(cppcoreguidelines-init-variables)</span></div>
 <div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span> </div>
 <div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    <span class="keyword">const</span> <span class="keyword">auto</span> res = ipv4_parse(first, last, ipv4);</div>
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    <span class="keywordflow">if</span> (res == <a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a444bcb3a3fcf8389296c49467f27e1d6">validation_errc::ok</a> &amp;&amp; dest.need_save()) {</div>
@@ -494,7 +494,7 @@ $(function(){initNavTree('url__host_8h_source.html','',''); });
 <div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span> </div>
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span><span class="keyword">inline</span> <a class="code hl_enumeration" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7">validation_errc</a> host_parser::parse_ipv6(<span class="keyword">const</span> CharT* first, <span class="keyword">const</span> CharT* last, host_output&amp; dest) {</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>    uint16_t ipv6addr[8];</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>    std::uint16_t ipv6addr[8];</div>
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span> </div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>    <span class="keyword">const</span> <span class="keyword">auto</span> res = ipv6_parse(first, last, ipv6addr);</div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    <span class="keywordflow">if</span> (res == <a class="code hl_enumvalue" href="namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a444bcb3a3fcf8389296c49467f27e1d6">validation_errc::ok</a> &amp;&amp; dest.need_save()) {</div>
