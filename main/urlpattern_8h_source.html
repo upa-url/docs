@@ -450,7 +450,7 @@ $(function(){initNavTree('urlpattern_8h_source.html','',''); });
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="keyword">inline</span> part_list parse_pattern_string(std::string_view input, <span class="keyword">const</span> options&amp; opt, encoding_callback encoding_cb);</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="comment">// https://urlpattern.spec.whatwg.org/#full-wildcard-regexp-value</span></div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="keyword">constexpr</span> std::string_view full_wildcard_regexp_value = <span class="stringliteral">&quot;.*&quot;</span>sv;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="keyword">inline</span> <span class="keyword">constexpr</span> std::string_view full_wildcard_regexp_value{ <span class="stringliteral">&quot;.*&quot;</span>sv };</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="comment">// https://urlpattern.spec.whatwg.org/#generate-a-segment-wildcard-regexp</span></div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>UPA_CONSTEXPR_20 std::string generate_segment_wildcard_regexp(<span class="keyword">const</span> options&amp; opt);</div>
@@ -1970,7 +1970,7 @@ $(function(){initNavTree('urlpattern_8h_source.html','',''); });
 <div class="line"><a id="l02012" name="l02012"></a><span class="lineno"> 2012</span> </div>
 <div class="line"><a id="l02013" name="l02013"></a><span class="lineno"> 2013</span><span class="comment">// https://urlpattern.spec.whatwg.org/#consume-text</span></div>
 <div class="line"><a id="l02014" name="l02014"></a><span class="lineno"> 2014</span>UPA_CONSTEXPR_20 std::string pattern_parser::consume_text() {</div>
-<div class="line"><a id="l02015" name="l02015"></a><span class="lineno"> 2015</span>    std::string result{};</div>
+<div class="line"><a id="l02015" name="l02015"></a><span class="lineno"> 2015</span>    std::string result;</div>
 <div class="line"><a id="l02016" name="l02016"></a><span class="lineno"> 2016</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line"><a id="l02017" name="l02017"></a><span class="lineno"> 2017</span>        <span class="keyword">const</span> <span class="keyword">auto</span>* ptoken = try_consume_token(token::type::CHAR);</div>
 <div class="line"><a id="l02018" name="l02018"></a><span class="lineno"> 2018</span>        <span class="keywordflow">if</span> (ptoken == <span class="keyword">nullptr</span>) {</div>
@@ -2223,7 +2223,7 @@ $(function(){initNavTree('urlpattern_8h_source.html','',''); });
 <div class="line"><a id="l02265" name="l02265"></a><span class="lineno"> 2265</span> </div>
 <div class="line"><a id="l02266" name="l02266"></a><span class="lineno"> 2266</span><span class="comment">// https://urlpattern.spec.whatwg.org/#generate-a-pattern-string</span></div>
 <div class="line"><a id="l02267" name="l02267"></a><span class="lineno"> 2267</span><span class="keyword">inline</span> std::string generate_pattern_string(<span class="keyword">const</span> part_list&amp; pt_list, <span class="keyword">const</span> options&amp; opt) {</div>
-<div class="line"><a id="l02268" name="l02268"></a><span class="lineno"> 2268</span>    std::string result{};</div>
+<div class="line"><a id="l02268" name="l02268"></a><span class="lineno"> 2268</span>    std::string result;</div>
 <div class="line"><a id="l02269" name="l02269"></a><span class="lineno"> 2269</span> </div>
 <div class="line"><a id="l02270" name="l02270"></a><span class="lineno"> 2270</span>    <span class="keywordflow">for</span> (std::size_t index = 0; index &lt; pt_list.size(); ++index) {</div>
 <div class="line"><a id="l02271" name="l02271"></a><span class="lineno"> 2271</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; pt = pt_list[index];</div>
@@ -2334,7 +2334,7 @@ $(function(){initNavTree('urlpattern_8h_source.html','',''); });
 <div class="line"><a id="l02376" name="l02376"></a><span class="lineno"> 2376</span>} };</div>
 <div class="line"><a id="l02377" name="l02377"></a><span class="lineno"> 2377</span> </div>
 <div class="line"><a id="l02378" name="l02378"></a><span class="lineno"> 2378</span>UPA_CONSTEXPR_20 std::string escape_pattern_string(std::string_view input) {</div>
-<div class="line"><a id="l02379" name="l02379"></a><span class="lineno"> 2379</span>    std::string result{};</div>
+<div class="line"><a id="l02379" name="l02379"></a><span class="lineno"> 2379</span>    std::string result;</div>
 <div class="line"><a id="l02380" name="l02380"></a><span class="lineno"> 2380</span>    append_escape_pattern_string(result, input);</div>
 <div class="line"><a id="l02381" name="l02381"></a><span class="lineno"> 2381</span>    <span class="keywordflow">return</span> result;</div>
 <div class="line"><a id="l02382" name="l02382"></a><span class="lineno"> 2382</span>}</div>
