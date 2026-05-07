@@ -465,7 +465,7 @@ $(function(){initNavTree('url__percent__encode_8h_source.html','',''); });
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>};</div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="comment">// Assumes the input is a valid hex digit! Call is_hex_char before using this.</span></div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> hex_char_to_num(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> c) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="keyword">constexpr</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> hex_char_to_num(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> c) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <span class="keywordflow">return</span> c - kCharToHexLookup[c / 0x20];</div>
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>}</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
@@ -481,7 +481,7 @@ $(function(){initNavTree('url__percent__encode_8h_source.html','',''); });
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span><span class="comment">// sequence. On failure, |*first| will be unchanged.</span></div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> decode_hex_to_byte(<span class="keyword">const</span> CharT*&amp; first, <span class="keyword">const</span> CharT* last, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>&amp; unescaped_value) {</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> decode_hex_to_byte(<span class="keyword">const</span> CharT*&amp; first, <span class="keyword">const</span> CharT* last, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>&amp; unescaped_value) {</div>
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    <span class="keywordflow">if</span> (last - first &lt; 2 ||</div>
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        !is_hex_char(first[0]) || !is_hex_char(first[1])) {</div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        <span class="comment">// not enough or invalid hex digits</span></div>
@@ -502,7 +502,7 @@ $(function(){initNavTree('url__percent__encode_8h_source.html','',''); });
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span><span class="comment">// Percent-encodes byte and appends to string</span></div>
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span><span class="comment">// See: https://url.spec.whatwg.org/#percent-encode</span></div>
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span> </div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span><span class="keyword">inline</span> <span class="keywordtype">void</span> append_percent_encoded_byte(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> uc, std::string&amp; output) {</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>UPA_CONSTEXPR_20 <span class="keywordtype">void</span> append_percent_encoded_byte(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> uc, std::string&amp; output) {</div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>    output.push_back(<span class="charliteral">&#39;%&#39;</span>);</div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    output.push_back(kHexCharLookup[uc &gt;&gt; 4]);</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    output.push_back(kHexCharLookup[uc &amp; 0xf]);</div>
@@ -513,7 +513,7 @@ $(function(){initNavTree('url__percent__encode_8h_source.html','',''); });
 <div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span><span class="comment">// sequences in input with Unicode replacement characters (U+FFFD) if present.</span></div>
 <div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span> </div>
 <div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> append_utf8_percent_encoded_char(<span class="keyword">const</span> CharT*&amp; first, <span class="keyword">const</span> CharT* last, std::string&amp; output) {</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>UPA_CONSTEXPR_20 <span class="keywordtype">bool</span> append_utf8_percent_encoded_char(<span class="keyword">const</span> CharT*&amp; first, <span class="keyword">const</span> CharT* last, std::string&amp; output) {</div>
 <div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>    <span class="comment">// url_util::read_utf_char(..) will handle invalid characters for us and give</span></div>
 <div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>    <span class="comment">// us the kUnicodeReplacementCharacter, so we don&#39;t have to do special</span></div>
 <div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>    <span class="comment">// checking after failure, just pass through the failure to the caller.</span></div>
@@ -528,7 +528,7 @@ $(function(){initNavTree('url__percent__encode_8h_source.html','',''); });
 <div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span><span class="comment">// sequences in input with Unicode replacement characters (U+FFFD) if present.</span></div>
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span> </div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> CharT&gt;</div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span><span class="keyword">inline</span> <span class="keywordtype">void</span> append_utf8_percent_encoded(<span class="keyword">const</span> CharT* first, <span class="keyword">const</span> CharT* last, <span class="keyword">const</span> code_point_set&amp; cpset, std::string&amp; output) {</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>UPA_CONSTEXPR_20 <span class="keywordtype">void</span> append_utf8_percent_encoded(<span class="keyword">const</span> CharT* first, <span class="keyword">const</span> CharT* last, <span class="keyword">const</span> code_point_set&amp; cpset, std::string&amp; output) {</div>
 <div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>    <span class="keyword">using </span>UCharT = std::make_unsigned_t&lt;CharT&gt;;</div>
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span> </div>
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = first; it &lt; last; ) {</div>
@@ -607,7 +607,7 @@ $(function(){initNavTree('url__percent__encode_8h_source.html','',''); });
 <div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span></div>
 <div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StrT, enable_if_str_arg_t&lt;StrT&gt; = 0&gt;</div>
 <div class="foldopen" id="foldopen00538" data-start="{" data-end="}">
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno"><a class="line" href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d">  538</a></span>[[nodiscard]] <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d">percent_encode</a>(StrT&amp;&amp; str, <span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1code__point__set.html">code_point_set</a>&amp; no_encode_set) {</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno"><a class="line" href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d">  538</a></span>[[nodiscard]] UPA_CONSTEXPR_20 std::string <a class="code hl_function" href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d">percent_encode</a>(StrT&amp;&amp; str, <span class="keyword">const</span> <a class="code hl_class" href="classupa_1_1code__point__set.html">code_point_set</a>&amp; no_encode_set) {</div>
 <div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>    <span class="keyword">const</span> <span class="keyword">auto</span> inp = make_str_arg(std::forward&lt;StrT&gt;(str));</div>
 <div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span> </div>
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>    std::string out;</div>
@@ -618,7 +618,7 @@ $(function(){initNavTree('url__percent__encode_8h_source.html','',''); });
 <div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span></div>
 <div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StrT, enable_if_str_arg_t&lt;StrT&gt; = 0&gt;</div>
 <div class="foldopen" id="foldopen00557" data-start="{" data-end="}">
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno"><a class="line" href="namespaceupa.html#a38eb088c23f4c98acc10afa8710af657">  557</a></span>[[nodiscard]] <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceupa.html#a38eb088c23f4c98acc10afa8710af657">encode_url_component</a>(StrT&amp;&amp; str) {</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno"><a class="line" href="namespaceupa.html#a38eb088c23f4c98acc10afa8710af657">  557</a></span>[[nodiscard]] UPA_CONSTEXPR_20 std::string <a class="code hl_function" href="namespaceupa.html#a38eb088c23f4c98acc10afa8710af657">encode_url_component</a>(StrT&amp;&amp; str) {</div>
 <div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceupa.html#a63edd0c260b666d7b332b212c1f5a73d">percent_encode</a>(std::forward&lt;StrT&gt;(str), <a class="code hl_variable" href="namespaceupa.html#a6e5bb00a92770adfff5de74c38a3ed75">component_no_encode_set</a>);</div>
 <div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>}</div>
 </div>

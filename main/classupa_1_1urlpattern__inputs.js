@@ -13,9 +13,9 @@ var classupa_1_1urlpattern__inputs =
     [ "urlpattern_inputs", "classupa_1_1urlpattern__inputs.html#ac8a4f1d1a71028e9f21481053777b671", null ],
     [ "urlpattern_inputs", "classupa_1_1urlpattern__inputs.html#a21fec9443bab87cea410d2d265068bdd", null ],
     [ "urlpattern_inputs", "classupa_1_1urlpattern__inputs.html#a2bdcf57426ea12512aaf0602015877db", null ],
-    [ "begin", "classupa_1_1urlpattern__inputs.html#ade388115a79189aafd02383f74092a13", null ],
+    [ "begin", "classupa_1_1urlpattern__inputs.html#a4e22958a36aa1f09ed6dd78a2397e92c", null ],
     [ "empty", "classupa_1_1urlpattern__inputs.html#af3085ce4605f61d0e99fa6b5bffc1e14", null ],
-    [ "end", "classupa_1_1urlpattern__inputs.html#a2af955c391bc0e576b4382624990df87", null ],
+    [ "end", "classupa_1_1urlpattern__inputs.html#a4553bb974377b939120f30bfed557545", null ],
     [ "operator[]", "classupa_1_1urlpattern__inputs.html#a9bab82624d77b2d5ac594b37d5d6eed1", null ],
     [ "size", "classupa_1_1urlpattern__inputs.html#a49d9a1010cc13743f939e09f28a099d6", null ]
 ];
