@@ -2593,23 +2593,23 @@ $(function(){initNavTree('url_8h_source.html','',''); });
 <div class="line"><a id="l02733" name="l02733"></a><span class="lineno"> 2733</span><span class="comment">// append parts from other url</span></div>
 <div class="line"><a id="l02734" name="l02734"></a><span class="lineno"> 2734</span> </div>
 <div class="line"><a id="l02735" name="l02735"></a><span class="lineno"> 2735</span><span class="keyword">inline</span> <span class="keywordtype">void</span> url_serializer::append_parts(<span class="keyword">const</span> url&amp; src, <a class="code hl_enumeration" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4e">url::PartType</a> t1, <a class="code hl_enumeration" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4e">url::PartType</a> t2, PathOpFn pathOpFn) {</div>
-<div class="line"><a id="l02736" name="l02736"></a><span class="lineno"> 2736</span>    <span class="comment">// See URL serializing</span></div>
-<div class="line"><a id="l02737" name="l02737"></a><span class="lineno"> 2737</span>    <span class="comment">// https://url.spec.whatwg.org/#concept-url-serializer</span></div>
-<div class="line"><a id="l02738" name="l02738"></a><span class="lineno"> 2738</span>    <span class="keyword">const</span> <a class="code hl_enumeration" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4e">url::PartType</a> ifirst = [&amp;]() {</div>
-<div class="line"><a id="l02739" name="l02739"></a><span class="lineno"> 2739</span>        <span class="keywordflow">if</span> (t1 &lt;= <a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea47e7325100dc88bd29b643b27564b73c">url::HOST</a>) {</div>
-<div class="line"><a id="l02740" name="l02740"></a><span class="lineno"> 2740</span>            <span class="comment">// authority, host</span></div>
-<div class="line"><a id="l02741" name="l02741"></a><span class="lineno"> 2741</span>            <span class="keywordflow">if</span> (!src.is_null(<a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea47e7325100dc88bd29b643b27564b73c">url::HOST</a>)) {</div>
-<div class="line"><a id="l02742" name="l02742"></a><span class="lineno"> 2742</span>                <span class="keywordflow">if</span> (t1 == <a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea09ba9cd6eecd391a8d60e1224f1186e5">url::USERNAME</a> &amp;&amp; src.has_credentials())</div>
-<div class="line"><a id="l02743" name="l02743"></a><span class="lineno"> 2743</span>                    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea09ba9cd6eecd391a8d60e1224f1186e5">url::USERNAME</a>;</div>
-<div class="line"><a id="l02744" name="l02744"></a><span class="lineno"> 2744</span>                <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea47e7325100dc88bd29b643b27564b73c">url::HOST</a>;</div>
-<div class="line"><a id="l02745" name="l02745"></a><span class="lineno"> 2745</span>            }</div>
-<div class="line"><a id="l02746" name="l02746"></a><span class="lineno"> 2746</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea673134bf19d83c863d04749822a65238">url::PATH_PREFIX</a>;</div>
-<div class="line"><a id="l02747" name="l02747"></a><span class="lineno"> 2747</span>        }</div>
-<div class="line"><a id="l02748" name="l02748"></a><span class="lineno"> 2748</span>        <span class="comment">// t1 == PATH</span></div>
-<div class="line"><a id="l02749" name="l02749"></a><span class="lineno"> 2749</span>        <span class="keywordflow">return</span> t1;</div>
-<div class="line"><a id="l02750" name="l02750"></a><span class="lineno"> 2750</span>    }();</div>
-<div class="line"><a id="l02751" name="l02751"></a><span class="lineno"> 2751</span> </div>
-<div class="line"><a id="l02752" name="l02752"></a><span class="lineno"> 2752</span>    <span class="keywordflow">if</span> (!need_save()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l02736" name="l02736"></a><span class="lineno"> 2736</span>    <span class="keywordflow">if</span> (!need_save()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l02737" name="l02737"></a><span class="lineno"> 2737</span> </div>
+<div class="line"><a id="l02738" name="l02738"></a><span class="lineno"> 2738</span>    <span class="comment">// See URL serializing</span></div>
+<div class="line"><a id="l02739" name="l02739"></a><span class="lineno"> 2739</span>    <span class="comment">// https://url.spec.whatwg.org/#concept-url-serializer</span></div>
+<div class="line"><a id="l02740" name="l02740"></a><span class="lineno"> 2740</span>    <span class="keyword">const</span> <a class="code hl_enumeration" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4e">url::PartType</a> ifirst = [&amp;]() {</div>
+<div class="line"><a id="l02741" name="l02741"></a><span class="lineno"> 2741</span>        <span class="keywordflow">if</span> (t1 &lt;= <a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea47e7325100dc88bd29b643b27564b73c">url::HOST</a>) {</div>
+<div class="line"><a id="l02742" name="l02742"></a><span class="lineno"> 2742</span>            <span class="comment">// authority, host</span></div>
+<div class="line"><a id="l02743" name="l02743"></a><span class="lineno"> 2743</span>            <span class="keywordflow">if</span> (!src.is_null(<a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea47e7325100dc88bd29b643b27564b73c">url::HOST</a>)) {</div>
+<div class="line"><a id="l02744" name="l02744"></a><span class="lineno"> 2744</span>                <span class="keywordflow">if</span> (t1 == <a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea09ba9cd6eecd391a8d60e1224f1186e5">url::USERNAME</a> &amp;&amp; src.has_credentials())</div>
+<div class="line"><a id="l02745" name="l02745"></a><span class="lineno"> 2745</span>                    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea09ba9cd6eecd391a8d60e1224f1186e5">url::USERNAME</a>;</div>
+<div class="line"><a id="l02746" name="l02746"></a><span class="lineno"> 2746</span>                <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea47e7325100dc88bd29b643b27564b73c">url::HOST</a>;</div>
+<div class="line"><a id="l02747" name="l02747"></a><span class="lineno"> 2747</span>            }</div>
+<div class="line"><a id="l02748" name="l02748"></a><span class="lineno"> 2748</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea673134bf19d83c863d04749822a65238">url::PATH_PREFIX</a>;</div>
+<div class="line"><a id="l02749" name="l02749"></a><span class="lineno"> 2749</span>        }</div>
+<div class="line"><a id="l02750" name="l02750"></a><span class="lineno"> 2750</span>        <span class="comment">// t1 == PATH</span></div>
+<div class="line"><a id="l02751" name="l02751"></a><span class="lineno"> 2751</span>        <span class="keywordflow">return</span> t1;</div>
+<div class="line"><a id="l02752" name="l02752"></a><span class="lineno"> 2752</span>    }();</div>
 <div class="line"><a id="l02753" name="l02753"></a><span class="lineno"> 2753</span> </div>
 <div class="line"><a id="l02754" name="l02754"></a><span class="lineno"> 2754</span>    <span class="comment">// copy flags; they can be used when copying / serializing url parts below</span></div>
 <div class="line"><a id="l02755" name="l02755"></a><span class="lineno"> 2755</span>    <span class="keywordtype">unsigned</span> mask = 0;</div>
