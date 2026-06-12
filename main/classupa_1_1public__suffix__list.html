@@ -452,7 +452,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </div><div class="memdoc">
 
 <p>Get public suffix or registrable domain information. </p>
-<p>Returns information about the public suffix or registrable domain in a hostname returned by <a class="el" href="classupa_1_1url.html#aff7f7632093f8a244a295df52c1a7963" title="The hostname getter.">url::hostname() const</a>.</p>
+<p>Returns information about the public suffix or registrable domain in a hostname returned by <a class="el" href="classupa_1_1url.html#ad2b98f4be6ec25c56a143decd62ac4cf" title="The hostname getter.">url::hostname() const</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="classupa_1_1url.html" title="URL class.">url</a></td><td>the <a class="el" href="classupa_1_1url.html" title="url">url</a> object </td></tr>
@@ -582,7 +582,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </div><div class="memdoc">
 
 <p>Get public suffix or registrable domain as string view. </p>
-<p>Returns the public suffix or registrable domain of a hostname returned by <a class="el" href="classupa_1_1url.html#aff7f7632093f8a244a295df52c1a7963" title="The hostname getter.">url::hostname() const</a>. To get the public suffix, use the default <code class="param">opt</code> value; to get the registrable domain, set <code class="param">opt</code> to <a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687aaff9398a8d00b70a5d503cd393986a509" title="to get registrable domain">option::registrable_domain</a>.</p>
+<p>Returns the public suffix or registrable domain of a hostname returned by <a class="el" href="classupa_1_1url.html#ad2b98f4be6ec25c56a143decd62ac4cf" title="The hostname getter.">url::hostname() const</a>. To get the public suffix, use the default <code class="param">opt</code> value; to get the registrable domain, set <code class="param">opt</code> to <a class="el" href="#aacf1f5100fba8fcec1fc1bd9eb36687aaff9398a8d00b70a5d503cd393986a509" title="to get registrable domain">option::registrable_domain</a>.</p>
 <p>The returned view is only valid as long as the <code class="param">url</code> exists and has not been modified.</p>
 <p>In case of error or if there is no public suffix or registrable domain, it returns an empty string view.</p>
 <dl class="params"><dt>Parameters</dt><dd>

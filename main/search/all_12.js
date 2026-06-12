@@ -35,6 +35,6 @@ var searchData=
   ['usage_32',['Usage',['../index.html#usage',1,'']]],
   ['userinfo_5fno_5fencode_5fset_33',['userinfo_no_encode_set',['../namespaceupa.html#aef68d826e39188de36895b53617b2a32',1,'upa']]],
   ['username_34',['USERNAME',['../classupa_1_1url.html#a84cba39d7a98ecc004de3f1585902b4ea09ba9cd6eecd391a8d60e1224f1186e5',1,'upa::url']]],
-  ['username_35',['username',['../structupa_1_1urlpattern__init.html#a2200918253b5b1beb6e2c5c6032790bb',1,'upa::urlpattern_init::username'],['../structupa_1_1urlpattern__result.html#a2a07941c262a02a8cc86476ec339f1c6',1,'upa::urlpattern_result::username'],['../classupa_1_1url.html#ab5298de8dc3ec557c178699163fb7e01',1,'upa::url::username(const StrT &amp;str)'],['../classupa_1_1url.html#a7852b89207d1bdbf112c7f0b1242186a',1,'upa::url::username() const']]],
+  ['username_35',['username',['../structupa_1_1urlpattern__init.html#a2200918253b5b1beb6e2c5c6032790bb',1,'upa::urlpattern_init::username'],['../structupa_1_1urlpattern__result.html#a2a07941c262a02a8cc86476ec339f1c6',1,'upa::urlpattern_result::username'],['../classupa_1_1url.html#ab5298de8dc3ec557c178699163fb7e01',1,'upa::url::username(const StrT &amp;str)'],['../classupa_1_1url.html#abc8d2c31f4d3b5a5b712ca40258cf8d6',1,'upa::url::username() const']]],
   ['using_20as_20a_20shared_20library_36',['Using as a shared library',['../index.html#using-as-a-shared-library',1,'']]]
 ];
