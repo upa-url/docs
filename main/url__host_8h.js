@@ -8,5 +8,6 @@ var url__host_8h =
       [ "upa::HostType::IPv4", "namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecfa42a9137a05a60eb752dcdf982e717626", null ],
       [ "upa::HostType::IPv6", "namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecfafdb7cb8f657426e7c409bfd6d1a36ce4", null ]
     ] ],
+    [ "upa::domain_parser", "namespaceupa.html#aa8e482d6e01946476b7d208d9e9fd8bd", null ],
     [ "upa::domain_to_unicode", "namespaceupa.html#ac9c08b0d549f6c60d2593f64e567b9d6", null ]
 ];

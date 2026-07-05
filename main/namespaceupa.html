@@ -245,6 +245,9 @@ Functions</h2></td></tr>
 <tr class="memdesc:a630576fbe181c46493712235942e88a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get library version encoded to one number.  <br /></td></tr>
 <tr class="memitem:a80452c6a19ca20320e345f0508f07493" id="r_a80452c6a19ca20320e345f0508f07493"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a80452c6a19ca20320e345f0508f07493">check_version</a> ()</td></tr>
 <tr class="memdesc:a80452c6a19ca20320e345f0508f07493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check used library version.  <br /></td></tr>
+<tr class="memitem:aa8e482d6e01946476b7d208d9e9fd8bd" id="r_aa8e482d6e01946476b7d208d9e9fd8bd"><td class="memTemplParams" colspan="2">template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </td></tr>
+<tr class="memitem:aa8e482d6e01946476b7d208d9e9fd8bd template"><td class="memItemLeft"><a class="el" href="#a80c9675b4477dda8ff779545c1ad75f7">validation_errc</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa8e482d6e01946476b7d208d9e9fd8bd">domain_parser</a> (std::string &amp;output, const StrT &amp;input, bool be_strict)</td></tr>
+<tr class="memdesc:aa8e482d6e01946476b7d208d9e9fd8bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the domain parser algorithm.  <br /></td></tr>
 <tr class="memitem:ac9c08b0d549f6c60d2593f64e567b9d6" id="r_ac9c08b0d549f6c60d2593f64e567b9d6"><td class="memTemplParams" colspan="2">template&lt;class CharT, class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </td></tr>
 <tr class="memitem:ac9c08b0d549f6c60d2593f64e567b9d6 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac9c08b0d549f6c60d2593f64e567b9d6">domain_to_unicode</a> (std::basic_string&lt; CharT &gt; &amp;output, const StrT &amp;input, bool be_strict=false, bool is_input_ascii=false)</td></tr>
 <tr class="memdesc:ac9c08b0d549f6c60d2593f64e567b9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the domain to Unicode algorithm.  <br /></td></tr>
@@ -339,7 +342,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03156">3156</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03158">3158</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -433,7 +436,7 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a80c9675b4477dda8ff779545c1ad75f7ad08953fe67c4855155597c0531593851" name="a80c9675b4477dda8ff779545c1ad75f7ad08953fe67c4855155597c0531593851"></a>domain_to_ascii&#160;</td><td class="fielddoc"><p>Unicode ToASCII records an error or returns the empty string. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a80c9675b4477dda8ff779545c1ad75f7aabf0fd2e85a62c8db303178c2b192191" name="a80c9675b4477dda8ff779545c1ad75f7aabf0fd2e85a62c8db303178c2b192191"></a>domain_invalid_code_point&#160;</td><td class="fielddoc"><p>The input’s host contains a forbidden domain code point. </p>
+<tr><td class="fieldname"><a id="a80c9675b4477dda8ff779545c1ad75f7aabf0fd2e85a62c8db303178c2b192191" name="a80c9675b4477dda8ff779545c1ad75f7aabf0fd2e85a62c8db303178c2b192191"></a>domain_invalid_code_point&#160;</td><td class="fielddoc"><p>Unused, use domain_to_ascii instead. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a80c9675b4477dda8ff779545c1ad75f7a16944afffa595ce9e8ae290e2d020f52" name="a80c9675b4477dda8ff779545c1ad75f7a16944afffa595ce9e8ae290e2d020f52"></a>host_invalid_code_point&#160;</td><td class="fielddoc"><p>An opaque host contains a forbidden host code point. </p>
 </td></tr>
@@ -527,7 +530,57 @@ Variables</h2></td></tr>
 <p>Check that the Upa URL library used is compatible with the header files. This makes sense when using the shared Upa URL library.</p>
 <dl class="section return"><dt>Returns</dt><dd>true if they are compatible </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03395">3395</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03397">3397</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+
+</div>
+</div>
+<a id="aa8e482d6e01946476b7d208d9e9fd8bd" name="aa8e482d6e01946476b7d208d9e9fd8bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8e482d6e01946476b7d208d9e9fd8bd">&#9670;&#160;</a></span>domain_parser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a80c9675b4477dda8ff779545c1ad75f7">validation_errc</a> upa::domain_parser </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>output</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const StrT &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>be_strict</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements the domain parser algorithm. </p>
+<p>See: <a href="https://url.spec.whatwg.org/#concept-domain-to-ascii">https://url.spec.whatwg.org/#concept-domain-to-ascii</a> The <em class="arg">output</em> is valid only if the function returns <span class="tt"><a class="el" href="#a80c9675b4477dda8ff779545c1ad75f7a444bcb3a3fcf8389296c49467f27e1d6" title="Success.">upa::validation_errc::ok</a></span>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>string to store result </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>source domain string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">be_strict</td><td>whether to enforce strict parsing rules </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="#a80c9675b4477dda8ff779545c1ad75f7a444bcb3a3fcf8389296c49467f27e1d6" title="Success.">upa::validation_errc::ok</a> on success, or <a class="el" href="#a80c9675b4477dda8ff779545c1ad75f7ad08953fe67c4855155597c0531593851" title="Unicode ToASCII records an error or returns the empty string.">upa::validation_errc::domain_to_ascii</a> on failure </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="url__host_8h_source.html#l00186">186</a> of file <a class="el" href="url__host_8h_source.html">url_host.h</a>.</p>
 
 </div>
 </div>
@@ -571,19 +624,20 @@ template&lt;class CharT, class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; <
 </div><div class="memdoc">
 
 <p>Implements the domain to Unicode algorithm. </p>
-<p>See: <a href="https://url.spec.whatwg.org/#concept-domain-to-unicode">https://url.spec.whatwg.org/#concept-domain-to-unicode</a> The domain to Unicode result is appended to the <em class="arg">output</em>, even if the function returns <span class="tt">false</span>.</p>
+<p>It runs the Unicode ToUnicode algorithm on the <em class="arg">input</em> string. The result is appended to the <em class="arg">output</em>, and the function returns <span class="tt">true</span> if ToUnicode records no errors. Otherwise, the <em class="arg">input</em> is appended to the <em class="arg">output</em>, and the function returns <span class="tt">false</span>.</p>
+<p>See: <a href="https://url.spec.whatwg.org/#concept-domain-to-unicode">https://url.spec.whatwg.org/#concept-domain-to-unicode</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>string to store result </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>source domain string </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">be_strict</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">is_input_ascii</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">be_strict</td><td>whether to enforce strict parsing rules </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_input_ascii</td><td>whether the input is ASCII </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> on success, or <span class="tt">false</span> on errors </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url__host_8h_source.html#l00178">178</a> of file <a class="el" href="url__host_8h_source.html">url_host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url__host_8h_source.html#l00225">225</a> of file <a class="el" href="url__host_8h_source.html">url_host.h</a>.</p>
 
 </div>
 </div>
@@ -672,7 +726,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03124">3124</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03126">3126</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -709,7 +763,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OS path as std::filesystem::path </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03368">3368</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03370">3370</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -796,7 +850,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>a reference to the output stream </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://url.spec.whatwg.org/#url-serializing">https://url.spec.whatwg.org/#url-serializing</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03141">3141</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03143">3143</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -872,7 +926,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 
 <p>Lexicographically compares two URL's. </p>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03129">3129</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03131">3131</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -914,7 +968,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OS path encoded in UTF-8 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03288">3288</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03290">3290</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1070,7 +1124,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03151">3151</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03153">3153</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1149,7 +1203,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>file URL </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03270">3270</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03272">3272</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>
@@ -1196,7 +1250,7 @@ template&lt;class StrT, enable_if_str_arg_t&lt; StrT &gt; = 0&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>file URL </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap03.html#tag_03_254">Pathname (POSIX)</a>, <a href="https://pubs.opengroup.org/onlinepubs/9799919799/functions/realpath.html">realpath</a>, <a href="https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfullpathnamew">GetFullPathName</a>, <a href="https://en.cppreference.com/w/cpp/filesystem/canonical">std::filesystem::canonical</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03191">3191</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="url_8h_source.html#l03193">3193</a> of file <a class="el" href="url_8h_source.html">url.h</a>.</p>
 
 </div>
 </div>

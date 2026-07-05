@@ -75,6 +75,7 @@ var namespaceupa =
       [ "null_character", "namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a787ebdd276396b0923e51eda2e86140c", null ]
     ] ],
     [ "check_version", "namespaceupa.html#a80452c6a19ca20320e345f0508f07493", null ],
+    [ "domain_parser", "namespaceupa.html#aa8e482d6e01946476b7d208d9e9fd8bd", null ],
     [ "domain_to_unicode", "namespaceupa.html#ac9c08b0d549f6c60d2593f64e567b9d6", null ],
     [ "encode_url_component", "namespaceupa.html#a38eb088c23f4c98acc10afa8710af657", null ],
     [ "equals", "namespaceupa.html#a704170fa90d71a1899e48494fb85cd70", null ],
