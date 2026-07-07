@@ -105,7 +105,7 @@ $(function(){initNavTree('regex__engine__std_8h_source.html','',''); });
   <div class="headertitle"><div class="title">regex_engine_std.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="regex__engine__std_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright 2025 Rimas Misevičius</span></div>
+<a href="regex__engine__std_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright 2025-2026 Rimas Misevičius</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Distributed under the BSD-style license that can be</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// found in the LICENSE file.</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//</span></div>
@@ -127,12 +127,12 @@ $(function(){initNavTree('regex__engine__std_8h_source.html','',''); });
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classupa_1_1regex__engine__std_1_1result.html">   26</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classupa_1_1regex__engine__std_1_1result.html">result</a> {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classupa_1_1regex__engine__std_1_1result.html#aeb7337c671555ee8a893cfd82373bd7f">   28</a></span>        std::size_t <a class="code hl_function" href="classupa_1_1regex__engine__std_1_1result.html#aeb7337c671555ee8a893cfd82373bd7f">size</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classupa_1_1regex__engine__std_1_1result.html#aeb7337c671555ee8a893cfd82373bd7f">   28</a></span>        <span class="keyword">inline</span> std::size_t <a class="code hl_function" href="classupa_1_1regex__engine__std_1_1result.html#aeb7337c671555ee8a893cfd82373bd7f">size</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">return</span> arr_.size();</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        }</div>
 </div>
 <div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classupa_1_1regex__engine__std_1_1result.html#a53e8aa5490403bdc71670b9737fe871d">   31</a></span>        std::optional&lt;std::string&gt; <a class="code hl_function" href="classupa_1_1regex__engine__std_1_1result.html#a53e8aa5490403bdc71670b9737fe871d">get</a>(std::size_t ind, std::string_view)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classupa_1_1regex__engine__std_1_1result.html#a53e8aa5490403bdc71670b9737fe871d">   31</a></span>        <span class="keyword">inline</span> std::optional&lt;std::string&gt; <a class="code hl_function" href="classupa_1_1regex__engine__std_1_1result.html#a53e8aa5490403bdc71670b9737fe871d">get</a>(std::size_t ind, std::string_view)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; res = arr_[ind];</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span> (res.matched)</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                <span class="keywordflow">return</span> std::string{ res.first, res.second };</div>
@@ -146,7 +146,7 @@ $(function(){initNavTree('regex__engine__std_8h_source.html','',''); });
 </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classupa_1_1regex__engine__std.html#a03e4b812a72fabfc70a597c1c8c204ea">   42</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classupa_1_1regex__engine__std.html#a03e4b812a72fabfc70a597c1c8c204ea">init</a>(std::string_view regex_str, <span class="keywordtype">bool</span> ignore_case) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classupa_1_1regex__engine__std.html#a03e4b812a72fabfc70a597c1c8c204ea">   42</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classupa_1_1regex__engine__std.html#a03e4b812a72fabfc70a597c1c8c204ea">init</a>(std::string_view regex_str, <span class="keywordtype">bool</span> ignore_case) {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">// 4. If options&#39;s ignore case is true then set flags to &quot;vi&quot;.</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">// 5. Otherwise set flags to &quot;v&quot;</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="comment">// Note that the std::regex does not have the &quot;v&quot; flag.</span></div>
@@ -164,12 +164,12 @@ $(function(){initNavTree('regex__engine__std_8h_source.html','',''); });
 </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classupa_1_1regex__engine__std.html#afcfc3b754f4888bd19b5e631ba2a5542">   58</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classupa_1_1regex__engine__std.html#afcfc3b754f4888bd19b5e631ba2a5542">exec</a>(std::string_view input, <a class="code hl_class" href="classupa_1_1regex__engine__std_1_1result.html">result</a>&amp; res)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classupa_1_1regex__engine__std.html#afcfc3b754f4888bd19b5e631ba2a5542">   58</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classupa_1_1regex__engine__std.html#afcfc3b754f4888bd19b5e631ba2a5542">exec</a>(std::string_view input, <a class="code hl_class" href="classupa_1_1regex__engine__std_1_1result.html">result</a>&amp; res)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> std::regex_match(input.begin(), input.end(), res.arr_, re_);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
 </div>
 <div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classupa_1_1regex__engine__std.html#a7a551c04e569be589b95a2916adf1a1d">   61</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classupa_1_1regex__engine__std.html#a7a551c04e569be589b95a2916adf1a1d">test</a>(std::string_view input)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classupa_1_1regex__engine__std.html#a7a551c04e569be589b95a2916adf1a1d">   61</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classupa_1_1regex__engine__std.html#a7a551c04e569be589b95a2916adf1a1d">test</a>(std::string_view input)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">return</span> std::regex_match(input.begin(), input.end(), re_);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
 </div>
@@ -190,7 +190,7 @@ $(function(){initNavTree('regex__engine__std_8h_source.html','',''); });
 <div class="ttc" id="aclassupa_1_1regex__engine__std_html_a03e4b812a72fabfc70a597c1c8c204ea"><div class="ttname"><a href="classupa_1_1regex__engine__std.html#a03e4b812a72fabfc70a597c1c8c204ea">upa::regex_engine_std::init</a></div><div class="ttdeci">bool init(std::string_view regex_str, bool ignore_case)</div><div class="ttdef"><b>Definition</b> <a href="#l00042">regex_engine_std.h:42</a></div></div>
 <div class="ttc" id="aclassupa_1_1regex__engine__std_html_a7a551c04e569be589b95a2916adf1a1d"><div class="ttname"><a href="classupa_1_1regex__engine__std.html#a7a551c04e569be589b95a2916adf1a1d">upa::regex_engine_std::test</a></div><div class="ttdeci">bool test(std::string_view input) const</div><div class="ttdef"><b>Definition</b> <a href="#l00061">regex_engine_std.h:61</a></div></div>
 <div class="ttc" id="aclassupa_1_1regex__engine__std_html_afcfc3b754f4888bd19b5e631ba2a5542"><div class="ttname"><a href="classupa_1_1regex__engine__std.html#afcfc3b754f4888bd19b5e631ba2a5542">upa::regex_engine_std::exec</a></div><div class="ttdeci">bool exec(std::string_view input, result &amp;res) const</div><div class="ttdef"><b>Definition</b> <a href="#l00058">regex_engine_std.h:58</a></div></div>
-<div class="ttc" id="anamespaceupa_html"><div class="ttname"><a href="namespaceupa.html">upa</a></div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l00047">url.h:47</a></div></div>
+<div class="ttc" id="anamespaceupa_html"><div class="ttname"><a href="namespaceupa.html">upa</a></div><div class="ttdef"><b>Definition</b> <a href="url_8h_source.html#l00050">url.h:50</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

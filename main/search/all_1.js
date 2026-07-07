@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['base_5furl_0',['base_url',['../structupa_1_1urlpattern__init.html#a3a0117e4b73fbd48a2ff8e0b5df4208d',1,'upa::urlpattern_init']]],
-  ['begin_1',['begin',['../classupa_1_1url__search__params.html#a0d5765ca3e8423ea09275aa975dd3dff',1,'upa::url_search_params::begin()'],['../classupa_1_1urlpattern__inputs.html#a4e22958a36aa1f09ed6dd78a2397e92c',1,'upa::urlpattern_inputs::begin()']]],
-  ['building_20and_20running_20tests_2',['Building and running tests',['../index.html#building-and-running-tests',1,'']]]
+  ['a_20shared_20library_0',['Using as a shared library',['../index.html#using-as-a-shared-library',1,'']]],
+  ['allow_5ftrailing_5fdot_1',['allow_trailing_dot',['../classupa_1_1public__suffix__list.html#aacf1f5100fba8fcec1fc1bd9eb36687aa23e541bd68e37b85efa8b14e1b3ba1c5',1,'upa::public_suffix_list']]],
+  ['and_20running_20tests_2',['Building and running tests',['../index.html#building-and-running-tests',1,'']]],
+  ['and_20standard_20conformance_3',['Features and standard conformance',['../index.html#features-and-standard-conformance',1,'']]],
+  ['append_4',['append',['../classupa_1_1url__search__params.html#a284287d17dbb70b4b14b19ddf9b40383',1,'upa::url_search_params']]],
+  ['array_5ftype_5',['array_type',['../classupa_1_1urlpattern__inputs.html#a83ae376866ab73065548a10668d0e20f',1,'upa::urlpattern_inputs']]],
+  ['as_20a_20shared_20library_6',['Using as a shared library',['../index.html#using-as-a-shared-library',1,'']]]
 ];

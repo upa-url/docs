@@ -123,17 +123,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9033dbcc2e375d875a2c994dc679b0ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs urlpattern object from URL pattern string.  <br /></td></tr>
 <tr class="memitem:a3ab6b83bae84346004f9f9958403a142" id="r_a3ab6b83bae84346004f9f9958403a142"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3ab6b83bae84346004f9f9958403a142">test</a> (const <a class="el" href="structupa_1_1urlpattern__init.html">urlpattern_init</a> &amp;input) const</td></tr>
 <tr class="memdesc:a3ab6b83bae84346004f9f9958403a142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether URL pattern matches the input.  <br /></td></tr>
-<tr class="memitem:a52d5d0491aec44acabbf539ac44fcd87" id="r_a52d5d0491aec44acabbf539ac44fcd87"><td class="memTemplParams" colspan="2">template&lt;class T, class TB = std::nullopt_t, upa::enable_if_str_arg_t&lt; T &gt; = 0, upa::enable_if_optional_str_arg_t&lt; TB &gt; = 0&gt; </td></tr>
-<tr class="memitem:a52d5d0491aec44acabbf539ac44fcd87 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a52d5d0491aec44acabbf539ac44fcd87">test</a> (const T &amp;input, const TB &amp;base_url_str=std::nullopt) const</td></tr>
-<tr class="memdesc:a52d5d0491aec44acabbf539ac44fcd87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether URL pattern matches the input URL string.  <br /></td></tr>
+<tr class="memitem:a44a9c19ef5d5d9a1df67701da8253112" id="r_a44a9c19ef5d5d9a1df67701da8253112"><td class="memTemplParams" colspan="2">template&lt;class T, class TB = std::nullopt_t, upa::enable_if_str_arg_t&lt; T &gt; = 0, upa::enable_if_optional_str_arg_t&lt; TB &gt; = 0&gt; </td></tr>
+<tr class="memitem:a44a9c19ef5d5d9a1df67701da8253112 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a44a9c19ef5d5d9a1df67701da8253112">test</a> (const T &amp;input, const TB &amp;base_url_str=upa::nullopt) const</td></tr>
+<tr class="memdesc:a44a9c19ef5d5d9a1df67701da8253112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether URL pattern matches the input URL string.  <br /></td></tr>
 <tr class="memitem:ac2607af05e3291888167c78dc9fc405b" id="r_ac2607af05e3291888167c78dc9fc405b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac2607af05e3291888167c78dc9fc405b">test</a> (const <a class="el" href="classupa_1_1url.html">upa::url</a> &amp;<a class="el" href="classupa_1_1url.html">url</a>) const</td></tr>
 <tr class="memdesc:ac2607af05e3291888167c78dc9fc405b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether URL pattern matches the URL.  <br /></td></tr>
 <tr class="memitem:ab76bda5f9ecce947cd6b01d11da93c90" id="r_ab76bda5f9ecce947cd6b01d11da93c90"><td class="memTemplParams" colspan="2">template&lt;class ResT = urlpattern_result, std::enable_if_t&lt; std::is_base_of_v&lt; <a class="el" href="structupa_1_1urlpattern__result.html">urlpattern_result</a>, ResT &gt;, int &gt; = 0&gt; </td></tr>
 <tr class="memitem:ab76bda5f9ecce947cd6b01d11da93c90 template"><td class="memItemLeft">std::optional&lt; ResT &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab76bda5f9ecce947cd6b01d11da93c90">exec</a> (const <a class="el" href="structupa_1_1urlpattern__init.html">urlpattern_init</a> &amp;input) const</td></tr>
 <tr class="memdesc:ab76bda5f9ecce947cd6b01d11da93c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the URL pattern against the input.  <br /></td></tr>
-<tr class="memitem:a03674ee096cbe2747b30e58ddce30a7e" id="r_a03674ee096cbe2747b30e58ddce30a7e"><td class="memTemplParams" colspan="2">template&lt;class ResT = urlpattern_result, class T, class TB = std::nullopt_t, std::enable_if_t&lt; std::is_base_of_v&lt; <a class="el" href="structupa_1_1urlpattern__result.html">urlpattern_result</a>, ResT &gt;, int &gt; = 0, upa::enable_if_str_arg_t&lt; T &gt; = 0, upa::enable_if_optional_str_arg_t&lt; TB &gt; = 0&gt; </td></tr>
-<tr class="memitem:a03674ee096cbe2747b30e58ddce30a7e template"><td class="memItemLeft">std::optional&lt; ResT &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a03674ee096cbe2747b30e58ddce30a7e">exec</a> (const T &amp;input, const TB &amp;base_url_str=std::nullopt) const</td></tr>
-<tr class="memdesc:a03674ee096cbe2747b30e58ddce30a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the URL pattern against the input URL string.  <br /></td></tr>
+<tr class="memitem:a9aa23d37f6d7afbe0375b3ad8f5ddd7c" id="r_a9aa23d37f6d7afbe0375b3ad8f5ddd7c"><td class="memTemplParams" colspan="2">template&lt;class ResT = urlpattern_result, class T, class TB = std::nullopt_t, std::enable_if_t&lt; std::is_base_of_v&lt; <a class="el" href="structupa_1_1urlpattern__result.html">urlpattern_result</a>, ResT &gt;, int &gt; = 0, upa::enable_if_str_arg_t&lt; T &gt; = 0, upa::enable_if_optional_str_arg_t&lt; TB &gt; = 0&gt; </td></tr>
+<tr class="memitem:a9aa23d37f6d7afbe0375b3ad8f5ddd7c template"><td class="memItemLeft">std::optional&lt; ResT &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9aa23d37f6d7afbe0375b3ad8f5ddd7c">exec</a> (const T &amp;input, const TB &amp;base_url_str=upa::nullopt) const</td></tr>
+<tr class="memdesc:a9aa23d37f6d7afbe0375b3ad8f5ddd7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the URL pattern against the input URL string.  <br /></td></tr>
 <tr class="memitem:a9835d64c45d4bf5dfe4ff79264973cb6" id="r_a9835d64c45d4bf5dfe4ff79264973cb6"><td class="memTemplParams" colspan="2">template&lt;class ResT = urlpattern_result, std::enable_if_t&lt; std::is_base_of_v&lt; <a class="el" href="structupa_1_1urlpattern__result.html">urlpattern_result</a>, ResT &gt;, int &gt; = 0&gt; </td></tr>
 <tr class="memitem:a9835d64c45d4bf5dfe4ff79264973cb6 template"><td class="memItemLeft">std::optional&lt; ResT &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9835d64c45d4bf5dfe4ff79264973cb6">exec</a> (const <a class="el" href="classupa_1_1url.html">upa::url</a> &amp;<a class="el" href="classupa_1_1url.html">url</a>) const</td></tr>
 <tr class="memdesc:a9835d64c45d4bf5dfe4ff79264973cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the URL pattern against the URL.  <br /></td></tr>
@@ -167,8 +167,8 @@ class upa::urlpattern&lt; regex_engine, typename &gt;</div><p>URL pattern class 
 <div class="line">    <a class="code hl_function" href="#a704744c87a206c161b59ba2868f9958d">urlpattern</a> urlp(<span class="stringliteral">&quot;https://*.example.com/:path&quot;</span>);</div>
 <div class="line">    std::cout &lt;&lt; urlp.test(<span class="stringliteral">&quot;https://sub.example.com/index.html&quot;</span>) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassupa_1_1urlpattern_html"><div class="ttname"><a href="classupa_1_1urlpattern.html">upa::urlpattern</a></div><div class="ttdoc">URL pattern class template.</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00616">urlpattern.h:616</a></div></div>
-<div class="ttc" id="aclassupa_1_1urlpattern_html_a704744c87a206c161b59ba2868f9958d"><div class="ttname"><a href="#a704744c87a206c161b59ba2868f9958d">upa::urlpattern::urlpattern</a></div><div class="ttdeci">urlpattern(const urlpattern_init &amp;init={}, urlpattern_options opt={})</div><div class="ttdoc">Constructs urlpattern object from upa::urlpattern_init object.</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00885">urlpattern.h:885</a></div></div>
+<div class="ttc" id="aclassupa_1_1urlpattern_html"><div class="ttname"><a href="classupa_1_1urlpattern.html">upa::urlpattern</a></div><div class="ttdoc">URL pattern class template.</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00623">urlpattern.h:623</a></div></div>
+<div class="ttc" id="aclassupa_1_1urlpattern_html_a704744c87a206c161b59ba2868f9958d"><div class="ttname"><a href="#a704744c87a206c161b59ba2868f9958d">upa::urlpattern::urlpattern</a></div><div class="ttdeci">urlpattern(const urlpattern_init &amp;init={}, urlpattern_options opt={})</div><div class="ttdoc">Constructs urlpattern object from upa::urlpattern_init object.</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00894">urlpattern.h:894</a></div></div>
 <div class="ttc" id="aregex__engine__srell_8h_html"><div class="ttname"><a href="regex__engine__srell_8h.html">regex_engine_srell.h</a></div></div>
 <div class="ttc" id="aurlpattern_8h_html"><div class="ttname"><a href="urlpattern_8h.html">urlpattern.h</a></div></div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -178,7 +178,7 @@ class upa::urlpattern&lt; regex_engine, typename &gt;</div><p>URL pattern class 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00616">616</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00623">623</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a704744c87a206c161b59ba2868f9958d" name="a704744c87a206c161b59ba2868f9958d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a704744c87a206c161b59ba2868f9958d">&#9670;&#160;</a></span>urlpattern() <span class="overload">[1/3]</span></h2>
@@ -221,7 +221,7 @@ template&lt;class regex_engine, typename E&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00885">885</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00894">894</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -274,7 +274,7 @@ template&lt;class T, class TB, upa::enable_if_str_arg_t&lt; T &gt; = 0, upa::ena
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00654">654</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00661">661</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -321,13 +321,13 @@ template&lt;class T, upa::enable_if_str_arg_t&lt; T &gt; = 0&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00670">670</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00677">677</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a03674ee096cbe2747b30e58ddce30a7e" name="a03674ee096cbe2747b30e58ddce30a7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03674ee096cbe2747b30e58ddce30a7e">&#9670;&#160;</a></span>exec() <span class="overload">[1/3]</span></h2>
+<a id="a9aa23d37f6d7afbe0375b3ad8f5ddd7c" name="a9aa23d37f6d7afbe0375b3ad8f5ddd7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aa23d37f6d7afbe0375b3ad8f5ddd7c">&#9670;&#160;</a></span>exec() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -347,7 +347,7 @@ template&lt;class ResT, class T, class TB, std::enable_if_t&lt; std::is_base_of_
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const TB &amp;</td>          <td class="paramname"><span class="paramname"><em>base_url_str</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;) const</td>
+          <td class="paramtype">const TB &amp;</td>          <td class="paramname"><span class="paramname"><em>base_url_str</em></span><span class="paramdefsep"> = </span><span class="paramdefval">upa::nullopt</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -377,7 +377,7 @@ template&lt;class ResT, class T, class TB, std::enable_if_t&lt; std::is_base_of_
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>match results; <span class="tt">std::nullopt</span> if no match </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l01068">1068</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l01077">1077</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -426,7 +426,7 @@ template&lt;class ResT, std::enable_if_t&lt; std::is_base_of_v&lt; <a class="el"
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Optional match result; <span class="tt">std::nullopt</span> if no match </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l01095">1095</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l01104">1104</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -466,11 +466,11 @@ template&lt;class ResT, std::enable_if_t&lt; std::is_base_of_v&lt; <a class="el"
 <div class="line">input.<a class="code hl_variable" href="structupa_1_1urlpattern__init.html#a93a891b0dfaef10daf5ee00cdf984202">hostname</a> = <span class="stringliteral">&quot;www.example.com&quot;</span>;</div>
 <div class="line">input.<a class="code hl_variable" href="structupa_1_1urlpattern__init.html#a0366280b4aee752de1968cec1932beb1">pathname</a> = <span class="stringliteral">&quot;/123&quot;</span>;</div>
 <div class="line"><span class="keyword">auto</span> res = urlp.exec&lt;<a class="code hl_struct" href="structupa_1_1urlpattern__result__and__inputs.html">upa::urlpattern_result_and_inputs</a>&gt;(input);</div>
-<div class="ttc" id="astructupa_1_1urlpattern__init_html"><div class="ttname"><a href="structupa_1_1urlpattern__init.html">upa::urlpattern_init</a></div><div class="ttdoc">URLPatternInit struct.</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00155">urlpattern.h:155</a></div></div>
-<div class="ttc" id="astructupa_1_1urlpattern__init_html_a0366280b4aee752de1968cec1932beb1"><div class="ttname"><a href="structupa_1_1urlpattern__init.html#a0366280b4aee752de1968cec1932beb1">upa::urlpattern_init::pathname</a></div><div class="ttdeci">std::optional&lt; std::string &gt; pathname</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00161">urlpattern.h:161</a></div></div>
-<div class="ttc" id="astructupa_1_1urlpattern__init_html_a0a7589638d4f72f1a2882b1fde4b55be"><div class="ttname"><a href="structupa_1_1urlpattern__init.html#a0a7589638d4f72f1a2882b1fde4b55be">upa::urlpattern_init::protocol</a></div><div class="ttdeci">std::optional&lt; std::string &gt; protocol</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00156">urlpattern.h:156</a></div></div>
-<div class="ttc" id="astructupa_1_1urlpattern__init_html_a93a891b0dfaef10daf5ee00cdf984202"><div class="ttname"><a href="structupa_1_1urlpattern__init.html#a93a891b0dfaef10daf5ee00cdf984202">upa::urlpattern_init::hostname</a></div><div class="ttdeci">std::optional&lt; std::string &gt; hostname</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00159">urlpattern.h:159</a></div></div>
-<div class="ttc" id="astructupa_1_1urlpattern__result__and__inputs_html"><div class="ttname"><a href="structupa_1_1urlpattern__result__and__inputs.html">upa::urlpattern_result_and_inputs</a></div><div class="ttdoc">The result of executing the URL pattern when there is a match.</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00574">urlpattern.h:574</a></div></div>
+<div class="ttc" id="astructupa_1_1urlpattern__init_html"><div class="ttname"><a href="structupa_1_1urlpattern__init.html">upa::urlpattern_init</a></div><div class="ttdoc">URLPatternInit struct.</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00159">urlpattern.h:159</a></div></div>
+<div class="ttc" id="astructupa_1_1urlpattern__init_html_a0366280b4aee752de1968cec1932beb1"><div class="ttname"><a href="structupa_1_1urlpattern__init.html#a0366280b4aee752de1968cec1932beb1">upa::urlpattern_init::pathname</a></div><div class="ttdeci">std::optional&lt; std::string &gt; pathname</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00165">urlpattern.h:165</a></div></div>
+<div class="ttc" id="astructupa_1_1urlpattern__init_html_a0a7589638d4f72f1a2882b1fde4b55be"><div class="ttname"><a href="structupa_1_1urlpattern__init.html#a0a7589638d4f72f1a2882b1fde4b55be">upa::urlpattern_init::protocol</a></div><div class="ttdeci">std::optional&lt; std::string &gt; protocol</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00160">urlpattern.h:160</a></div></div>
+<div class="ttc" id="astructupa_1_1urlpattern__init_html_a93a891b0dfaef10daf5ee00cdf984202"><div class="ttname"><a href="structupa_1_1urlpattern__init.html#a93a891b0dfaef10daf5ee00cdf984202">upa::urlpattern_init::hostname</a></div><div class="ttdeci">std::optional&lt; std::string &gt; hostname</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00163">urlpattern.h:163</a></div></div>
+<div class="ttc" id="astructupa_1_1urlpattern__result__and__inputs_html"><div class="ttname"><a href="structupa_1_1urlpattern__result__and__inputs.html">upa::urlpattern_result_and_inputs</a></div><div class="ttdoc">The result of executing the URL pattern when there is a match.</div><div class="ttdef"><b>Definition</b> <a href="urlpattern_8h_source.html#l00581">urlpattern.h:581</a></div></div>
 </div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>The returned value may contain references to the data of the <span class="tt"><a class="el" href="classupa_1_1urlpattern.html" title="URL pattern class template.">urlpattern</a></span> object. Therefore, it can only be accessed as long as the <span class="tt"><a class="el" href="classupa_1_1urlpattern.html" title="URL pattern class template.">urlpattern</a></span> object itself is not destroyed.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -486,7 +486,7 @@ template&lt;class ResT, std::enable_if_t&lt; std::is_base_of_v&lt; <a class="el"
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>match results; <span class="tt">std::nullopt</span> if no match </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l01043">1043</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l01052">1052</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -516,7 +516,7 @@ template&lt;class regex_engine, typename E&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>URL pattern's normalized hash pattern string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00977">977</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00986">986</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -546,7 +546,7 @@ template&lt;class regex_engine, typename E&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>URL pattern's normalized hostname pattern string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00961">961</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00970">970</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -576,7 +576,7 @@ template&lt;class regex_engine, typename E&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>URL pattern's normalized password pattern string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00957">957</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00966">966</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -606,7 +606,7 @@ template&lt;class regex_engine, typename E&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>URL pattern's normalized pathname pattern string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00969">969</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00978">978</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -636,7 +636,7 @@ template&lt;class regex_engine, typename E&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>URL pattern's normalized port pattern string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00965">965</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00974">974</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -666,7 +666,7 @@ template&lt;class regex_engine, typename E&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>URL pattern's normalized protocol pattern string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00949">949</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00958">958</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -696,7 +696,7 @@ template&lt;class regex_engine, typename E&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>URL pattern's normalized search pattern string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00973">973</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00982">982</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -726,7 +726,7 @@ template&lt;class regex_engine, typename E&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>URL pattern's normalized username pattern string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00953">953</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00962">962</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -756,12 +756,12 @@ template&lt;class regex_engine, typename E&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>whether URL pattern contains one or more groups which uses regular expression matching </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l01200">1200</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l01209">1209</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
-<a id="a52d5d0491aec44acabbf539ac44fcd87" name="a52d5d0491aec44acabbf539ac44fcd87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52d5d0491aec44acabbf539ac44fcd87">&#9670;&#160;</a></span>test() <span class="overload">[1/3]</span></h2>
+<a id="a44a9c19ef5d5d9a1df67701da8253112" name="a44a9c19ef5d5d9a1df67701da8253112"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a9c19ef5d5d9a1df67701da8253112">&#9670;&#160;</a></span>test() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -781,7 +781,7 @@ template&lt;class T, class TB, upa::enable_if_str_arg_t&lt; T &gt;, upa::enable_
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const TB &amp;</td>          <td class="paramname"><span class="paramname"><em>base_url_str</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;) const</td>
+          <td class="paramtype">const TB &amp;</td>          <td class="paramname"><span class="paramname"><em>base_url_str</em></span><span class="paramdefsep"> = </span><span class="paramdefval">upa::nullopt</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -802,7 +802,7 @@ template&lt;class T, class TB, upa::enable_if_str_arg_t&lt; T &gt;, upa::enable_
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if URL pattern matches the <em class="arg">input</em> on a component-by-component basis, <span class="tt">false</span> otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l01001">1001</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l01010">1010</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -840,7 +840,7 @@ template&lt;class regex_engine, typename E&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if URL pattern matches the <em class="arg">url</em> on a component-by-component basis, <span class="tt">false</span> otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l01006">1006</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l01015">1015</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>
@@ -879,7 +879,7 @@ template&lt;class regex_engine, typename E&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if URL pattern matches the <em class="arg">input</em> on a component-by-component basis, <span class="tt">false</span> otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00985">985</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="urlpattern_8h_source.html#l00994">994</a> of file <a class="el" href="urlpattern_8h_source.html">urlpattern.h</a>.</p>
 
 </div>
 </div>

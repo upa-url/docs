@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['running_20tests_0',['Building and running tests',['../index.html#building-and-running-tests',1,'']]]
+  ['library_0',['Using as a shared library',['../index.html#using-as-a-shared-library',1,'']]],
+  ['license_1',['License',['../index.html#license',1,'']]]
 ];

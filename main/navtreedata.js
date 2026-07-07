@@ -27,6 +27,7 @@ var NAVTREE =
   [ "Upa URL C++ library", "index.html", [
     [ "Upa URL", "index.html", "index" ],
     [ "String input", "md_doc_2string__input.html", null ],
+    [ "C++20 modules support", "md_doc_2modules.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [

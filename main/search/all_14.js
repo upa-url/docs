@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['wildcard_5frule_0',['wildcard_rule',['../structupa_1_1public__suffix__list_1_1result.html#aa195a5c8dcd7f5f7d1cd013212936cca',1,'upa::public_suffix_list::result']]],
-  ['windows_1',['windows',['../namespaceupa.html#a5806bc3a0d267938f093d8106d84360fa0f4137ed1502b5045d6083aa258b5c42',1,'upa']]],
-  ['with_20cpm_20cmake_20script_2',['Embedding with CPM.cmake script',['../index.html#embedding-with-cpmcmake-script',1,'']]],
-  ['with_20fetchcontent_3',['Embedding with FetchContent',['../index.html#embedding-with-fetchcontent',1,'']]]
+  ['validation_5ferrc_0',['validation_errc',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7',1,'upa']]],
+  ['value_5ftype_1',['value_type',['../classupa_1_1url__search__params.html#a0201c99550386b659f84943c837de827',1,'upa::url_search_params::value_type'],['../classupa_1_1urlpattern__inputs.html#a0eaca775c9890dd5632c2eaa5bf3298e',1,'upa::urlpattern_inputs::value_type']]],
+  ['vcpkg_2',['vcpkg',['../index.html#vcpkg',1,'']]],
+  ['version_5fnum_3',['version_num',['../namespaceupa.html#a630576fbe181c46493712235942e88a6',1,'upa']]]
 ];
