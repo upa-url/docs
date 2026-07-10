@@ -2518,8 +2518,8 @@ $(function(){initNavTree('urlpattern_8h_source.html','',''); });
 <div class="line"><a id="l02560" name="l02560"></a><span class="lineno"> 2560</span>    upa::url dummy_url{};</div>
 <div class="line"><a id="l02561" name="l02561"></a><span class="lineno"> 2561</span>    {</div>
 <div class="line"><a id="l02562" name="l02562"></a><span class="lineno"> 2562</span>        upa::detail::url_serializer urls(dummy_url);</div>
-<div class="line"><a id="l02563" name="l02563"></a><span class="lineno"> 2563</span><span class="comment">        /*** This code is unnecessary ***</span></div>
-<div class="line"><a id="l02564" name="l02564"></a><span class="lineno"> 2564</span><span class="comment">        urls.set_scheme(&quot;https&quot;);</span></div>
+<div class="line"><a id="l02563" name="l02563"></a><span class="lineno"> 2563</span>        urls.set_scheme(<span class="stringliteral">&quot;https&quot;</span>);</div>
+<div class="line"><a id="l02564" name="l02564"></a><span class="lineno"> 2564</span><span class="comment">        /*** This code is unnecessary ***</span></div>
 <div class="line"><a id="l02565" name="l02565"></a><span class="lineno"> 2565</span><span class="comment">        // HACK: To improve performance, we use &quot;h&quot; instead of &quot;dummy.invalid&quot;.</span></div>
 <div class="line"><a id="l02566" name="l02566"></a><span class="lineno"> 2566</span><span class="comment">        urls.hostStart().push_back(&#39;h&#39;);</span></div>
 <div class="line"><a id="l02567" name="l02567"></a><span class="lineno"> 2567</span><span class="comment">        urls.hostDone(upa::HostType::Domain);</span></div>
