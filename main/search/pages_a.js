@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['requirements_0',['Requirements',['../md_doc_2modules.html#requirements',1,'']]],
-  ['running_20tests_1',['Building and running tests',['../index.html#building-and-running-tests',1,'']]]
+  ['modules_20support_0',['C++20 modules support',['../md_doc_2modules.html',1,'']]]
 ];

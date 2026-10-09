@@ -28,6 +28,7 @@ var NAVTREE =
     [ "Upa URL", "index.html", "index" ],
     [ "String input", "md_doc_2string__input.html", null ],
     [ "C++20 modules support", "md_doc_2modules.html", null ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -66,10 +67,10 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classupa_1_1url.html#ac66b3b70d461158681deac74d9a9b528",
-"dir_e68e8157741866f444e17edd764ebbae.html",
-"structupa_1_1urlpattern__result.html#ad65548c46428ca5e27d5ce5d5e40eb5d"
+"dir_d44c64559bbebec7f509842c48db8b23.html",
+"structupa_1_1urlpattern__result.html#ad547a7e86fcf8fc3fb4f3c1073babf06"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronization';
-var SYNCOFFMSG = 'click to enable panel synchronization';
-var LISTOFALLMEMBERS = 'List of all members';
+const SYNCONMSG = 'click to disable panel synchronization';
+const SYNCOFFMSG = 'click to enable panel synchronization';
+const LISTOFALLMEMBERS = 'List of all members';
