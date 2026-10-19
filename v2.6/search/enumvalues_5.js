@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['ignored_0',['ignored',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7af3f98c5d41d7c992a6fb63799f700f2b',1,'upa']]],
+  ['invalid_5fbase_1',['invalid_base',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a0674127785b0d71200ae2cabd791db90',1,'upa']]],
+  ['invalid_5fcredentials_2',['invalid_credentials',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a4e8c418aae8164352aca1aa983a3bee3',1,'upa']]],
+  ['invalid_5freverse_5fsolidus_3',['invalid_reverse_solidus',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7ac3ea7eeb178005245d67dcb07a9f923d',1,'upa']]],
+  ['invalid_5furl_5funit_4',['invalid_url_unit',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7af22e807b4d78567626b09936b54d6f2b',1,'upa']]],
+  ['ipv4_5',['IPv4',['../namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecfa42a9137a05a60eb752dcdf982e717626',1,'upa']]],
+  ['ipv4_5fempty_5fpart_6',['ipv4_empty_part',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a6bab231067ccab6b94d06f29a31336b6',1,'upa']]],
+  ['ipv4_5fin_5fipv6_5finvalid_5fcode_5fpoint_7',['ipv4_in_ipv6_invalid_code_point',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a9b4e0f64a048d0538460ab198e4f9b38',1,'upa']]],
+  ['ipv4_5fin_5fipv6_5fout_5fof_5frange_5fpart_8',['ipv4_in_ipv6_out_of_range_part',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7add85b170c4d1334d41a1b5bc3df38c59',1,'upa']]],
+  ['ipv4_5fin_5fipv6_5ftoo_5ffew_5fparts_9',['ipv4_in_ipv6_too_few_parts',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a9587f1bb4b801f034b2c273424783594',1,'upa']]],
+  ['ipv4_5fin_5fipv6_5ftoo_5fmany_5fpieces_10',['ipv4_in_ipv6_too_many_pieces',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a0cd4dbbe2b3fceb57f8c43b9c970037b',1,'upa']]],
+  ['ipv4_5fnon_5fdecimal_5fpart_11',['ipv4_non_decimal_part',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7ad5530f19f2d03a59b7c21f8b7138a00a',1,'upa']]],
+  ['ipv4_5fnon_5fnumeric_5fpart_12',['ipv4_non_numeric_part',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a3306cf0ca8d4126dd33c8b1d30bd8bcf',1,'upa']]],
+  ['ipv4_5fout_5fof_5frange_5fpart_13',['ipv4_out_of_range_part',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7aecadf894c2ab021ed325120ee3dcddd1',1,'upa']]],
+  ['ipv4_5ftoo_5fmany_5fparts_14',['ipv4_too_many_parts',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7ac0d21c8c82905fe00578b248bc1cbab8',1,'upa']]],
+  ['ipv6_15',['IPv6',['../namespaceupa.html#a318ad29c1af9286c1fd6ecebae372ecfafdb7cb8f657426e7c409bfd6d1a36ce4',1,'upa']]],
+  ['ipv6_5finvalid_5fcode_5fpoint_16',['ipv6_invalid_code_point',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a80dc36ac3d518f30d0a5cd02a4fa001a',1,'upa']]],
+  ['ipv6_5finvalid_5fcompression_17',['ipv6_invalid_compression',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a0a0236177a3c5e036af4fbc6df0ae2f6',1,'upa']]],
+  ['ipv6_5fmultiple_5fcompression_18',['ipv6_multiple_compression',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a2071221bf4af2c784b845de3db77260b',1,'upa']]],
+  ['ipv6_5ftoo_5ffew_5fpieces_19',['ipv6_too_few_pieces',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7ab577ca969dac9d16ac14048aa15089e9',1,'upa']]],
+  ['ipv6_5ftoo_5fmany_5fpieces_20',['ipv6_too_many_pieces',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7a816d1ccedcaf9485d77b763923bbaefe',1,'upa']]],
+  ['ipv6_5funclosed_21',['ipv6_unclosed',['../namespaceupa.html#a80c9675b4477dda8ff779545c1ad75f7ae759d6f475b8f916c6686d229b789764',1,'upa']]]
+];
