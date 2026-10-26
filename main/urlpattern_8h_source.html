@@ -1217,7 +1217,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('urlpattern_8h_
 <div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>    <span class="comment">// The specification uses regular expressions to perform all matching, but this is not mandated.</span></div>
 <div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span>    <span class="comment">// Implementations are free to perform matching directly against the part list when possible;</span></div>
 <div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>    <span class="comment">// e.g. when there are no custom regexp matching groups. If there are custom regular</span></div>
-<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>    <span class="comment">// expressions, however, its important that they be immediately evaluated in the compile</span></div>
+<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>    <span class="comment">// expressions, however, it&#39;s important that they be immediately evaluated in the compile</span></div>
 <div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>    <span class="comment">// a component algorithm so an error can be thrown if they are invalid.</span></div>
 <div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>    <span class="keywordflow">if</span> (!regular_expression_.init(regular_expression_string, opt.ignore_case))</div>
 <div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classupa_1_1urlpattern__error.html">urlpattern_error</a>(<span class="stringliteral">&quot;regular expression is not valid&quot;</span>);</div>
@@ -2146,8 +2146,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('urlpattern_8h_
 <div class="line"><a id="l02167" name="l02167"></a><span class="lineno"> 2167</span>        <span class="comment">// legacy reasons to match path-to-regexp. We could attempt to convert this to use regular</span></div>
 <div class="line"><a id="l02168" name="l02168"></a><span class="lineno"> 2168</span>        <span class="comment">// expression named captured groups, but given the complexity of this algorithm there is a</span></div>
 <div class="line"><a id="l02169" name="l02169"></a><span class="lineno"> 2169</span>        <span class="comment">// real risk of introducing unintended bugs. In addition, if we ever end up exposing the</span></div>
-<div class="line"><a id="l02170" name="l02170"></a><span class="lineno"> 2170</span>        <span class="comment">// generated regular expressions to the web we would like to maintain compability with</span></div>
-<div class="line"><a id="l02171" name="l02171"></a><span class="lineno"> 2171</span>        <span class="comment">// path-to-regexp which has indicated its unlikely to switch to using named capture groups.</span></div>
+<div class="line"><a id="l02170" name="l02170"></a><span class="lineno"> 2170</span>        <span class="comment">// generated regular expressions to the web we would like to maintain  compatibility with</span></div>
+<div class="line"><a id="l02171" name="l02171"></a><span class="lineno"> 2171</span>        <span class="comment">// path-to-regexp which has indicated it&#39;s unlikely to switch to using named capture groups.</span></div>
 <div class="line"><a id="l02172" name="l02172"></a><span class="lineno"> 2172</span>        std::string_view regexp_value{ pt.value_ };</div>
 <div class="line"><a id="l02173" name="l02173"></a><span class="lineno"> 2173</span>        std::string regexp_value_buffer;</div>
 <div class="line"><a id="l02174" name="l02174"></a><span class="lineno"> 2174</span>        <span class="keywordflow">if</span> (pt.type_ == part::type::SEGMENT_WILDCARD) {</div>
